@@ -1,0 +1,2225 @@
+\documentclass[11pt,twoside]{amsart}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=Blue, citecolor=Blue}
+\usepackage{amsthm, amsmath, amscd, amssymb,centernot,txfonts}
+\usepackage{tikz-cd}
+\usepackage{lipsum}
+\usepackage{cancel} 
+\usepackage{multicol}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage[all]{xy}
+\usepackage[left=2.5cm,top=2.5cm,bottom=3cm,right=2.5cm]{geometry}
+\usepackage{dirtytalk}
+\usepackage{mathtools}
+\usetikzlibrary{shapes,arrows}
+\usepackage{etoolbox}
+\usepackage{dynkin-diagrams}
+\usepackage{enumitem}
+\usepackage{chngpage}
+\usepackage{adjustbox}
+\usepackage[normalem]{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage{fourier} 
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{comment}
+%\usepackage[cmtip,all]{xy}
+\usepackage{cancel}
+\usepackage{cleveref}
+\newcommand{\longsquiggly}{\xymatrix{{}\ar@{~>}[r]&{}}}
+
+
+
+
+\setlength{\headheight}{15.2pt}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+
+
+\setcounter{tocdepth}{1}
+
+\setlength\parskip{0in}
+\setlength\parindent{0.2in}
+
+
+\theoremstyle{plain}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+
+\newtheorem{observation}[theorem]{Observation}
+
+
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{set-up}[theorem]{Set-up}
+\newtheorem{definition}[theorem]{Definition}
+
+\newcommand{\te}{\otimes}
+
+\newcommand{\myeq}{\overset{\mathrm{duality}}{=\joinrel=}}
+\newcommand*{\QEDA}{\hfill\ensuremath{\blacksquare}}
+\newcommand*{\QEDB}{\hfill\ensuremath{\square}}
+
+\tikzstyle{decision} = [diamond, draw, , 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, , 
+    text width=10em, text centered, rounded corners, minimum height=2em]
+\tikzstyle{block1} = [rectangle, draw, , 
+    text width=5em, text centered, rounded corners, minimum height=2em]    
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,, node distance=3cm,
+    minimum height=2em]
+\begin{document}
+
+\title[Extendability of general $K3$ surfaces without Gaussian maps ]{Extendability of general $K3$ surfaces without Gaussian maps and classification of non-prime Fano threefolds}
+
+
+\author[P. Bangere]{Purnaprajna Bangere}
+\address{Department of Mathematics, University of Kansas, Lawrence, USA}
+\email{purna@ku.edu}
+
+%\author[F.J. Gallego]{Francisco Javier Gallego}
+%\address{Departamento de \'Algebra, Geometr\'ia y Topolog\'ia and Instituto de Matem\'atica Interdisciplinar,
+%Universidad Complutense de Madrid, Spain}
+%\email{gallego@mat.ucm.es}
+
+\author[J. Mukherjee]{Jayan Mukherjee}
+\address{Department of Mathematics, Oklahoma State University, Stillwater, USA}
+\email{jayan.mukherjee@okstate.edu}
+
+\subjclass[2020]{14B10, 14N05, 14J28, 14J45}
+\keywords{extendability, $K3$ surfaces, canonical curves, Fano threefolds, Mukai varieties, projective degenerations, ribbons}
+
+
+%\subjclass[2020]{14B05, 14B10, 14D06, 14D15, 14D20, 14E30, 14J10, 14J45}
+%\keywords{compactification of moduli spaces, simple normal crossings, semi-log-canonical singularities, smoothings, deformations of morphisms, multiple structures, Fano varieties, Calabi-Yau varieties, varieties of general type, moduli of varieties of general type.}
+
+\maketitle
+\begin{abstract}
+
+In \cite{BM24}, we introduced an approach to the question of extendability of projective varieties via degeneration to ribbons. In this article we build on these methods to give a new proof of optimal results on the extendability of general non-prime $K3$ surfaces, classification of non-prime \textcolor{black}{Fano threefolds and} Mukai varieties and the irreducibility of their Hilbert schemes. 
+\textcolor{black}{The methods in this article also show the non-extendability of prime $K3$ surfaces for infinitely many values of $g$, for example when $g$ is of the form $g = 4k+1$, $k \geq 5$.} 
+This involves degenerations of $K3$ surfaces to ribbons on embedded Hirzebruch surfaces, called $K3$ carpets. We directly give optimal upper bounds on the cohomology of the twisted normal bundle of the $K3$ carpets instead of computing coranks of Gaussian maps of the canonical curve sections as in \cite{CLM94}, \cite{CLM98}. 
+As a result of independent interest, we show such $K3$ carpets also appear as degenerations of smoothable simple normal crossings of two Hirzebruch surfaces embedded by arbitrary linear series intersecting along an anticanonical elliptic curve. 
+Such type II degenerations constitute a smooth locus of codimension $6$ in the Hilbert scheme of $K3$ surfaces. 
+%In \cite{CLM93}, a special case of such type II degenerations, namely a union of scrolls was used to work out the prime case. \textcolor{blue}{The techniques introduced in this article show that in the non-prime case, degenerating the $K3$ surfaces to union of Hirzeburch surfaces embedded by arbitrary linear series, and further degenerating to $K3$ carpets, suffices to prove the results.}
+% \textcolor{blue}{In \cite{CLM93}, degenerations of $K3$ surfaces into a union of scrolls were further degenerated to a union of planes whose hyperplane sections are graph curves with corank one Gaussian map. In the present context, to deal with the non-prime case, we essentially, degenerate $K3$ surfaces to a union of Hirzebruch surfaces as non scrolls, but instead of further degenerating to union of planes, we degenerate it to a $K3$ carpet.}
+%\textcolor{blue}{\sout{Thus our methods can be viewed as an extension of methods employed in \cite{CLM93}, which completes the program of reformulation of the classification of Fano threefolds in the Picard rank one case.}} \textcolor{red}{The previous sentence which is already implied by the above paragraphs, not only serves our purpose badly, it distracts. Our method is NOT an extension of their methods in the technical sense, and that is the point of our paper. But I do understand what you are trying to implay..will think of a better way of saying.}
+%\textcolor{blue}{Thus we complete the program of reformulation of the classification of Fano threefolds laid out in \cite{CLM93} with methods which are (on the hindsight) closely related to \cite{CLM93} when the Picard rank is one.}
+%\textcolor{blue}{\textcolor{green}{\textbf{COMMENT:} We have already extensively talked about the contrasts !} don't you think we should draw some contrast with the papers of CM and CLM on the non prime case with ours...people may wonder what is the point..we will discuss this.}
+
+%In this article we show the existence of simple normal crossing varieties $V = Y_1 \bigcup_E Y_2 \subset \mathbb{P}^N$, where each $Y_i \hookrightarrow \mathbb{P}^N$ is a Hirzebruch surface embedded by the complete linear series of a very ample line bundle $aC_0+bf$ that intersect along an anticanonical elliptic curve $E$. We show further that these snc varieties are smoothable in $\mathbb{P}^N$ into smooth $K3$ surfaces. For a fixed $a$ and $b$, these polarized type II degenerations form a smooth locus of codimension $6$ inside the corresponding Hilbert scheme. We show that when $Y_i = \mathbb{F}_0$ and $a = 1$, a general such $V$, which is a union of scrolls, has well-defined and semistable syzygy points $\textrm{Syz}_{0,q}(V)$ for $q \geq 2$ and $\textrm{Syz}_{p,2}(V)$ for $p \leq \lfloor \displaystyle\frac{g-1}{2} \rfloor$ where $g$ is the sectional genus of the smoothing $K3$ fiber. We draw similar conclusions for the syzygy points of the general canonical binary curve sections of $V$.
+ 
+
+\end{abstract}
+%\section{Observations to discuss with CLM and highlight in the paper}
+
+%\begin{enumerate}
+ %   \item I think we are recovering Wahl's theorem for non-prime  $K3$ surfaces. 
+    %Since $\alpha(\widetilde{Y}) = 0$, we have $\alpha(X) = 0$ for a general $K3$. 
+  %  In \Cref{H^0(N(-2))}, we have shown $h^0(N_{\widetilde{Y}}(-2\widetilde{H})) = 0$ in order to compute the dimension of the tangent space at the Hilbert point represented by the cone over a general $K3$. This implies $h^0(N_{X}(-2H)) = 0$ for a general non-prime $K3$ surface. Therefore $h^0(N_{C}(-H)) \geq N+1$ and hence $\alpha(C) = \operatorname{corank}(\Phi_{\omega_{C}}) \geq 1$. This is an important consequence of our method of directly computing cohomology of twists of the normal bundle on a $K3$ surface. 
+    
+    
+   % \item The results of \cite[Lemma $4$]{CLM93} (Gaussian map of graph curve techniques), \cite{CLM94}, \cite[Proposition $2.22$]{CLM98} (Gaussian map on $K3$ surface techniques) also recovers Wahl's theorem. So why dont they highlight it ? Is the argument in item $[(1)]$ correct ?
+    %They show $\operatorname{corank}(\Phi_{\omega_C}) \leq 1$ and crucially uses Wahl's theorem to to conclude that $\operatorname{corank}(\Phi_{\omega_C}) $ cannot be zero. 
+%\end{enumerate}
+
+\section{Introduction}
+
+\begin{definition}\label{extendability}
+Let $X \subset \mathbb{P}^M$ be an irreducible nondegenerate variety of codimension at least $1$. Let $k \geq 1$ be an integer. We say that $X$ is $k-$ extendable if there exists a variety $W \subset \mathbb{P}^{M+k}$
+different from a cone, with dim $W =$ dim $X + k$ and having $X$ as a section by a $M-$ dimensional linear space such that $W$ is smooth along $X = W \cap \mathbb{P}^M$. We say that $X$ is precisely $k-$ extendable if it is $k-$ extendable but not $(k + 1)-$ extendable. The variety $W$ is called a $k$-extension of $X$. We say that $X$ is extendable if it is $1-$ extendable.  
+\end{definition}
+
+Extendability of a projective variety is a natural and fundamental question in projective geometry. This classical question has been the topic of intense research for decades and has revealed deep connections between the geometry of an embedding, Gaussian map of curve sections, deformations of cones over the hyperplane sections etc. We refer to \cite{Lop23} for an excellent recent survey of this topic. 
+%\textcolor{red}{There is an additional motivation for the study; it gives a different proof of the classification of an important class of Fano threefolds as shown in....} \textcolor{blue}{perhaps this has to be said better, but putting it here nonetheless so as not to forget.} 
+
+\smallskip
+
+This article revisits the question of extendability of an embedded $K3$ surface and its \textcolor{black}{applications}  \textcolor{black}{to the} boundedness, classification and Hilbert schemes of Fano threefolds and more generally Mukai varieties, which are varieties with a canonical curve section. In \cite{CLM93}, \cite{CLM94} and \cite{CLM98},  Ciliberto, Lopez and Miranda analyze the extendability of general $K3$ surfaces by computing the coranks of Wahl maps of the canonical curve sections (see also \cite{CD22}, \cite{CD24}, \cite{K20}, \cite{Tot20}). %\textcolor{blue}{In the case of prime $K3$ surfaces the authors show that the corank of the Wahl map of the canonical curve section is one by degenerating to a union of scrolls and further degenerating to a union of planes, whose hyperplane sections are graph curves.} In the case of non-prime $K3$ surfaces, the authors first prove the surjectivity of a relevant Gaussian map on a general non-prime $K3$ surface (see \cite{CLM94}) and then conclude  \textcolor{black}{that the corank of the Wahl map of the canonical curve section is one} (see \cite{CLM98}), by invoking results from the case of prime $K3$ surfaces (see \cite[Lemma $2.3$]{CLM98} \cite[Lemma $4$]{CLM93}, see also \cite{K20} ). %\textcolor{blue}{We also refer to \cite{CD22} and \cite{CD24} for coranks of Gaussian maps of non-primitive linear systems on $K3$ surfaces.}
+
+\smallskip
+
+\textcolor{black}{The questions on extendability has almost always involved Gaussian map, either on the surface or going to the hyperplane curve section. As noted in \cite{Lop23} "the emerging philosophy is that if one can control the corank of the Gaussian maps of the curve section of X, then one can give information on the extendability of X." It is further noted in \cite{Lop23} that there \textcolor{black}{are} only \textcolor{black}{two} other general results (\cite{KLM11}, \cite{CDGK20}) that allows studying the extendability of surfaces, without passing to the hyperplane section.}\
+
+\smallskip
+
+ \textcolor{black}{The method in this article  avoids the approach via Gaussian maps altogether, either on the surface or on the hyperplane curve section. It provides another general method, via degeneration to ribbons, to study extendability} by directly computing $\alpha(X) = h^0(N_{X/\mathbb{P}^M}(-1))-M-1$ and $h^0(N_{X/\mathbb{P}^M}(-2))$ for a general $K3$ surface $X$. \textcolor{black}{Once this is accomplished,} we conclude using the following theorem due to Zak-L\'vovsky. 
+%Hence this gives %This theorem gives us a criterion to determine if a projective variety $X \subset \mathbb{P}^M$ is $k-$ extendable or not.
+
+\begin{theorem}(\cite{Lvo92}, \cite{Zak91})\label{ZL}
+Let $X \subset \mathbb{P}^{M}$ be a smooth irreducible nondegenerate variety of codimension at least $1$ and suppose $X$ is not a quadric. If $\alpha(X) \leq 0$, then X is not extendable. Further, given an integer $k \geq 2$, suppose that either:
+\begin{itemize}
+    \item[(1)] $\alpha(X) < M$ or
+    \item[(2)] $H^0(N_{X/\mathbb{P}^M}(-2)) = 0$,
+\end{itemize}
+If $\alpha(X) \leq k-1$, then X is not $k-$ extendable.  
+
+\end{theorem}
+
+By semicontinuity it is enough to give sharp upper bounds to $\alpha(X)$ by computing it over an embedded degeneration of $X$. We show that $\alpha(\widetilde{Y})$ for ribbons $\widetilde{Y} \subset \mathbb{P}^M$ called $K3$ carpets (see \Cref{ribbon}) on Hirzebruch surfaces $Y \subset \mathbb{P}^M$ embedded by the linear series \textcolor{black}{$|aC_0+bf|$ for suitably chosen values of $a$ and $b$}, achieve sharp upper bounds. Such $K3$ carpets were shown to be smoothable in \cite{BMR21} (see also \cite{GP97}).  \textcolor{black}{When $\operatorname{gcd}(a,b) > 1$, the resulting smooth fibers are non-prime $K3$ surfaces while if $\operatorname{gcd}(a,b) = 1$, the resulting smooth fibers are prime $K3$ surfaces (see \Cref{degeneration into $K3$ carpets}).} The computability of $\alpha(\widetilde{Y})$ is facilitated by the fact that $\widetilde{Y} \subset \mathbb{P}^M$ is an embedded ribbon which is a local complete intersection scheme whose reduced part is a (possibly degenerate) Hirzebruch surface $Y \subset \mathbb{P}^M$. %\sout{thickening of a (possibly degenerate) Hirzebruch surface $Y \subset \mathbb{P}^M$, where the embedding is induced by the complete linear series of a very ample line bundle $aC_0+bf$ followed by a linear embedding of projective spaces.}
+We reduce the computations involving the cohomology of twists of the normal bundle $N_{\widetilde{Y}/\mathbb{P}^M}$ to computing cohomology of twists of $N_{Y/\mathbb{P}^M}$ by a series of cohomological procedures and analysis of the related coboundary maps. \par
+
+
+\textcolor{black}{We now state our results. Let $\mathcal{H}_{r,g}$ denote the Hilbert scheme of $K3$ surfaces of index $r$ and genus $g$. (see \Cref{Hilbert schemes of K3 surfaces})}
+For \textcolor{black}{general} $K3$ surfaces of large genus, we show:
+
+\begin{theorem}(see \Cref{non-extendability of K3 surfaces}, \Cref{H^0(N(-2))})\label{non-extendability of K3 surfaces intro}
+    Let \textcolor{black}{$X \subset \mathbb{P}^{M}$ be a general $K3$ surface in $\mathcal{H}_{r,g}$ embedded by the complete linear series of $rB$, where $B$ is a primitive very ample line bundle, with $B^2 = 2g-2$ and $M = 1+r^2(g-1)$.}
+    
+    \begin{enumerate}
+        \item If $r \geq 5, g \geq 3$ or $r = 4, g \geq 4$ or $r = 3, g \geq 5$ or $r = 2$, $g \geq 7$, then $\alpha(X) = 0$ and consequently $X \subset \mathbb{P}^M$ is not extendable. 
+
+       % \item[(2)] If $r = 1$, $g = 4k+1, k \geq 5$ or $r = 1$, $g = 18k+4, k \geq 1$, or $r = 1$, $g = 18k+7, k \geq 2$ or $r = 1$, $g = 18k+13, k \geq 1$ or $r = 1$, $g = 18k+16, k \geq 1$, then $\alpha(X) = 0$ and consequently $X \subset \mathbb{P}^M$ is not extendable. 
+       
+        \item If $r = 1$ and $g$ is either $g = 4k+1, k \geq 5$ or $g = 18k+4, k \geq 1$, or $g = 18k+7, k \geq 2$ or $g = 18k+13, k \geq 1$ or $g = 18k+16, k \geq 1$, then $\alpha(X) = 0$ and consequently $X \subset \mathbb{P}^M$ is not extendable.
+        
+        \item[(3)] If $r = 2, g \geq 4$ or $r \geq 3, g \geq 3$, then $H^0(N_{X/\mathbb{P}^M}(-2)) = 0$. Further, if $(r = 2, g = 3)$, then $h^0(N_{X/\mathbb{P}^M}(-2)) \leq 1$.
+        
+        
+    \end{enumerate}
+\end{theorem}
+
+ \par
+
+\textcolor{black}{The above theorem completely recovers optimal results in the case of non-prime $K3$ surfaces, while it recovers results for infinitely many values of $g$ in the prime case. We intend to deal with the case $r = 1$ and all possible values of $g$ more systematically in a forthcoming article. }
+
+\vspace{0.2cm}
+
+\color{black}
+
+%\sout{One of the consequences of \Cref{non-extendability of K3 surfaces intro}, $(2)$, is the non-surjectivity of the Wahl map $\Phi_{\omega_C}$ in the non-prime case.}
+
+%\begin{corollary}\label{Wahl intro}(\Cref{Wahl})
+% \sout{Let $X$ be a $K3$ surface and $C \subset X$ is a smooth curve with $C \in |rB|$ with $r \geq 2$. Then the Wahl map $\Phi_{\omega_C}$ is not surjective.}
+%\end{corollary}
+
+%\sout{The result was first proved by Wahl (\cite{W87}) and later by Beauville-Merindol (\cite{BM87}) and Ciliberto-Miranda (\cite{CM90}) (see also \cite{V92}).}
+
+\color{black}
+
+
+For non-prime $K3$ surfaces of lower genus, we show 
+
+\begin{theorem}(see \Cref{ZL for lower genus $K3$ surfaces})\label{ZL for lower genus $K3$ surfaces intro}
+
+Let \textcolor{black}{$X \subset \mathbb{P}^{M}$ be a general $K3$ surface in $\mathcal{H}_{r,g}$ embedded by the complete linear series of $rB$, where $B$ is a primitive very ample line bundle, with $B^2 = 2g-2$ and $M = 1+r^2(g-1)$.}
+
+    \begin{enumerate}
+       % \item \textcolor{blue}{If $r = 2$, $g = 2$, then $\alpha(X) = 14$} 
+        \item If $r = 2$, $g = 3$, then $\alpha(X) = 10$ 
+        %(\textcolor{blue}{Needs improvement by $1$.})
+        \item If $r = 2$, $g = 4$, then $\alpha(X) = 6$ 
+        \item If $r = 2$, $g = 5$, then $\alpha(X) = 3$ 
+        \item If $r = 2$, $g = 6$, then $\alpha(X) = 1$ 
+       % \item If $r = 3$, $g = 2$, then $\alpha(X) = 10$ 
+        \item If $r = 3$, $g = 3$, then $\alpha(X) \leq 4$
+        \item If $r = 3$, $g = 4$, then $\alpha(X) = 1$ 
+        \item If $r = 4$, $g = 3$, then $\alpha(X) = 1$
+        
+       
+        
+    \end{enumerate}
+    
+\end{theorem}
+
+One of the key technical results proved in \cite{CLM98}, that crucially depends on the corank of the Wahl map, concerns the dimension of the component of the Hilbert scheme at points representing cones over canonical curves. Using \Cref{non-extendability of K3 surfaces intro} $(2)$ and the bounds of $\alpha(X)$ in \Cref{ZL for lower genus $K3$ surfaces intro}, we prove this result directly for the cone over a $K3$ surface. \par
+%\sout{without going to Gaussian maps on canonical curves}. 
+The following theorem, which is a consequence of our results and a general principle outlined in \cite{CLM98}, gives a classification of non-prime Fano-threefolds and more generally non-prime Mukai varieties of Picard rank one 
+ 
+\begin{theorem}(see \Cref{classification of fanos with index two}, \Cref{classification of Mukai varieties with index two})\label{classification of mukai varieties intro}
+\begin{enumerate}
+    \item Let \textcolor{black}{$\mathcal{V}_{r,g,1}$ denote the closure of the locus of points representing smooth Fano threefolds with Picard rank one in the Hilbert scheme of smooth anticanonically embedded Fano threefolds of index $r$ and genus $g$. Let $r \geq 2$ and $g \geq 3$ (see \Cref{Hilbert scheme of Fanos and K3})}.
+    Then
+
+\begin{enumerate}
+    \item $\mathcal{V}_{r,g,1} = \varnothing$ if $(r = 2, g \geq 7)$, $(r = 3, g = 3)$, $(r = 3, g \geq 5)$, $(r = 4, g \geq 4)$ or $(r \geq 5, g \geq 3)$. 
+    \item For $(r = 2, 3 \leq g \leq 6), (r = 3, g = 4), (r = 4, g = 3)$, $\mathcal{V}_{r,g,1}$ is irreducible, and the families of Fano and Iskovskih form an open dense irreducible subset of $\mathcal{V}_{r,g,1}$. The general fiber of the projection map $p: \mathcal{F}_{r,g} \to \mathcal{H}_{r,g}$ as defined in \Cref{Hilbert scheme of Fanos and K3} is irreducible. Upto projective transformations, a general $K3$ surface in $\mathcal{H}_{2,6}, \mathcal{H}_{3,4}$ or $ \mathcal{H}_{4,3}$ is contained in a unique Fano threefold in $\mathcal{V}_{2,6,1}, \mathcal{V}_{3,4,1}$ or $ \mathcal{V}_{4,3,1}$ respectively.
+\end{enumerate}
+
+\item \textcolor{black}{For $n \geq 4$, let $\mathcal{V}_{n,r,g,1}$ denote the closure of the locus of smooth Fano $n-$ folds of Picard rank one in the Hilbert scheme of smooth embedded Fano varieties of dimension $n \geq 4$, index $r(n-2)$ and genus $g$ with a canonical curve section. (see \Cref{Mukai varieties}). Let $r \geq 2$ and $g \geq 3$}.
+Then 
+\begin{enumerate}
+    \item $\mathcal{V}_{n,r,g,1} = \varnothing$ if $(r = 2, 3 \leq g \leq 4)$, $(n \geq 6, r = 2, g = 5)$, $(r = 2, g \geq 6)$, $(r = 3, g \geq 3)$, or $(r = 4, g \geq 3)$ . 
+    \item $\mathcal{V}_{4,2,5,1}$ and $\mathcal{V}_{5,2,5,1}$ are irreducible, and the families of Mukai form an open dense irreducible subset of the components.
+\end{enumerate}
+
+\end{enumerate} 
+
+\end{theorem}
+
+
+
+
+Finally in \Cref{Hirzebruch main}, we show that the $K3$ carpets $\widetilde{Y} \subset \mathbb{P}^M$ %\sout{extending the possibly degenerate embeddings $Y \subset \mathbb{P}^M$, where  $Y$ is a} 
+on a Hirzebruch surface $Y=\mathbb{F}_e$, $0 \leq e \leq 1$, \textcolor{black}{embedded by arbitrary linear series} 
+%\sout{and the embedding is induced by the complete linear series of a very ample line bundle $aC_0+bf$ followed by a linear embedding of projective spaces,} 
+lie in the closure of simple normal crossing varieties of the form $V = Y_1 \bigcup_E Y_2 \subset \mathbb{P}^M$, where each $Y_i \cong Y$ is embedded by $aC_0+bf$ and $E$ is an anticanonical elliptic curve.  The relation of these embedded type two degenerations of $K3$ surfaces \textcolor{black}{to the present context is} as follows: In \cite{CLM93}, to deal with the prime case, the authors degenerated $K3$ surfaces into a union of scrolls (this is the case $a=1$ above.) These were further degenerated to a union of planes whose hyperplane sections are graph curves with corank one Gaussian map. \textcolor{black}{The techniques introduced in this article show that in the non-prime case, degenerating the $K3$ surfaces to union of Hirzeburch surfaces embedded by arbitrary linear series, and further degenerating to $K3$ carpets, suffices to prove the results.} %\sout{requiring no further degeneration to planes and taking hyperplace curve sections or study Gaussian maps.} 
+%\sout{present context, to deal with the non-prime case, we essentially, degenerate $K3$ surfaces to a union of Hirzebruch surfaces as non scrolls meeting along an elliptic curve, but instead of further degenerating to union of planes, we degenerate it to a $K3$ carpet.} 
+%Comment:\textcolor{blue}{In fact I was thinking about rewriting this entire paragraph before we put it in the arxiv. We should not get into this mess as it was done here before...it would confuse the reader endlessly. But I feel the above makes it clearer. What do you think?} 
+
+%On the other hand, J. Wahl, introduced the following map which is now called a Wahl-map
+
+%\begin{definition}\label{Wahl map}
+ %Let $C$ be a smooth irreducible curve, then the Wahl map of $C$ is the map
+ %$$\Phi_{\omega_C}: \wedge^2H^0(\omega_C) \to H^0(\omega_C^{\otimes 3})$$
+ %given by $\Phi_{\omega_C}(fdz \wedge gdz) = (fg'-gf')dz^3 $
+%\end{definition}
+
+%The relation of Wahl map to extendability is given by the fact that if $C$ is a curve of genus $g \geq 3$, in its canonical embedding, then $\alpha(C) = \operatorname{cork}(\Phi_{\omega_C})$. Further if $C$ is a linearly normal curve section of a non-degenerate variety $X \subset \mathbb{P}^N$ of dimension $n$ and $H^0(N_C(-2)) = 0$, then $\alpha(X) \leq \alpha(C)-n+1$. 
+
+
+
+%In this article, we reprove the results on extendability of general $K3$ surfaces in the non-prime case, i.e, when the hyperplane section of the embedding is a multiple of the generator of the Picard group. $K3$ surface is embedded 
+\vspace{0.2cm}
+
+\par
+
+Using \Cref{non-extendability of K3 surfaces intro} along with results of \cite{CDS20}, \cite{ABS17}, we conclude that 
+\begin{corollary}\label{corank one intro}(see \Cref{corank one})
+In the situation of \Cref{non-extendability of K3 surfaces intro}, if $C \in |rB|$ is any smooth hyperplane section of $X \subset \mathbb{P}^M$, then $\alpha(C) = \operatorname{cork}(\Phi_{\omega_C}) = 1$.   
+\end{corollary}
+The corank one theorem can also be derived from our methods  independently by showing the injectivity of the map $H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-2\widetilde{H})) \to H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))$ on the ribbon $\widetilde{Y}$ (see \Cref{independent corank one} ). For this, along with the methods introduced here, one needs to use results on Gaussian maps on Hirzebruch surfaces in \cite{DM92} and \cite{DP12}. Since showing injectivity of this map is essential to \textcolor{black}{systematically} handle the case $r = 1$, i.e, the case of prime $K3$ surfaces, we will come back to this in a forthcoming article (\cite{BM25}) . 
+
+\vspace{0.2cm}
+
+\noindent\textbf{Acknowledgements.} We thank Professor Rick Miranda and Professor Angelo Lopez for useful discussions. We also thank Professor Thomas Dedieu for reading the paper carefully and for his helpful suggestions; in particular for pointing out that our results hold in greater generality than what was stated in our previous version. 
+
+\section{Preliminaries on degeneration of $K3$ surfaces into $K3$ double structures on Hirzebruch surfaces}
+
+We recall some definitions and a theorem on some special non-reduced degenerations of $K3$ surfaces in a projective space.
+
+\begin{definition}\label{ribbon}
+Let $Y$ be a reduced connected projective variety.
+ \begin{enumerate}
+     \item A scheme $\widetilde{Y}$ is called a ribbon on $Y$ with conormal bundle $L$ if $\widetilde{Y}_{\operatorname{red}} = Y$, $\mathcal{I}_{Y/\widetilde{Y}}^2 = (0)$ and $\mathcal{I}_{Y/\widetilde{Y}} \cong L$ as an $\mathcal{O}_Y$ module where $\mathcal{I}_{Y/\widetilde{Y}}$ is the ideal sheaf of $Y$ inside $\widetilde{Y}$ and $L$ is a line bundle on $Y$. 
+
+     \item If $Y$ is a smooth surface, then a ribbon $\widetilde{Y}$ on $Y$ is called a $K3$ carpet if the dualizing sheaf $K_{\widetilde{Y}} \cong \mathcal{O}_{\widetilde{Y}}$ and $H^1(\mathcal{O}_{\widetilde{Y}})= 0$
+
+\end{enumerate}
+\end{definition}  
+
+The following lemma characterizes the conormal bundle of a $K3$ carpet $\widetilde{Y}$ on a smooth surface $Y$.
+
+\begin{lemma}(see \cite[Proposition $2.1$]{GGP08})
+    A ribbon $\widetilde{Y}$ on smooth surface $Y$ with conormal bundle $L$ is a $K3$ carpet if and only if $L \cong K_Y$.
+\end{lemma}
+
+\color{black}
+We recall the definition of the Hilbert scheme of $K3$ surfaces.
+
+\begin{definition}\label{Hilbert schemes of K3 surfaces}
+    Let $\mathcal{H}_{r,g}$ denote the Hilbert scheme of $K3$ surfaces of index $r$ and genus $g$, i.e, $K3$ surfaces $X \subset \mathbb{P}^{1+r^2(g-1)}$ embedded by the complete linear series of $rB$ where $B$ is a primitive very ample line bundle with $B^2 = 2g-2$. If $r = 1$, we call $\mathcal{H}_{r,g}$ the Hilbert scheme of prime $K3$ surfaces while if $r \geq 2$, $\mathcal{H}_{r,g}$ is called the Hilbert scheme of non-prime $K3$ surfaces.
+\end{definition}
+\color{black}
+
+Next we recall a degeneration theorem of $K3$ surfaces into $K3$ carpets on Hirzebruch surfaces.
+
+\begin{theorem}\label{degeneration into $K3$ carpets}(\cite[Theorem $4.1$]{BMR21} and \cite[Theorem $2.9$]{GP97})
+Let $Y = \mathbb{F}_e$ be a Hirzebruch surface. Let $H = aC_0+bf$ be a very ample line bundle on $Y$, where $C_0$ is the class of section, satisfying $C_0^2 = -e$ and $f$ is the class of a fiber satisfying $f^2 = 0$ (this happens if and only if $b \geq ae+1$). Consider the embedding $Y \hookrightarrow \mathbb{P}^N$ induced by the complete linear series $|H|$.  
+\begin{enumerate}
+    \item Then there exists $K3$ carpets $\widetilde{Y}$ on $Y$ along with a very ample line bundle $\widetilde{H}$ on $\widetilde{Y}$ such that $\widetilde{H}|_Y = H$.
+
+    \item If $\widetilde{Y} \hookrightarrow \mathbb{P}^M$ denote the embedding induced by the complete linear series $|\widetilde{H}|$, then $\widetilde{Y}$ is smoothable in $\mathbb{P}^M$ into smooth $K3$ surfaces embedded by the complete linear series of a very ample line bundle.
+
+    \item For $0 \leq e \leq 2$, the Hilbert point of $\widetilde{Y}$ is smooth and the general smooth surface of the unique Hilbert component containing $\widetilde{Y}$ is a 
+    \begin{itemize}
+        \item[(a)] prime $K3$ surface if $\textrm{gcd}(a,b) = 1$ 
+        \item[(b)] a non-prime $K3$ surface embedded by $rB$, with $r = \operatorname{gcd}(a,b)$ and $B$ is a primitive very ample line bundle. 
+    \end{itemize}
+\end{enumerate}
+\end{theorem}
+
+\begin{proof} Part $(1)$, $(2)$ and the statement on smoothness of Hilbert point in part $(3)$ of the Theorem follows from \cite[Theorem $3.1 (3)$, Theorem $4.3$, Theorem $5.1$]{BMR21} and \cite[Proposition $1.7$, Theorem $3.5$, Theorem $4.1$]{GP97}.
+    
+
+We prove part $(3)$. Let $Y = \mathbb{F}_e$ with $0 \leq e \leq 2$. Consider the $K3$ double cover of $\pi:X \to Y$ branched along $D \in |-2K_Y|$. Let $H_0 = \pi^*(\mathcal{O}_{Y}(1)) = \pi^*(aC_0+bf)$ and consider the composition  
+\[
+\begin{tikzcd}
+X \arrow[dr, "\varphi"] \arrow[d, "\pi"] & \\
+Y \arrow[r, hook] & \mathbb{P}^M
+\end{tikzcd}
+\]
+Recall the smoothing fibers $X_t \xhookrightarrow{\varphi_t} \mathbb{P}^M$ are obtained as the image of an embedding $\varphi_t$ which is a general deformation of $\varphi$ along a one parameter family $T$ and are hence embedded inside $\mathbb{P}^M$ by the complete linear series of a line bundle $H_t$ which is a deformation of $H_0$. Since the multiplicity of a polarization remains constant on a smooth family, we have to find the multiplicity of $H_0$ on the double cover $X$. Now since $D$ is smooth and irreducible part $(3)$ for $Y = \mathbb{F}_e$, $0 \leq e \leq 2$ follows from the fact that $\textrm{Pic}(X)$ is generated by $\pi^*\mathcal{O}_Y(C_0)$ and $\pi^*\mathcal{O}_Y(f)$ (see \cite[Proposition $6.3$]{AHL10}).
+
+\end{proof}
+
+\section{Extendability of general $K3$ surfaces}
+
+
+
+
+
+As mentioned before, to give an upper bound to $\alpha(X)$ for a $K3$ surface $X \subset \mathbb{P}^M$, we will degenerate $X \subset \mathbb{P}^M$ to a $K3$ carpet $\widetilde{Y} \subset \mathbb{P}^M$, using \Cref{degeneration into $K3$ carpets} and compute $\alpha(\widetilde{Y})$.  The main tool for all our computations that follow consist of the three exact sequences \Cref{1}, \Cref{2} and \Cref{3}  that decomposes the cohomology of the twisted normal bundle $N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})$ of a ribbon $\widetilde{Y} \subset \mathbb{P}^M$ in terms of cohomology of various twists of the normal bundle $N_{Y/\mathbb{P}^M}$ of the reduced part. 
+
+
+
+%\begin{theorem}\label{ZL for snc}
+% Let $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^M$ be a simple normal crossing variety of dimension $d > 1$, embedded by the complete linear series of a very ample line bundle $\widetilde{H}$, where $Y_1 = \mathbb{F}_e \hookrightarrow \mathbb{P}^N$, $e \leq 2$ is embedded by the complete linear series of a very ample line bundle $|aC_0+bf|$, $E \in |-K_{Y_1}|$, $Y_2$ is a general element of $\mathcal{F}_{E,Y}$ and $M = N + h^0((a-2)C_0+(b-e-2)f)$ (i.e, we are in the situation of Theorem \ref{Hirzebruch main}, $(1)$ (b). Let $H = \widetilde{H}|_{Y_1}$ and assume $H^1(-H+K_{Y_1}) = 0$. Let
+
+
+
+% $$\beta = h^1(T_{Y_1}(-H+K_{Y_1})) + h^1(T_{Y_1}(-H)) - h^0(T_{Y_1}(-H)) +  h^1(-H-K_{Y_1}) + h^0(-H-2K_{Y_1})$$ 
+
+\begin{theorem}\label{ZL for K3 carpets}
+ Let $\widetilde{Y} \hookrightarrow \mathbb{P}^M$ be a $K3$ carpet embedded by the complete linear series of a very ample line bundle $\widetilde{H}$ such that the possibly degenerate embedding $Y = \mathbb{F}_e \hookrightarrow \mathbb{P}^M$ induced on the reduced part is given by the complete linear series of a very ample line bundle $H = aC_0+bf$ followed by a linear embedding of projective spaces. Assume $H^1(-H+K_Y) = 0$. 
+ 
+ \begin{enumerate}
+ \item Let $$\beta = h^1(T_Y(-H+K_Y)) + h^1(T_Y(-H)) - h^0(T_Y(-H)) +  h^1(-H-K_Y) + h^0(-H-2K_Y)$$ 
+Then 
+$$\alpha(\widetilde{Y}) = h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))-M-1 \leq  \beta$$ 
+In particular if $\beta = 0$, then $\alpha(\widetilde{Y}) \leq 0$. Consequently, the general smooth $K3$ surfaces in the Hilbert component containing $\widetilde{Y}$ are not extendable .
+
+\item Let $a = 2$, $\widetilde{Y}$ a general embedded $K3$ carpet represented by a general no-where vanishing section in $H^0(N_{Y/\mathbb{P}^M} \otimes K_Y)$ and set
+%and $$\gamma = h^0(N_{Y/\mathbb{P}^M}(-H+K_Y)+h^0(N_{Y/\mathbb{P}^M}(-H)+h^0(-H-2K_Y)$$
+\begin{align*}
+    \gamma & =  h^0(N_{Y/\mathbb{P}^M}(-H+K_Y)+h^0(N_{Y/\mathbb{P}^M}(-H)+h^0(-H-2K_Y)-M-1 \\
+    & \leq h^1(T_Y(-H+K_Y))+h^0(N_{Y/\mathbb{P}^M}(-H)+h^0(-H-2K_Y)-M-1
+\end{align*}
+
+Then 
+$$\alpha(\widetilde{Y}) = h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))-M-1 \leq  \gamma$$ 
+In particular if $\gamma = 0$, then $\alpha(\widetilde{Y}) \leq 0$. Consequently, the general smooth $K3$ surfaces in the Hilbert component containing $\widetilde{Y}$ are not extendable.
+
+
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    Part $(1)$ has been proved in \cite[Theorem $2.2$]{BM24}. We prove part $(2)$. We have the following exact sequences (see \cite[Lemma $4.1$]{GGP08})
+\begin{equation}\label{1}
+    0 \to N_{\widetilde{Y}/\mathbb{P}^M} (K_Y) \to N_{\widetilde{Y}/\mathbb{P}^M} \to N_{\widetilde{Y}/\mathbb{P}^M} \otimes \mathcal{O}_Y \to 0
+\end{equation}
+\begin{equation}\label{2}
+    0 \to \mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y) \to N_{\widetilde{Y}/\mathbb{P}^M} \otimes \mathcal{O}_Y \to \mathcal{O}_Y(-2K_Y) \to 0 
+\end{equation}
+\begin{equation}\label{3}
+    0 \to \mathcal{O}_Y(-K_Y) \to N_{Y/\mathbb{P}^M} \to \mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y) \to 0
+\end{equation}
+
+
+Tensoring equation \ref{1} by $\mathcal{O}_{\widetilde{Y}}(-\widetilde{H})$, we have that 
+
+\begin{equation}\label{4}
+ h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) \leq h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) + h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H))
+\end{equation}
+
+We compute $h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y))$. Tensoring equation \ref{2} by $\mathcal{O}_Y(-H+K_Y)$ we have 
+
+\begin{equation*}
+    0 \to \mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y) \to N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y) \to \mathcal{O}_Y(-H-K_Y) \to 0 
+\end{equation*}
+
+Hence 
+
+\begin{equation}\label{6}
+    h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) \leq h^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y)) + h^0(\mathcal{O}_Y(-H-K_Y))
+\end{equation}
+
+Tensoring equation \ref{3}, by $\mathcal{O}_Y(-H+K_Y)$ we have 
+
+\begin{equation*}
+    0 \to \mathcal{O}_Y(-H) \to N_{Y/\mathbb{P}^M}(-H+K_Y) \to \mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y) \to 0
+\end{equation*}
+
+Since $H^1(-H) = 0$, by Kodaira vanishing theorem, and $h^0(-H) = 0$, we have that 
+
+\begin{equation}\label{7}
+   h^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y)) = h^0(N_{Y/\mathbb{P}^M}(-H+K_Y))  
+\end{equation}
+
+We now compute $h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H))$. Tensoring equation \ref{2} by $\mathcal{O}_Y(-H)$ we have 
+
+\begin{equation*}
+    0 \to \mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H) \to N_{\widetilde{Y}/\mathbb{P}^M}(-H) \to \mathcal{O}_Y(-H-2K_Y) \to 0 
+\end{equation*}
+
+Hence 
+
+\begin{equation}\label{7}
+    h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H)) \leq h^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) + h^0(\mathcal{O}_Y(-H-2K_Y))
+\end{equation}
+
+Tensoring equation \ref{3}, by $\mathcal{O}_Y(-H)$ we have 
+
+\begin{equation*}
+    0 \to \mathcal{O}_Y(-H-K_Y) \to N_{Y/\mathbb{P}^M}(-H) \to \mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H) \to 0
+\end{equation*}
+Now we claim that 
+
+\begin{claim}\label{splits}
+    For a general ribbon $\widetilde{Y}$, the induced map $H^0(N_{Y/\mathbb{P}^M}(-H)) \to H^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H))$ is surjective.
+\end{claim}
+
+Granting the claim for now, we have that
+
+\begin{equation}\label{7}
+   h^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) = h^0(N_{Y/\mathbb{P}^M}(-H)) - h^0(-H-K_Y) 
+\end{equation}
+
+
+
+Hence we have that 
+
+\begin{equation*}
+ h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) \leq h^0(-H-K_Y) + h^0(N_{Y/\mathbb{P}^M}(-H+K_Y)) + h^0(N_{Y/\mathbb{P}^M}(-H)) - h^0(-H-K_Y) + h^0(-H-2K_Y)
+\end{equation*}
+
+\begin{equation}\label{8}
+h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) \leq  h^0(N_{Y/\mathbb{P}^M}(-H+K_Y)) + h^0(N_{Y/\mathbb{P}^M}(-H)) + h^0(-H-2K_Y)
+\end{equation}
+
+We now compute $h^0(N_{Y/\mathbb{P}^M}(-H+K_Y))$. 
+We have
+
+\begin{equation}\label{9}
+   0 \to T_Y \to T_{\mathbb{P}^M}|_Y \to N_{Y/\mathbb{P}^M} \to 0 
+\end{equation}
+
+
+
+
+and the Euler exact sequence restricted to $Y$
+
+\begin{equation}\label{11}
+   0 \to \mathcal{O}_Y \to \mathcal{O}_Y(H)^{M+1} \to T_{\mathbb{P}^M}|_Y \to 0 
+\end{equation}
+
+
+
+
+
+Tensoring equation \ref{11} by $\mathcal{O}_Y(-H+K_Y)$, we have 
+
+\begin{equation*}
+     H^0(\mathcal{O}_Y(K_Y))^{M+1} \to H^0(T_{\mathbb{P}^M}|_Y(-H+K_Y)) \to H^1(\mathcal{O}_Y(-H+K_Y)) 
+\end{equation*}
+
+We have that $H^0(\mathcal{O}_Y(K_Y)) = 0$ and by assumption $H^1(\mathcal{O}_Y(-H+K_Y)) = 0$ and hence $H^0(T_{\mathbb{P}^M}|_Y(-H+K_Y)) = 0$. 
+
+%Similarly we have from the same exact sequence
+
+%\begin{equation*}
+ %   H^1(\mathcal{O}_Y(K_Y))^{N+1} \to H^1(T_{\mathbb{P}^M}|_Y(-H+K_Y)) \to H^2(\mathcal{O}_Y(-H+K_Y))
+%\end{equation*}
+
+
+Tensoring equation \ref{9} by $\mathcal{O}_Y(-H+K_Y)$, we have 
+
+\begin{equation*}
+    H^0(T_{\mathbb{P}^M}|_Y(-H+K_Y)) \to H^0(N_{Y/\mathbb{P}^M}(-H+K_Y)) \to H^1(T_Y(-H+K_Y))
+\end{equation*}
+
+Since $H^0(T_{\mathbb{P}^M}|_Y(-H+K_Y)) = 0$, 
+
+\begin{equation}\label{14}
+    h^0(N_{Y/\mathbb{P}^M}(-H+K_Y)) \leq h^1(T_Y(-H+K_Y))
+\end{equation}
+
+Plugging everything back into equation \ref{8}, we have
+
+\begin{equation}\label{15}
+h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) \leq  M+1 + h^1(T_Y(-H+K_Y)) + h^0(N_{Y/\mathbb{P}^M}(-H)) + h^0(-H-2K_Y)
+\end{equation}
+
+
+
+\end{proof}
+
+
+We now prove the claim.
+
+\smallskip
+
+\textit{Proof of Claim \ref{splits}.} Consider the exact sequence given by twisting equation \ref{3} by $-H$. 
+\begin{equation}\label{16}
+0 \to -K_Y-H \to N_{Y/\mathbb{P}^M}(-H) \to \mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H) \to 0
+\end{equation}
+
+Let $p: Y \to \mathbb{P}^1$ denote the smooth fibration. Now note that $-K_Y-H = -(b-e-2)f$ and hence $R^1p_*(-H-K_Y) = 0$. Hence we have the following exact sequence by pushing forward the exact sequence \ref{16}
+
+\begin{equation}\label{17}
+    0 \to p_*(-H-K_Y) \to p_*(N_{Y/\mathbb{P}^M}(-H)) \to p_*(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) \to 0
+\end{equation}
+    
+It is enough to show that the exact sequence \ref{17} is split for a general ribbon $\widetilde{Y}$. To see this we first show that there is a surjection from $p_*(N_{Y/\mathbb{P}^M}(-H))$ to $p_*(-H-K_Y)$. To see this consider the exact sequence \ref{9} twisted by $-H$ to get 
+
+\begin{equation}\label{18}
+   0 \to T_Y(-H) \to T_{\mathbb{P}^M}|_Y(-H) \to N_{Y/\mathbb{P}^M}(-H) \to 0 
+\end{equation}
+
+We show that
+
+\begin{equation*}
+   R^1p_*(T_{\mathbb{P}^M}|_Y(-H)) = 0, p_*(T_Y(-H)) = \mathcal{O}_{\mathbb{P}^1}(-(b-e)) \operatorname{and} R^1p_*(T_Y(-H)) =  \mathcal{O}_{\mathbb{P}^1}(-(b-e-2))  
+\end{equation*}
+
+To see the first vanishing once again note that from the Euler exact sequence pulled back to $Y$ and twisted by $-H$, we have 
+
+\begin{equation}\label{24}
+    0 \to \mathcal{O}_Y(-H) \to \mathcal{O}_Y^{\otimes M+1} \to T_{\mathbb{P}^M}|_Y(-H) \to 0
+\end{equation}
+
+Since $R^1p_*(\mathcal{O}_Y) = R^2(p_*\mathcal{O}_Y(-H)) = 0$, we have that $R^1p_*(T_{\mathbb{P}^M}|_Y(-H)) = 0$. Now we turn to $R^ip_*(T_Y(-H))$. Consider the exact sequence of horizontal and vertical tangent bundles on $Y$ twisted by $-H$
+\begin{equation}\label{19}
+    0 \to T_{Y/\mathbb{P}^1}(-H) \to T_Y(-H) \to p^*T_{\mathbb{P}^1}(-H) \to 0
+\end{equation}
+
+Using the relative Euler exact sequence we have that 
+$T_{Y/\mathbb{P}^1} = 2C_0+ef$, so that $T_{Y/\mathbb{P}^1}(-H) = -(b-e)f$. Therefore $p_*(T_{Y/\mathbb{P}^1}(-H)) = \mathcal{O}_{\mathbb{P}^1}(-(b-e))$ and $R^ip_*(T_{Y/\mathbb{P}^1}(-H)) = R^ip_*(-(b-e)f) = 0$ for $i = 1,2$. Now $p^*T_{\mathbb{P}^1}(-H) = -2C_0-(b-2)f$. Therefore, $p_*p^*T_{\mathbb{P}^1}(-H) = p_*(-2C_0-(b-2)f) = \mathcal{O}_{\mathbb{P}^1}(-(b-2)) \otimes p_*(-2C_0) = 0$ and
+
+\begin{align*}\label{20}
+  R^1p_*(p^*T_{\mathbb{P}^1}(-H)) & = R^1p_*(-2C_0-(b-2)f) \\
+  & = \mathcal{O}_{\mathbb{P}^1}(-(b-2)) \otimes R^1p_*(-2C_0) \\
+  & = \mathcal{O}_{\mathbb{P}^1}(-(b-2)) \otimes (p_*(\mathcal{O}_Y))^* \otimes (\bigwedge^2(\mathcal{O}_{\mathbb{P}^1} \oplus \mathcal{O}_{\mathbb{P}^1}(-e)))^* \\ 
+  & = \mathcal{O}_{\mathbb{P}^1}(-(b-e-2))
+\end{align*}
+
+Pushing forward the sequence \ref{19}, we have that 
+
+\begin{equation}\label{21}
+0 \to p_*(T_{Y/\mathbb{P}^1}(-H)) = \mathcal{O}_{\mathbb{P}^1}(-(b-e)) \to p_*T_Y(-H) \to 0    
+\end{equation}
+
+and 
+
+\begin{equation}\label{22}
+   0 \to R^1p_*T_Y(-H) \to \mathcal{O}_{\mathbb{P}^1}(-(b-e-2)) \to 0 
+\end{equation}
+
+%Now pushing forward the sequence \ref{19}, we have that $R^1p_*(T_Y(-H)) = \mathcal{O}_{\mathbb{P}^1}(-(b-e-2)) $ and we have an isomorphism $p_*(T_Y(-H)) = \mathcal{O}_{\mathbb{P}^1}(-(b-e))$. 
+Now pushing forward the exact sequence \ref{18}, we have that 
+
+\begin{multline}\label{23}
+0 \to \mathcal{O}_{\mathbb{P}^1}(-(b-e)) = p_*T_Y(-H) = p_*(T_{Y/\mathbb{P}^1}(-H)) \to p_*(T_{\mathbb{P}^M}|_Y(-H)) \to p_*(N_{Y/\mathbb{P}^M}(-H)) \\ \xrightarrow[]{\lambda} \mathcal{O}_{\mathbb{P}^1}(-(b-e-2)) = p_*(-H-K_Y) \to 0
+\end{multline}
+
+We now end the proof of the claim by showing that for a general ribbon $\widetilde{Y}$, which is defined by an injection $0 \to -K_Y \to N_{Y/\mathbb{P}^M}$, the map $\lambda$ is a section to the injective map induced by the pushforward after twisting by $-H$. 
+
+$$p_*(-H-K_Y) \to p_*(N_{Y/\mathbb{P}^M}(-H))$$
+
+So the question is can we choose a ribbon or equivalently, an injection $0 \to -K_Y \to N_{Y/\mathbb{P}^M}$, such that the induced map $\beta$,  $$0 \to p_*(-H-K_Y) = \mathcal{O}_{\mathbb{P}^1}(-(b-e-2)) \xrightarrow[]{\beta} p_*(N_{Y/\mathbb{P}^M}(-H))$$
+
+which sits in the following diagram 
+
+
+\begin{tikzcd}\label{section}
+  &&& 0 \arrow[d] && \\
+  &&& p_*(-H-K_Y) \arrow[d, "\beta"] && \\
+  0 \arrow[r] & \mathcal{O}_{\mathbb{P}^1}(-(b-e)) \arrow[r] &  p_*(T_{\mathbb{P}^M}|_Y(-H)) \arrow[r, "\delta"] & p_*(N_{Y/\mathbb{P}^M}(-H)) \arrow[r, "\lambda"] & p_*(-H-K_Y) \arrow[r] & 0  
+\end{tikzcd}
+
+\smallskip 
+
+satisfies $\lambda \circ \beta = \operatorname{id}$. It is enough to choose $\beta$ such that $\lambda \circ \beta$  is an isomorphism and since $p_*(-H-K_Y) = \mathcal{O}_{\mathbb{P}^1}(-(b-e-2))$ is a line bundle, it is enough to choose $\beta$ such that $\lambda \circ \beta$ is non-zero. This happens in particular if $\operatorname{Im}(\beta)$ is not contained in $\operatorname{Ker}(\lambda)$. So we need to show that $\beta$ does not factor as 
+
+\[
+\begin{tikzcd}
+   & & p_*(-H-K_Y) \arrow[d, "\beta"] \arrow[dl] \\
+   0 \arrow[r] & \operatorname{Ker}(\lambda) \arrow[r] & p_*(N_{Y/\mathbb{P}^M}(-H))
+\end{tikzcd}
+\]
+
+It is enough to show that 
+
+\begin{equation}\label{32}
+    \operatorname{Hom}(p_*(-H-K_Y), \operatorname{Ker}(\lambda)) \to \operatorname{Hom}(p_*(-H-K_Y), p_*(N_{Y/\mathbb{P}^M}(-H)) 
+\end{equation}
+
+
+does not surject. To see this note that (by sequence \ref{23} and diagram \ref{section}),  we have an exact sequence
+
+$$0 \to \mathcal{O}_{\mathbb{P}^1}(-(b-e)) = p_*T_{Y/\mathbb{P}^1}(-H) \to p_*(T_{\mathbb{P}^M}|_Y(-H)) \to \operatorname{Ker}(\lambda) \to 0$$
+
+Applying the functor $\operatorname{Hom}(p_*(-H-K_Y),-)$ we get 
+
+\begin{multline}\label{30}
+0 \to \operatorname{Hom}(p_*(-H-K_Y), 
+ p_*T_{Y/\mathbb{P}^1}(-H))  \to \operatorname{Hom}(p_*(-H-K_Y), p_*(T_{\mathbb{P}^M}|_Y(-H))) \\ \to \operatorname{Hom}(p_*(-H-K_Y),\operatorname{Ker}(\lambda)) \to \operatorname{Ext^1}(p_*(-H-K_Y), 
+ p_*T_{Y/\mathbb{P}^1}(-H)) \\ \xrightarrow[]{\eta} \operatorname{Ext^1}(p_*(-H-K_Y), 
+ p_*(T_{\mathbb{P}^M}|_Y(-H))
+\end{multline}
+
+%Since $p_*(-H-K_Y) = \mathcal{O}_{\mathbb{P}^1}(-(b-e-2))$, we have that $\operatorname{Hom}(\mathcal{O}_{\mathbb{P}^1}(-(b-e-2)), 
+ %\mathcal{O}_{\mathbb{P}^1}(-(b-e))) = 0$ and $\operatorname{Ext^1}(\mathcal{O}_{\mathbb{P}^1}(-(b-e-2)), 
+% \mathcal{O}_{\mathbb{P}^1}(-(b-e))) = $
+
+We show that the map $\operatorname{Ext^1}(p_*(-H-K_Y), 
+ p_*T_{Y/\mathbb{P}^1}(-H))  \xrightarrow[]{\eta} \operatorname{Ext^1}(p_*(-H-K_Y), 
+ p_*(T_{\mathbb{P}^M}|_Y(-H))$ is an injective map and is in fact an isomorphism. To see this, push forward sequence \ref{24}, to get 
+
+ \begin{equation}\label{25}
+     0 \to \mathcal{O}_{\mathbb{P}^1}^{M+1} \to p_*(T_{\mathbb{P}^M}|_Y(-H)) \to R^1p_*(-H) \to 0
+ \end{equation}
+
+Note that $\operatorname{Ext^i}(p_*(-H-K_Y), \mathcal{O}_{\mathbb{P}^1}^{M+1}) = H^i(\mathcal{O}_{\mathbb{P}^1}(b-e-2))^{\oplus M+1} = 0$ for $i = 1,2$ if $b \geq e+1$. Hence applying the functor $\operatorname{Hom}(p_*(-H-K_Y), -)$ we get 
+
+\begin{equation}\label{26}
+     0 \to \operatorname{Ext^1}(p_*(-H-K_Y), 
+ p_*(T_{\mathbb{P}^M}|_Y(-H))) \to \operatorname{Ext^1}(p_*(-H-K_Y), 
+ R^1p_*(-H)) \to 0
+ \end{equation}
+
+Composing the map $\eta$ with the isomorphism in sequence \ref{25}, we see that it is enough to show that the following map $\theta$ 
+
+\begin{equation}\label{27}
+   \operatorname{Ext^1}(p_*(-H-K_Y), 
+ p_*T_{Y/\mathbb{P}^1}(-H))  \xrightarrow[]{\theta} \operatorname{Ext^1}(p_*(-H-K_Y), 
+ R^1p_*(-H)) 
+\end{equation}
+
+is an isomorphism. To see this consider the relative Euler sequence corresponding to the projective bundle $Y \to \mathbb{P}^1$, twisted by $-H$ 
+
+\begin{equation}\label{28}
+0 \to \mathcal{O}_Y(-H) \to p^*(\mathcal{O}_{\mathbb{P}^1} \oplus \mathcal{O}_{\mathbb{P}^1}(-e))^* \otimes (C_0-H) \to T_{Y/\mathbb{P}^1}(-H) \to 0
+\end{equation}
+
+Pushing forward the above exact sequence, we have that 
+
+\begin{equation}\label{29}
+ 0 \to p_*T_{Y/\mathbb{P}^1}(-H) \to R^1p_*(-H) \to 0 
+\end{equation}
+
+Now the map in sequence \ref{27} is induced by the isomorphism from sequence \ref{29} is hence an isomorphism. Going back to sequence \ref{30}, we have 
+
+\begin{multline}\label{31}
+0 \to \operatorname{Hom}(p_*(-H-K_Y), 
+ p_*T_{Y/\mathbb{P}^1}(-H))  \to \operatorname{Hom}(p_*(-H-K_Y), p_*(T_{\mathbb{P}^M}|_Y(-H))) \\ \to \operatorname{Hom}(p_*(-H-K_Y),\operatorname{Ker}(\lambda)) \to 0
+\end{multline}
+
+Therefore, to show that the map in \ref{32} does not surject, it is enough to show that
+
+\begin{equation}\label{33}
+  \operatorname{Hom}(p_*(-H-K_Y), p_*(T_{\mathbb{P}^M}|_Y(-H)) \to \operatorname{Hom}(p_*(-H-K_Y), p_*(N_{Y/\mathbb{P}^M}(-H))  
+\end{equation}
+
+is not surjective. Since $p^*p_*(-H-K_Y) = -H-K_Y$, by the projection formula, this is the same as showing 
+
+\begin{equation}\label{34}
+   H^0(T_{\mathbb{P}^M}|_Y(K_Y)) \to H^0(N_{Y/\mathbb{P}^M}(K_Y)) 
+\end{equation}
+does not surject
+
+Now by taking the cohomology of the exact sequence 
+
+$$0 \to T_Y \otimes K_Y \to T_{\mathbb{P}^M|_Y} \otimes K_Y \to N_{Y/\mathbb{P}^M}(K_Y) \to 0$$
+
+
+we have 
+
+$$0 \to H^0(T_Y \otimes K_Y) \to H^0(T_{\mathbb{P}^M|_Y} \otimes K_Y) \to H^0(N_{Y/\mathbb{P}^M}(K_Y)) \to H^1(T_Y \otimes K_Y) \to H^1(T_{\mathbb{P}^M|_Y} \otimes K_Y)$$
+
+Now the required non-surjection of sequence \ref{34} follows from the fact that $H^1(T_Y \otimes K_Y) = \mathbb{C}^2$ and $H^1(T_{\mathbb{P}^M|_Y} \otimes K_Y) = \mathbb{C}$. \QEDB
+
+In the following lemmas we find out for what values of $a, b, e$, the estimates $\beta$ and $\alpha$ in \Cref{ZL for K3 carpets} are zero. The cohomology of the line bundles in Lemmas \ref{2C_0+ef-H}, \ref{2f-H}, \ref{-H-K_Y}, \ref{-H-2K_Y} follow by pushing forward onto $\mathbb{P}^1$ after possibly using Serre duality on $Y$ (see \cite[III, Ex $8.4$]{Hartshorne}).
+
+
+\begin{lemma}\label{2C_0+ef-H}
+Let $H = aC_0+bf$ be a line bundle on $\mathbb{F}_e$ with $a \geq 1$. Then 
+\begin{enumerate}
+    \item[(1)] $H^1(2C_0+ef-H) = 0$ if 
+\[
+\begin{cases}
+   a = 1, & b \leq 1  \\
+   a = 2, & b \leq e+1 \\
+   a = 3 & \\
+   a \geq 4, & b \geq ae-2e+1 \\
+\end{cases}
+\]
+
+\item[(2)] $H^0(2C_0+ef-H) = 0$ if 
+\[
+\begin{cases}
+   a = 1, & b \geq e+1  \\
+   a = 2, & b \geq e+1 \\
+   a \geq 4 & \\
+\end{cases}
+\] 
+
+\end{enumerate}
+
+    
+\end{lemma}
+
+\begin{lemma}\label{2f-H}
+Let $H = aC_0+bf$ be a line bundle on $\mathbb{F}_e$ with $a \geq 1$. Then 
+\begin{enumerate}
+    \item[(1)] $H^1(2f-H) = 0$ if 
+\[
+\begin{cases}
+   a = 1 &   \\
+   a \geq 2, & b \geq ae-e+3 \\
+   
+\end{cases}
+\]
+
+\item[(2)] $H^0(2f-H) = 0$ 
+
+
+
+\end{enumerate}  
+
+\end{lemma}
+
+
+\begin{lemma}\label{-H-K_Y}
+Let $H = aC_0+bf$ be a line bundle on $\mathbb{F}_e$ with $a \geq 1$ and $b \geq ae+1$. Then $H^1(-H+K_{F_e}) = 0$. Further, $H^1(-H-K_{F_e}) = 0$ if 
+ \[
+\begin{cases}
+   a = 1, & b \leq 3  \\
+   a = 2, & b \leq 3+e \\
+   a = 3 & \\
+   a \geq 4, & b \geq ae-2e+3 \\
+\end{cases}
+ \]
+
+\end{lemma}
+
+
+
+\begin{lemma}\label{-H-2K_Y}
+Let $H = aC_0+bf$ be a line bundle on $\mathbb{F}_e$ with $a \geq 1$ and $b \geq ae+1$. Then $H^0(-H-2K_{\mathbb{F}_e}) = 0$ if 
+\[
+\begin{cases}
+   a \leq 4 & b \geq 2e+5  \\
+   a \geq 5 &   \\
+   
+\end{cases}
+\]
+    
+\end{lemma}
+
+\begin{lemma}\label{T_Y(-H)}
+Let $H = aC_0+bf$ be a line bundle on $\mathbb{F}_e$ with $a \geq 1$ and $b \geq ae+1$. Then 
+\begin{enumerate}
+    \item[(1)] $H^1(T_{\mathbb{F}_e}(-H)) = 0$ if 
+\[
+\begin{cases}
+   a = 1, & b \leq 1  \\
+   a = 2, & ae-e+3 \leq b \leq e+1  \\
+   a = 3, & b \geq ae-e+3 \\
+   a \geq 4, & b \geq \operatorname{max}\{ae-2e+3, ae-e+3\}
+   
+\end{cases}
+\]
+
+  \item[(2)] $H^1(T_{\mathbb{F}_e}(-H+K_{\mathbb{F}_e})) = 0$ if 
+\[
+\begin{cases}
+   a = 1, & b \geq e+1  \\
+   a \geq 2, & b \geq ae+1 \\
+\end{cases}
+\] 
+
+\item[(3)] $H^0(T_{\mathbb{F}_e}(-H)) = 0$ if 
+\[
+\begin{cases}
+   a = 1, & b \geq e+1  \\
+   a = 2, & b \geq e+1 \\
+   a \geq 3 & \\
+\end{cases}
+\] 
+
+\end{enumerate}
+
+\end{lemma}
+
+\noindent\textit{Proof.} Let $Y = \mathbb{F}_e$ and let $p: Y \to \mathbb{P}^1$ denote the projection to $\mathbb{P}^1$. Note that we have an exact sequence 
+$$0 \to T_{Y/\mathbb{P}^1} \to T_Y \to p^*T_{\mathbb{P}^1} \to 0$$
+and that $T_{Y/\mathbb{P}^1} = 2C_0+ef$ and $p^*T_{\mathbb{P}^1} = 2f$. So it is enough to show $H^1(2C_0+ef-H) = H^1(2f-H) = 0$. Now the claim follows by combining Lemmas \ref{2C_0+ef-H} and \ref{2f-H}. \QEDA
+
+
+
+\begin{proposition}\label{calculating beta}
+%Let $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^M$ be a simple normal crossing variety of dimension $d > 1$, embedded by the complete linear series of a very ample line bundle $\widetilde{H}$, where $Y_1 = \mathbb{F}_e \hookrightarrow \mathbb{P}^N$, $e \leq 2$ is embedded by the complete linear series of a very ample line bundle $|aC_0+bf|$, $E \in |-K_{Y_1}|$, $Y_2$ is a general element of $\mathcal{F}_{E,Y}$ and $M = N + h^0((a-2)C_0+(b-e-2)f)$ (i.e, we are in the situation of Theorem \ref{Hirzebruch main}, $(1)$ (b). Then $\alpha(V) = \beta = 0$ if 
+Let $\widetilde{Y} \hookrightarrow \mathbb{P}^M$ be a $K3$ carpet embedded by the complete linear series of a very ample line bundle $\widetilde{H}$ such that the possibly degenerate embedding $Y = \mathbb{F}_e \hookrightarrow \mathbb{P}^M$ induced on the reduced part is given by the complete linear series of a very ample line bundle $H = aC_0+bf$ followed by a linear embedding of projective spaces.   
+Then 
+
+\begin{enumerate}
+    \item $\beta = 0$ if
+    \[
+\begin{cases}
+    a = 3, b \geq 5 & e = 0  \\
+    a = 3, b \geq 7 & e = 1  \\
+    a = 3, b \geq 9 & e = 2  \\
+\color{black}
+    a = 3, b \geq 11 & e \geq 3 \\
+    a = 3, b \geq 3e+1 & e \geq 4 \\
+\color{black}
+    a = 4, b \geq 5 & e = 0 \\
+    a \geq 5, b \geq 3 & e = 0 \\
+    a \geq 4, b \geq a+2 & e = 1 \\
+    a \geq 4, b \geq ae+1 & e \geq 2 \\
+    
+\end{cases}
+  \]
+
+  \item If $a = 2$, then $\gamma = 0$ if $b \geq 2e+5$
+
+ % \item If $a = 1$, then $\alpha(\widetilde{Y}) = 0$ if $b \geq 2e+5$
+
+
+\end{enumerate}
+  
+
+ 
+
+
+\end{proposition}
+ 
+\noindent\textit{Proof $(1)$.} This follows by combining Lemma \ref{-H-K_Y}, \ref{-H-2K_Y}, \ref{T_Y(-H)} and applying Theorem \ref{ZL for K3 carpets}. \\
+
+\noindent\textit{Proof $(2)$.} Note that by Lemma \ref{T_Y(-H)}, $(2)$, $h^1(T_Y(-H+K_Y)) = 0$ if $a = 2$ and $b \geq 2e+1$. Similarly by Lemma \ref{-H-2K_Y}, $h^0(-H-2K_Y) = 0$ if $a = 2$ and $b \geq 2e+5$. Now we show that $h^0(N_{Y/\mathbb{P}^M}(-H)) = M+1$. Twisting the sequence $$0 \to T_Y \to T_{\mathbb{P}^M}|_Y \to N_{Y/\mathbb{P}^M} \to 0$$ by $-H$ and taking cohomology, we have 
+
+\begin{equation}\label{35}
+0 \to H^0(T_Y(-H)) \to H^0(T_{\mathbb{P}^M}|_Y(-H)) \to H^0(N_{Y/\mathbb{P}^M}(-H)) \to H^1(T_Y(-H)) \to H^1(T_{\mathbb{P}^M}|_Y(-H))
+\end{equation}
+
+Now by Lemma \ref{T_Y(-H)}, part $(3)$, we have that $H^0(T_Y(-H)) = 0$ if $a = 2$ and $b \geq e+1$. Turning to the Euler sequence on $\mathbb{P}^M$, restricting to $Y$ twisting by $-H$ and taking cohomology, we get
+
+\begin{equation}\label{36}
+    0 \to H^0(\mathcal{O}_Y^{\oplus M+1}) \to H^0(T_{\mathbb{P}^M}|_Y(-H)) \to 0
+\end{equation}
+
+Hence $h^0(T_{\mathbb{P}^M}|_Y(-H)) = M+1$. So it is enough to show that the map $H^1(T_Y(-H)) \to H^1(T_{\mathbb{P}^M}|_Y(-H))$ is injective. Continuing with the long exact sequence of cohomology in \ref{36}, we have that 
+
+\begin{equation}\label{36}
+    0 \to H^1(T_{\mathbb{P}^M}|_Y(-H)) \to H^2(-H) \to 0
+\end{equation}
+
+Similary tensoring the exact sequence of horizontal and vertical tangent bundles by $-H$, we have
+
+\begin{equation}\label{37}
+    0 \to T_{Y/\mathbb{P}^1}(-H) \to T_Y(-H) \to p^*(T_{\mathbb{P}^1})(-H) \to 0
+\end{equation}
+
+and taking the cohomology, we have that 
+
+\begin{equation}\label{38}
+    H^0(p^*(T_{\mathbb{P}^1})(-H)) \to H^1(T_{Y/\mathbb{P}^1}(-H)) \to H^1(T_Y(-H)) \to H^1(p^*(T_{\mathbb{P}^1})(-H)) \to 0
+\end{equation}
+
+Now note that $p^*(T_{\mathbb{P}^1})(-H) = -2C_0-(b-2)f$. We have that $H^0(-2C_0-(b-2)f) = 0$ and $H^1(-2C_0-(b-2)f) = H^1((b-e-4)f)^* = 0$ if $b \geq e+3$. hence we have 
+
+\begin{equation}\label{39}
+    0 \to H^1(T_{Y/\mathbb{P}^1}(-H)) \to H^1(T_Y(-H)) \to  0
+\end{equation}
+
+Composing the map $H^1(T_Y(-H)) \to H^1(T_{\mathbb{P}^M}|_Y(-H))$ in sequence \ref{35} with the isomorphisms given by the sequences \ref{36} and \ref{39}, we see that it is enough to show that the map 
+
+\begin{equation}\label{40}
+     H^1(T_{Y/\mathbb{P}^1}(-H)) \to H^2(-H)
+\end{equation}
+
+is injective. But the above map comes as follows: Take the relative Euler sequence of the map $Y \to \mathbb{P}^1$, given in sequence \ref{28} twist by $-H$ and take the cohomology to get
+
+\begin{equation}\label{41}
+    0 \to H^1(T_{Y/\mathbb{P}^1}(-H)) \to H^2(-H)
+\end{equation}
+
+Hence we have that $\gamma = 0$ if $a = 2$ and $b \geq 2e+5$. \\
+
+
+\begin{comment}
+    
+\noindent\textit{Proof $(3)$.} We finally settle the case $a = 1$.Tensoring sequence \ref{1} by $-\widetilde{H}$ and taking the cohomology, we have 
+
+\begin{multline}\label{42}
+0 \to H^0(N_{\widetilde{Y}/\mathbb{P}^M} (-H+K_Y)) \to H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) \to H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H))  \to H^1(N_{\widetilde{Y}/\mathbb{P}^M} (-H+K_Y)) \to H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) \\ \to H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-H)) \to H^2(N_{\widetilde{Y}/\mathbb{P}^M} (-H+K_Y)) \to H^2(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) \to H^2(N_{\widetilde{Y}/\mathbb{P}^M}(-H)) \to 0  
+\end{multline}
+
+We compute $H^i(N_{\widetilde{Y}/\mathbb{P}^M} (-H+K_Y)) = 0$ for $i = 0,1,2$. Tensoring sequence \ref{2} by $-H+K_Y$ and taking the cohomology, we have that 
+
+\begin{multline}\label{43}
+   0 \to H^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y)) \to H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y))  \to H^0(\mathcal{O}_Y(-H-K_Y)) \to H^1(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y)) \\ \to H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y))  \to H^1(\mathcal{O}_Y(-H-K_Y)) \to H^2(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y)) \to H^2(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) \\  \to H^2(\mathcal{O}_Y(-H-K_Y)) \to 0
+\end{multline}
+
+Note that since $H = C_0+bf$, we have that $H^0(-H-K_Y) = 0$ if $b \geq e+3$. Further, $h^2(-H-K_Y) = h^0(H+2K_Y) = h^0(-3C_0+(b-2e-4)f) = 0$.
+
+Tensoring sequence \ref{3} by $-H+K_Y$ and taking the cohomology, we have that 
+
+\begin{multline}\label{44}
+ 0 \to H^0(-H) = (0) \to H^0(N_{Y/\mathbb{P}^M}(-H+K_Y)) \to H^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y)) \to H^1(-H) = (0) \\ \to H^1(N_{Y/\mathbb{P}^M}(-H+K_Y)) \to H^1(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y)) \to H^2(-H) = (0) \\ \to
+ H^2(N_{Y/\mathbb{P}^M}(-H+K_Y)) \to H^2(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y)) \to 0
+\end{multline}
+
+Now using the Euler exact sequence pulled back to $Y$  and tensored with $-H+K_Y$, we have that 
+
+\begin{multline}\label{45}
+ 0 \to H^0(-H+K_Y) \to H^0(K_Y)^{\oplus M+1} = (0) \to H^0(T_{\mathbb{P}^M}|_Y (-H+K_Y)) \to H^1(-H+K_Y) \to H^1(K_Y)^{\oplus M+1} \\ \to H^1(T_{\mathbb{P}^M}|_Y (-H+K_Y)) \to H^2(-H+K_Y) \to H^2(K_Y)^{\oplus M+1} \to H^2(T_{\mathbb{P}^M}|_Y (-H+K_Y)) \to 0   
+\end{multline}
+
+We have $H^1(-H+K_Y) = 0$ for $b \geq e+1$ by Lemma \ref{-H-K_Y} and $H^1(K_Y) = 0$. Further the map $H^2(-H+K_Y) \to H^2(K_Y)^{\oplus M+1} = H^2(K_Y) \otimes H^0(H)$ is an isomorphism since it is the dual of the isomorphism $H^0(\mathcal{O}_Y) \otimes H^0(H) \to H^0(H)$. Putting all this together in sequence \ref{45}, we have
+
+\begin{equation}\label{46}
+  H^i(T_{\mathbb{P}^M}|_Y (-H+K_Y)) = 0, i = 0,1,2, b \geq e+1
+\end{equation}
+
+On the other hand, from the sequence 
+
+\begin{equation}
+    0 \to T_{Y/\mathbb{P}^1}(-H+K) = -C_0-(b+2)f \to T_Y(-H+K) \to p^*T_{\mathbb{P}^1}(-H+K) = -3C_0-(b+e)f \to 0
+\end{equation}
+
+we have that if $b \geq e+1$
+
+\begin{equation}\label{47}
+    H^{i}(T_Y(-H+K_Y)), i = 0,1, H^2(T_Y(-H+K_Y)) = H^0(C_0+(b-2))^*
+\end{equation}
+
+Hence from the sequence 
+
+\begin{equation*}
+    0 \to T_Y(-H+K_Y) \to T_{\mathbb{P}^M}|_Y(-H+K_Y)) \to N_{Y/\mathbb{P}^M}(-H+K_Y) \to 0
+\end{equation*}
+
+we conclude that for $b \geq e+1$, 
+
+\begin{equation}\label{48}
+    H^0(N_{Y/\mathbb{P}^M}(-H+K_Y)) = 0, H^1(N_{Y/\mathbb{P}^M}(-H+K_Y)) =  H^{2}(T_Y(-H+K_Y)) = H^0(C_0+(b-2)f)^*,  H^2(N_{Y/\mathbb{P}^M}(-H+K_Y)) = 0
+\end{equation}
+
+Plugging everything back into sequence \ref{44}, we have that 
+
+\begin{multline}\label{49}
+ H^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y)) = 0, H^1(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y)) = H^{2}(T_Y(-H)) = H^0(C_0+(b-2))^*, \\  H^2(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H+K_Y)) = 0 
+\end{multline}
+
+Going back to sequence \ref{43}, and noting that $H^0(-H-K_Y) = 0$ for $b \geq e+3$, we have that for $b \geq e+3$, 
+%for $b \geq 2e+5$
+
+\begin{equation}\label{50}
+   H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) = 0, H^2(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) = 0
+\end{equation}
+
+and an exact sequence 
+
+\begin{equation}\label{51}
+0 \to H^2(T_Y(-H+K_Y)) \to  H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) \to H^1(-H-K_Y) \to 0   
+\end{equation}
+
+yielding $h^1(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) = h^2(T_Y(-H+K_Y) + h^1(-H-K_Y)$
+
+Now we compute $H^i(N_{\widetilde{Y}/\mathbb{P}^M} (-H)) = 0$ for $i = 0,1,2$. Tensoring sequence \ref{2} by $-H$ and taking the cohomology, we have that 
+
+\begin{multline}\label{52}
+   0 \to H^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) \to H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H))  \to H^0(\mathcal{O}_Y(-H-2K_Y)) \to H^1(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) \\ \to H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-H))  \to H^1(\mathcal{O}_Y(-H-2K_Y)) \to H^2(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) \to H^2(N_{\widetilde{Y}/\mathbb{P}^M}(-H)) \\  \to H^2(\mathcal{O}_Y(-H-2K_Y)) \to 0
+\end{multline}
+
+Note that since $H = C_0+bf$, we have that $H^0(-H-2K_Y) = 0$ if $b \geq 2e+5$.
+
+Tensoring sequence \ref{3} by $-H$ and taking the cohomology, we have that 
+
+\begin{multline}\label{53}
+ 0 \to H^0(-H-K_Y) = (0) \to H^0(N_{Y/\mathbb{P}^M}(-H)) \to H^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) \to H^1(-H-K_Y)  \\ \to H^1(N_{Y/\mathbb{P}^M}(-H)) \to H^1(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) \to H^2(-H-K_Y) = (0) \\ \to
+ H^2(N_{Y/\mathbb{P}^M}(-H)) \to H^2(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) \to 0
+\end{multline}
+
+Now using the Euler exact sequence pulled back to $Y$  and tensored with $-H$, we have that 
+
+\begin{multline}\label{54}
+ 0 \to H^0(-H) \to H^0(\mathcal{O}_Y)^{\oplus M+1} \to H^0(T_{\mathbb{P}^M}|_Y (-H)) \to H^1(-H) = (0) \to H^1(\mathcal{O}_Y)^{\oplus M+1} = (0) \\ \to H^1(T_{\mathbb{P}^M}|_Y (-H)) \to H^2(-H) \to H^2(\mathcal{O}_Y)^{\oplus M+1} \to H^2(T_{\mathbb{P}^M}|_Y (-H)) \to 0   
+\end{multline}
+
+We have $H^0(-H) = 0$, $H^1(-H) = 0$ by Kodaira vanishing theorem, $H^2(-H) = 0$ by pushing forward to $\mathbb{P}^1$  since $a = 1$  Putting all this together in sequence \ref{54}, we have
+
+\begin{equation}\label{55}
+  h^0(T_{\mathbb{P}^M}|_Y (-H)) = N+1, h^1(T_{\mathbb{P}^M}|_Y (-H)) = h^2(T_{\mathbb{P}^M}|_Y (-H)) = 0 
+\end{equation}
+
+On the other hand, from the sequence 
+
+\begin{equation}
+    0 \to T_{Y/\mathbb{P}^1}(-H) = C_0-(b-e)f \to T_Y(-H) \to p^*T_{\mathbb{P}^1}(-H) = -C_0-(b-2)f \to 0
+\end{equation}
+
+we have that if $b \geq e-1$
+
+\begin{equation}\label{56}
+    H^{i}(T_Y(-H)), i = 0,2, H^1(T_Y(-H)) = H^1(C_0-(b-e)f)
+\end{equation}
+
+Hence from the sequence 
+
+\begin{equation*}
+    0 \to T_Y(-H) \to T_{\mathbb{P}^M}|_Y(-H)) \to N_{Y/\mathbb{P}^M}(-H) \to 0
+\end{equation*}
+
+we conclude that for $b \geq e-1$, 
+
+\begin{equation}\label{57}
+    H^1(N_{Y/\mathbb{P}^M}(-H)) = H^2(N_{Y/\mathbb{P}^M}(-H)) = 0
+\end{equation}
+
+and we have an exact sequence
+
+\begin{equation}\label{58}
+    0 \to H^0(T_{\mathbb{P}^M}|_Y (-H)) = \mathbb{C}^{N+1} \to H^0(N_{Y/\mathbb{P}^M}(-H)) \to H^1(T_Y(-H)) \to 0
+\end{equation}
+
+Plugging everything back into sequence \ref{53}, we have that 
+
+\begin{equation}\label{59}
+  H^1(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) =H^2(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) = 0 
+\end{equation}
+
+and an exact sequence
+
+\begin{equation}\label{60}
+    0 \to H^0(N_{Y/\mathbb{P}^M}(-H)) \to H^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) \to H^1(-H-K_Y) \to 0
+\end{equation}
+
+Going back to sequence \ref{52}, and noting that $H^0(-H-2K_Y) = 0$ for $b \geq 2e+5$, we have that for $b \geq 2e+5$
+
+\begin{equation}\label{61}
+   H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H)) = H^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)), H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-H)) = H^1(-H-2K_Y), H^2(N_{\widetilde{Y}/\mathbb{P}^M}(-H)) = 0
+\end{equation}
+
+Plugging \ref{50}, \ref{51}, \ref{61} into the exact sequence \ref{42}, we have 
+
+\begin{align}\label{62}
+   h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))  & = h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H)) - h^1(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) + h^1(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))-h^1(N_{\widetilde{Y}/\mathbb{P}^M}(-H)) \\
+    & = N+1 + h^1(T_Y(-H)) - h^2(T_Y(-H+K_Y)) + h^1(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))-h^1(-H-2K_Y) 
+\end{align}
+
+Now note that by \ref{56}, $h^1(T_Y(-H)) = h^1(C_0-(b-e)f) = 2b-e-2$ and $h^2(T_Y(-H+K_Y)) = h^0(C_0+(b-2)f) = 2b-e-2$. Hence 
+
+\begin{equation}\label{63}
+   h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) = N+1 + h^1(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))-h^1(-H-2K_Y) 
+\end{equation}
+
+We end the proof by showing $h^1(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))=h^1(-H-2K_Y)$ if $b \geq e+3$ (\textcolor{blue}{The fact that we never use $b \geq 2e+5$ is not used from now is used crucially to get the correct lower genus bounds in the next section !}). Note that from sequence \ref{42} and equations \ref{50} and \ref{61}, we already have
+
+\begin{multline}\label{64}
+0 \to H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) \to H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H))  \xrightarrow[]{} H^1(N_{\widetilde{Y}/\mathbb{P}^M} (-H+K_Y)) \to H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) 
+ \\ \to H^1(-H-2K_Y) \to 0  
+\end{multline}
+
+We show that the map $H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H))  \xrightarrow[]{} H^1(N_{\widetilde{Y}/\mathbb{P}^M} (-H+K_Y))$ is surjective. First note that we have the sequence 
+$$0 \to H^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) \to H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H)) \to H^0(-H-2K_Y) \to 0$$
+
+It is enough to show that the composed map $H^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H))  \xrightarrow[]{f} H^1(N_{\widetilde{Y}/\mathbb{P}^M} (-H+K_Y))$ is surjective
+Note that from 
+\ref{60}, we have 
+
+$$0 \to H^0(N_{Y/\mathbb{P}^M}(-H)) \to  H^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-H)) \xrightarrow[]{g} H^1(-H-K_Y) \to 0$$
+
+while from \ref{48} and \ref{51}, we have the exact sequence 
+
+$$ 0 \to H^1(N_{Y/\mathbb{P}^M}(-H+K_Y)) = H^2(T_Y(-H+K_Y)) \to  H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) \xrightarrow[]{h} H^1(-H-K_Y) \to 0  $$
+
+It is easy to see that $h \circ f = g$. 
+%Since both maps $h \circ f$ and $g$ naturally arise out the data of the ribbon $\widetilde{Y} \subset \mathbb{P}^M$, or in other words chasing through the sequences \ref{1}, \ref{2} and \ref{3}, we have that $h \circ f = g$.
+Therefore we have a commutative diagram of exact sequences
+
+\[
+\begin{tikzcd}\label{65}
+ 0 \arrow[r] & H^0(N_{Y/\mathbb{P}^M}(-H)) \arrow[r] \arrow[d, "a"] & H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H)) \arrow[r, "g"] \arrow[d, "f"] & H^1(-H-K_Y) \arrow[r] \arrow[d, "\operatorname{id}"] & 0  \\
+ 0 \arrow[r] & H^1(N_{Y/\mathbb{P}^M}(-H+K_Y))  \arrow[r] & H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) \arrow[r] & H^1(-H-K_Y) \arrow[r] & 0
+\end{tikzcd}
+\]
+
+where $a$ is the map induced by $f$ on the kernel.
+Therefore to show that $f$ is surjective, it is enough to show that $a$ is surjective. Now from \ref{58}, we have an exact sequence
+\begin{equation}\label{66}
+0 \to H^0(T_{\mathbb{P}^M}|_Y (-H)) = \mathbb{C}^{M+1} \to H^0(N_{Y/\mathbb{P}^M}(-H)) \to H^1(T_Y(-H)) \to 0
+\end{equation}
+while from \ref{48}, we have
+
+\begin{equation}\label{67}
+0 \to H^1(T_{\mathbb{P}^M}|_Y (-H+K_Y)) = (0) \to H^1(N_{Y/\mathbb{P}^M}(-H+K_Y)) \to H^2(T_Y(-H+K_Y) \to 0
+\end{equation}
+
+\color{black}
+
+The map $a$ induces a map $b: H^1(T_Y(-H)) \to H^2(T_Y(-H+K_Y)) $ which we now show is the zero map. The map is induced as follows: The ribbon denotes a class $\zeta \in H^1(T_Y \otimes K_Y)$ which induces by cup product a map between 
+$$H^1(T_Y(-H)) \to H^2(T_Y^{\otimes 2}(-H+K_Y)) = \operatorname{Ext}^2(\Omega_Y, T_Y(-H+K_Y))$$
+Now, the universal derivation map $d: \mathcal{O}_Y \to \Omega_Y$ then induces a pullback to $\operatorname{Ext}^2(\mathcal{O}_Y, T_Y(-H+K_Y)) = H^2(T_Y(-H+K_Y))$. The composition of the maps
+
+$$H^1(T_Y(-H)) \to  H^2(T_Y^{\otimes 2}(-H+K_Y)) \to H^2(T_Y(-H+K_Y))$$
+
+is the map $b$. We show that the map 
+$$H^1(T_Y(-H)) \to  H^2(T_Y^{\otimes 2}(-H+K_Y))$$ obtained by pairing with the class $\zeta$ of the ribbon is already the zero map.
+\color{black}
+Now we claim that $$H^1(T_Y(-H)) = H^2(T_Y(-H+K_Y) = H^1(\mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e)))$$
+
+First note the exact sequence 
+
+$$0 \to T_{Y/\mathbb{P}^1}(-H) = C_0-(b-e)f \to T_Y(-H) \to p^*T_{\mathbb{P}^1}(-H) = -C_0-(b-2)f \to 0 $$
+
+when pushed forward along the map $Y \to \mathbb{P}^1$ and noting that $p_*(C_0-(b-e)f) = \mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e))$, $R^1p_*(C_0-(b-e)f) = 0$, $p_*(-C_0-(b-2)f) = R^1p_*(-C_0-(b-2)f) = 0$ we have 
+
+\begin{equation}\label{68}
+ p_*T_Y(-H) = \mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e)), R^1p_*T_Y(-H) = 0 
+\end{equation}
+
+Hence $H^1(T_Y(-H)) = H^1(p_*T_Y(-H)) = H^1(\mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e)))$
+
+Next note the exact sequence 
+
+$$0 \to T_{Y/\mathbb{P}^1}(-H+K_Y) = -C_0-(b+2)f \to T_Y(-H) \to p^*T_{\mathbb{P}^1}(-H) = -3C_0-(b+e)f \to 0 $$
+
+when pushed forward along the map $Y \to \mathbb{P}^1$ and noting that $p_*(-C_0-(b+2)f) = R^1p_*(-C_0-(b+2)f) = 0$, $p_*(-3C_0-(b+e)f) = 0$ and $R^1p_*(-3C_0-(b+e)f) = \mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e))$ we have 
+
+\begin{equation}\label{69}
+ p_*T_Y(-H+K_Y) = 0, R^1p_*T_Y(-H+K_Y) =  \mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e))
+\end{equation}
+
+Hence $H^2(T_Y(-H+K_Y)) = H^1(R^1p_*T_Y(-H+K_Y)) = H^1(\mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e)))$
+
+Using \ref{66}, \ref{67}, \ref{68}, \ref{69} we have a diagram of exact sequences
+
+\[
+\begin{tikzcd}
+  0 \arrow[r] & H^0(T_{\mathbb{P}^M}|_Y (-H)) = \mathbb{C}^{N+1} \arrow[r] \arrow[d, "d"] & H^0(N_{Y/\mathbb{P}^M}(-H)) \arrow[r, "c"] \arrow[d, "a"] & H^1(\mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e))) \arrow[r] & 0 \\
+  0 \arrow[r] & H^1(T_{\mathbb{P}^M}|_Y (-H+K_Y)) = (0) \arrow[r]  & H^1(N_{Y/\mathbb{P}^M}(-H+K_Y)) \arrow[r, "b"]  & H^1(\mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e))) \arrow[r] & 0
+\end{tikzcd}
+\]
+
+The map $d$ is obtained as follows:
+Tensor the exact sequence 
+$$0 \to K_Y \to \mathcal{O}_{\widetilde{Y}} \to \mathcal{O}_Y \to 0$$ with $T_{\mathbb{P}^M}|_{\widetilde{Y}}(-\widetilde{H})$ and taking cohomology to get 
+
+$$0 \to H^0(T_{\mathbb{P}^M}|_Y (-H+K_Y)) \to H^0(T_{\mathbb{P}^M}|_{\widetilde{Y}}(-\widetilde{H})) \to H^0(T_{\mathbb{P}^M}|_Y (-H)) \xrightarrow[]{d} H^1(T_{\mathbb{P}^M}|_Y (-H+K_Y))  $$
+
+This in turn induces the map $e$ in the diagram 
+
+\[
+\begin{tikzcd}\label{70}
+  0 \arrow[r] & H^0(T_{\mathbb{P}^M}|_Y (-H)) = \mathbb{C}^{N+1} \arrow[r] \arrow[d, "d"]  & H^0(N_{Y/\mathbb{P}^M}(-H)) \arrow[r, "c"] \arrow[d, "a"] & H^1(\mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e))) \arrow[r] \arrow[d, "e"] & 0 \\
+  0 \arrow[r] & H^1(T_{\mathbb{P}^M}|_Y (-H+K_Y)) = (0) \arrow[r]  & H^1(N_{Y/\mathbb{P}^M}(-H+K_Y)) \arrow[r, "b"]  & H^1(\mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e))) \arrow[r] & 0
+\end{tikzcd}
+\]
+
+\color{blue}
+We describe the map $e$ and show that it is an isomorphism. By the projection formula of Ext groups (see \cite[\href{https://stacks.math.columbia.edu/tag/08JM}{Tag 08JM}]{stacks-project}), we have 
+$$H^1(T_Y(-H)) = \operatorname{Ext}^1(\Omega_Y(H),\mathcal{O}_Y) = \operatorname{Ext}^1((Rp_*T_Y(-H))^*,\mathcal{O}_{\mathbb{P}^1})$$
+
+By the spectral sequence and by \Cref{68}, the term $\operatorname{Ext}^1((Rp_*T_Y(-H))^*,\mathcal{O}_{\mathbb{P}^1})$ has contributions from 
+$$\operatorname{Ext}^1((p_*T_Y(-H))^*,\mathcal{O}_{\mathbb{P}^1}) =  \operatorname{Ext}^1(\mathcal{O}_{\mathbb{P}^1}(b) \oplus \mathcal{O}_{\mathbb{P}^1}(b-e) ,\mathcal{O}_{\mathbb{P}^1}) \operatorname{and} \operatorname{Hom}((R^1p_*T_Y(-H))^*,\mathcal{O}_{\mathbb{P}^1}) = 0$$
+
+Similarly, 
+
+$$H^2(T_Y(-H+K_Y)) = \operatorname{Ext}^2(\Omega_Y(H-K_Y),\mathcal{O}_Y) = \operatorname{Ext}^2((Rp_*T_Y(-H+K))^*,\mathcal{O}_{\mathbb{P}^1})$$
+
+and by the spectral sequence and by \Cref{69} the term $\operatorname{Ext}^2((Rp_*T_Y(-H+K_Y))^*,\mathcal{O}_{\mathbb{P}^1})$ has contributions from 
+$$\operatorname{Ext}^2((p_*T_Y(-H+K_Y))^*,\mathcal{O}_{\mathbb{P}^1}) = 0, \operatorname{and} \operatorname{Ext}^1((R^1p_*T_Y(-H))^*, \mathcal{O}_{\mathbb{P}^1}) = \operatorname{Ext}^1(\mathcal{O}_{\mathbb{P}^1}(b) \oplus \mathcal{O}_{\mathbb{P}^1}(b-e) ,\mathcal{O}_{\mathbb{P}^1})$$
+
+
+On the other hand the space of ribbons is given by
+
+$$H^1(T_Y(K_Y)) = \operatorname{Ext}^1(\Omega_Y(-K_Y),\mathcal{O}_Y) = \operatorname{Ext}^1((Rp_*T_Y(K))^*,\mathcal{O}_{\mathbb{P}^1})$$
+which once again by the spectral sequence is 
+$$\operatorname{Ext}^1((p_*T_Y(K))^*,\mathcal{O}_{\mathbb{P}^1}) \oplus \operatorname{Hom}((R^1p_*T_Y(K))^*,\mathcal{O}_{\mathbb{P}^1})$$
+By \cite[Proposition $1.7$, page $2481$]{GP97}, the above is 
+$$\operatorname{Ext}^1(\mathcal{O}_{\mathbb{P}^1}(2),\mathcal{O}_{\mathbb{P}^1}) \oplus \operatorname{Hom}(\mathcal{O}_{\mathbb{P}^1},\mathcal{O}_{\mathbb{P}^1})$$
+Now we have a Yoneda pairing of Ext groups
+
+\begin{equation}\label{yoneda}
+(\operatorname{Ext}^1(\mathcal{O}_{\mathbb{P}^1}(2), \mathcal{O}_{\mathbb{P}^1}) \oplus  \operatorname{Hom}(\mathcal{O}_{\mathbb{P}^1},\mathcal{O}_{\mathbb{P}^1})) \times \operatorname{Ext}^1(\mathcal{O}_{\mathbb{P}^1}(b) \oplus \mathcal{O}_{\mathbb{P}^1}(b-e),\mathcal{O}_{\mathbb{P}^1}) \to \operatorname{Ext}^1(\mathcal{O}_{\mathbb{P}^1}(b) \oplus \mathcal{O}_{\mathbb{P}^1}(b-e),\mathcal{O}_{\mathbb{P}^1}) 
+\end{equation}
+
+For a non-split ribbon $\widetilde{Y} \in \operatorname{Ext}^1((Rp_*T_Y(K))^*,\mathcal{O}_{\mathbb{P}^1})$, the image if its class in $\operatorname{Hom}(\mathcal{O}_{\mathbb{P}^1},\mathcal{O}_{\mathbb{P}^1})$ is non-zero and the map $e$ is given by the map induced by \Cref{yoneda} when we fix the image of the class of the ribbon in $\operatorname{Hom}(\mathcal{O}_{\mathbb{P}^1},\mathcal{O}_{\mathbb{P}^1})$
+$$\operatorname{Ext}^1(\mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e)),\mathcal{O}_{\mathbb{P}^1}) \to \operatorname{Ext}^1(\mathcal{O}_{\mathbb{P}^1}(-b) \oplus \mathcal{O}_{\mathbb{P}^1}(-(b-e)),\mathcal{O}_{\mathbb{P}^1})$$ 
+
+Hence $e$ is an isomorphism.
+
+\color{red}
+COMMENT: The following is just for our clarity:
+We \textbf{probably} have a more general pairing,
+
+$$\operatorname{Hom}((Rp_*T_Y(K))^*,\mathcal{O}_{\mathbb{P}^1}) \times \operatorname{Ext}^1((Rp_*T_Y(-H))^*,\mathcal{O}_{\mathbb{P}^1}) \to \operatorname{Ext}^2((Rp_*T_Y(-H+K))^*,\mathcal{O}_{\mathbb{P}^1}) $$
+
+The above boils down to four pairings
+
+$$\operatorname{Hom}((R^1p_*T_Y(K))^*,\mathcal{O}_{\mathbb{P}^1}) \times \operatorname{Ext}^1((p_*T_Y(-H))^*,\mathcal{O}_{\mathbb{P}^1}) \to \operatorname{Ext}^1((R^1p_*T_Y(-H+K))^*,\mathcal{O}_{\mathbb{P}^1}) $$
+
+ which is the only non zero pairing. The second third and fourth pairings are between
+
+
+$$\operatorname{Ext}^1((p_*T_Y(K))^*,\mathcal{O}_{\mathbb{P}^1}) \times \operatorname{Hom}((R^1p_*T_Y(-H))^*,\mathcal{O}_{\mathbb{P}^1}) \to \operatorname{Ext}^1((R^1p_*T_Y(-H+K))^*,\mathcal{O}_{\mathbb{P}^1}) $$
+
+$$\operatorname{Hom}((R^1p_*T_Y(K))^*,\mathcal{O}_{\mathbb{P}^1}) \times \operatorname{Hom}((R^1p_*T_Y(-H))^*,\mathcal{O}_{\mathbb{P}^1}) \to \operatorname{Hom}((R^2p_*T_Y(-H+K))^*,\mathcal{O}_{\mathbb{P}^1}) $$
+
+$$\operatorname{Ext}^1((p_*T_Y(K))^*,\mathcal{O}_{\mathbb{P}^1}) \times \operatorname{Ext}^1((p_*T_Y(-H))^*,\mathcal{O}_{\mathbb{P}^1}) \to \operatorname{Ext}^2((p_*T_Y(-H+K))^*,\mathcal{O}_{\mathbb{P}^1}) $$
+
+and are all zero either because $R^1p_*T_Y(-H) = p_*T_Y(-H+K) = 0$ and there is no $R^2p_*$.
+
+
+
+
+%Using the fact that both maps $b \circ a$ and $c$ naturally arise out the data of the ribbon $\widetilde{Y} \subset \mathbb{P}^M$, or in other words chasing through the sequences \ref{1}, \ref{2} and \ref{3}, it can be shown that $e = \operatorname{id}$.
+
+
+\color{black}
+
+Hence $a$ is surjective. This ends our proof.
+
+\end{comment}
+
+\QEDB
+
+\subsection{Extendability of general $K3$ surfaces of higher genus}
+
+The following theorem is the first of our main results in the article. We give upper bounds $\alpha(X)$ for a general $K3$ surface $X \subset \mathbb{P}^M$ of index $r$ and large genus $g$. Using Theorem \ref{ZL for K3 carpets}, we compute $\alpha(\widetilde{Y})$ for a suitably chosen $K3$ carpet $\widetilde{Y}$, which by semicontinuity gives us an upper bound. 
+
+
+\begin{theorem}\label{non-extendability of K3 surfaces}
+    Let \textcolor{black}{$X \subset \mathbb{P}^{M}$ be a general $K3$ surface in $\mathcal{H}_{r,g}$ embedded by the complete linear series of $rB$, where $B$ is a primitive very ample line bundle, with $B^2 = 2g-2$ and $M = 1+r^2(g-1)$.} Assume either of the following conditions hold:
+    \begin{enumerate}
+        \item[(1)] $r \geq 5, g \geq 3$
+        \item[(2)] $r = 4, g \geq 4$
+        \item[(3)] $r = 3, g \geq 5$ 
+        \item[(4)] $r = 2$, $g \geq 7$ 
+        \item[(5)] $r = 1$ and $g$ is either $g = 4k+1, k \geq 5$ or $g = 18k+4, k \geq 1$, or $g = 18k+7, k \geq 2$ or $g = 18k+13, k \geq 1$ or $g = 18k+16, k \geq 1$
+        %and 
+                  % \begin{enumerate}
+                   %    \item[(a)]  $g = 2pq+1, p \geq 2, q \geq 2$, $p$, $q$ coprime or
+                    %   \item[(b)] $g = 2pq-p^2+1, p \geq 2, q \geq p+1$, $p$, $q$ coprime 
+                   %\end{enumerate}
+        
+        
+        
+       % \item[(5)] $r = 1$, $g = 11$ or $g \geq 13$  
+                   %\begin{enumerate}
+                     %  \item[(a)] $g = 6q+1$, $3 \nmid q$, $q \geq 4$
+                     %  \item[(b)] $g = 6q+1$, $3 \nmid q+1$, $q \geq 5$
+                      % \item[(c)] $g = 8q+1$, $2 \nmid q$, $q \geq 4$
+                      % \item[(d)] $g = 2pq+1$, $p, q$ coprime, $p \geq 5, q \geq 5$
+                       %\item[(e)] $g = 2pq-p^2+1$, $p, q$ coprime, $p \geq 4, q \geq p+2$ 
+                   %\end{enumerate}
+        
+    \end{enumerate}
+\end{theorem}
+
+Then $\alpha(X) = 0$ and consequently $X \subset \mathbb{P}^M$ is not extendable.
+
+\begin{proof}
+    %We first show that a general $K3$ surface of index $r$ and genus $g$ as mentioned in Theorem \ref{non-extendability of K3 surfaces} is not extendable. For this, 
+    We use Proposition \ref{calculating beta}, to show that $\beta = 0$ for $a \geq 3$ and suitable values of $b$ and $\gamma = 0$ for $a = 2$ and suitable values of $b$ and hence $\alpha(\widetilde{Y}) = 0$ for a suitably chosen $K3$ carpet $\widetilde{Y}$. 
+    %type II (\textcolor{black}{you are referring to Kondoa's paper. Should we indicate what Type II mean...makes it less irrritating for the reader}) normal crossing $Y_1 \bigcup Y_2$. 
+    \begin{enumerate}
+        \item[(1)] For $r \geq 5$, we can choose $a = r, e = 0, b = rm, m \geq 1$ to get non-extendability of general $K3$ surfaces of index $r$ and genus $2m+1$, $m \geq 1$ and $a = r, e = 1, b = rm, m \geq 2$ to get non-extendability of general $K3$ surfaces of index $r$ and genus $2m$ with $m \geq 2$. 
+
+        \smallskip
+        
+        \item[(2)] For $r = 4$, we can choose $a = 4, e = 0, b = 4m, m \geq 2$ to get non-extendability of general $K3$ surfaces of index $r$ and genus $2m+1$, $m \geq 2$ and $a = 4, e = 1, b = 4m, m \geq 2$ to get non-extendability of general $K3$ surfaces of index $4$ and genus $2m$ with $m \geq 2$. 
+
+       \smallskip
+        
+        \item[(3)] For $r = 3$, we can choose $a = 3, e = 0, b = 3m, m \geq 2$ to get non-extendability of general $K3$ surfaces of index $3$ and genus $2m+1$, $m \geq 1$ and $a = 3, e = 1, b = 3m, m \geq 3$ to get non-extendability of general $K3$ surfaces of index $3$ and genus $2m$ with $m \geq 2$. 
+        
+        \smallskip
+
+        \item[(4)] For $r = 2$, we use part $(2)$. One can choose $a = 2, e = 0, b = 2m, m \geq 3$ to get non-extendability of general $K3$ surfaces of index $2$ and genus $2m+1$, $m \geq 3$ and $a = 2, e = 1, b = 2m, m \geq 4$ to get non-extendability of general $K3$ surfaces of index $2$ and genus $2m$ with $m \geq 4$.
+       
+        \item[(5)] For $r = 1$, we first use part $(2)$. We can choose $a = 2, e = 0$  and $b = k$ odd, $k \geq 5$ to get non-extendability of general prime $K3$ surfaces of genus $4k+1$ and $a = 1, e = 1$  and $b = k+1$, $k \geq 7$, $k$ even to get non-extendability of general prime $K3$ surfaces of genus $4k+1$. Then we use part $(1)$. One can choose $a = 3, e = 0, b = 3k+1, k \geq 2$ to get non-extendability of general prime $K3$ surfaces of genus $18k+7$. Similarly the rest follows by choosing $a = 3, e = 0, b = 3k+2, k \geq 1$, $a = 3, e = 1, b = 3k+i, k \geq 2$ and $i = 1,2$.
+       
+       
+       
+       % \item[(4)] For $r = 2$, we can choose $a = 2p, e = 0, b = 2q$ with $p, q$ coprime, $p \geq 2, q \geq 2$ to get non-extendability of general $K3$ surfaces of index $2$ and genus $2pq+1$ and $a = 2p, e = 1, b = 2q$ with $p, q$ coprime, $p \geq 2, q \geq p+1$ to get non-extendability of general $K3$ surfaces of index $2$ and genus $2pq-p^2+1$
+        
+      % \smallskip
+
+      % \item[(5)]  For $r = 1$, we use part $(3)$. One can choose $a = 1, e = 0, b = m, m \geq 5$ to get non-extendability of general $K3$ surfaces of index $1$ and genus $2m+1$, $m \geq 5$ and $a = 1, e = 1, b = m, m \geq 7$ to get non-extendability of general $K3$ surfaces of index $1$ and genus $2m$ with $m \geq 7$.
+        
+      %  \item[(5)] For $r = 1$, we can choose $a = 3, e = 0, b = q$ with $3 \nmid q$ with $q \geq 4$ to get non-extendability of general $K3$ surfaces of index $1$ and genus $6q+1$ or $a = 3, e = 0, b = q$ with $3 \nmid q$ with $q \geq 6$ to get non-extendability of general $K3$ surfaces of index $1$ and genus $6q-7$ or $a = 4, e = 0, b = q$ with $2 \nmid q$ with $q \geq 4$ to get non-extendability of general $K3$ surfaces of index $1$ and genus $8q+1$ or $a = p, e = 0, b = q$ with $p, q$  with $p \geq 5, q \geq 3$, $p, q$ coprime to get non-extendability of general $K3$ surfaces of index $1$ and genus $2pq+1$ or $a = p, e = 1, b = q$ with $p, q$ coprime, $p \geq 4, q \geq p+2$ to get non-extendability of general $K3$ surfaces of index $1$ and genus $2pq-p^2+1$. 
+     
+    \end{enumerate}
+\end{proof}
+
+
+\begin{corollary}\label{corank one}
+\textcolor{black}{Let $X \subset \mathbb{P}^{M}$ be a general $K3$ surface in $\mathcal{H}_{r,g}$ embedded by the complete linear series of $rB$, where $B$ is a primitive very ample line bundle, with $B^2 = 2g-2$ and $M = 1+r^2(g-1)$.} Let $C \in |rB|$ be any smooth curve section of $X$. Assume either $r \geq 5, g \geq 3$ or $r = 4, g \geq 4$ or $r = 3, g \geq 5$ or $r = 2$, $g \geq 7$ or $r = 1$ and $g$ is either $g = 4k+1, k \geq 5$ or $g = 18k+4, k \geq 1$, or $g = 18k+7, k \geq 2$ or $g = 18k+13, k \geq 1$ or $g = 18k+16, k \geq 1$ Then $\alpha(C) = \operatorname{cork}(\Phi_{\omega_C}) = 1$.
+\end{corollary}
+
+\begin{proof}
+First note that $2g(C)-2 = r^2B^2 = r^2(2g-2)$ and hence $g(C) = r^2(g-1)+1 \geq 11$. Now let $\operatorname{cork}(\Phi_{\omega_C}) = r$. Then by \cite[$2.2$, $2.2.2$]{CDS20} (see also \cite{ABS17}), we have the existence of an arithmetically Gorenstein normal variety $W$, such that every ribbon $[v] \in \mathbb{P}(\operatorname{ker}(^T\Phi_{\omega_C}))$ (these are ribbons on $C$ with conormal bundle $\omega_C^{-1}$) is contained in a unique section of $W$ by a linear $g(C)$ space. In particular, $W$ contains all surface extensions of $C$. Therefore $\alpha(X) = 0$ forces $\alpha(C) = 1$. 
+\end{proof}
+
+\begin{remark}{\label{independent corank one}}
+The corank one theorem can also be derived from our methods independently by showing that the map $H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-2\widetilde{H})) \to H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))$ in the exact sequence
+$$0 \to H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-2\widetilde{H})) \to H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) \to H^0(N_{\widetilde{C}/\mathbb{P}^M}(-\widetilde{H})) \to H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-2\widetilde{H})) \to H^1(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))$$
+is injective. To show this, along with the cohomological computations and analysis of coboundary maps using Equations \ref{1}, \ref{2}, \ref{3}, as introduced in here, one needs to use results on Gaussian maps on Hirzebruch surfaces in \cite{DM92} and \cite{DP12}. Since showing injectivity of this map is essential to handle the case of extendability of prime $K3$ surfaces, we will come back to this in a forthcoming article (\cite{BM25}). 
+\end{remark}
+
+\Cref{calculating beta} has some consequences on extendability of $K3$ double covers $X$ of $\mathbb{F}_0$ or $\mathbb{F}_1$. First one notices by $T_0 = \pi^*C_0$ and $T_1 = \pi^*f$ generate the Picard group of $X$. 
+
+\begin{theorem}\label{rank two}
+
+Let $X$ be a $K3$ surface which is a double cover $\pi: X \to Y$ of $Y = \mathbb{F}_0$ or $Y = \mathbb{F}_1$. Let $T_0 = \pi^*C_0$ and $T_1 = \pi^*f$. Then for $X \subset \mathbb{P}^M$ where the embedding is induced by the complete linear series of a very ample line bundle $B = aT_0+bT_1$, we have $\alpha(X) = 0$ if $a = 3, b \geq 5, e = 0$ or a = $3, b \geq 7, e = 1$ respectively.
+
+\end{theorem}
+
+\begin{proof}
+    First note that by \cite[Proposition $2.1$]{DM24}, for the split $K3$ carpet $\widetilde{Y}$ on $Y = \mathbb{F}_0$ or $Y = \mathbb{F}_1$, the line bundle $\widetilde{H}$ such that $\widetilde{H}|_Y = H$ is very ample and in fact projectively normal if $a \geq 2$ and $b \geq (a-1)e+2$. Further, since any double cover $X$ isotrivially degenerates to the split ribbon $\widetilde{Y}$, $\alpha(X) = 0$ for $X$, if $\alpha(\widetilde{Y}) = 0$. Now the vanishing of the latter follows from part \Cref{calculating beta}, $(1)$.
+\end{proof}
+
+
+
+\subsection{Extendability of general non-prime $K3$ surfaces of lower genus}
+
+In the following theorem, we compute $\alpha(X)$ for a general $K3$ surface $X \subset \mathbb{P}^M$ of index $r \geq 2$ and low genus $g$. We will use the upper bounds to compute the dimension of the tangent space corresponding to the Hilbert point represented by the cone over a $K3$ surface. We show later in \Cref{equality of alpha(x)} that the upper bounds are actually equalities. 
+
+\begin{theorem}\label{ZL for lower genus $K3$ surfaces}
+\textcolor{black}{Let $X \subset \mathbb{P}^{M}$ be a general $K3$ surface in $\mathcal{H}_{r,g}$ embedded by the complete linear series of $rB$, where $B$ is a primitive very ample line bundle, with $B^2 = 2g-2$ and $M = 1+r^2(g-1)$.}
+ 
+    \begin{enumerate}
+       % \item If $r = 1$, $g = 12$, then $\alpha(X) \leq 1$
+       % \item If $r = 1$, $g = 10$, then $\alpha(X) \leq 3$  
+       % \item If $r = 1$, $g = 9$, then $\alpha(X) \leq 4$
+       % \item If $r = 1$, $g = 8$, then $\alpha(X) \leq 6$
+       % \item If $r = 1$, $g = 7$, then $\alpha(X) \leq 8$
+       % \item If $r = 1$, $g = 6$, then $\alpha(X) \leq 10$ (\textcolor{blue}{exceptional case})
+       % \item \label{2,2} If $r = 2$, $g = 2$, then $\alpha(X) \leq 14$ 
+        \item \label{2,3} If $r = 2$, $g = 3$, then $\alpha(X) \leq 10$ %(\textcolor{blue}{exceptional case})
+        %(\textcolor{blue}{Needs improvement by $1$.})
+        \item \label{2,4} If $r = 2$, $g = 4$, then $\alpha(X) \leq 6$ 
+        \item \label{2,5} If $r = 2$, $g = 5$, then $\alpha(X) \leq 3$ 
+        \item \label{2,6} If $r = 2$, $g = 6$, then $\alpha(X) \leq 1$ 
+      %  \item If $r = 3$, $g = 2$, then $\alpha(X) \leq 10$ %(\textcolor{blue}{exceptional case})
+        \item \label{3,3} If $r = 3$, $g = 3$, then $\alpha(X) \leq 4$
+        \item \label{3,4} If $r = 3$, $g = 4$, then $\alpha(X) \leq 1$ 
+        \item \label{4,3} If $r = 4$, $g = 3$, then $\alpha(X) \leq 1$
+        
+       
+        
+    \end{enumerate}
+    
+\end{theorem}
+
+\begin{proof}
+  %We first prove for the case $r = 1$, by showing that in this case $\alpha({\widetilde{Y}}) \leq h^0(-H-2K_Y)$. We have $6 \leq g \leq 10$ or $g = 12$. We can degenerate such a $K3$ surface to a $K3$ carpet $\widetilde{Y} \subset \mathbb{P}^M$, extending $Y \subset \mathbb{P}^M$, where $Y = \mathbb{F}_e$ embedded by the complete linear series of $C_0+bf$ where $e = 0$ or $e = 1$ depending on whether $g$ is odd or even respectively. Such a $\widetilde{Y}$ has a canonical ribbon section with arithmetic genus $p_a = g = 2b-e+1$. So it is enough to find an upper bound for $\alpha(\widetilde{Y})$ for a $K3$ carpet $\widetilde{Y} \subset \mathbb{P}^M$, extending $Y \subset \mathbb{P}^M$, where $Y = \mathbb{F}_e$ embedded by the complete linear series of $C_0+bf$ where the pair $(e,b)$ is one of $(0,3), (0,4), (1,3), (1,4), (1,5), (1,6)$. To see this, note that if $b \geq e+3$ by equations \ref{42}-\ref{62}, we have (since the only vanishing, we do not have is that of $h^0(-H-2K_Y)$ for which we require $b \geq 2e+5$)  the following modified version of equation \ref{63}   
+  
+ % \ref{50}, we have $H^0(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) = 0, H^2(N_{\widetilde{Y}/\mathbb{P}^M}(-H+K_Y)) = 0$ for $b \geq e+3$. Hence for $b \geq e+3$, we have the following weaker version of equation \ref{63}
+%\begin{equation}\label{70}
+ %   h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})) = N+1 + h^1(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))-h^1(-H-2K_Y) + h^0(-H-2K_Y)
+%\end{equation}
+
+%And then we have shown in the proof of part $(3)$ of Theorem \ref{calculating beta} (right after equation \ref{63}) that for $b \geq e+3$, $h^1(N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H}))-h^1(-H-2K_Y)$. Hence by equation \ref{70}, we have that for $b \geq e+3$, $\alpha({\widetilde{Y}}) \leq h^0(-H-2K_Y)$. Now computing $h^0(-H-2K_Y)$ for the cases $(0,3), (0,4), (1,3), (1,4), (1,5), (1,6)$, give us the bounds as stated in the Theorem.  \par
+
+We first prove for $r = 2$. Since $3 \leq g \leq 6$. We can degenerate such a $K3$ surface to a $K3$ carpet $\widetilde{Y} \subset \mathbb{P}^M$, extending $Y \subset \mathbb{P}^M$, where $Y = \mathbb{F}_e$ embedded by the complete linear series of $2C_0+bf$, where $b = 2m$ and $e = 0$ or $e = 1$ depending on whether $g$ is odd or even respectively. In this case $g = 2m-e+1$. So it is enough to find an upper bound for $\alpha(\widetilde{Y})$ for a $K3$ carpet $\widetilde{Y} \subset \mathbb{P}^M$, extending $Y \subset \mathbb{P}^M$, where $Y = \mathbb{F}_e$ embedded by the complete linear series of $2C_0+2mf$ where the pair $(e,m)$ is one of $(0,1), (0,2), (1,2), (1,3)$. We have shown in Theorem \ref{ZL for K3 carpets}, part $(2)$, that $$\alpha(\widetilde{Y})  \leq  \gamma \leq h^1(T_Y(-H+K_Y))+h^0(N_{Y/\mathbb{P}^M}(-H)+h^0(-H-2K_Y)-M-1 $$
+So we calculate the right hand side of the above equation for the above mentioned values of $(e,m)$. By Lemma \ref{T_Y(-H)}, $(2)$, we have that for $m \geq e+1/2$, $h^1(T_Y(-H+K_Y)) = 0$. Now in the proof of part $(2)$ of Theorem \ref{calculating beta}, using equations \ref{35}-\ref{41}, we have shown that if $m \geq e/2+3/2$, $h^0(N_{Y/\mathbb{P}^M}(-H) = M+1$. Hence except for the case for the cases $(e,m) = (0,1)$, $\alpha(\widetilde{Y}) \leq h^0(-H-2K_Y)$. This gives us the upper bounds as stated in the statement for the cases $r = 2, 4 \leq g \leq 6$. On the other hand, in the case $(0,1)$, once again in the proof of part $(2)$ of Theorem \ref{calculating beta}, in equation \ref{38}, we have that $H^1(p^*(T_{\mathbb{P}^1})(-H)) = H^1(\mathcal{O}_{\mathbb{P}^1}(-2) = \mathbb{C}$ for $(0,1)$ 
+%and $H^1(p^*(T_{\mathbb{P}^1})(-H)) = H^1(\mathcal{O}_{\mathbb{P}^1}(-3) = \mathbb{C}^2$ for $(1,1)$ 
+which in turn gives us $h^0(N_{Y/\mathbb{P}^M}(-H)) \leq M+2$ 
+%and $h^0(N_{Y/\mathbb{P}^M}(-H) \leq M+3$ respectively 
+from the sequence in \ref{35}. Hence in this case $\alpha(\widetilde{Y}) \leq h^0(-H-2K_Y)+1$.
+%respectively $\alpha(\widetilde{Y}) \leq h^0(-H-2K_Y)+2$. 
+This gives us the remaining case $r = 2, g = 3$ 
+%and $r = 2, g = 2$. \par
+
+We now prove for $r = 3,4$. We can degenerate such a $K3$ surface to a $K3$ carpet $\widetilde{Y} \subset \mathbb{P}^M$, extending $Y \subset \mathbb{P}^M$, where $Y = \mathbb{F}_e$ embedded by the complete linear series of $rC_0+rmf$, where $e = 0$ or $e = 1$ depending on whether $g$ is odd or even respectively. Again we have $g = 2m-e+1$. So it is enough to find an upper bound for $\alpha(\widetilde{Y})$ for a $K3$ carpet $\widetilde{Y} \subset \mathbb{P}^M$, extending $Y \subset \mathbb{P}^M$, where $Y = \mathbb{F}_e$ embedded by the complete linear series of $rC_0+rmf$ where the tuple $(r,e,m)$ is one of $(3,0,1), (3,1,2), (4,0,1)$. In each case we calculate $\beta$ in Theorem \ref{ZL for K3 carpets} which gives an upper bound for $\alpha(\widetilde{Y})$. In each case 
+%other than $(3,1,1)$ 
+one can check that the only contribution to $\beta$ comes from $h^0(-H-2K_Y)$, which gives us the stated bounds. 
+%In the case $(3,1,1)$, the contribution comes from $h^0(-H-2K_Y)+h^1(T_Y(-H))$. 
+\end{proof}
+
+\section{Classification of non-prime Fano-threefolds and Mukai varieties of Picard rank one and their Hilbert schemes}
+
+Boundedness and classification of smooth Fano threefolds and more generally varieties with a canonical curve section (Mukai varieties) with Picard rank one was first obtained by Iskovskih-Mori-Mukai in \cite{I77}, \cite{I78}, \cite{M88} and \cite{MM82} (see also \cite{BKM25}). We give a new proof in the non-prime case using completely different methods and a general principle outlined in \cite{CLM98}. \par
+In the following theorem we compute $h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-2\widetilde{H}))$ which will be an upper bound for $h^0(N_{X/\mathbb{P}^M}(-2))$ for a general non-prime $K3$ surface. We will need this to compute the tangent space to the Hilbert scheme of non-prime Fano threefolds at the Hilbert point representing the cone over such a $K3$ surface. Further, the vanishing of this cohomology group allows us to recover Wahl's theorem on the non-surjectivity of the Gaussian-Wahl map $\Phi_{\omega_C}$ for a curve lying on a $K3$ surface in the non-prime case.
+
+
+
+\begin{proposition}\label{H^0(N(-2))}
+Let $\widetilde{Y} \hookrightarrow \mathbb{P}^M$ be a $K3$ carpet embedded by the complete linear series of a very ample line bundle $\widetilde{H}$ such that the possibly degenerate embedding $Y = \mathbb{F}_e \hookrightarrow \mathbb{P}^M$ induced on the reduced part is given by the complete linear series of a very ample line bundle $H = aC_0+bf$ followed by a linear embedding of projective spaces.   
+Assume $H^1(-H+K_Y) = 0$. Then $$h^0(N_{\widetilde{Y}/\mathbb{P}^N}(-2\widetilde{H})) \leq h^1(T_Y(-2H+K_Y)) + h^1(T_Y(-2H)) - h^0(T_Y(-2H)) +  h^1(-2H-K_Y) + h^0(-2H-2K_Y) $$
+Consequently, $h^0(N_{\widetilde{Y}/\mathbb{P}^N}(-2\widetilde{H})) = 0$ if either of the following conditions hold
+\begin{enumerate}
+    \item $a = 2, b \geq 3, e = 0$
+    \item $a \geq 3, b \geq 2, e = 0$
+    \item $a \geq 2, b \geq a/2+1, e = 1$
+    \item $a \geq 2, b \geq ae/2+1/2, e \geq 2$
+    
+\end{enumerate}
+Moreover, if $a = 2, b = 2, e = 0$, $h^0(N_{\widetilde{Y}/\mathbb{P}^N}(-2\widetilde{H})) \leq 1$. In this case, $h^0(N_{\widetilde{Y}/\mathbb{P}^N}(-3\widetilde{H})) = 0$. Hence if $(r = 2, g \geq 4), (r \geq 3, g \geq 3)$, $H^0(N_{X/\mathbb{P}^M}(-2)) = 0$. Further, if $(r = 2, g = 3)$, then $h^0(N_{X/\mathbb{P}^M}(-2)) \leq 1$.
+\end{proposition}
+
+\begin{proof}
+    %We follow the proof of \cite[Theorem $2.2$]{BM24}, and indicate the changes.  
+   Let $k \geq 2$. We tensor \Cref{1} by $-k\widetilde{H}$ to obtain
+    $$h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-k\widetilde{H})) \leq  h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-kH+K_Y)) + h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-k\widetilde{H}))$$
+    Now tensoring \Cref{2} by $(-kH+K_Y)$ and noting that $h^0(-kH-K_Y) = 0$ we have,
+    $$h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-kH+K_Y)) = h^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-kH+K_Y))$$
+    Once again, tensoring \Cref{3}, by $-kH+K_Y$ and noting that $h^0(-kH) = h^1(-kH) = 0$, we have 
+    $$h^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-kH+K_Y)) = h^0(N_{Y/\mathbb{P}^M}(-kH+K_Y))$$
+
+    
+    Now tensoring \Cref{2} by $(-kH)$ we have,
+    $$h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-kH)) \leq h^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-kH))+h^0(-kH-2K_Y)$$
+    Once again, tensoring \Cref{3}, by $-kH$ and noting that $h^0(-kH-K_Y)) = 0$, we have 
+    $$h^0(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)(-kH+K_Y)) = h^0(N_{Y/\mathbb{P}^M}(-kH))+h^1(-kH-K_Y)$$
+    
+    %instead of $-\widetilde{H}$ and follow the proof verbatim. Equations $2.1-2.9$ in \cite[Theorem $2.2$]{BM24}, yields 
+    Hence we have,
+    $$h^0(N_{\widetilde{Y}/\mathbb{P}^M}(-k\widetilde{H})) \leq  h^0(N_{Y/\mathbb{P}^M}(-kH+K_Y)) + h^0(N_{Y/\mathbb{P}^M}(-kH)) +  h^1(-kH-K_Y) + h^0(-kH-2K_Y)$$
+
+Now \Cref{9} and \Cref{11} yield %tensoring the exact sequence $2.10-2.11$ in \cite[Theorem $2.2$]{BM24} by $-kH$ now yields 
+$$h^0(N_{Y/\mathbb{P}^M}(-kH)) \leq h^1(T_Y(-kH)) - h^0(T_Y(-kH))$$
+%Similarly tensoring $2.10-2.11$ in \cite[Theorem $2.2$]{BM24} by $-kH+K_Y$ yields 
+and
+$$h^0(N_{Y/\mathbb{P}^M}(-kH+K_Y)) \leq h^1(T_Y(-kH+K_Y))$$
+Hence we have 
+$$h^0(N_{\widetilde{Y}/\mathbb{P}^N}(-k\widetilde{H})) \leq h^1(T_Y(-kH+K_Y)) + h^1(T_Y(-kH)) - h^0(T_Y(-kH)) +  h^1(-kH-K_Y) + h^0(-kH-2K_Y) $$
+Now the rest of the proof follows from \Cref{-H-K_Y}, \Cref{-H-2K_Y}, \Cref{T_Y(-H)}. For the ease of the reader we point out that in the case $a = 2, b = 2, e = 0$, the only term that contributes in the upper bound of $h^0(N_{\widetilde{Y}/\mathbb{P}^N}(-2\widetilde{H}))$ is $h^0(-2H-2K_Y) = 1$. 
+\end{proof}
+
+
+
+%\begin{proposition}\label{r = 1, H^0(N(-2))}
+%Let $\widetilde{Y} \hookrightarrow \mathbb{P}^M$ be a $K3$ carpet embedded by the complete linear series of a very ample line bundle $\widetilde{H}$ such that the embedding induced on the reduced part is $Y = \mathbb{F}_e \hookrightarrow \mathbb{P}^N$ embedded by the complete linear series of a very ample line bundle $H = aC_0+bf$. Assume $H^1(-H+K_Y) = 0$. Then $$h^0(N_{\widetilde{Y}/\mathbb{P}^N}(-2\widetilde{H})) \leq h^1(T_Y(-2H+K_Y)) + h^0(N_{Y/\mathbb{P}^M}(-2H))+ h^0(-2H-2K_Y) $$
+%Consequently, $h^0(N_{\widetilde{Y}/\mathbb{P}^N}(-2\widetilde{H})) = 0$ if $a = 1, b \geq e+5/2$.
+%Moreover, if $a = 1, b = 3, e = 1$, $h^0(N_{\widetilde{Y}/\mathbb{P}^N}(-2\widetilde{H})) \leq 1$
+%\end{proposition}
+
+
+\begin{definition}\label{Hilbert scheme of Fanos and K3}
+    Let \textcolor{black}{$\mathcal{V}_{r,g}$ denote the Hilbert scheme of smooth anticanonically embedded Fano threefolds of index $r$ and genus $g$, i.e, anticanonically embedded Fano threefolds $V \subset \mathbb{P}^{2+r^2(g-1)}$ such that $-K_V$ is $r-$ divisible in $\operatorname{Pic}(V)$. Let $\mathcal{V}_{r,g,1}$ denote the closure inside $\mathcal{V}_{r,g}$ of the locus of points representing the Fano threefolds with Picard rank one.} Recall that $\mathcal{H}_{r,g}$ denotes the Hilbert scheme of $K3$ surfaces of index $r$ and genus $g$, i.e, $K3$ surfaces $X \subset \mathbb{P}^{1+r^2(g-1)}$ embedded by the complete linear series of $rB$ where $B$ is a primitive very ample line bundle with $B^2 = 2g-2$. \textcolor{black}{Denote by $C(X) \subset \mathbb{P}^{2+r^2(g-1)}$ the cone over such a $K3$ surface.} Let $\mathcal{F}_{r,g}$ denote the flag Hilbert scheme consisting of pairs $(V,X)$ where $V \in \mathcal{V}_{r,g,1}$ and $X$ is a hyperplane section of $V$ and hence $X \in \mathcal{H}_{r,g}$. There is natural projection map from $p: \mathcal{F}_{r,g} \to \mathcal{H}_{r,g}$.
+\end{definition}
+
+\color{black}
+ We proved \Cref{corank one} by combining our results in \Cref{non-extendability of K3 surfaces} with \cite{CDS20} and \cite{ABS17}. However, using \Cref{H^0(N(-2))}, we independently recover Wahl's theorem on non surjectivity of the Gaussian-Wahl map (see \cite{W87},  \cite{BM87}, \cite{CM90}, \cite{V92}) in the non-prime case.
+
+\begin{corollary}\label{Wahl}
+ Let $X$ be a $K3$ surface and $C \subset X$ is a smooth curve with $C \in |rB|$ with $r \geq 2$. Then the Wahl map $\Phi_{\omega_C}$ is not surjective. 
+\end{corollary}
+
+\begin{proof}
+   Let $B^2 = 2g-2$. The case $g = 2$, can be worked out separately (for example, see \cite{CLM98}). For $r = 2, g = 3$, $g(C) = 9$ and $\Phi_{\omega_C}$ cannot be surjective since the domain is of dimension less than the target. For $r = 2, g \geq 4$ or $r \geq 3, g \geq 3$, consider the Hilbert scheme $\mathcal{H}_{r,g}$. It is enough to prove the statement for a general element of $\mathcal{H}_{r,g}$ since surjectivity of $\Phi_{\omega_C}$ is an open condition. Let $M = 1+r^2(g-1)$ Now we have an exact sequence
+   $$0 \to H^0(N_{X/\mathbb{P}^M}(-2)) \to H^0(N_{X/\mathbb{P}^M}(-1)) \to H^0(N_{C/\mathbb{P}^{M-1}}(-1))$$
+   By \Cref{H^0(N(-2))}, $H^0(N_{X/\mathbb{P}^M}(-2)) = 0$ and hence we have that $\operatorname{corank}(\Phi_{\omega_C}) = h^0(N_{C/\mathbb{P}^{M-1}}(-1))-M \geq h^0(N_{X/\mathbb{P}^M}(-1))-M \geq 1$.
+\end{proof}
+
+\color{black}
+
+\begin{corollary}\label{upper bound on cone over $K3$ surface}
+
+\textcolor{black}{Let $X \subset \mathbb{P}^{M}$ be a general $K3$ surface in $\mathcal{H}_{r,g}$ embedded by the complete linear series of $rB$, where $B$ is a primitive very ample line bundle, with $B^2 = 2g-2$ and $M = 1+r^2(g-1)$.}
+
+
+\begin{enumerate}
+    \item If $r \geq 2, g \geq 4$. Then the dimension of the tangent space of $\mathcal{V}_{r,g,1}$ at the point $C(X) \subset \mathbb{P}^{M+1}$ is given by 
+
+\begin{equation}\label{upper bounds}
+    \operatorname{dim}T_{C(X)}(\mathcal{V}_{r,g,1}) = h^0(N_{X/\mathbb{P}^M})+h^0(N_{X/\mathbb{P}^{M}}(-1)) = 18+(2+r^2(g-1))^2+\alpha(X)+(2+r^2(g-1))
+\end{equation}
+
+   \item If $r = 2, g = 3$. Then the dimension of the tangent space of $\mathcal{V}_{r,g,1}$ at the point $C(X) \subset \mathbb{P}^{M+1}$ is given by 
+
+\begin{equation}\label{upper bounds for r = 2, g = 3}
+    \operatorname{dim}T_{C(X)}(\mathcal{V}_{r,g,1}) \leq h^0(N_{X/\mathbb{P}^M})+h^0(N_{X/\mathbb{P}^{M}}(-1)) + 1 = 18+(2+r^2(g-1))^2+\alpha(X)+(2+r^2(g-1))+1
+\end{equation}
+
+
+\end{enumerate}
+
+    
+\end{corollary}
+
+\begin{proof}
+    The proof of the corollary follows from \Cref{H^0(N(-2))} and the fact that $$\operatorname{dim}T_{C(X)}(\mathcal{V}_{r,g,1}) = \Sigma_{k \geq 0} h^0(N_{X/\mathbb{P}^M}(-k))$$
+\end{proof}
+
+\begin{lemma}\label{hyperplane section of a general fano is a general K3}
+
+Let $V$ be a general element of $\mathcal{V}_{r,g,1}$. Then a general hyperplane section of $V$ corresponds to a general $K3$ surface in $\mathcal{H}_{r,g}$.
+    
+\end{lemma}
+
+\begin{proof}
+    The proof follows from standard deformation theory arguments (see for example \cite[Lemma $3.7$]{CLM98}, or \cite{Bea02}).
+\end{proof}
+
+\begin{theorem}\label{classification of fanos with index two}
+\textcolor{black}{Consider} $\mathcal{V}_{r,g,1}$ \textcolor{black}{for} $r \geq 2$ and genus $g \geq 3$. Then 
+\begin{enumerate}
+    \item $\mathcal{V}_{r,g,1} = \varnothing$ if $(r = 2, g \geq 7)$, $(r = 3, g = 3)$, $(r = 3, g \geq 5)$, $(r = 4, g \geq 4)$ or $(r = 5, g \geq 3)$. 
+    \item For $(r = 2, 3 \leq g \leq 6), (r = 3, g = 4), (r = 4, g = 3)$, $\mathcal{V}_{r,g,1}$ is irreducible, and the families of Fano and Iskovskih form an open dense irreducible subset of $\mathcal{V}_{r,g,1}$. The general fiber of the projection map $p: \mathcal{F}_{r,g} \to \mathcal{H}_{r,g}$ as defined in \Cref{Hilbert scheme of Fanos and K3} is irreducible. Upto projective transformations, a general $K3$ surface in $\mathcal{H}_{2,6}, \mathcal{H}_{3,4}$ or $ \mathcal{H}_{4,3}$ is contained in a unique Fano threefold in $\mathcal{V}_{2,6,1}, \mathcal{V}_{3,4,1}$ or $ \mathcal{V}_{4,3,1}$ respectively.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  \noindent\textit{Proof of $(1)$} First note that for every $r$, there is a unique component $\mathcal{H}_{r,g}$ of the Hilbert scheme parameterizing $K3$ surfaces $X \subset \mathbb{P}^{h^0(rB)-1}$ embedded by the complete linear of a very ample line bundle $rB$, where $B^2 = 2g-2$. Now excepting the case, $(r = 3, g = 3)$, part $(1)$ follows from \Cref{non-extendability of K3 surfaces}. For the case $(r=3, g=3)$, note that if the hyperplane section of a Fano threefold $V$ in  $\mathcal{V}_{r,g,1}$ be denoted by $rL$ and $L^3 = d$, then computing $h^0(rL) = h^0(rB)-1$ by Riemann-Roch theorem, we have $d = 2(g-1)/r$. But for $r = 3, g = 3$, $d$ cannot be an integer. This resolves the case. \par
+  \textit{Proof of $(2)$} First one notes that for each $r$ and $g$, $\mathcal{H}_{r,g}$ is irreducible. Now the list of examples of Fano-Iskovskih-Mori-Mukai (see for example \cite[Table $3.1$]{CLM98}), show that in each of the cases mentioned by part $(2)$, there exist $K3$ surfaces in $\mathcal{H}_{r,g}$ which are extendable to smooth Fano threefolds. Hence by \Cref{hyperplane section of a general fano is a general K3}, in each of the cases, $\mathcal{H}_{r,g}$ is dominated by $\mathcal{V}_{r,g,1}$. We end the proof by showing, $\mathcal{V}_{r,g,1}$ has a unique irreducible component and that the the examples of Fano-Iskovskih-Mori-Mukai form an open dense subset of $\mathcal{V}_{r,g,1}$.  To see this, we observe first as in \cite{CLM93} and \cite{CLM98}, that a projectively Cohen-Macaulay scheme degenerates along a flat family to the cone over its hyperplane section. Hence once again using, \Cref{hyperplane section of a general fano is a general K3}, it is enough to show that for a general $K3$ surface $X \subset \mathbb{P}^{M}$ in $\mathcal{H}_{r,g}$, the cone $C(X) \subset \mathbb{P}^{M+1}$ is a smooth point of $\mathcal{V}_{r,g,1}$. For the stated values of pairs $(r,g)$, 
+ % \Cref{upper bounds} and \Cref{upper bounds for r = 2, g = 3} in 
+  \Cref{upper bound on cone over $K3$ surface} along with \Cref{ZL for lower genus $K3$ surfaces}, gives an upper bound to $\operatorname{dim}T_{C(X)}(\mathcal{V}_{r,g,1})$ which is listed as follows 
+  \begin{enumerate}
+     % \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{1,6,1}) \leq 85$
+
+     % \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{1,7,1}) \leq 98$
+
+     % \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{1,8,1}) \leq 114$
+
+     % \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{1,9,1}) \leq 132$
+      
+     % \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{1,10,1}) \leq 153$
+
+     % \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{1,12,1}) \leq 201$
+      
+      \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{2,3,1}) \leq 139$
+
+      \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{2,4,1}) \leq 234$
+
+      \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{2,5,1}) \leq 363$
+
+      \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{2,6,1}) \leq 525$
+
+      \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{3,4,1}) \leq 889$
+
+      \item $\operatorname{dim}T_{C(X)}(\mathcal{V}_{4,3,1}) \leq 1209$
+  \end{enumerate}
+Now for a smooth Fano threefold $V \in \mathcal{V}_{r,g,1}$, $V$ represents a smooth point of $\mathcal{V}_{r,g,1}$, since embedded deformations of an anticanonically embedded Fano variety of dimension at least $3$ can be shown to be unobstructed using the vanishing of $h^1(N_{V/\mathbb{P}^{M+1}})$ by Kodaira-Nakano vanishing theorem. Therefore the dimension of $\mathcal{V}_{r,g,1}$ at a smooth point is given by $\operatorname{dim}T_V(\mathcal{V}_{r,g,1}) = h^0(N_{V/\mathbb{P}^{M+1}})$. Now using the descriptions of the examples of Fano-Iskovskih-Mori-Mukai, one can calculate the dimension $h^0(N_{V/\mathbb{P}^{M+1}})$ (see for example \cite[Table $2$, pg $666$]{CLM93} and \cite[Table $3.1$]{CLM98}) to check that in each case, $\operatorname{dim}T_V(\mathcal{V}_{r,g,1})$ is exactly the upper bound just obtained. Hence $C(X)$ is also a smooth point of $\mathcal{V}_{r,g,1}$. \par
+To see the statement on the irreducibility of fibers of $p$, note that for a general $X \subset V$, we have an exact sequence 
+$$0 \to H^0(N_V(-1)) \to H^0(N_V) \to H^0(N_X) \to 0$$
+The surjectivity arises from the fact that from \Cref{hyperplane section of a general fano is a general K3}, one can show that every embedded deformation of $X$ can be lifted to an embedded deformation of $V$. Since $H^1(N_{V/\mathbb{P}^{M+1}}) = 0$, this implies $H^1(N_{V/\mathbb{P}^{M+1}}(-1)) = 0$. This implies that $V$ is a smooth point of the fiber and that the dimension of the fiber at $V$ is $h^0(N_V(-1))$. Now once again the cone $C(X)$ lies in every irreducible component of the fiber and the tangent space to the fiber at $C(X)$ is given by 
+$$h^0(N_X(-1))+h^0(N_X(-2))$$
+But we already checked that 
+$$h^0(N_V(-1)) = h^0(N_V) - h^0(N_X) = h^0(N_X(-1))+h^0(N_X(-2))$$
+This implies that $C(X)$ is a smooth point of the fiber and hence the fiber is irreducible. \par
+The last statement follows from the fact that $\alpha(X) = 1$ in these cases. 
+
+  
+\end{proof}
+
+\color{black}
+\begin{definition}\label{Mukai varieties}
+Let $\mathcal{V}_{n,r,g}$ denote the Hilbert scheme of smooth embedded Fano varieties of dimension $n \geq 4$, index $r(n-2)$ and genus $g$ with a canonical curve section. The surface sections of such varieties are $K3$ surfaces $X \in \mathcal{H}_{r,g}$ and hence their curve sections are canonical curves of genus $1+r^2(g-1)$. Denote by $\mathcal{V}_{n,r,g,1}$, the closure in $\mathcal{V}_{n,r,g}$ of the locus parameterizing the varieties with Picard number one. Such varieties are called Mukai varieties.
+\end{definition}
+
+\color{black}
+
+\begin{theorem}\label{classification of Mukai varieties with index two}
+\textcolor{black}{Consider} $\mathcal{V}_{n,r,g,1}$ \textcolor{black}{with index $r \geq 2$ and genus $g \geq 3$.} Then 
+\begin{enumerate}
+    \item $\mathcal{V}_{n,r,g,1} = \varnothing$ if $(r = 2, 3 \leq g \leq 4)$, $(n \geq 6, r = 2, g = 5)$, $(r = 2, g \geq 6)$, $(r = 3, g \geq 3)$, or $(r = 4, g \geq 3)$ . 
+    \item $\mathcal{V}_{4,2,5,1}$ and $\mathcal{V}_{5,2,5,1}$ are irreducible, and the families of Mukai form an open dense irreducible subset of the components.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+   By \Cref{non-extendability of K3 surfaces}, the cases to deal with are the lower genus cases $(1)-(7)$  listed in \Cref{upper bound on cone over $K3$ surface}. Now $\mathcal{V}_{n,r,g,1} = \varnothing$ for $n \geq 4$ for cases \ref{2,6}, \ref{3,4}, \ref{4,3} since $\alpha(X) \leq 1$. $\mathcal{V}_{n,r,g,1} = \varnothing$ for $n \geq 3$ for case \ref{3,3} has been shown in \Cref{classification of fanos with index two} part $(1)$. Similarly $\mathcal{V}_{n,r,g,1} = \varnothing$ for $n \geq 6$ for case \ref{2,5} since $\alpha(X) \leq 3$.  $\mathcal{V}_{n,r,g,1} = \varnothing$ for $n \geq 4$, for cases \ref{2,3}, \ref{2,4}, can be shown by basic adjunction theory arguments, for example see \cite[Theorem $3.11$]{CLM98}. It remains to show part \ref{2,5}. It is enough to show the statement for $\mathcal{V}_{5,2,5,1}$. In this case by the same arguments in \Cref{upper bound on cone over $K3$ surface}, we see that dimension of the tangent space $T_{C(X)}(\mathcal{V}_{5,2,5,1})$ to the (triple) cone $C(X) \in \mathcal{V}_{5,2,5,1}$ over $X \in \mathcal{V}_{2,5,1}$ is given by 
+   $$\operatorname{dim}T_{C(X)}(\mathcal{V}_{5,2,5,1}) = 18+2(r^2(g-1))^2+3(\alpha(X)+2+r^2(g-1)) = 405$$
+   Now the result follows by comparing with the number of parameters of Mukai's family of example.
+
+
+\end{proof}
+
+\begin{corollary}\label{equality of alpha(x)}
+Let \textcolor{black}{$X \subset \mathbb{P}^{M}$ be a general $K3$ surface in $\mathcal{H}_{r,g}$ embedded by the complete linear series of $rB$, where $B$ is a primitive very ample line bundle, with $B^2 = 2g-2$ and $M = 1+r^2(g-1)$.}
+
+    \begin{enumerate}
+       % \item If $r = 1$, $g = 12$, then $\alpha(X) \leq 1$
+       % \item If $r = 1$, $g = 10$, then $\alpha(X) \leq 3$  
+       % \item If $r = 1$, $g = 9$, then $\alpha(X) \leq 4$
+       % \item If $r = 1$, $g = 8$, then $\alpha(X) \leq 6$
+       % \item If $r = 1$, $g = 7$, then $\alpha(X) \leq 8$
+       % \item If $r = 1$, $g = 6$, then $\alpha(X) \leq 10$ (\textcolor{blue}{exceptional case})
+        \item If $r = 2$, $g = 3$, then $\alpha(X) = 10$ %(\textcolor{blue}{exceptional %case})
+        %(\textcolor{blue}{Needs improvement by $1$.})
+        \item If $r = 2$, $g = 4$, then $\alpha(X) = 6$ 
+        \item If $r = 2$, $g = 5$, then $\alpha(X) = 3$ 
+        \item If $r = 2$, $g = 6$, then $\alpha(X) = 1$ 
+        \item If $r = 3$, $g = 3$, then $\alpha(X) \leq 4$
+        \item If $r = 3$, $g = 4$, then $\alpha(X) = 1$ 
+        \item If $r = 4$, $g = 3$, then $\alpha(X) = 1$
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+    Excepting in case $(5)$, we have by \Cref{classification of fanos with index two}, $\mathcal{V}_{r,g,1}$ is non empty and that $T_{C(X)}(\mathcal{V}_{r,g,1}) = T_V(\mathcal{V}_{r,g,1})$ where $V$ is a smooth point of $\mathcal{V}_{r,g,1}$. Hence by \Cref{upper bound on cone over $K3$ surface}, we conclude that the upper bounds to $\alpha(X)$ in \Cref{ZL for lower genus $K3$ surfaces}, are actually equalities. 
+\end{proof}
+
+\section{Degeneration of $K3$ surfaces to union of Hirzebruch surfaces embedded by arbitrary linear series}
+
+\label{main results}
+
+In this section we show how $K3$ carpets arise as degenerations of snc union of embedded Hirzebruch surfaces intersecting along an anticanonical elliptic curve. This relates our degeneration to that of \cite{CLM93}. In \cite{CLM93}, the authors degenerate a prime $K3$ surface into a union of scrolls meeting along an elliptic curve and further degenerate such a union into a union of planes whose hyperplane sections are graph curves with corank one Gaussian maps. Similarly, one can think of our degeneration as a degeneration into a union of Hirzebruch surfaces embedded as non-scrolls, but instead of further degenerating to a union of planes, we degenerate into $K3$ carpets. To fix some notations, we start with a remark.
+
+\begin{remark}\label{flag hilbert schemes}
+Let $i: Y \hookrightarrow \mathbb{P}^M$ be an embedding of a smooth variety inside a projective space. Let $D \in |L^{-1}|$ be a smooth divisor. Then there is an induced embedding of $j: D \hookrightarrow \mathbb{P}^M$. Let $p_1$ and $p_2$ denote the Hilbert polynomials of $Y \hookrightarrow \mathbb{P}^M$ and $D \hookrightarrow \mathbb{P}^M$ respectively. Let $\mathcal{H}(p_1, p_2)$ denote the flag Hilbert scheme representing the flag-Hilbert functor as defined in \cite{Ser}, Section $4.5.1$ or \cite{KL81}. Closed points of $\mathcal{H}(p_1, p_2)$ parameterize pairs $(D' \hookrightarrow Y' \hookrightarrow \mathbb{P}^M)$ where the subschemes $Y' \hookrightarrow \mathbb{P}^M$ and $D' \hookrightarrow \mathbb{P}^M$ have Hilbert polynomials $p_1$ and $p_2$ respectively. Let $\mathcal{D}$ denote the Hilbert scheme parameterizing subschemes $(D' \hookrightarrow \mathbb{P}^M)$ with Hilbert polynomial $p_2$. There is a projection map $p: \mathcal{H}(p_1, p_2) \to \mathcal{D}$ whose fibre $\mathcal{F}_D$ at a subscheme $(D \hookrightarrow \mathbb{P}^M)$ consists of all those subschemes $Y' \hookrightarrow \mathbb{P}^N$ with Hilbert polynomial $p_1$ such that $D \subset Y'$. Let $\mathcal F_{D,Y}$ denote the union of irreducible components of $\mathcal F_D$ containing the point $(D \hookrightarrow Y\hookrightarrow \mathbb{P}^M)$. Closed points parameterized by $\mathcal{F}_{D,Y}$ correspond to deformations over an irreducible curve of the subvariety $Y$ inside $\mathbb{P}^M$ which keeps $D$ fixed.     
+\end{remark}
+
+
+
+\begin{theorem}\label{Hirzebruch main}
+Let $Y = \mathbb{F}_e \hookrightarrow \mathbb{P}^N$ be an embedding of the Hirzebruch surface $\mathbb{F}_e$, with $e \leq 2$, induced by the complete linear series of the very ample line bundle $|aC_0+bf|$ (hence $b \geq ae+1$). Let $i: \mathbb{P}^N \to \mathbb{P}^M$ be a linear embedding with $M = N + h^0((a-2)C_0+(b-e-2)f)$ and consider the composed (possibly degenerate) embedding $Y \hookrightarrow \mathbb{P}^M$. Let $E \in |-K_Y|$ denote a smooth elliptic curve. 
+
+\begin{itemize}
+    \item[(1)] If $Y_1$ is the subvariety $Y$ of $\mathbb P^M$ and $Y_2$ is a subvariety of $\mathbb P^M$ that corresponds to a general element of $\mathcal{F}_{E,Y}$, then {the scheme theoretic intersection of $Y_1 and Y_2$ is $E$ and} {$V = Y_1 \bigcup_E Y_2$} is  smoothable inside $\mathbb{P}^M$ to a \textit{smooth $K3$ surface} embedded by the complete linear series of a very ample line bundle. The Hilbert point of $V$ inside $\mathbb{P}^M$ is smooth. 
+    %\begin{enumerate}
+     %   \item[(a)] If $M = N$, the subvarieties $V$ and the $K3$ surfaces are embedded by a sublinear series of codimension $$h^0((a-2)C_0+(b-e-2)f) = \displaystyle\frac{(a-1)}{2}(2b-2-ae)$$ of a very ample line bundle.
+      %  \item[(b)] If $M = N + h^0((a-2)C_0+(b-e-2)f)$, the subvarieties $V$ and the $K3$ surfaces are embedded by a complete linear series  of a very ample line bundle.
+    %\end{enumerate}
+     Further the closure inside the Hilbert scheme of the locus of varieties of the form $V = Y_1 \bigcup_E Y_2$ contains embedded $K3$ carpets $\widetilde{Y} \hookrightarrow \mathbb{P}^M$ which extends the embedding $Y \hookrightarrow \mathbb{P}^M$.  
+    
+    \smallskip
+    
+    \item[(2)] The locally trivial deformations of $V$ inside $\mathbb{P}^M$ are unobstructed and form a subspace in the tangent space of the Hilbert scheme at $[V]$ of codimension $h^0(-2K_Y|_E) = 6$. Furthermore, this subspace is the tangent space at $[V]$ of an irreducible locus of the Hilbert scheme, which has codimension $h^0(-2K_Y|_E) = 6$ and is smooth at $[V]$. The singularities of the subschemes parameterized by this locus are normal crossing singularities;  in particular, they are non-normal and semi-log-canonical. They are analytically isomorphic to $(x_1^2+x_2^2 = 0 \subset \mathbb{C}^M)$. 
+   % \item[(3)] The general fiber of any one-parameter family of embedded deformations of $V$ whose image under the Kodaira-Spencer map is a  locally trivial deformation of $V$, is once again a simple normal crossing variety $V' = Y_1' \bigcup_D' Y_2'$, where both $Y_1'$ and $Y_2'$ are deformations of the subvariety $Y$ and $D'$ is a deformation of the subscheme $D$. 
+    \smallskip
+    
+    \item[(3)] The general smooth surface of the Hilbert component containing $V$ is a 
+    \begin{itemize}
+        \item[(a)] prime $K3$ surface if $\textrm{gcd}(a,b) = 1$ 
+        \item[(b)] a non-prime $K3$ surface embedded by $rB$, with $r = \operatorname{gcd}(a,b)$ and $B$ is a primitive very ample line bundle. 
+    \end{itemize}
+\end{itemize}
+
+\end{theorem}
+
+\begin{proof}
+Let us prove part $(1)$. We apply \cite[Theorem $2.10$]{BGM24}. First of all, there exists nowhere vanishing sections inside $H^0(N_{Y/\mathbb{P}^M} \otimes K_Y)$ corresponding to embedded ribbons $\widetilde{Y}$ by \cite[Theorem $1.7$]{GP97} for $a = 1$ and  by \cite[Theorem $3.1$]{BMR21} for $a \geq 2$. A simple computation  shows that $H^1(N_{Y/\mathbb{P}^M}) = 0$ and hence $Y$ is unobstructed in $\mathbb{P}^M$. If $a = 1$, then we have that $H^1(N_{Y/\mathbb{P}^M} \otimes K_Y) = 0$ by \cite[Theorem $1.7$]{GP97} while if $a \geq 2$, the same vanishing follows from \cite[Lemma $2.7$, $(2)$]{BMR21} and hence, the functor $F_{E, Y}$ is unobstructed. If $a = 1$, the smoothability of $\widetilde{Y}$ inside $\mathbb{P}^M$ and the smoothness of its Hilbert point follows from \cite[Corollary $2.9$]{GGP13} and \cite[Theorem $4.1$]{GP97} respectively while if $a \geq 2$, the same follows from \cite[Theorem $4.1$]{BMR21} and \cite[Theorem $5.1$]{BMR21} respectively. 
+%We remark that although the proofs of \cite[Theorem $4.1$]{BMR21} and \cite[Theorem $5.1$]{BMR21} assume that $\widetilde{Y}$ is embedded by a complete linear series, the proofs go through verbatim by embeddings of $\widetilde{Y}$ induced by an incomplete linear series. 
+%Now we prove the claim concerning the codimension of the sublinear series of the very ample line bundle that induce the embedding of the smoothing fiber. 
+%Consider a $K3$ double cover of $\pi:X \to Y$ branched along $B \in |\omega_Y^{-2}|$. Let $A = \pi^*(\mathcal{O}_{Y}(1))$ and consider the composition  
+%\[
+%\begin{tikzcd}
+%X \arrow[dr, "\varphi"] \arrow[d, "\pi"] & \\
+%Y \arrow[r, hook] & \mathbb{P}^N
+%\end{tikzcd}
+%\]
+%The smoothing fibers $X_t \xhookrightarrow{\varphi_t} \mathbb{P}^M$ are obtained as the image of an embedding $\varphi_t$ which is a deformation of $\varphi$ along a one parameter family $T$. Now note that $\varphi^* (\mathcal{O}_{\mathbb{P}^M}(1)) = \pi^*\mathcal{O}_Y(1)$. Then $A = \pi^*(\mathcal{O}_Y(aC_0+bf))$. Note that the one parameter family of smooth fibers $X_t$ that smoothes the normal crossing $V = Y_1 \bigcup_E Y_2$ are embedded inside $\mathbb{P}^M$ by some sublinear series of a line bundle $A_t$ which is a deformation of $A$. Since $X_t$ is $K3$, we have that for $i = 1,2$, $H^i(A_t) = 0$ and hence $h^0(A_t) = h^0(A)$. Hence $h^0(A_t) = h^0(A) = h^0(\pi^*(\mathcal{O}_Y(aC_0+bf))) = h^0(\mathcal{O}_Y(aC_0+bf))+h^0(\mathcal{O}_Y(aC_0+bf) \otimes \omega_Y) = N+1+h^0(\mathcal{O}_Y(aC_0+bf) \otimes \omega_Y)$. Now part (a) and (b) of $(1)$ follows by noting that $h^0(\mathcal{O}_Y(aC_0+bf) \otimes \omega_Y) = h^0(\mathcal{O}_Y((a-2)C_0+(b-e-2)f))$ whose dimension is as stated in the Theorem.
+
+Therefore part $(1)$ follows from Theorem \cite[Theorem $2.10$]{BGM24}. \\
+To show part $(2)$ we need to show that $H^1(N_{V/\mathbb{P}^M}') = 0$ for one subvariety of the form $V = Y_1 \bigcup_E Y_2$ where $Y_2 \in \mathcal{F}_{E,Y}$. For this, first note that for any such $V$ we have an exact sequence 
+$$0 \to N_{V/\mathbb{P}^M}' \to N_{V/\mathbb{P}^M} \to T_V^1 \to 0$$
+Note that by part $(1)$, we have flat family $\mathcal{Y} \to T$ over an smooth irreducible curve $T$, such that $\mathcal{Y}_0$ is an embedded $K3$ carpet $\widetilde{Y}$ on $Y$ and $\mathcal{Y}_t$ is a subvariety of the form $V = Y_1 \bigcup_E Y_2$. When $a \geq 2$, by \cite[Theorem $5.1$, equation $(5.9)$]{BMR21}, we have that $H^1(N_{\widetilde{Y}/\mathbb{P}^M}) = 0$, while for $a = 1$, the same holds for by \cite[Theorem $4.1$]{GP97}. Now since the family $\mathcal{Y} \to T$ is local complete intersection, we have that $N_{\mathcal{Y}/\mathbb{P}_T^M}$ is locally free and hence flat over $T$. Therefore by semi-continuity, $H^1(N_{\mathcal{Y}_t/\mathbb{P}^M}) = 0$, i.e, $H^1(N_{V/\mathbb{P}^M}) = 0$. The vanishing of $H^1(N_{V/\mathbb{P}^M}')$ now follows if we show that $H^0(N_{V/\mathbb{P}^M}) \to H^0(T_V^1)$ is a surjection. Once again, we show this surjection by passing to the ribbon, i.e, we show that $H^0(N_{\widetilde{Y}/\mathbb{P}^M}) \to H^0(T_{\widetilde{Y}}^1)$ is surjection. First note that the sheaf $T_{\widetilde{Y}}^1 = \mathcal{O}_Y(-2K_Y)$ and sits as the last term in the exact sequence 
+\begin{equation*}
+    0 \to \mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y) \to N_{\widetilde{Y}/\mathbb{P}^M} \otimes \mathcal{O}_Y \to \mathcal{O}_Y(-2K_Y) \to 0
+\end{equation*}
+
+while the map $H^0(N_{\widetilde{Y}/\mathbb{P}^M}) \to H^0(T_{\widetilde{Y}}^1)$ factors as $H^0(N_{\widetilde{Y}/\mathbb{P}^M}) \to H^0(N_{\widetilde{Y}/\mathbb{P}^M} \otimes \mathcal{O}_Y) \to H^0(T_{\widetilde{Y}}^1)$ where the first map is obtained by taking the cohomology of the exact sequence
+
+\begin{equation*}
+ 0 \to N_{\widetilde{Y}/\mathbb{P}^M} (K_Y) \to N_{\widetilde{Y}/\mathbb{P}^M} \to N_{\widetilde{Y}/\mathbb{P}^M} \otimes \mathcal{O}_Y \to 0   
+\end{equation*}
+
+So to show the surjection it is enough to that $H^1(\mathcal{H}om(I_{\widetilde{Y}}/I_{Y}^2, \mathcal{O}_Y)) = 0$ and $H^1(N_{\widetilde{Y}/\mathbb{P}^M} (K_Y)) = 0$. For $a = 1$, these vanishings follow from the proof of \cite[Theorem $4.1$]{GP97} and for $a \geq 2$, from \cite[Theorem $5.1$]{BMR21}.
+
+
+%from the following two lemmas which are generalizations of \cite[Lemma $(2)$]{CLM93} and \cite[Corollary $(1)$]{CLM93} for any $a \geq 1$, whose proof works exactly as in \cite{CLM93} 
+%(note that we have already showed in Theorem \ref{snc to carpet} that $H^1(N_{Y/\mathbb{P}^M}) = 0$)  
+%\begin{lemma}\label{alternate T^1}
+%The sheaf $T_V^1$ is the cokernel of the inclusion $N_{Y/\mathbb{P}^M} \to N_{V/\mathbb{P}^M}|_Y$
+%\end{lemma}
+
+%\begin{lemma}\label{alternate smoothing}
+%The map of global sections from $H^0(N_{V/\mathbb{P}^M}) \to H^0(T_V^1)$ is a surjection. 
+%\end{lemma}
+
+%Part $(3)$ follows from \Cref{degeneration into $K3$ carpets}, part $(3)$.
+
+\end{proof}
+%We prove part $(3)$. Let $Y = \mathbb{F}_0$ or $Y = \mathbb{F}_1$. Since the general $K3$ surface in any irreducible component of the Hilbert scheme of $\mathbb{P}^M$, parameterizing smooth $K3$ surfaces has Picard rank one, a general smoothing fiber of $V$ has Picard rank one. Once again consider the $K3$ double cover of $\pi:X \to Y$ branched along $B \in |\omega_Y^{-2}|$. Let $A = \pi^*(\mathcal{O}_{Y}(1))$ and consider the composition  
+%\[
+%\begin{tikzcd}
+%X \arrow[dr, "\varphi"] \arrow[d, "\pi"] & \\
+%Y \arrow[r, hook] & \mathbb{P}^M
+%\end{tikzcd}
+%\]
+%Recall the smoothing fibers $X_t \xhookrightarrow{\varphi_t} \mathbb{P}^M$ are obtained as the image of an embedding $\varphi_t$ which is a deformation of $\varphi$ along a one parameter family $T$ and are hence embedded inside $\mathbb{P}^M$ by some sublinear series of a line bundle $A_t$ which is a deformation of $A$. Since the multiplicity of a polarization remains constant on a smooth family, we have to find the multiplicity of $A$ on the double cover $X$. Now since $B$ is smooth and irreducible part $(3)$ for $Y = \mathbb{F}_0$ or $Y = \mathbb{F}_1$ follows from the fact that $\textrm{Pic}(X)$ is generated by $\pi^*\mathcal{O}_Y(C_0)$ and $\pi^*\mathcal{O}_Y(f)$ (see \cite[Proposition $6.3$]{AHL10}). Now suppose $V = Y_1 \bigcup_E Y_2$, with $Y = \mathbb{F}_2 \hookrightarrow \mathbb{P}^N$ and $\mathcal{O}_Y(1) = \mathcal{O}_{\mathbb{F}_2}(aC_0+bf)$. Then by Theorem \ref{theorem.irreducible} and Lemma \ref{general element of the fiber of the flag Hilbert scheme} part $(2)$, there is a reduced irreducible variety $\mathcal{F}_{E,Y} \times \mathcal{F}_{E,Y}$ which contains the normal crossing variety $V$ and whose general point $V' = Y_1' \bigcup_E Y_2'$ where each $Y_i' = \mathbb{F}_0 \hookrightarrow \mathbb{P}^M$ with $\mathcal{O}_{Y_i}(1) = \mathcal{O}_{\mathbb{F}_0}(aC_0+(b-a)f)$. Since the Hilbert point of $V$ and $V'$ are both smooth, they both are contained in a unique irreducible component of the Hilbert scheme. Hence by part $(3)$ applied to $V'$, the general $K3$ surface in this component of the Hilbert scheme has Picard group $\mathbb{Z}$ with the hyperplane class a multiple of the generator of the Picard group, the multiplicity being equal to $\textrm{gcd}(a,b-a) = \textrm{gcd}(a,b)$. 
+%We first show that the map $\pi^*: \textrm{Pic}(Y) \to \textrm{Pic}(X)$ is an isomorphism. By \cite{Par91}, Lemma $4.2$, we have $H^1(\Omega_X^1) = H^1(\pi_*\Omega_X^1) = H^1(\Omega_Y) \bigoplus H^1(\Omega_Y(\log (B)) \otimes \omega_Y)$. Now using the exact sequence 
+%$$ 0 \to \Omega_Y \otimes \omega_Y \to \Omega_Y(\log (B)) \otimes \omega_Y \to \omega_Y|_B \to 0 $$ we have 
+%$$H^1(\Omega_Y \otimes K_Y) \to H^1(\Omega_Y(\log (B)) \otimes K_Y) \to H^1(K_Y|_B)$$
+%Suppose that $Y = \mathbb{F}_0$ or $Y = \mathbb{F}_1$. Then the leftmost term is zero due to Nakano vanishing theorem. We have 
+%$$0 \to \omega_Y^{\otimes 2} \to \omega_Y \to \omega_Y|_B \to 0$$ 
+%We have $H^1(\omega_Y) = H^1(\mathcal{O}_Y) = 0$. Now applying Serre-duality, the map $H^2(\omega_Y^{\otimes 2}) \to H^2(\omega_Y)$ is the map between  and hence we see that $H^1(\omega_Y|_B) = 0$. This implies $H^1(\Omega_Y(\log (B)) \otimes K_Y) = 0$. Now since $H^1(\mathcal{O}_Y) = H^1(\mathcal{O}_X) = 0$, the pullback map between $\pi^*: \textrm{Pic}(Y)  \to \textrm{Pic}(X) $ is induced by the map 
+%$$H^1(\Omega_Y) \to H^1(\Omega_Y) \bigoplus H^1(\Omega_Y(\log (B)) \otimes K_Y)$$
+%Therefore $H^1(\Omega_Y(\log (B)) \otimes K_Y) = 0$ implies $\pi^*$ is an isomorphism
+
+
+
+\color{black}
+
+
+\begin{comment}
+\subsection{Syzygy points of union of scrolls and their semistability}
+
+We refer to \cite{Fed18} for the relevant defintions of syzygy points and their semistabilty.  
+
+\begin{corollary}
+    \begin{itemize}
+        
+        \item[(1)] For each $g \geq 3$ and $g = 2m+1$, a general smoothable simple normal crossing union of balanced scrolls $V = Y_1 \bigcup_E Y_2 \subset \mathbb{P}^g$ meeting along an anticanonical elliptic curve $E$ as constructed in Theorem \ref{Hirzebruch main}, where $Y_i = \mathbb{F}_0 \hookrightarrow \mathbb{P}^g$ is embedded by the complete linear series of $|C_0+mf|$, has well-defined syzygy points $\textrm{Syz}_{0,q}(V)$ for $q \geq 2$ and $\textrm{Syz}_{p,2}(V)$ for $1 \leq p \leq m-1$, which are semistable with respect to the $SL(g+1)$ action.
+
+        \item[(2)] For each $g \geq 3$ and $g = 2m+1$, a general canonical binary curve $D = C_1 \bigcup C_2$ of genus $g$, where $C_i$'s are rational normal curves of degree $g-1$ intersecting at $g+1$ points has well-defined syzygy points $\textrm{Syz}_{0,q}(D)$ and $\textrm{Syz}_{1,2}(D)$ which are semistable with respect to the $SL(g)$ action.
+        
+        
+    \end{itemize}
+    
+\end{corollary}
+
+\noindent\textit{Proof $(1)$.} By Theorem \ref{Hirzebruch main} (see also Theorem \ref{snc to carpet}) there exists a flat family of subschemes $\sigma: \mathcal{Y} \to T$ of $\mathbb{P}^g_T$ over a smooth irreducible algebraic curve $T$ such that 
+\begin{itemize}
+    \item[(1)]  $\mathcal{Y}_0$ is an embedded $K3$ carpet $\widetilde{Y} \hookrightarrow \mathbb{P}^g$ extending an embedding $Y = \mathbb{F}_0 \hookrightarrow \mathbb{P}^g$.  
+    \item[(2)] $\mathcal{Y}_t = Y_{1t} \bigcup_E Y_{2t}$, where for each $t$ and $i = 1,2$, $Y_{it} = \mathbb{F}_0 \hookrightarrow \mathbb{P}^g$ is embedded by the complete linear series of $|C_0+mf|$ and $E$ is a smooth elliptic curve, anticanonical in each $Y_{it}$.
+    \item[(3)] The varieties $\mathcal{Y}_t$ are smoothable in $\mathbb{P}^{g}$ into smooth $K3$ surfaces.
+\end{itemize}
+
+By Theorem \ref{Hirzebruch main}, part $(1)$, (b), $\mathcal{Y}_0 \hookrightarrow \mathbb{P}^g$ is embedded by a complete linear series. It is also known that a $K3$ carpet on $\mathbb{F}_0$ embedded as a scroll is projectively normal (see \cite{BE95},  \cite{Deo18}). (\textcolor{red}{I do not understand meaning of "projectively normal" when let alone the cone, the scheme itself is not normal". This is a grotesque abuse of term, whoever may have used it. One can of course talk of the multiplication map.}) Consider the line bundle $\mathcal{L} = \mathcal{O}_{\mathcal{Y}}(1)$ and the cokernel $\mathcal{G}$ of the map 
+$$ \sigma_*(\mathcal{O}_{\mathbb{P}^g_T}(n)) \to  \sigma_*(\mathcal{O}_{\mathcal{Y}}(n)) \to \mathcal{G} \to 0$$
+$\mathcal{G}$ is a coherent sheaf on $T$, 
+\textcolor{red}{Is it better if we write $\mathcal{G}$ explicitly as $R^1\sigma_*(\mathcal{I}(n))$}?  
+and by cohomology and base change, $\mathcal{G}_t = \textrm{coker}(\mathcal{O}_{\mathbb{P}^g}(n) \to  \mathcal{O}_{\mathcal{Y}_t}(n))$. Now since $\mathcal{G}_0 = (0)$ we have that $\mathcal{G}_t = (0)$ for a general $t$ and hence $\widetilde{Y}_t \hookrightarrow \mathbb{P}^g$ is embedded by a complete linear series and is projectively normal. Therefore the syzygy points $\textrm{Syz}_{p,q}(\mathcal{Y}_t)$ are well-defined as soon as $K_{p,q}(\mathcal{Y}_t) = 0$.  Now it has been shown in \cite{Deo18} that the syzygy points $K_{p,2}(\mathcal{Y}_0) = 0$ for $1 \leq p \leq m-1$ are well-defined. Let $\mathcal{K}_{p,2}$ denote the cohomology in the middle of the sequence 
+$$\bigwedge^{p+1} \sigma_* \mathcal{L} \otimes \sigma_* \mathcal{L} \to \bigwedge^p \sigma_* \mathcal{L} \otimes \sigma_* \mathcal{L}^{\otimes 2} \to \bigwedge^{p-1} \sigma_* \mathcal{L} \otimes \sigma_* \mathcal{L}^{\otimes 3}$$
+As before $\mathcal{K}_{p,2}$ is a coherent sheaf (since kernel and cokernel of coherent sheaves are coherent) and by cohomology and base change we have that the fiber of $\mathcal{K}_{p,2}$ at $t \in T$ is $K_{p,2}(\mathcal{Y}_t)$, we conclude that $K_{p,2}(\mathcal{Y}_t) = 0$ for for $1 \leq p \leq m-1$. Now by openness of semistability, the result follows from the proof semistability of syzygy points $\textrm{Syz}_{0,q}(\mathcal{Y}_0)$ for $q \geq 2$ and $\textrm{Syz}_{p,2}(\mathcal{Y}_0)$ for $1 \leq p \leq m-1$ in \cite{Fed18}, proof of Theorem $4.1$. 
+
+\noindent\textit{Proof.} Taking a general hyperplane section of the family obtained in part $(1)$, we get a flat family of subschemes $\sigma: \mathcal{D} \to T$ of $\mathbb{P}^{g-1}_T$ over a smooth irreducible algebraic curve $T$ such that 
+\begin{itemize}
+    \item[(1)]  $\mathcal{D}_0$ is a canonical ribbon $\widetilde{D} \hookrightarrow \mathbb{P}^{g-1}$ extending an embedding $C = \mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$.  
+    \item[(2)] $\mathcal{D}_t = C_{1t} \bigcup C_{2t}$, where for each $t$ and $i = 1,2$, $C_{it}$ is a rational normal curve of degree $g-1$, $C_{1t} \bigcap C_{2t}$ is a reduced scheme of length $g+1$ and $\mathcal{D}_t$ is canonically embedded in $\mathbb{P}^{g-1}$.
+    \item[(3)] The varieties $\mathcal{D}_t$ are smoothable in $\mathbb{P}^{g-1}$ into smooth canonical curves.
+\end{itemize}
+
+Now once again the well-definedness of the syzygy points follow by \cite{Deo18} while the semistability 
+$\textrm{Syz}_{0,q}(\mathcal{D}_t)$ and $\textrm{Syz}_{1,2}(\mathcal{D}_t)$ follows from the corresponding semistability of $\textrm{Syz}_{0,q}(\mathcal{D}_0)$ and $\textrm{Syz}_{1,2}(\mathcal{D}_0)$ (see \cite{AFS13}, \cite{FJ13} \cite{DFS16}).
+\QEDA
+
+
+
+\subsection{Explicit examples of degenerations of $K3$ surfaces of genus $g$ for some low values of $g$}
+
+We fix a $g \geq 3$ and consider the Hilbert scheme of $K3$ surfaces $X \hookrightarrow \mathbb{P}^g$ embedded by the complete linear series of a line bundle $L$, with $L^2 = 2g-2$. We list below all the distinct codimension six locus consisting of snc degenerations into a union of two embedded Hirzebruch surfaces, as obtained from Theorem \ref{Hirzebruch main} for some low values of $g$. We compare our results with \cite{CLM93} and point out the new aspects of our results. 
+
+\begin{example}
+    \begin{enumerate}
+        \item For $g = 3$, we get a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^3$, where each $Y_i = \mathbb{F}_0 \hookrightarrow \mathbb{P}^3$ is embedded by $\mathcal{O}_{\mathbb{F}_0}(C_0+f)$. The locus is contained in the unique component of the Hilbert scheme parameterizing prime $K3$ surfaces of genus $3$. \textbf{The new result is that the Hilbert points of general such $V$ are semistable.}
+        \smallskip
+        \item For $g = 4$, we get a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^4$, where each $Y_i = \mathbb{F}_1 \hookrightarrow \mathbb{P}^4$ is embedded by $\mathcal{O}_{\mathbb{F}_1}(C_0+2f)$. The locus is contained in the unique component of the Hilbert scheme parameterizing prime $K3$ surfaces of genus $4$. 
+        \smallskip
+        \item For $g = 5$, we get a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^5$, where each $Y_i = \mathbb{F}_0 \hookrightarrow \mathbb{P}^5$ is embedded by $\mathcal{O}_{\mathbb{F}_0}(C_0+2f)$. The locus is contained in the unique component of the Hilbert scheme parameterizing prime $K3$ surfaces of genus $5$. \textbf{The new result is that the Hilbert points of general such $V$ are semistable.} There is a sublocus consisting of varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^5$, where $Y_1 = \mathbb{F}_0 \hookrightarrow \mathbb{P}^5$ is embedded by $\mathcal{O}_{\mathbb{F}_0}(C_0+2f)$ and $Y_2 = \mathbb{F}_2 \hookrightarrow \mathbb{P}^5$ is embedded by $\mathcal{O}_{\mathbb{F}_2}(C_0+3f)$. 
+        \smallskip
+        \item For $g = 6$, we get a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^6$, where each $Y_i = \mathbb{F}_1 \hookrightarrow \mathbb{P}^6$ is embedded by $\mathcal{O}_{\mathbb{F}_1}(C_0+3f)$. The locus is contained in the unique component of the Hilbert scheme parameterizing prime $K3$ surfaces of genus $6$
+        \smallskip
+        \item For $g = 7$, we get a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^7$, where each $Y_i = \mathbb{F}_1 \hookrightarrow \mathbb{P}^7$ is embedded by $\mathcal{O}_{\mathbb{F}_0}(C_0+3f)$. The locus is contained in the unique component of the Hilbert scheme parameterizing prime $K3$ surfaces of genus $7$. \textbf{The new result is that the Hilbert points of general such $V$ are semistable.}
+        \smallskip
+        \item For $g = 8$, we get a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^7$, where each $Y_i = \mathbb{F}_1 \hookrightarrow \mathbb{P}^8$ is embedded by $\mathcal{O}_{\mathbb{F}_1}(C_0+4f)$. The locus is contained in the unique component of the Hilbert scheme parameterizing prime $K3$ surfaces of genus $8$. 
+        \smallskip
+        \item For $g = 9$, we get three different loci 
+        \begin{enumerate}
+            \item a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^9$, where each $Y_i = \mathbb{F}_0 \hookrightarrow \mathbb{P}^9$ is embedded by $\mathcal{O}_{\mathbb{F}_1}(C_0+4f)$. The locus is contained in the unique component of the Hilbert scheme parameterizing prime $K3$ surfaces of genus $9$. \textbf{The new result is that the Hilbert points of general such $V$ are semistable.} There is a sublocus consisting of varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^9$, where $Y_1 = \mathbb{F}_0 \hookrightarrow \mathbb{P}^8$ is embedded by $\mathcal{O}_{\mathbb{F}_0}(C_0+4f)$ and $Y_2 = \mathbb{F}_2 \hookrightarrow \mathbb{P}^8$ is embedded by $\mathcal{O}_{\mathbb{F}_2}(C_0+5f)$.  
+            \item a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^9$, where each $Y_i = \mathbb{F}_1 \hookrightarrow \mathbb{P}^8$ is embedded by $\mathcal{O}_{\mathbb{F}_1}(2C_0+3f)$. The locus is contained in the unique component of the Hilbert scheme parameterizing prime $K3$ surfaces of genus $9$. \textbf{The existence of this locus is new and in fact by Theorem \ref{Hirzebruch main}, we show that the degeneration actually happens in $\mathbb{P}^{8}$.}
+            \item a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^9$, where each $Y_i = \mathbb{F}_0 \hookrightarrow \mathbb{P}^9$ is embedded by $\mathcal{O}_{\mathbb{F}_0}(2C_0+2f)$. The locus is contained in the component of the Hilbert scheme parameterizing non-prime $K3$ surfaces of genus $9$ where the hyperplane bundle is twice the generator of the Picard group. \textbf{This degeneration can be obtained by taking the second veronese embedding of the degeneration in item $(1)$.} \textbf{But the new result is that by Theorem \ref{Hirzebruch main}, we show that this degeneration actually happens in $\mathbb{P}^8$.}
+        \end{enumerate} 
+        \smallskip
+        \item For $g = 13$, we get three different loci 
+        \begin{enumerate}
+            \item a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^{13}$, where each $Y_i = \mathbb{F}_0 \hookrightarrow \mathbb{P}^{13}$ is embedded by $\mathcal{O}_{\mathbb{F}_0}(C_0+6f)$. The locus is contained in the unique component of the Hilbert scheme parameterizing prime $K3$ surfaces of genus $13$. \textbf{The new result is that the Hilbert points of general such $V$ are semistable.}
+            \smallskip
+            \item a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^{13}$, where each $Y_i = \mathbb{F}_0 \hookrightarrow \mathbb{P}^{11}$ is embedded by $\mathcal{O}_{\mathbb{F}_0}(2C_0+3f)$. The locus is contained in the unique component of the Hilbert scheme parameterizing prime $K3$ surfaces of genus $13$. \textbf{The existence of this locus is new and in fact by Theorem \ref{Hirzebruch main}, we show that this degeneration actually happens in $\mathbb{P}^{11}$.} There is a sublocus consisting of varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^{13}$, where $Y_1 = \mathbb{F}_0 \hookrightarrow \mathbb{P}^{11}$ is embedded by $\mathcal{O}_{\mathbb{F}_0}(2C_0+3f)$ and $Y_2 = \mathbb{F}_2 \hookrightarrow \mathbb{P}^{11}$ is embedded by $\mathcal{O}_{\mathbb{F}_2}(2C_0+5f)$.
+            \smallskip
+            \item a locus of snc varieties of the form $V = Y_1 \bigcup_E Y_2 \hookrightarrow \mathbb{P}^{13}$, where each $Y_i = \mathbb{F}_1 \hookrightarrow \mathbb{P}^{11}$ is embedded by $\mathcal{O}_{\mathbb{F}_1}(2C_0+4f)$. The locus is contained in the component of the Hilbert scheme parameterizing non-prime $K3$ surfaces of genus $9$ where the hyperplane bundle is twice the generator of the Picard group. \textbf{This degeneration can be obtained by taking the second veronese embedding of the degeneration in item $(2)$.} \textbf{But the new result is that by Theorem \ref{Hirzebruch main}, we show that this degeneration actually happens in $\mathbb{P}^{11}$.}
+        \end{enumerate} 
+        
+        
+    \end{enumerate}
+\end{example}
+
+
+
+\smallskip
+\end{comment}
+
+
+%\section{Some consequences on extendability of Picard rank two $K3$ surfaces}
+
+
+
+
+
+
+
+
+
+
+\vspace{0.5cm}
+
+\bibliographystyle{plain}
+\begin{thebibliography}{KMM92}
+\color{black}
+
+
+
+\bibitem{AHL10}
+Artebani, Michela; Hausen, Jürgen; Laface, Antonio
+\emph{On Cox rings of K3 surfaces}
+Compos. Math. 146 (2010), no. 4, 964–998.
+
+\bibitem{ABS17}
+Arbarello, Enrico; Bruno, Andrea; Sernesi, Edoardo
+\emph{On hyperplane sections of K3 surfaces.}
+Algebr. Geom. 4 (2017), no. 5, 562–596.
+
+\bibitem{BE95}
+Bayer, Dave; Eisenbud, David
+\emph{Ribbons and their canonical embeddings}
+Trans. Amer. Math. Soc. 347 (1995), no. 3, 719–756.
+
+
+\bibitem{Bea02}
+Beauville, A. \emph{Fano threefolds and $K3$ surfaces}
+https://arxiv.org/abs/math/0211313
+%\bibitem[Bel24]{Bel24}
+%Belmans, Peter
+%\emph{Fanography: a tool to visually study the geography of Fano 3-folds.}
+%https://www.fanography.info
+
+\bibitem{BGM24} Bangere, Purnaprajna; Gallego, Francisco Javier; Mukherjee; Jayan \emph{Projective smoothing of varieties with simple normal crossings.}(https://arxiv.org/abs/2403.04167)
+
+\bibitem{BKM25}
+Bayer, Arend;  Kuznetsov, Alexander;  Macr\'i, Emanuele 
+\emph{Mukai models of Fano varieties}
+arXiv:2501.16157
+
+\bibitem{BM87}
+Beauville, A.; Mérindol, J.-Y.
+\emph{Sections hyperplanes des surfaces $K3$.[Hyperplane sections of $K3$ surfaces]}
+Duke Math. J. 55 (1987), no. 4, 873–878.
+
+\bibitem{BMR21}
+Bangere, Purnaprajna; Mukherjee, Jayan; Raychaudhury, Debaditya
+\emph{K3 carpets on minimal rational surfaces and their smoothings.}
+Internat. J. Math.32(2021), no.6, Paper No. 2150032, 20 pp.
+
+\bibitem{BM24} 
+Bangere, Purnaprajna; Mukherjee, Jayan  
+\emph{Extendability of projective varieties via degeneration to ribbons with applications to Calabi-Yau threefolds} (arXiv:2409.03960)
+
+\bibitem{BM25}
+Bangere, Purnaprajna; Mukherjee, Jayan  
+\emph{Extendability of general prime $K3$ surfaces via degeneration to ribbons} (in progress)
+
+
+
+%\bibitem[BGM24]{BGM24} Bangere, Purnaprajna; Gallego, Francisco Javier; Mukherjee; Jayan \emph{Projective degenerations of $K3$ surfaces to a union of Hirzebruch surfaces not embedded as scrolls.} (in preparation)
+
+%\bibitem[BGM24b]{BGM24b} Bangere, Purnaprajna; Gallego, Francisco Javier; Mukherjee; Jayan \emph{Projective smoothing of simple normal crossing projective bundles.} (in preparation)
+
+%\bibitem[BGM24c]{BGM24c} Bangere, Purnaprajna; Gallego, Francisco Javier; Mukherjee; Jayan \emph{Projective smoothing of simple normal crossing complete intersections.} (in preparation)
+
+\bibitem{CD22}
+Ciliberto, Ciro; Dedieu, Thomas
+\emph{$K3$ curves with index $k>1$.}
+Boll. Unione Mat. Ital. 15 (2022), no. 1-2, 87–115.
+
+\bibitem{CD24}
+Ciliberto, Ciro; Dedieu, Thomas
+\emph{Double covers and extensions.}
+Kyoto J. Math. 64 (2024), no. 1, 75–94.
+
+
+\bibitem{CDGK20}
+Ciliberto, C; Dedieu, T;  Galati, C.; Knutsen, A. L.  
+\emph{Moduli of curves on Enriques surfaces.}
+Adv. Math. 365 (2020), 107010, 42 pp. 6, 13, 14
+
+\bibitem{CDS20}
+Ciliberto, Ciro; Dedieu, Thomas; Sernesi, Edoardo
+\emph{Wahl maps and extensions of canonical curves and $K3$ surfaces.}
+J. Reine Angew. Math. 761 (2020), 219–245.
+
+\bibitem{CLM93}
+Ciliberto, C; Lopez, A; Miranda, R
+\emph{Projective degenerations of $K3$ surfaces, Gaussian maps and Fano threefolds}
+Invent. Math. 114, 641 667 (1993)
+
+\bibitem{CLM94}
+Ciliberto, Ciro; Lopez, Angelo Felice; Miranda, Rick
+\emph{On the corank of Gaussian maps for general embedded $K3$ surfaces}
+arXiv:alg-geom/9411008
+
+\bibitem{CLM98}
+Ciliberto, Ciro; Lopez, Angelo Felice; Miranda, Rick
+\emph{Classification of varieties with canonical curve section via Gaussian maps on canonical curves.}
+Amer. J. Math.   120 (1998), no. 1, 1–21.
+
+\bibitem{CM90}
+Ciliberto, Ciro; Miranda, Rick
+\emph{On the Gaussian map for canonical curves of low genus.}
+Duke Math. J. 61 (1990), no. 2, 417–443.
+
+\bibitem{DM92}
+Duflot, Jeanne; Miranda, Rick
+\emph{The Gaussian map for rational ruled surfaces.}
+Trans. Amer. Math. Soc. 330 (1992), no. 1, 447–459.
+
+\bibitem{DM24}
+Deopurkar, Anand; Mukherjee, Jayan
+\emph{Syzygies of canonical ribbons on higher genus curves}
+arXiv:2412.05500
+
+%\color{black}
+%\bibitem[Deb01]{Debarre} Debarre, O., \emph{Higher-dimensional algebraic geometry}, 
+%Universitext Springer--Verlag, New York, 2001.
+%\color{black}
+
+\bibitem{DP12}
+Duflot, Jeanne; Peters, Pamela L.
+\emph{Gaussian maps for double covers of toric surfaces.}
+Rocky Mountain J. Math. 42 (2012), no. 5, 1471–1520.
+
+
+
+
+
+
+
+
+
+
+
+
+%\bibitem[Fri83]{F83}
+%Friedman, Robert; 
+%\emph{Global smoothings of varieties with normal crossings.} 
+%Ann. of Math. (2) 118 (1983), no. 1, 75--114.
+
+ 
+
+\color{black}
+
+%\bibitem[Fuj14a]{KFujita} Fujita, Kento, \emph{Simple normal crossing Fano varieties and log Fano manifolds.}
+%Nagoya Math. J. 214 (2014), 95-123.
+
+%\bibitem[Fuj14b]{Fujino} Fujino, Osamu.
+%\emph{Fundamental theorems for semi log canonical pairs.} Algebr. Geom. 1 (2014), no.2, 194-228.
+
+%\color{black}
+
+\bibitem{GGP08}
+Gallego, Francisco Javier; González, Miguel; Purnaprajna, Bangere P., 
+\emph{$K3$ double structures on Enriques surfaces and their smoothings.}
+J. Pure Appl. Algebra 212 (2008), no. 5, 981--993
+
+\bibitem{GGP13}
+Gallego, F.J., González, M., Purnaprajna, B.P., 
+\emph{An infinitesimal condition to smooth ropes.}
+Rev Mat Complut 26, 253–269 (2013).
+
+\bibitem{Go}
+  Gonz\'alez, Miguel.
+  \emph{Smoothing of ribbons over curves}.
+  J. Reine Angew. Math. 591 (2006), 201--235.
+
+\bibitem{GP97}
+Gallego, F.J., Purnaprajna, B.P.
+\emph{Degenerations of $K3$ surfaces in projective space}
+Transactions of the American Mathematical Society
+Volume 349, Number 6, June 1997, Pages 2477–2492
+
+
+
+  \color{black}
+
+  %\bibitem[Gro61]{EGA} A. Grothendieck, \emph{\'El\'ements 
+%de g\'eom\'etrie 
+%alg\'ebrique. III. \'Etude cohomologique des faisceaux 
+%coh\'erents. I.}, Inst. 
+%Hautes \'Etudes Sci. Publ. Math.  
+%{11}, (1961).
+
+\bibitem{Hartshorne}  
+Hartshorne, R; \emph{Algebraic geometry}, 
+Grad. Texts in Math., No. 52
+Springer-Verlag, New York-Heidelberg, 1977
+
+\color{black}
+  
+
+
+
+
+\bibitem{I77}
+Iskovskih, V. A.
+\emph{Fano threefolds. I.}
+(Russian)Izv. Akad. Nauk SSSR Ser. Mat.41 (1977), no.3, 516–562, 717.
+
+\bibitem{I78}
+Iskovskih, V. A.
+\emph{Fano threefolds. II.}
+(Russian)Izv. Akad. Nauk SSSR Ser. Mat.42 (1978), no.3, 506–549.
+
+
+
+%\bibitem[Kim17]{Ki17}
+%Kimura, Y.;
+%\emph{Structure of stable degeneration of $K3$ surfaces into pairs of rational elliptic surfaces}
+%JHEP03(2018)045, %https://doi.org/10.48550/arXiv.1710.04984
+\bibitem{K20}
+Knutsen, Andreas Leopold
+\emph{Global sections of twisted normal bundles of $K3$ surfaces and their hyperplane sections.}
+Atti Accad. Naz. Lincei Rend. Lincei Mat. Appl. 31 (2020), no. 1, 57–79.
+
+
+\bibitem{KLM11}
+Knutsen, Andreas Leopold; Lopez, Angelo Felice; Muñoz, Roberto
+\emph{On the extendability of projective surfaces and a genus bound for Enriques-Fano threefolds.}
+J. Differential Geom.88(2011), no.3, 485–518.
+
+\bibitem{KL81}
+Kleppe, J.; 
+\emph{The Hilbert Flag Scheme, its properties, and its connection with the Hilbert Scheme. Applications to curves in three-space. Thesis. University of Oslo, Preprint No. 5 (1981)}
+\bibitem{KL87}
+Kleppe, J.;
+\emph{Non-reduced components of the Hilbert scheme of smooth space curves. In: Space Curve.}
+Rocca di papa, 1985. Ghione, F., Peskine, C., Sernesi, E. (eds.) Springer Lect. Notes Math. No. 1266 (1987), 181-207
+
+
+
+  
+
+
+
+
+%\bibitem[Kon85]{Ko85}
+%Kondo, S
+%\emph{Type II degenerations of $K3$ surfaces}
+%Nagoya Math. J. Vol. 99 (1985), 11-30
+
+
+
+%\bibitem[Kul77]{Ku77}
+%Kulikov, V. 
+%\emph{Degenerations of K3 surfaces and Enriques surfaces} Math. USSR Izvestiya 11 (1977), 957-989.
+
+
+
+
+
+\color{black}
+
+
+
+\bibitem{Lop23}
+Lopez, Angelo Felice
+\emph{On the extendability of projective varieties: a survey.The art of doing algebraic geometry, 261–291. With an appendix by Thomas Dedieu}
+Trends Math. Birkhäuser/Springer, Cham, [2023], ©2023 ISBN:978-3-031-11937-8
+ISBN:978-3-031-11938-5
+
+
+%\bibitem[LR12]{LR}
+%Liu, Wenfei; Rollenske, Sönke. \emph{Two-dimensional semi-log-canonical hypersurfaces}, 
+%Matematiche (Catania) 67 (2012), no. 2, 185–202.
+
+\bibitem{Lvo92} 
+L\'vovsky, S.
+\emph{Extensions of projective varieties and deformations. I, II.}
+Michigan Math. J.39(1992), no.1, 41–51, 65--70.
+
+
+
+
+
+\bibitem{MM82}
+Mori, Shigefumi; Mukai, Shigeru
+\emph{Classification of Fano 3-folds with $B2 \geq 2$.}
+Manuscripta Math.36(1981/82/1982), no.2, 147–162.
+
+
+\bibitem{M88}
+Mukai, S
+\emph{Curves, K3 Surfaces and Fano 3-folds of Genus $\leq$ 10}
+Algebraic Geometry and Commutative Algebra, Academic Press,
+1988, Pages 357-377.
+
+  \color{black}
+  
+
+
+  \color{black}
+%\bibitem[Par91]{Par91}
+%Pardini, Rita
+%\emph{Abelian covers of algebraic varieties.}
+%J. Reine Angew. Math.417(1991), 191–213.
+
+
+
+
+%\bibitem[PP81]{PP81}
+%Persson, U; Pinkham, H 
+%\emph{Degenerations of surfaces with trivial canonical bundle}
+%Ann. of Math. 113 (1981), 45-66
+
+
+
+
+\bibitem{Ser}
+Sernesi, Edoardo.
+\emph{Deformations of Algebraic Schemes.}
+Grundlehren der Mathematischen Wissenschaften [Fundamental Principles of Mathematical Sciences], 334. Springer-Verlag, Berlin, 2006.
+
+\bibitem{Tot20}
+Totaro, Burt
+\emph{Bott vanishing for algebraic surfaces.}
+Trans. Amer. Math. Soc. 373 (2020), no. 5, 3609–3626.
+%\bibitem[Sei92]{Sei92}
+%Seiler, Wolfgang K.
+%\emph{Deformations of ruled surfaces.}
+%J. Reine Angew. Math.426(1992), 203–219.
+
+%\bibitem[SP]{SP}
+%Stacks project authors
+%\emph{The Stacks project}
+%\url{https://stacks.math.columbia.edu}, 2023
+
+%\bibitem[Tho13]{T13}
+%Thompson, A;
+%\emph{Degenerations of $K3$ surfaces of degree two}
+%Transactions of the American Mathematical Society
+%Volume 366, Number 1, January 2014, Pages 219–243
+%S 0002-9947(2013)05759-5
+
+
+\bibitem{V92}
+Voisin, Claire
+\emph{Sur l'application de Wahl des courbes satisfaisant la condition de Brill-Noether-Petri.[On the Wahl mapping of curves satisfying the Brill-Noether-Petri condition]}
+Acta Math. 168 (1992), no. 3-4, 249–272.
+
+
+
+
+
+
+\bibitem{W87}
+Wahl, J. M. 
+\emph{The Jacobian algebra of a graded Gorenstein singularity.}
+Duke Math. J. 55 (1987), no. 4,
+843-871
+
+\bibitem{Zak91}
+Zak, F. L.
+\emph{Some properties of dual varieties and their applications in projective geometry.}
+Algebraic geometry (Chicago, IL, 1989), 273–280.
+Lecture Notes in Math., 1479
+Springer-Verlag, Berlin, 1991
+
+ 
+
+
+
+
+
+
+  
+
+\end{thebibliography}
+
+\end{document}
+

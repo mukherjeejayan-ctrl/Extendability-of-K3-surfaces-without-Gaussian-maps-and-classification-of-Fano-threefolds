@@ -1,0 +1,291 @@
+ \documentclass[11pt,twoside]{amsart}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=Blue, citecolor=Maroon}
+\usepackage{amsthm, amsmath, amscd, amssymb,centernot,txfonts}
+\usepackage{tikz-cd}
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage[all]{xy}
+\usepackage[left=2.5cm,top=2.5cm,bottom=3cm,right=2.5cm]{geometry}
+\usepackage{dirtytalk}
+\usepackage{mathtools}
+\usetikzlibrary{shapes,arrows}
+\usepackage{etoolbox}
+\usepackage{dynkin-diagrams}
+\usepackage{enumitem}
+\usepackage{chngpage}
+\usepackage{adjustbox}
+\usepackage[normalem]{ulem}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fourier} 
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{comment}
+%\usepackage[cmtip,all]{xy}
+
+\newcommand{\longsquiggly}{\xymatrix{{}\ar@{~>}[r]&{}}}
+\newcommand\aimplies{\stackrel{\mathclap{\normalfont\mbox{Theorem ~\ref{Def_1}}}}{\implies}}
+\newcommand\bimplies{\stackrel{\mathclap{\normalfont\mbox{Corollary ~\ref{Defphi}}}}{\implies}}
+\newcommand\cimplies{\stackrel{\mathclap{\normalfont\mbox{Corollary ~\ref{defcanonicalmorphism }}}}{\implies}}
+%\newcommand\myeq{\stackrel{\mathclap{\normalfont\mbox{def}}}{=}}
+
+
+
+\setlength{\headheight}{15.2pt}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+
+
+\setcounter{tocdepth}{1}
+
+\setlength\parskip{0in}
+\setlength\parindent{0.2in}
+
+
+\theoremstyle{plain}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newtheorem{definition}[theorem]{Definition}
+
+
+\newtheorem{set-up}[theorem]{Set-up}
+\newtheorem{observation}[theorem]{Observation}
+
+
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+
+
+\newcommand{\te}{\otimes}
+
+\newcommand{\myeq}{\overset{\mathrm{duality}}{=\joinrel=}}
+\newcommand*{\QEDA}{\hfill\ensuremath{\blacksquare}}
+\newcommand*{\QEDB}{\hfill\ensuremath{\square}}
+
+\tikzstyle{decision} = [diamond, draw, , 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, , 
+    text width=10em, text centered, rounded corners, minimum height=2em]
+\tikzstyle{block1} = [rectangle, draw, , 
+    text width=5em, text centered, rounded corners, minimum height=2em]    
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,, node distance=3cm,
+    minimum height=2em]
+\begin{document}
+
+\title[List of corrections]{List of revisions in the article "Extendability of general $K3$ surfaces without Gaussian maps and classification of non-prime Fano threefolds"}
+\author[P. Bangere]{Purnaprajna Bangere}
+%%\address{Department of Mathematics, University of Kansas, Lawrence, USA}
+%%\email{purna@ku.edu}
+
+%\author[F.J. Gallego]{Francisco Javier Gallego}
+%%\address{Departamento de \'Algebra, Geometr\'ia y Topolog\'ia and Instituto de Matem\'atica Interdisciplinar,
+%%Universidad Complutense de Madrid, Spain}
+%%\email{gallego@mat.ucm.es}
+
+\author[J. Mukherjee]{Jayan Mukherjee}
+%%\address{Department of Mathematics, University of California, Riverside, USA} 
+%%\email{jayanm@ucr.edu}
+
+%\author[D. Raychaudhury]{Debaditya Raychaudhury}
+%%\address{Department of Mathematics, University of Toronto, Toronto, Canada}
+%%\email{debaditya.raychaudhury@utoronto.ca}
+
+
+
+
+
+\maketitle
+
+We thank the referee for the valuable comments. \textcolor{black}{We have addressed all of them.} We list the corrections/modifications that we implemented following the referee's comments.
+
+\smallskip
+
+\begin{enumerate}
+
+\item[$(1)$] After Theorem $1.4$, we have re-emphasized the fact that the results of Theorem $1.3$ and $1.4$, were proven in \cite{CLM93} and \cite{CLM98} and have added a reference to \cite{CLM98c}. 
+
+\item[$(2)$] After Theorem $1.5$, we have pointed out that the results were proven using very different methods in \cite{CLM98}. Also "Upto" has been changed to "Up to".
+
+\item[$(3)$] Corollary $1.6$ has been stated including the values of $r$ and $g$ as in Corollary $3.10$. 
+
+\item[$(4)$] In Definition $2.1$ part $(2)$, the period after $0$ has been added. 
+
+\item[$(5)$] In Lemma $2.2$, the reference has been changed to Proposition $1.5$ from Proposition $2.1$. Also the word "regular" has been added before the word "surface".
+
+\item[$(6)$] In Theorem $2.4$, we have indicated the correct Theorems and Propositions in \cite{BMR21} and \cite{GP97} journal versions. We apologize for refering to incorrect (or missing) theorems/ propositions.
+
+\item[$(7)$] In Theorem $2.4$, we have added the reference to \cite[Theorem $4.4$]{BMR21} as a reference for smoothability of $K3$ carpets on $\mathbb{F}_e$ for $e > 2$.
+
+\item[$(8)$]  In the proof of Theorem $2.4$ part $(3)$, we have changed the statement concerning $\operatorname{Pic}(X)$ to only include general $K3$ surfaces in the Hilbert component of $K3$ carpets on $Y = \mathbb{F}_e$, $0 \leq e \leq 1$. This statement follows from \cite[Proposition $6.3$]{AHL10} and \cite[Proposition $6.5$ (i), (iii)]{AHL10} and not just from \cite[Proposition $6.3$]{AHL10} as the referee has correctly pointed out. Further, one does need to start from a $K3$ double cover branched along a very general (as the referee has correctly pointed out), smooth and irreducible $D \in |-2K_Y|$. The definition of "generic" in the cited article is given in Section $(6)$, right before Proposition $6.1$ of the article. It means very general. Leaving out the case $e = 2$ does not change any results on extendability of general $K3$ surfaces (as the referee has already noted) \textcolor{blue}{(\sout{COMMENT: Needs to be checked carefully})}. 
+
+\item[$(9)$] Following referee's comment, we introduce the clarifying notation $\widetilde{V}(L):=\widetilde{V}\otimes_{\mathcal{O}_{\widetilde{Y}}} L$ before Theorem $3.1$ in page $5$. Under this notation therefore $N_{\widetilde{Y}/\mathbb{P}^M}(L) = N_{\widetilde{Y}/\mathbb{P}^M}|_Y \otimes_{\mathcal{O}_Y}L$ \textcolor{blue}{(COMMENT: We have done the same thing in the Calabi-Yau paper. Please check carefully)}
+
+\item[$(10)$] In the proof of Claim $3.2$ in page $8$ (\textcolor{blue}{CHECK the page number this right before submission}, we have added the proper reference to the fact that a $K3$ carpet $\widetilde{Y} \subset \mathbb{P}^M$ is defined by a nowhere vanishing global section of $N_{Y/\mathbb{P}^M} \otimes K_Y$ 
+
+\item[$(11)$] We have replaced the period after $-H$ by a colon.
+
+\item[$(12)$] The diagram has now been marked by the number $3.22$. It has now been recalled below by $3.22$ instead of $3$.   
+
+\item[$(13)$] In the proof of Claim $3.2$, the referee has asked for a clarification of a part of the proof: this is clarified if we show that the map $\operatorname{Ext^1}(p_*(-H-K_Y), 
+ p_*T_{Y/\mathbb{P}^1}(-H))  \xrightarrow[]{\eta} \operatorname{Ext^1}(p_*(-H-K_Y), 
+ p_*(T_{\mathbb{P}^M}|_Y(-H))$ is injective.  We have given a detailed argument explaining why the map \\ $\operatorname{Ext^1}(p_*(-H-K_Y), 
+ p_*T_{Y/\mathbb{P}^1}(-H))  \xrightarrow[]{\eta} \operatorname{Ext^1}(p_*(-H-K_Y), 
+ p_*(T_{\mathbb{P}^M}|_Y(-H))$ is an injective map and is in fact an isomorphism. This actually follows by showing the existence of a commutative diagram, which we do \textcolor{red}{on page $11$.} 
+ %The argument is essentially the same as the previous one but the proof of injectivity of $\eta$ has been slightly re-structured to incorporate the details of the commutativity of the maps in question. 
+
+\item[$(14)$] The part of the proof that the referee indicates in this item has been re-structured. In the re-structured proof, the equations have been referred to with their correct numbers.
+
+\item[$(15)$] We have cited the relevant lemmas in \cite{BMR21}, that contain the cohomology calculations.
+
+\item[$(16)$] In Lemma $3.3$ ($2$), we have changed $a \geq 4$ to $a \geq 3$. In Lemma $3.7$ ($1$), the empty range for $a = 2$ has been removed. As the referee has correctly pointed out this part is not needed. The proof for $a = 2$, proceeds along different lines than $a \geq 3$. In Lemma $3.7$ ($1$), the condition has been revised to $b \geq ae-e+3$. We thank the referee for pointing out to us the correct bounds. 
+ 
+\item[$(17)$] In the proof of lemma $3.7$, following the referee's suggestions, we have first proved part $(1)$ and $(3)$ and then have added the fact that part $(2)$ follows by observing that the vanishings of $H^1(-H-2f)$ and $H^1(H-2f)$ holds under the given hypothesis.   
+
+\item[$(18)$] In Proposition $3.8$ (i), we have corrected $a \geq 3, b \geq 11, e \geq 3$ to $a \geq 3, b \geq 11, e = 3$. We would like to point out that the number $11$ comes from the vanishing of $h^0(-H-2K_Y)$ in Lemma $3.6$, where we require $b \geq 2e+5$. For $a = 4, e = 1$, the bound for $b$ has been changed to $b \geq 7$. As the referee has correctly pointed out, in Theorem $3.9(2)$, $r = 4, g \geq 4$ and $g$ even, we require $a = 4, e = 1$ and $b \geq 8$. So the modification does not affect Theorem $3.9$.
+
+\item[$(19)$] To address comment $(20)$, we have once again re-structured the proof of part $(2)$ of Proposition $3.8$.  The cohomology sequence that is being referred to in comment $(19)$ of the referee report, now falls within the re-structured part of the proof. However, the correct exact sequence has been referred to here, \textcolor{black}{thus addressing comment (19) of the referee.}
+ 
+ 
+\item[$(20)$] The referee has asked for a clarification of a part of the proof of Proposition $3.8$: this is clarified if we show that the map $H^1(T_Y(-H)) \xrightarrow{}  H^1(T_{\mathbb{P}^M}|_Y(-H))$, which we have now denoted by $s$, is injective. We have given a detailed proof of the fact that the map $H^1(T_Y(-H)) \xrightarrow{s}  H^1(T_{\mathbb{P}^M}|_Y(-H))$ is injective. This once again follows (as in $(13)$) by showing the existence of a commutative diagram, which we do \textcolor{red}{on page $14$.} 
+%To do this, we have once again slightly re-structured the proof to incorporate the details of the commutativity of the maps in question. 
+
+\item[$(21)$] We have added a period after $1$ in Theorem $3.9$, $(5)$.
+
+\item[$(22)$] We have added the reference to Theorem $3.1$ in the first line of the proof of Theorem $3.9$. 
+
+\item[$(23)$] In the proof of Theorem $3.9$, part $(3)$, for $e = 0$, "$2m+1, m \geq 1$" has been replaced by $2m+1, m \geq 2$ and for $e = 1$, "$2m, m \geq 2$" has been replaced by $2m, m \geq 3$.
+
+\item[$(24)$] In the proof of Proposition $3.9 (4)$, we have indicated that we are using part $(2)$ of both Theorem $3.1$ and Proposition $3.8$.   
+
+\item[$(25)$] In the statement of Theorem $3.9$, Theorem $1.3$ and Corollary $3.10$, for $g = 18k+4$, the lower bound to $k$ has been changed to $k \geq 2$. Further, in the proof of Theorem $3.9 (5)$, for the case $g = 18k+16$, we have mentioned that one needs to set $b = 3k+4$ in order to get the bound $k \geq 1$. Further, in the proof of part $(5)$ of Theorem $3.9$, we have mentioned which choices of $e, b$ correspond to which value of $g$. 
+
+\item[$(26)$] In the proof of Theorem $3.9(5)$, we have mentioned "of Theorem $3.1$ and Proposition $3.8$" after part $(1)$ and $(2)$.  
+
+\item[$(27)$] The referee's comments in this item already occurs in item $25$ and they have been addressed. 
+
+\item[$(28)$] In the proof of Corollary $3.10$, we have changed the notation of the Wahl map to $\gamma_C$ an have referred to the \cite[$2.2.1$]{CDS20} as well. We have referred to \cite[Lemma $8.3$]{K01} to show that $\operatorname{Cliff}(C) > 2$. 
+
+\item[$(29)$] We have removed the line "First one notices by $T_0 = \pi^*C_0$ and $T_1 = \pi^*f$ generate the Picard group of $X$." before Theorem $3.12$. However, in Theorem $3.12$, we do not have to mention that we require $D$ to be very general, since in the statement of the Theorem $3.12$, we are only concerned with a very ample line bundle of the form $aT_0+bT_1$.
+
+\item[$(30)$] In the Proof of Theorem $3.12$, we have modified the inequality on $b$, so as to ensure that $H = aC_0+bf$ is very ample. Further, the inequality $b \geq (a-1)e+2$, ensures that $H \otimes K_Y$ is base point free, which in turn ensures that $\widetilde{H}$ is very ample, but not necessarily projectively normal. But as the referee has correctly observed, we do not need projective normality and hence we have removed projective normality. Also we have mentioned that the very ampleness of $\widetilde{H}$ follows from the proof of the proposition which is being referred to, and not just the statement. We have also added an explanation as to why any double cover isotrivially degenerates to a split ribbon. 
+
+\item[$(31)$] In the proof of Theorem $3.13$, the period after $g = 3$ is added.
+
+\item[$(32)$] In the statement of Proposition $4.1$, a period after $e \geq 2$ is added.
+
+\item[$(33)$] This ambiguity in the notation has been addressed in the clarifying notation before Theorem $3.1$.
+
+\item[$(34)$] We have fixed the error in the twist and have changed the equality to $\leq$.
+
+\item[$(35)$] The two occurences of $h^0(T_Y(-kH))$ have been removed from the proof of Proposition $4.1$.
+
+\item[$(36)$] We have proved the vanishings required in Lemmas $3.5, 3.6, 3.7$ for any line bundle $H = aC_0+bf$. The vanishings required in the proof of Proposition $4.1$ for $kH$ with $k = 2, 3$ comes from specializing $H$ to $kH$ in those lemmas.
+
+%The vanishings required in the proof of Proposition $4.1$ for $k \geq 2$ are obtained by applying the Lemmas $3.5, 3.6, 3.7$, for $kH$ instead of $H$, with $k = 2, 3$. So the lemmas already allow the reader to verify. (\textcolor{blue}{Pls check carefully}).
+
+\item[$(37)$] In the proof of Corollary $4.4$ and Definition $2.3$, we have recalled the fact that $\operatorname{dim}\mathcal{H}_{r,g} = h^0(N_{X/\mathbb{P}^M}) =  18+(M+1)^2$.
+
+\item[$(38)$] The last range in Theorem $4.6 (1)$ has been changed to $r \geq 5, g \geq 3$. 
+
+\item[$(39)$] In the proof of Theorem $4.8$, we have changed Corollary $4.4$ to Theorem $3.13$.
+
+\item[$(40)$] In the proof of Theorem $4.8$, we have changed the reference from Theorem $3.11$ to Theorem $3.15$. 
+
+\item[$(41)$] In the proof of Theorem $4.8$, we have changed the part $(3)$ to part $(2)$.
+
+\item[$(42)$] In the proof of Theorem $5.2$, we have changed the reference from "Theorem $1.7$" to "Proposition $1.7$".
+
+\item[$(43)$] In the proof of Theorem $5.2$, we have changed the reference from "Corollary $2.9$" to "Theorem $2.7$".
+
+\item[$(44)$] In the proof of Theorem $5.2$, we have changed the reference from "Theorem $4.1$" to "Theorem $4.3$".
+
+\item[$(45)$] In the proof of Theorem $5.2$ the word "Theorem" before the reference [$5$, Theorem $2.10$] has been removed.
+
+\item[$(46)$] In the proof of Theorem $5.2$, we have added a proof of the fact $T_{\widetilde{Y}}^1 \cong \mathcal{O}_Y(-2K_Y)$ and a reference to the exact sequence that follows.
+
+    
+\end{enumerate}
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{KMM92}
+\color{black}
+
+\bibitem{AHL10}
+Artebani, Michela; Hausen, Jürgen; Laface, Antonio
+\emph{On Cox rings of K3 surfaces}
+Compos. Math. 146 (2010), no. 4, 964–998.
+
+\bibitem{BMR21}
+Bangere, Purnaprajna; Mukherjee, Jayan; Raychaudhury, Debaditya
+\emph{K3 carpets on minimal rational surfaces and their smoothings.}
+Internat. J. Math.32(2021), no.6, Paper No. 2150032, 20 pp.
+
+\bibitem{CDS20}
+Ciliberto, Ciro; Dedieu, Thomas; Sernesi, Edoardo
+\emph{Wahl maps and extensions of canonical curves and $K3$ surfaces.}
+J. Reine Angew. Math. 761 (2020), 219–245.
+
+
+\bibitem{CLM93}
+Ciliberto, C; Lopez, A; Miranda, R
+\emph{Projective degenerations of $K3$ surfaces, Gaussian maps and Fano threefolds}
+Invent. Math. 114, 641 667 (1993)
+
+\bibitem{CLM94}
+Ciliberto, Ciro; Lopez, Angelo Felice; Miranda, Rick
+\emph{On the corank of Gaussian maps for general embedded $K3$ surfaces}
+arXiv:alg-geom/9411008
+
+\bibitem{CLM98}
+Ciliberto, Ciro; Lopez, Angelo Felice; Miranda, Rick
+\emph{Classification of varieties with canonical curve section via Gaussian maps on canonical curves.}
+Amer. J. Math.   120 (1998), no. 1, 1–21.
+
+\bibitem{CLM98c}
+Ciliberto, Ciro; Lopez, Angelo Felice; Miranda, Rick
+\emph{Corrigendum to ``Classification of varieties with canonical curve section via Gaussian maps on canonical curves''.}
+Amer. J. Math. 143 (2021), no. 6, 1661–1663.
+
+
+\bibitem{BMR21}
+Bangere, Purnaprajna; Mukherjee, Jayan; Raychaudhury, Debaditya
+\emph{K3 carpets on minimal rational surfaces and their smoothings.}
+Internat. J. Math.32(2021), no.6, Paper No. 2150032, 20 pp.
+
+\bibitem{GP97}
+Gallego, F.J., Purnaprajna, B.P.
+\emph{Degenerations of $K3$ surfaces in projective space}
+Transactions of the American Mathematical Society
+Volume 349, Number 6, June 1997, Pages 2477–2492
+
+\bibitem{K01}
+Knutsen, Andreas Leopold
+\emph{On $k$th-order embeddings of $K3$ surfaces and Enriques surfaces.}
+Manuscripta Math. 104 (2001), no. 2, 211–237.
+
+
+
+\end{thebibliography}
+\end{document}
+
+
+

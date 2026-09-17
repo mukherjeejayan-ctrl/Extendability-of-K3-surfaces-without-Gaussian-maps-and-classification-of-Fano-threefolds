@@ -1,0 +1,657 @@
+\documentclass[11pt]{article}
+
+% ---------- Packages ----------
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+% ---------- Theorem environments ----------
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}
+
+% ---------- Common notation ----------
+\newcommand{\PP}{\mathbb{P}}
+%\newcommand{\mathbb{A}}{\mathbb{A}}
+\newcommand{\OO}{\mathcal{O}}
+%\newcommand{\Gm}{\mathbb{G}_m}
+
+%\newcommand{\PP}{\mathbb{P}}
+\newcommand{\Gm}{\mathbb{G}_{\mathrm{m}}}
+\begin{document}
+
+\begin{lemma}[The Euler maps and the Euler exact sequence on $\PP^N$]\label{lem:Euler-sequence-maps}
+Let $k$ be a field and let $\PP^N=\PP^N_k$ with homogeneous coordinates
+$[x_0:\cdots:x_N]$.  Then there are canonical morphisms of sheaves
+\[
+\sigma:\OO_{\PP^N}\longrightarrow \OO_{\PP^N}(1)^{\oplus (N+1)},
+\qquad
+\rho:\OO_{\PP^N}(1)^{\oplus (N+1)}\longrightarrow T_{\PP^N},
+\]
+with the following properties.
+
+\begin{enumerate}
+\item[(i)] \textbf{(Definition of the two maps.)}
+The left map $\sigma$ is defined by
+\[
+\sigma(1)=(x_0,\dots,x_N),
+\]
+where each $x_i$ is viewed as the standard global section of $\OO_{\PP^N}(1)$.
+
+The right map $\rho$ is defined as follows.  For any open set $U\subset \PP^N$ and
+any section $s=(s_0,\dots,s_N)\in \Gamma\!\big(U,\OO_{\PP^N}(1)^{\oplus(N+1)}\big)$,
+choose (locally on $U$) homogeneous degree-$1$ representatives of the $s_i$ on the
+cone $\mathbb{A}^{N+1}\setminus\{0\}$.  Form the $k$--derivation
+\[
+\widetilde{X}_s \;:=\; \sum_{i=0}^N s_i\,\frac{\partial}{\partial x_i}.
+\]
+The induced derivation on $\Gm$--invariant functions (equivalently, on the structure
+sheaf of $U$) defines a vector field on $U$; we set $\rho(s)$ to be this vector field.
+Equivalently, $\rho(s)$ is the vector field on $\PP^N$ induced by $\widetilde{X}_s$
+after quotienting by the $\Gm$--scaling direction.
+
+\item[(ii)] \textbf{(Local coordinate formula for $\rho$.)}
+On the standard affine chart $U_0=\{x_0\neq 0\}$, set
+\[
+y_i=\frac{x_i}{x_0}\qquad (i=1,\dots,N).
+\]
+Then $\OO_{\PP^N}(1)$ is trivialized on $U_0$ by $x_0$, hence any local section
+$s_i\in \Gamma(U_0,\OO_{\PP^N}(1))$ can be written uniquely as $s_i=x_0 f_i$ with
+$f_i\in \OO_{\PP^N}(U_0)$.  For $s=(x_0 f_0,\dots,x_0 f_N)$ one has on $U_0$
+\[
+\rho(s)
+\;=\;
+\sum_{i=1}^N \bigl(f_i-f_0\,y_i\bigr)\,\frac{\partial}{\partial y_i}.
+\]
+In particular, for $n=1$ (so $y=x_1/x_0$) one has
+\[
+\rho(x_0 f_0,\ x_0 f_1) \;=\; (f_1-f_0 y)\,\frac{\partial}{\partial y}.
+\]
+In particular, when $n=2$ (so $y_1=x_1/x_0$ and $y_2=x_2/x_0$) one has
+\[
+\rho(x_0 f_0,\ x_0 f_1,\ x_0 f_2)
+\;=\;
+\bigl(f_1-f_0 y_1\bigr)\,\frac{\partial}{\partial y_1}
+\;+\;
+\bigl(f_2-f_0 y_2\bigr)\,\frac{\partial}{\partial y_2}.
+\]
+\item[(iii)] \textbf{(Kernel equals image; Euler exact sequence.)}
+On each standard affine chart $U_j=\{x_j\neq 0\}$ (in particular on $U_0$) one has
+\[
+\ker\!\bigl(\rho|_{U_j}\bigr)=\mathrm{im}\!\bigl(\sigma|_{U_j}\bigr),
+\]
+and $\sigma$ is injective.  Consequently the sequence
+\[
+0\longrightarrow \OO_{\PP^N}
+\xrightarrow{\ \sigma\ }
+\OO_{\PP^N}(1)^{\oplus(N+1)}
+\xrightarrow{\ \rho\ }
+T_{\PP^N}
+\longrightarrow 0
+\]
+is exact; this is the Euler sequence on $\PP^N$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(ii) The definition of $\rho$ is the standard construction: a homogeneous degree-$1$
+vector field on the cone descends to a vector field on the projective quotient, and
+the Euler vector field $E$ generates the $\Gm$--direction, so it maps to zero on $\PP^n$.
+Since $\sigma(1)=(x_0,\dots,x_n)$ corresponds to $E$, we have $\mathrm{im}(\sigma)\subseteq
+\ker(\rho)$, and exactness of \eqref{eq:Euler-seq} identifies $\ker(\rho)=\mathrm{im}(\sigma)$.
+
+(2) We compute $\rho(s)$ by evaluating the induced derivation on the affine coordinate
+functions $y_i=x_i/x_0$.  Let $\widetilde{X}=\sum_{j=0}^n s_j\,\partial/\partial x_j$
+be the corresponding derivation on the coordinate ring of the cone.
+
+\smallskip
+\noindent\emph{Step 1: Differentiating an inverse.}
+On $U_0$ the function $x_0$ is invertible.  Using the Leibniz rule on
+$x_0\cdot x_0^{-1}=1$, we get
+\[
+0=\widetilde{X}(1)=\widetilde{X}(x_0\cdot x_0^{-1})
+=\widetilde{X}(x_0)\,x_0^{-1}+x_0\,\widetilde{X}(x_0^{-1}),
+\]
+hence
+\begin{equation}\label{eq:inverse-rule}
+\widetilde{X}(x_0^{-1})=-\,\frac{\widetilde{X}(x_0)}{x_0^2}.
+\end{equation}
+
+
+\noindent\emph{Step 2: Differentiating a quotient (quotient rule).}
+For any functions $f,g$ with $g$ invertible, write $f/g=f\cdot g^{-1}$.  Then
+\[
+\widetilde{X}\!\left(\frac{f}{g}\right)
+=\widetilde{X}(f\cdot g^{-1})
+=\widetilde{X}(f)\,g^{-1}+f\,\widetilde{X}(g^{-1})
+=\frac{\widetilde{X}(f)}{g}-f\,\frac{\widetilde{X}(g)}{g^2},
+\]
+where we used \eqref{eq:inverse-rule} in the last step.  Thus
+\begin{equation}\label{eq:quotient-rule}
+\widetilde{X}\!\left(\frac{f}{g}\right)
+=\frac{\widetilde{X}(f)\,g-f\,\widetilde{X}(g)}{g^2}.
+\end{equation}
+
+\smallskip
+\noindent\emph{Step 3: Apply the quotient rule to $y_i=x_i/x_0$.}
+Taking $f=x_i$ and $g=x_0$ in \eqref{eq:quotient-rule} gives
+\[
+\widetilde{X}(y_i)
+=\widetilde{X}\!\left(\frac{x_i}{x_0}\right)
+=\frac{\widetilde{X}(x_i)\,x_0-x_i\,\widetilde{X}(x_0)}{x_0^2}.
+\]
+Since $\widetilde{X}=\sum s_j\partial/\partial x_j$, we have
+$\widetilde{X}(x_i)=s_i$ and $\widetilde{X}(x_0)=s_0$, hence
+\[
+\widetilde{X}(y_i)=\frac{s_i x_0-x_i s_0}{x_0^2}.
+\]
+Now write $s_i=x_0 f_i$ and $x_i=x_0 y_i$.  Substituting yields
+\[
+\widetilde{X}(y_i)=\frac{(x_0 f_i)x_0-(x_0 y_i)(x_0 f_0)}{x_0^2}
+=f_i-f_0 y_i.
+\]
+
+\smallskip
+\noindent\emph{Step 4: Identify the induced vector field on $U_0$.}
+A vector field on $U_0\simeq \mathbb{A}^n$ is determined by its values on the coordinate
+functions $y_1,\dots,y_n$, and the derivation sending $y_i\mapsto f_i-f_0 y_i$
+is exactly $\sum_{i=1}^n (f_i-f_0 y_i)\,\partial/\partial y_i$. This proves (ii). \\
+
+\begin{proof}
+\noindent \textit{Proof of $(3)$.}
+Exactness is local on $\PP^N$, so it suffices to work on the standard affine charts
+$U_j=\{x_j\neq 0\}$.  We carry out the argument on $U_0$; the other charts are identical
+after relabeling coordinates.
+
+\medskip
+\noindent\textbf{Step 1: $\sigma$ is injective.}
+Since $\OO_{\PP^N}$ is torsion-free and $\sigma$ is nonzero (indeed $\sigma(1)=(x_0,\dots,x_N)$),
+it is injective on each affine chart; equivalently, on $U_0$ the component $x_0$ is
+invertible, so if $\sigma(f)=0$ then $f x_0=0$ in $\OO(U_0)$, hence $f=0$.
+
+\medskip
+\noindent\textbf{Step 2: $\rho\circ\sigma=0$.}
+On $U_0$ set $y_i=x_i/x_0$ $(i=1,\dots,N)$.  Write $\sigma(1)=(x_0,\dots,x_N)$ in the
+form $(x_0 f_0,\dots,x_0 f_N)$ with $f_0=1$ and $f_i=y_i$ for $i\ge 1$.  Using the local
+formula from part~(ii),
+\[
+\rho(\sigma(1))
+=
+\sum_{i=1}^N (f_i-f_0 y_i)\,\frac{\partial}{\partial y_i}
+=
+\sum_{i=1}^N (y_i-y_i)\,\frac{\partial}{\partial y_i}
+=0.
+\]
+Thus $\mathrm{im}(\sigma)\subseteq \ker(\rho)$.
+
+\medskip
+\noindent\textbf{Step 3: $\ker(\rho)\subseteq \mathrm{im}(\sigma)$ on $U_0$.}
+Let $s=(s_0,\dots,s_N)\in \Gamma\!\big(U_0,\OO_{\PP^N}(1)^{\oplus(N+1)}\big)$ and write
+$s_i=x_0 f_i$ with $f_i\in \OO(U_0)$.  If $\rho(s)=0$, then by the local formula
+\[
+0=\rho(s)=\sum_{i=1}^N (f_i-f_0 y_i)\,\frac{\partial}{\partial y_i}.
+\]
+Since $\{\partial/\partial y_i\}_{i=1}^N$ are $\OO(U_0)$--linearly independent, we obtain
+\[
+f_i-f_0 y_i=0 \qquad (i=1,\dots,N),
+\]
+hence $f_i=f_0 y_i$ for all $i\ge 1$.  Setting $g:=f_0\in \OO(U_0)$ gives
+\[
+s_0=x_0 f_0=x_0 g=g x_0,
+\qquad
+s_i=x_0 f_i=x_0(g y_i)=g(x_0 y_i)=g x_i \quad (i\ge 1).
+\]
+Therefore $s=g(x_0,\dots,x_N)=g\,\sigma(1)$, so $s\in \mathrm{im}(\sigma)$ on $U_0$.
+Thus $\ker(\rho|_{U_0})=\mathrm{im}(\sigma|_{U_0})$.
+
+\medskip
+\noindent\textbf{Step 4: Surjectivity of $\rho$.}
+On $U_0\simeq \mathbb{A}^N$ every vector field has the form
+$\sum_{i=1}^N a_i\,\partial/\partial y_i$ with $a_i\in \OO(U_0)$.  Take the section
+$s=(0,\ x_0 a_1,\dots,x_0 a_N)$ of $\OO_{\PP^N}(1)^{\oplus(N+1)}$ on $U_0$; then $f_0=0$
+and $f_i=a_i$ for $i\ge 1$, so by the local formula
+\[
+\rho(s)=\sum_{i=1}^N (a_i-0\cdot y_i)\,\frac{\partial}{\partial y_i}
+=\sum_{i=1}^N a_i\,\frac{\partial}{\partial y_i}.
+\]
+Hence $\rho$ is surjective on $U_0$, and therefore surjective globally.
+
+\medskip
+Combining Steps~1--4, we conclude that
+\[
+0\longrightarrow \OO_{\PP^N}
+\xrightarrow{\ \sigma\ }
+\OO_{\PP^N}(1)^{\oplus(N+1)}
+\xrightarrow{\ \rho\ }
+T_{\PP^N}
+\longrightarrow 0
+\]
+is exact.
+\end{proof}
+
+
+
+\end{proof}
+
+
+
+
+
+
+\begin{lemma}[The Euler maps and the Euler exact sequence on $\PP^N$]\label{lem:Euler-sequence-maps}
+Let $k$ be a field and let $\PP^N=\PP^N_k$ with homogeneous coordinates
+$[x_0:\cdots:x_N]$.  Then there are canonical morphisms of sheaves
+\[
+\sigma:\OO_{\PP^N}\longrightarrow \OO_{\PP^N}(1)^{\oplus (N+1)},
+\qquad
+\rho:\OO_{\PP^N}(1)^{\oplus (N+1)}\longrightarrow T_{\PP^N},
+\]
+with the following properties.
+
+\begin{enumerate}
+\item[\textup{(i)}] \textbf{(Definition of the two maps.)}
+The map $\sigma$ is defined by
+\[
+\sigma(1)=(x_0,\dots,x_N),
+\]
+where each $x_i$ is viewed as the standard global section of $\OO_{\PP^N}(1)$.
+
+The map $\rho$ is defined as follows.  For any open set $U\subset \PP^N$ and
+any section $s=(s_0,\dots,s_N)\in \Gamma\!\big(U,\OO_{\PP^N}(1)^{\oplus(N+1)}\big)$,
+choose (locally on $U$) homogeneous degree-$1$ representatives of the $s_i$ on the
+cone $\mathbb{A}^{N+1}\setminus\{0\}$.  Form the $k$-derivation
+\[
+\widetilde{X}_s \;:=\; \sum_{i=0}^N s_i\,\frac{\partial}{\partial x_i}.
+\]
+The induced derivation on $\Gm$-invariant functions defines a vector field on $U$;
+we set $\rho(s)$ to be this vector field.
+
+Both maps are well defined: $\sigma$ is manifestly a sheaf morphism, and $\rho$ is
+independent of the choice of homogeneous representatives because any two
+choices differ by a multiple of the Euler vector field
+$E=\sum x_i\,\partial/\partial x_i$, which acts as zero on degree-$0$ functions.
+
+\item[\textup{(ii)}] \textbf{(Local coordinate formula for $\rho$.)}
+On the standard affine chart $U_0=\{x_0\neq 0\}$, set
+\[
+y_i=\frac{x_i}{x_0}\qquad (i=1,\dots,N).
+\]
+Then $\OO_{\PP^N}(1)$ is trivialized on $U_0$ by~$x_0$, so any section
+$s_i\in \Gamma(U_0,\OO_{\PP^N}(1))$ can be written uniquely as $s_i=x_0 f_i$ with
+$f_i\in \OO_{\PP^N}(U_0)$.  For $s=(x_0 f_0,\dots,x_0 f_N)$ one has
+\begin{equation}\label{eq:local-formula}
+\rho(s)
+\;=\;
+\sum_{i=1}^N \bigl(f_i-f_0\,y_i\bigr)\,\frac{\partial}{\partial y_i}.
+\end{equation}
+
+\item[\textup{(iii)}] \textbf{(Euler exact sequence.)}
+The sequence
+\[
+0\longrightarrow \OO_{\PP^N}
+\xrightarrow{\ \sigma\ }
+\OO_{\PP^N}(1)^{\oplus(N+1)}
+\xrightarrow{\ \rho\ }
+T_{\PP^N}
+\longrightarrow 0
+\]
+is exact.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The Euler exact sequence is classical; see Hartshorne~\cite[Theorem~II.8.13]{Hartshorne}
+for the dual (cotangent) version.  We include a self-contained proof via the
+tangent formulation because the local coordinate formula~\eqref{eq:local-formula}
+will be used later.
+
+\medskip
+\noindent\textbf{Part~(i)} is addressed in the statement; the only non-obvious
+point is that $\rho$ is well defined, which follows from the fact that the Euler
+vector field $E=\sum x_i\,\partial/\partial x_i$ annihilates every degree-$0$
+rational function on $\mathbb{A}^{N+1}\setminus\{0\}$.
+
+\medskip
+\noindent\textbf{Part~(ii).}
+We compute $\rho(s)$ on $U_0$ by evaluating the derivation
+$\widetilde{X}=\sum_{j=0}^N s_j\,\partial/\partial x_j$
+on the affine coordinate functions $y_i=x_i/x_0$.
+By the quotient rule for derivations,
+\[
+\widetilde{X}(y_i)
+=\widetilde{X}\!\left(\frac{x_i}{x_0}\right)
+=\frac{\widetilde{X}(x_i)\,x_0 - x_i\,\widetilde{X}(x_0)}{x_0^2}.
+\]
+Since $\widetilde{X}(x_i)=s_i$ and $\widetilde{X}(x_0)=s_0$, we get
+\[
+\widetilde{X}(y_i)=\frac{s_i\, x_0-x_i\, s_0}{x_0^2}.
+\]
+Substituting $s_i=x_0 f_i$ and $x_i=x_0 y_i$ yields
+\[
+\widetilde{X}(y_i)
+=\frac{(x_0 f_i)\,x_0-(x_0 y_i)(x_0 f_0)}{x_0^2}
+=f_i-f_0\, y_i.
+\]
+A vector field on $U_0\simeq \mathbb{A}^N$ is determined by its values on
+$y_1,\dots,y_N$, so
+$\rho(s)=\sum_{i=1}^N (f_i-f_0\, y_i)\,\partial/\partial y_i$.
+
+\medskip
+\noindent\textbf{Part~(iii).}
+Exactness is local, so it suffices to work on each standard chart
+$U_j=\{x_j\neq 0\}$.  We treat $U_0$; the other charts are identical
+after relabeling.
+
+\smallskip
+\emph{Injectivity of $\sigma$.}\;
+On $U_0$ the component $x_0$ is invertible, so $\sigma(f)=f(x_0,\dots,x_N)=0$
+forces $f\,x_0=0$ in $\OO(U_0)$, hence $f=0$.
+
+\smallskip
+\emph{$\rho\circ\sigma=0$.}\;
+Write $\sigma(1)=(x_0,\dots,x_N)$ as $(x_0 f_0,\dots,x_0 f_N)$ with $f_0=1$
+and $f_i=y_i$ for $i\ge 1$.  By~\eqref{eq:local-formula},
+\[
+\rho(\sigma(1))
+=\sum_{i=1}^N (y_i-1\cdot y_i)\,\frac{\partial}{\partial y_i}=0.
+\]
+
+\smallskip
+\emph{$\ker(\rho)\subseteq \operatorname{im}(\sigma)$ on $U_0$.}\;
+Let $s=(x_0 f_0,\dots,x_0 f_N)$ satisfy $\rho(s)=0$.
+By~\eqref{eq:local-formula} and the linear independence of
+$\{\partial/\partial y_i\}$, we get $f_i=f_0\,y_i$ for all $i\ge 1$.
+Setting $g:=f_0$ gives
+\[
+s_0=g\,x_0,\qquad s_i=g\,(x_0 y_i)=g\,x_i \quad(i\ge 1),
+\]
+so $s=g\,(x_0,\dots,x_N)=\sigma(g)$.
+
+\smallskip
+\emph{Surjectivity of $\rho$.}\;
+Every vector field on $U_0\simeq\mathbb{A}^N$ has the form
+$\sum_{i=1}^N a_i\,\partial/\partial y_i$.  Taking $s=(0,\,x_0 a_1,\dots,x_0 a_N)$
+gives $f_0=0$ and $f_i=a_i$, so $\rho(s)=\sum a_i\,\partial/\partial y_i$ by
+\eqref{eq:local-formula}.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{Hartshorne}
+R.~Hartshorne,
+\emph{Algebraic Geometry},
+Graduate Texts in Mathematics~52,
+Springer-Verlag, New York, 1977.
+\end{thebibliography}
+
+\end{document}
+
+
+\begin{lemma}[Commutativity of the right square for the $2$--uple Veronese]\label{lem:veronese-right-square}
+Let $\nu_2:\PP^1\to \PP^2$ be the second Veronese embedding
+\[
+\nu_2([u:v])=[U_0:U_1:U_2]=[u^2:uv:v^2].
+\]
+Let $\rho_{\PP^1}:\OO_{\PP^1}(1)^{\oplus 2}\to T_{\PP^1}$ be the Euler map on $\PP^1$ and
+let $\rho_{\PP^2}:\OO_{\PP^2}(1)^{\oplus 3}\to T_{\PP^2}$ be the Euler map on $\PP^2$.
+Pulling back the Euler sequence of $\PP^2$ along $\nu_2$ yields a map
+\[
+\nu_2^*\rho_{\PP^2}:\OO_{\PP^1}(2)^{\oplus 3}\longrightarrow T_{\PP^2}\big|_{\nu_2(\PP^1)}.
+\]
+Define a morphism of vector bundles
+\[
+\alpha:\OO_{\PP^1}(1)^{\oplus 2}\longrightarrow \OO_{\PP^1}(2)^{\oplus 3}
+\]
+by the Jacobian rule
+\[
+\alpha(a,b)=(2u\,a,\;u\,b+v\,a,\;2v\,b),
+\]
+and let $\beta=d\nu_2:T_{\PP^1}\to T_{\PP^2}|_{\nu_2(\PP^1)}$ be the differential of $\nu_2$.
+Then the following square commutes:
+\[
+\begin{tikzcd}
+\OO_{\PP^1}(1)^{\oplus 2} \arrow[r, "\rho_{\PP^1}"] \arrow[d, "\alpha"'] &
+T_{\PP^1} \arrow[d, "\beta=d\nu_2"] \\
+\OO_{\PP^1}(2)^{\oplus 3} \arrow[r, "\nu_2^*\rho_{\PP^2}"'] &
+T_{\PP^2}\big|_{\nu_2(\PP^1)}
+\end{tikzcd}
+\]
+
+Equivalently, $\nu_2^*\rho_{\PP^2}\circ \alpha=\beta\circ \rho_{\PP^1}$.
+\end{lemma}
+
+\begin{proof}
+Since the claim is local on $\PP^1$, it suffices to check it on the affine chart
+$U=\{v\neq 0\}\subset \PP^1$.  Set $y=u/v$ on $U$.
+
+\medskip
+\noindent\textbf{Step 1: Local coordinates on $\PP^2$ along $\nu_2(U)$.}
+On the affine chart $\{U_2\neq 0\}\subset \PP^2$ set
+\[
+z_0=\frac{U_0}{U_2},\qquad z_1=\frac{U_1}{U_2}.
+\]
+Along $\nu_2(U)$ we have $U_0=u^2$, $U_1=uv$, $U_2=v^2$, hence
+\[
+z_0=\frac{u^2}{v^2}=y^2,\qquad z_1=\frac{uv}{v^2}=y.
+\]
+Therefore the differential $\beta=d\nu_2$ satisfies
+\begin{equation}\label{eq:beta-local}
+\beta\!\left(\frac{\partial}{\partial y}\right)
+=
+\frac{d z_0}{d y}\frac{\partial}{\partial z_0}+\frac{d z_1}{d y}\frac{\partial}{\partial z_1}
+=
+2y\,\frac{\partial}{\partial z_0}+\frac{\partial}{\partial z_1}.
+\end{equation}
+
+\medskip
+\noindent\textbf{Step 2: Local formula for the Euler maps.}
+On $U=\{v\neq 0\}$ the line bundle $\OO_{\PP^1}(1)$ is trivialized by $v$, so any local
+section of $\OO_{\PP^1}(1)^{\oplus 2}$ can be written as $(vA,\;vB)$ with
+$A,B\in \OO_{\PP^1}(U)$.  By the $n=1$ case of the affine formula from Lemma~\ref{lem:Euler-sequence-maps}, we have
+\begin{equation}\label{eq:rhoP1-local}
+\rho_{\PP^1}(vA,\;vB)=(A-By)\,\frac{\partial}{\partial y}.
+\end{equation}
+
+Similarly, on $\{U_2\neq 0\}$ the bundle $\OO_{\PP^2}(1)$ is trivialized by $U_2$.
+After pulling back to $U$, we have $U_2=v^2$, so $\OO_{\PP^1}(2)$ is trivialized by $v^2$.
+Hence any local section of $\OO_{\PP^1}(2)^{\oplus 3}$ can be written as
+$(v^2C_0,\;v^2C_1,\;v^2C_2)$ with $C_i\in \OO_{\PP^1}(U)$.  The $n=2$ affine formula
+gives
+\begin{equation}\label{eq:rhoP2-local}
+(\nu_2^*\rho_{\PP^2})(v^2C_0,\;v^2C_1,\;v^2C_2)
+=
+(C_0-C_2 z_0)\frac{\partial}{\partial z_0}+(C_1-C_2 z_1)\frac{\partial}{\partial z_1}.
+\end{equation}
+Restricting to $\nu_2(U)$, we may substitute $z_0=y^2$ and $z_1=y$.
+
+\medskip
+\noindent\textbf{Step 3: The Jacobian map $\alpha$ in local trivializations.}
+Let $(vA,\;vB)$ be a local section of $\OO_{\PP^1}(1)^{\oplus 2}$ on $U$.
+Using $u=yv$ we compute
+\[
+\alpha(vA,\;vB)
+=
+(2u\cdot vA,\; u\cdot vB+v\cdot vA,\;2v\cdot vB)
+=
+\bigl(v^2(2yA),\;v^2(A+yB),\;v^2(2B)\bigr).
+\]
+Thus in the notation of \eqref{eq:rhoP2-local},
+\begin{equation}\label{eq:C-coeffs}
+C_0=2yA,\qquad C_1=A+yB,\qquad C_2=2B.
+\end{equation}
+
+\medskip
+\noindent\textbf{Step 4: Compare both compositions.}
+First compute $(\nu_2^*\rho_{\PP^2})\circ \alpha$ using
+\eqref{eq:rhoP2-local} and \eqref{eq:C-coeffs}, and then substitute $z_0=y^2$, $z_1=y$:
+\[
+(\nu_2^*\rho_{\PP^2})(\alpha(vA,vB))
+=
+(C_0-C_2 y^2)\frac{\partial}{\partial z_0}+(C_1-C_2 y)\frac{\partial}{\partial z_1}
+=
+\bigl(2yA-2B y^2\bigr)\frac{\partial}{\partial z_0}+\bigl(A+yB-2By\bigr)\frac{\partial}{\partial z_1}.
+\]
+Hence
+\[
+(\nu_2^*\rho_{\PP^2})(\alpha(vA,vB))
+=
+2y(A-By)\frac{\partial}{\partial z_0}+(A-By)\frac{\partial}{\partial z_1}
+=
+(A-By)\left(2y\frac{\partial}{\partial z_0}+\frac{\partial}{\partial z_1}\right).
+\]
+On the other hand, using \eqref{eq:rhoP1-local} and then \eqref{eq:beta-local},
+\[
+\beta\bigl(\rho_{\PP^1}(vA,vB)\bigr)
+=
+\beta\!\left((A-By)\frac{\partial}{\partial y}\right)
+=
+(A-By)\,\beta\!\left(\frac{\partial}{\partial y}\right)
+=
+(A-By)\left(2y\frac{\partial}{\partial z_0}+\frac{\partial}{\partial z_1}\right).
+\]
+The two expressions agree, proving $\nu_2^*\rho_{\PP^2}\circ \alpha=\beta\circ \rho_{\PP^1}$
+on $U$.  Since the assertion is local and $U$ covers $\PP^1$ together with the chart
+$\{u\neq 0\}$, the square commutes globally.
+\end{proof}
+
+
+\begin{lemma}[Commutativity of the right square for the $2$--uple Veronese in $\PP^M$]\label{lem:veronese-right-square-PM}
+Let $M\ge 2$ and let $i:\PP^1\to \PP^M$ be a morphism whose image is a smooth conic.
+Equivalently, after choosing homogeneous coordinates $[X_0:\dots,X_M]$ on $\PP^M$,
+the map $i$ factors as
+\[
+\PP^1 \xrightarrow{\ \nu_2\ } \PP^2 \xrightarrow{\ \iota\ } \PP^M,
+\qquad
+\nu_2([u:v])=[u^2:uv:v^2],\quad
+\iota([U_0:U_1:U_2])=[U_0:U_1:U_2:0:\cdots:0].
+\]
+Let $\rho_{\PP^1}:\OO_{\PP^1}(1)^{\oplus 2}\to T_{\PP^1}$ be the Euler map on $\PP^1$ and
+let $\rho_{\PP^M}:\OO_{\PP^M}(1)^{\oplus (M+1)}\to T_{\PP^M}$ be the Euler map on $\PP^M$.
+Pulling back the Euler sequence of $\PP^M$ along $i$ yields a map
+\[
+i^*\rho_{\PP^M}:\OO_{\PP^1}(2)^{\oplus (M+1)}\longrightarrow T_{\PP^M}\big|_{i(\PP^1)}.
+\]
+
+Define a morphism of vector bundles
+\[
+\widetilde\alpha:\OO_{\PP^1}(1)^{\oplus 2}\longrightarrow \OO_{\PP^1}(2)^{\oplus (M+1)}
+\]
+by the Jacobian rule in the first three coordinates and zero in the remaining ones:
+\[
+\widetilde\alpha(a,b)=\bigl(2u\,a,\;u\,b+v\,a,\;2v\,b,\;0,\dots,0\bigr),
+\]
+and let $\beta=di:T_{\PP^1}\to T_{\PP^M}|_{i(\PP^1)}$ be the differential of $i$.
+Then the following square commutes:
+\[
+\begin{tikzcd}
+\OO_{\PP^1}(1)^{\oplus 2} \arrow[r, "\rho_{\PP^1}"] \arrow[d, "\widetilde\alpha"'] &
+T_{\PP^1} \arrow[d, "\beta=di"] \\
+\OO_{\PP^1}(2)^{\oplus (M+1)} \arrow[r, "i^*\rho_{\PP^M}"'] &
+T_{\PP^M}\big|_{i(\PP^1)}.
+\end{tikzcd}
+\]
+Equivalently, $i^*\rho_{\PP^M}\circ \widetilde\alpha=\beta\circ \rho_{\PP^1}$.
+\end{lemma}
+
+\begin{proof}
+Since the claim is local on $\PP^1$, it suffices to check it on the affine chart
+$U=\{v\neq 0\}\subset \PP^1$.  Set $y=u/v$ on $U$.
+
+\medskip
+\noindent\textbf{Step 1: Local coordinates on $\PP^M$ along $i(U)$.}
+On the affine chart $\{X_2\neq 0\}\subset \PP^M$ set
+\[
+z_0=\frac{X_0}{X_2},\qquad z_1=\frac{X_1}{X_2},\qquad w_j=\frac{X_j}{X_2}\ (j=3,\dots,M).
+\]
+Along $i(U)$ we have $X_0=u^2$, $X_1=uv$, $X_2=v^2$, and $X_j=0$ for $j\ge 3$, hence
+\[
+z_0=\frac{u^2}{v^2}=y^2,\qquad z_1=\frac{uv}{v^2}=y,\qquad w_j=0\ (j=3,\dots,M).
+\]
+Therefore the differential $\beta=di$ satisfies
+\begin{equation}\label{eq:beta-local-PM}
+\beta\!\left(\frac{\partial}{\partial y}\right)
+=
+\frac{d z_0}{d y}\frac{\partial}{\partial z_0}
++\frac{d z_1}{d y}\frac{\partial}{\partial z_1}
++\sum_{j=3}^M \frac{d w_j}{d y}\frac{\partial}{\partial w_j}
+=
+2y\,\frac{\partial}{\partial z_0}+\frac{\partial}{\partial z_1},
+\end{equation}
+since $w_j\equiv 0$ on $i(U)$.
+
+\medskip
+\noindent\textbf{Step 2: Local formula for the Euler maps.}
+On $U=\{v\neq 0\}$ the line bundle $\OO_{\PP^1}(1)$ is trivialized by $v$, so any local
+section of $\OO_{\PP^1}(1)^{\oplus 2}$ can be written as $(vA,\;vB)$ with
+$A,B\in \OO_{\PP^1}(U)$.  By the $n=1$ affine formula from Lemma~\ref{lem:Euler-sequence-maps}, we have
+\begin{equation}\label{eq:rhoP1-local-PM}
+\rho_{\PP^1}(vA,\;vB)=(A-By)\,\frac{\partial}{\partial y}.
+\end{equation}
+
+Similarly, on $\{X_2\neq 0\}$ the bundle $\OO_{\PP^M}(1)$ is trivialized by $X_2$.
+After pulling back to $U$, we have $X_2=v^2$, so $\OO_{\PP^1}(2)$ is trivialized by $v^2$.
+Hence any local section of $\OO_{\PP^1}(2)^{\oplus (M+1)}$ can be written as
+\[
+(v^2C_0,\;v^2C_1,\;v^2C_2,\;v^2D_3,\dots,v^2D_M)
+\]
+with $C_i,D_j\in \OO_{\PP^1}(U)$.  The affine Euler formula on the chart $\{X_2\neq 0\}$
+gives
+\begin{equation}\label{eq:rhoPM-local}
+(i^*\rho_{\PP^M})(v^2C_0,\;v^2C_1,\;v^2C_2,\;v^2D_3,\dots,v^2D_M)
+=
+(C_0-C_2 z_0)\frac{\partial}{\partial z_0}
++(C_1-C_2 z_1)\frac{\partial}{\partial z_1}
++\sum_{j=3}^M (D_j-C_2 w_j)\frac{\partial}{\partial w_j}.
+\end{equation}
+Restricting to $i(U)$, we may substitute $z_0=y^2$, $z_1=y$, and $w_j=0$.
+
+\medskip
+\noindent\textbf{Step 3: The Jacobian map $\widetilde\alpha$ in local trivializations.}
+Let $(vA,\;vB)$ be a local section of $\OO_{\PP^1}(1)^{\oplus 2}$ on $U$.
+Using $u=yv$ we compute
+\[
+\widetilde\alpha(vA,\;vB)
+=
+\bigl(2u\cdot vA,\; u\cdot vB+v\cdot vA,\;2v\cdot vB,\;0,\dots,0\bigr)
+=
+\bigl(v^2(2yA),\;v^2(A+yB),\;v^2(2B),\;0,\dots,0\bigr).
+\]
+Thus in the notation of \eqref{eq:rhoPM-local},
+\begin{equation}\label{eq:C-D-coeffs}
+C_0=2yA,\qquad C_1=A+yB,\qquad C_2=2B,\qquad D_j=0\ (j=3,\dots,M).
+\end{equation}
+
+\medskip
+\noindent\textbf{Step 4: Compare both compositions.}
+First compute $(i^*\rho_{\PP^M})\circ \widetilde\alpha$ using
+\eqref{eq:rhoPM-local} and \eqref{eq:C-D-coeffs}, and then substitute
+$z_0=y^2$, $z_1=y$, and $w_j=0$:
+\begin{align*}
+(i^*\rho_{\PP^M})(\widetilde\alpha(vA,vB))
+&=
+(C_0-C_2 y^2)\frac{\partial}{\partial z_0}
++(C_1-C_2 y)\frac{\partial}{\partial z_1}
++\sum_{j=3}^M (D_j-C_2\cdot 0)\frac{\partial}{\partial w_j}\\
+&=
+\bigl(2yA-2B y^2\bigr)\frac{\partial}{\partial z_0}
++\bigl(A+yB-2By\bigr)\frac{\partial}{\partial z_1}
++\sum_{j=3}^M 0\cdot \frac{\partial}{\partial w_j}\\
+&=
+(A-By)\left(2y\frac{\partial}{\partial z_0}+\frac{\partial}{\partial z_1}\right).
+\end{align*}
+On the other hand, using \eqref{eq:rhoP1-local-PM} and then \eqref{eq:beta-local-PM},
+\[
+\beta\bigl(\rho_{\PP^1}(vA,vB)\bigr)
+=
+\beta\!\left((A-By)\frac{\partial}{\partial y}\right)
+=
+(A-By)\,\beta\!\left(\frac{\partial}{\partial y}\right)
+=
+(A-By)\left(2y\frac{\partial}{\partial z_0}+\frac{\partial}{\partial z_1}\right).
+\]
+The two expressions agree, proving $i^*\rho_{\PP^M}\circ \widetilde\alpha=\beta\circ \rho_{\PP^1}$
+on $U$.  Since the assertion is local and $U$ covers $\PP^1$ together with the chart
+$\{u\neq 0\}$, the square commutes globally.
+\end{proof}
+
+
+
+\end{document}

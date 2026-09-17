@@ -1,0 +1,217 @@
+ \documentclass[11pt,twoside]{amsart}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=Blue, citecolor=Maroon}
+\usepackage{amsthm, amsmath, amscd, amssymb,centernot,txfonts}
+\usepackage{tikz-cd}
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage[all]{xy}
+\usepackage[left=2.5cm,top=2.5cm,bottom=3cm,right=2.5cm]{geometry}
+\usepackage{dirtytalk}
+\usepackage{mathtools}
+\usetikzlibrary{shapes,arrows}
+\usepackage{etoolbox}
+\usepackage{dynkin-diagrams}
+\usepackage{enumitem}
+\usepackage{chngpage}
+\usepackage{adjustbox}
+\usepackage[normalem]{ulem}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fourier} 
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{comment}
+%\usepackage[cmtip,all]{xy}
+
+\newcommand{\longsquiggly}{\xymatrix{{}\ar@{~>}[r]&{}}}
+\newcommand\aimplies{\stackrel{\mathclap{\normalfont\mbox{Theorem ~\ref{Def_1}}}}{\implies}}
+\newcommand\bimplies{\stackrel{\mathclap{\normalfont\mbox{Corollary ~\ref{Defphi}}}}{\implies}}
+\newcommand\cimplies{\stackrel{\mathclap{\normalfont\mbox{Corollary ~\ref{defcanonicalmorphism }}}}{\implies}}
+%\newcommand\myeq{\stackrel{\mathclap{\normalfont\mbox{def}}}{=}}
+
+
+
+\setlength{\headheight}{15.2pt}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+
+
+\setcounter{tocdepth}{1}
+
+\setlength\parskip{0in}
+\setlength\parindent{0.2in}
+
+
+\theoremstyle{plain}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newtheorem{definition}[theorem]{Definition}
+
+
+\newtheorem{set-up}[theorem]{Set-up}
+\newtheorem{observation}[theorem]{Observation}
+
+
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+
+
+\newcommand{\te}{\otimes}
+
+\newcommand{\myeq}{\overset{\mathrm{duality}}{=\joinrel=}}
+\newcommand*{\QEDA}{\hfill\ensuremath{\blacksquare}}
+\newcommand*{\QEDB}{\hfill\ensuremath{\square}}
+
+\tikzstyle{decision} = [diamond, draw, , 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, , 
+    text width=10em, text centered, rounded corners, minimum height=2em]
+\tikzstyle{block1} = [rectangle, draw, , 
+    text width=5em, text centered, rounded corners, minimum height=2em]    
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,, node distance=3cm,
+    minimum height=2em]
+\begin{document}
+
+\title[List of corrections]{List of revisions in the article "Extendability of general $K3$ surfaces without Gaussian maps and classification of non-prime Fano threefolds"}
+\author[P. Bangere]{Purnaprajna Bangere}
+%%\address{Department of Mathematics, University of Kansas, Lawrence, USA}
+%%\email{purna@ku.edu}
+
+%\author[F.J. Gallego]{Francisco Javier Gallego}
+%%\address{Departamento de \'Algebra, Geometr\'ia y Topolog\'ia and Instituto de Matem\'atica Interdisciplinar,
+%%Universidad Complutense de Madrid, Spain}
+%%\email{gallego@mat.ucm.es}
+
+\author[J. Mukherjee]{Jayan Mukherjee}
+%%\address{Department of Mathematics, University of California, Riverside, USA} 
+%%\email{jayanm@ucr.edu}
+
+%\author[D. Raychaudhury]{Debaditya Raychaudhury}
+%%\address{Department of Mathematics, University of Toronto, Toronto, Canada}
+%%\email{debaditya.raychaudhury@utoronto.ca}
+
+
+
+
+
+\maketitle
+
+We thank the referee for the valuable comments. \textcolor{black}{We have addressed all of them.} We list the corrections/modifications that we implemented following the referee's comments.
+
+\smallskip
+
+\begin{enumerate}
+
+\item We have addressed this point in the proof of Theorem $3.1$. The bottom row of the commutative diagram of exact sequences do indeed reduce to what we had claimed before, but we found it more convenient to directly argue using the commutative diagram 
+
+\[
+\begin{tikzcd}
+  0 \arrow[r] & \mathcal{O}_{\mathbb{P}^1} \arrow[r, "\sigma_{\mathbb{P}^1}"] \arrow[d, "\Bar{w}", "\cong"'] & \mathcal{O}_{\mathbb{P}^1}(1)^{\oplus 2} \arrow[r, "\rho_{\mathbb{P}^1}"] \arrow[d, "\widetilde{\alpha}"] & T_{\mathbb{P}^1} \arrow[r] \arrow[d, "\beta = di"] & 0 \\
+   0 \arrow[r] & \mathcal{O}_{\mathbb{P}^1} \arrow[r, "i^*\sigma_{\mathbb{P}^M}"] & \mathcal{O}_{\mathbb{P}^1}(2)^{M+1} \arrow[r, "i^*\rho_{\mathbb{P}^M}"] & T_{\mathbb{P}^2}|_{\mathbb{P}^1} \oplus \mathcal{O}_{\mathbb{P}^1}(2)^{M-2} = T_{\mathbb{P}^M|_{\mathbb{P}^1}} \arrow[r] & 0
+\end{tikzcd}
+\]
+
+All the local computations are shown in Lemma $3.4$
+
+\item Theorem $4.4$ of \cite{BMR21} has been cited in the proof of Theorem $2.4$.
+
+\item \cite[Lemma $2.6$, (iii)]{BMR21} has been changed to \cite[Lemma $2.5$, $(4)$]{BMR21} and \cite[Lemma $2.5$ (iii)] {BMR21} has been changed to \cite[Lemma $2.5$, $(3)$]{BMR21} at the end of the proof of Theorem $3.1$.
+
+\item $a = 1$ has been changed to $a = 2$ in item $(5)$ of the proof of Theorem $3.11$.
+
+\item A period is added after $8k+16$ after item $(5)$ of the proof of Theorem $3.11$.
+
+\item A period is added after $1$ in item $(7)$ of Theorem $3.15$.
+
+\item We have included the correct bounds as pointed out by the referee in items $(3)$ and $(4)$ of Proposition $4.1$. We thank the referee for giving us the correct bounds (indeed the line bundle $H = \mathcal{O}_Y(aC_0+bf)$ needs to be very ample first !).
+
+\item All occurences of $N_{\widetilde{Y}/\mathbb{P}^N}$ in Proposition $4.1$ have been replaced by $N_{\widetilde{Y}/\mathbb{P}^M}$.
+
+\item A period has been added after $1209$ in the proof of Theorem $4.6$.
+
+
+\end{enumerate}
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{KMM92}
+\color{black}
+
+\bibitem{AHL10}
+Artebani, Michela; Hausen, Jürgen; Laface, Antonio
+\emph{On Cox rings of K3 surfaces}
+Compos. Math. 146 (2010), no. 4, 964–998.
+
+\bibitem{BMR21}
+Bangere, Purnaprajna; Mukherjee, Jayan; Raychaudhury, Debaditya
+\emph{K3 carpets on minimal rational surfaces and their smoothings.}
+Internat. J. Math.32(2021), no.6, Paper No. 2150032, 20 pp.
+
+\bibitem{CDS20}
+Ciliberto, Ciro; Dedieu, Thomas; Sernesi, Edoardo
+\emph{Wahl maps and extensions of canonical curves and $K3$ surfaces.}
+J. Reine Angew. Math. 761 (2020), 219–245.
+
+
+\bibitem{CLM93}
+Ciliberto, C; Lopez, A; Miranda, R
+\emph{Projective degenerations of $K3$ surfaces, Gaussian maps and Fano threefolds}
+Invent. Math. 114, 641 667 (1993)
+
+\bibitem{CLM94}
+Ciliberto, Ciro; Lopez, Angelo Felice; Miranda, Rick
+\emph{On the corank of Gaussian maps for general embedded $K3$ surfaces}
+arXiv:alg-geom/9411008
+
+\bibitem{CLM98}
+Ciliberto, Ciro; Lopez, Angelo Felice; Miranda, Rick
+\emph{Classification of varieties with canonical curve section via Gaussian maps on canonical curves.}
+Amer. J. Math.   120 (1998), no. 1, 1–21.
+
+\bibitem{CLM98c}
+Ciliberto, Ciro; Lopez, Angelo Felice; Miranda, Rick
+\emph{Corrigendum to ``Classification of varieties with canonical curve section via Gaussian maps on canonical curves''.}
+Amer. J. Math. 143 (2021), no. 6, 1661–1663.
+
+
+\bibitem{BMR21}
+Bangere, Purnaprajna; Mukherjee, Jayan; Raychaudhury, Debaditya
+\emph{K3 carpets on minimal rational surfaces and their smoothings.}
+Internat. J. Math.32(2021), no.6, Paper No. 2150032, 20 pp.
+
+\bibitem{GP97}
+Gallego, F.J., Purnaprajna, B.P.
+\emph{Degenerations of $K3$ surfaces in projective space}
+Transactions of the American Mathematical Society
+Volume 349, Number 6, June 1997, Pages 2477–2492
+
+\bibitem{K01}
+Knutsen, Andreas Leopold
+\emph{On $k$th-order embeddings of $K3$ surfaces and Enriques surfaces.}
+Manuscripta Math. 104 (2001), no. 2, 211–237.
+
+
+
+\end{thebibliography}
+\end{document}
+
+
+

@@ -1,0 +1,115 @@
+\documentclass[11pt,twoside]{amsart}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=Blue, citecolor=Maroon}
+\usepackage{amsthm, amsmath, amscd, amssymb,centernot,txfonts}
+\usepackage{tikz-cd}
+\usepackage{lipsum}
+\usepackage{cancel} 
+\usepackage{multicol}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage[all]{xy}
+\usepackage[left=2.5cm,top=2.5cm,bottom=3cm,right=2.5cm]{geometry}
+\usepackage{dirtytalk}
+\usepackage{mathtools}
+\usetikzlibrary{shapes,arrows}
+\usepackage{etoolbox}
+\usepackage{dynkin-diagrams}
+\usepackage{enumitem}
+\usepackage{chngpage}
+\usepackage{adjustbox}
+\usepackage[normalem]{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage{fourier} 
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{comment}
+%\usepackage[cmtip,all]{xy}
+\usepackage{cancel}
+\usepackage{cleveref}
+\newcommand{\longsquiggly}{\xymatrix{{}\ar@{~>}[r]&{}}}
+
+
+
+
+\setlength{\headheight}{15.2pt}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+
+
+\setcounter{tocdepth}{1}
+
+\setlength\parskip{0in}
+\setlength\parindent{0.2in}
+
+
+\theoremstyle{plain}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+
+\newtheorem{observation}[theorem]{Observation}
+
+
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{set-up}[theorem]{Set-up}
+\newtheorem{definition}[theorem]{Definition}
+
+\newcommand{\te}{\otimes}
+
+\newcommand{\myeq}{\overset{\mathrm{duality}}{=\joinrel=}}
+\newcommand*{\QEDA}{\hfill\ensuremath{\blacksquare}}
+\newcommand*{\QEDB}{\hfill\ensuremath{\square}}
+
+\tikzstyle{decision} = [diamond, draw, , 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, , 
+    text width=10em, text centered, rounded corners, minimum height=2em]
+\tikzstyle{block1} = [rectangle, draw, , 
+    text width=5em, text centered, rounded corners, minimum height=2em]    
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,, node distance=3cm,
+    minimum height=2em]
+\begin{document}
+
+\title[Extendability of $K3$ surfaces without Gaussian maps and classification of Fano threefolds]{Extendability of $K3$ surfaces without Gaussian maps and classification of Fano threefolds}
+
+
+%\author[P. Bangere]{Purnaprajna Bangere}
+%\address{Department of Mathematics, University of Kansas, Lawrence, USA}
+%\email{purna@ku.edu}
+
+%\author[F.J. Gallego]{Francisco Javier Gallego}
+%\address{Departamento de \'Algebra, Geometr\'ia y Topolog\'ia and Instituto de Matem\'atica Interdisciplinar,
+%Universidad Complutense de Madrid, Spain}
+%\email{gallego@mat.ucm.es}
+
+%\author[J. Mukherjee]{Jayan Mukherjee}
+%\address{Department of Mathematics, Oklahoma State University, Stillwater, USA}
+%\email{jayan.mukherjee@okstate.edu}
+
+\subjclass[2020]{14B05, 14B10, 14D06, 14D15, 14D20, 14E30, 14J10, 14J45}
+\keywords{compactification of moduli spaces, simple normal crossings, semi-log-canonical singularities, smoothings, deformations of morphisms, multiple structures, Fano varieties, Calabi-Yau varieties, varieties of general type, moduli of varieties of general type.}
+
+\begin{theorem}\label{ZL for K3 carpets}
+ Let $\widetilde{Y} \hookrightarrow \mathbb{P}^M$ be a $K3$ carpet embedded by the complete linear series of a very ample line bundle $\widetilde{H}$ such that the embedding induced on the reduced part is $Y = \mathbb{F}_e \hookrightarrow \mathbb{P}^N$ embedded by the complete linear series of a very ample line bundle $H = C_0+bf$. If $b \geq e+3$, then $\alpha(\widetilde Y) = h^0(\mathcal{O}_Y(-H-2K_Y))$.
+ \end{theorem}
+
+
+\end{document}
