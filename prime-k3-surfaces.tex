@@ -70,6 +70,65 @@
 
 %% content to be added
 
+\section{Preliminaries on degeneration of $K3$ surfaces into $K3$ double structures on Hirzebruch surfaces}
+
+We recall some definitions and a theorem on some special non-reduced degenerations of $K3$ surfaces in a projective space.
+
+\begin{definition}\label{ribbon}
+Let $Y$ be a reduced connected projective variety.
+ \begin{enumerate}
+     \item A scheme $\widetilde{Y}$ is called a ribbon on $Y$ with conormal bundle $L$ if $\widetilde{Y}_{\operatorname{red}} = Y$, $\mathcal{I}_{Y/\widetilde{Y}}^2 = (0)$ and $\mathcal{I}_{Y/\widetilde{Y}} \cong L$ as an $\mathcal{O}_Y$ module where $\mathcal{I}_{Y/\widetilde{Y}}$ is the ideal sheaf of $Y$ inside $\widetilde{Y}$ and $L$ is a line bundle on $Y$. 
+
+     \item If $Y$ is a smooth surface, then a ribbon $\widetilde{Y}$ on $Y$ is called a $K3$ carpet if the dualizing sheaf $K_{\widetilde{Y}} \cong \mathcal{O}_{\widetilde{Y}}$ and $H^1(\mathcal{O}_{\widetilde{Y}})= 0$.
+
+\end{enumerate}
+\end{definition}  
+
+The following lemma characterizes the conormal bundle of a $K3$ carpet $\widetilde{Y}$ on a smooth surface $Y$.
+
+\begin{lemma}(see \cite[\textcolor{black}{Proposition $1.5$}]{GGP08})
+    A ribbon $\widetilde{Y}$ on a smooth \textcolor{black}{regular} surface $Y$ with conormal bundle $L$ is a $K3$ carpet if and only if $L \cong K_Y$.
+\end{lemma}
+
+\color{black}
+We recall the definition of the Hilbert scheme of $K3$ surfaces.
+
+\begin{definition}\label{Hilbert schemes of K3 surfaces}
+    Let $\mathcal{H}_{r,g}$ denote the Hilbert scheme of $K3$ surfaces of index $r$ and genus $g$, i.e, $K3$ surfaces $X \subset \mathbb{P}^{1+r^2(g-1)} = \mathbb{P}^M$ embedded by the complete linear series of $rB$ where $B$ is a primitive very ample line bundle with $B^2 = 2g-2$. If $r = 1$, we call $\mathcal{H}_{r,g}$ the Hilbert scheme of prime $K3$ surfaces while if $r \geq 2$, $\mathcal{H}_{r,g}$ is called the Hilbert scheme of non-prime $K3$ surfaces. Recall that $\operatorname{dim}\mathcal{H}_{r,g} = h^0(N_{X/\mathbb{P}^M}) =  18+(M+1)^2$.
+\end{definition}
+\color{black}
+
+Next we recall a degeneration theorem of $K3$ surfaces into $K3$ carpets on Hirzebruch surfaces.
+
+\begin{theorem}\label{degeneration into $K3$ carpets}(\cite[ \textcolor{black}{Theorems $3.1, 4.3, 4.4, 5.1$}]{BMR21} and \cite[\textcolor{black}{Proposition $1.7$, Theorems $3.5, 4.1$}]{GP97})
+Let $Y = \mathbb{F}_e$ be a Hirzebruch surface. Let $H = aC_0+bf$ be a very ample line bundle on $Y$, where $C_0$ is the class of section, satisfying $C_0^2 = -e$ and $f$ is the class of a fiber satisfying $f^2 = 0$ (this happens if and only if $b \geq ae+1$). Consider the embedding $Y \hookrightarrow \mathbb{P}^N$ induced by the complete linear series $|H|$.  
+\begin{enumerate}
+    \item Then there exists $K3$ carpets $\widetilde{Y}$ on $Y$ along with a very ample line bundle $\widetilde{H}$ on $\widetilde{Y}$ such that $\widetilde{H}|_Y = H$.
+
+    \item If $\widetilde{Y} \hookrightarrow \mathbb{P}^M$ denote the embedding induced by the complete linear series $|\widetilde{H}|$, then $\widetilde{Y}$ is smoothable in $\mathbb{P}^M$ into smooth $K3$ surfaces embedded by the complete linear series of a very ample line bundle.
+
+    \item For $0 \leq e \leq 2$, the Hilbert point of $\widetilde{Y}$ is smooth and \textcolor{black}{for} \textcolor{black}{$0 \leq e \leq 1$,} the general smooth surface of the unique Hilbert component containing $\widetilde{Y}$ is a 
+    \begin{itemize}
+        \item[(a)] prime $K3$ surface if $\textrm{gcd}(a,b) = 1$ 
+        \item[(b)] a non-prime $K3$ surface embedded by $rB$, with $r = \operatorname{gcd}(a,b)$ and $B$ is a primitive very ample line bundle. 
+    \end{itemize}
+\end{enumerate}
+\end{theorem}
+
+\begin{proof} Part $(1)$, $(2)$ and the statement on smoothness of Hilbert point in part $(3)$ of the Theorem follows from \cite[Theorem $3.1 (3)$, Theorem $4.3$, Theorem $4.4$, Theorem $5.1$]{BMR21} and \cite[Proposition $1.7$, Theorem $3.5$, Theorem $4.1$]{GP97}.
+    
+
+We prove part $(3)$. Let $Y = \mathbb{F}_e$ with $0 \leq e \leq 2$. Consider the $K3$ double cover of $\pi:X \to Y$ branched along \textcolor{black}{a very general smooth} $D \in |-2K_Y|$. Let $H_0 = \pi^*(\mathcal{O}_{Y}(1)) = \pi^*(aC_0+bf)$ and consider the composition  
+\[
+\begin{tikzcd}
+X \arrow[dr, "\varphi"] \arrow[d, "\pi"] & \\
+Y \arrow[r, hook] & \mathbb{P}^M
+\end{tikzcd}
+\]
+Recall the smoothing fibers $X_t \xhookrightarrow{\varphi_t} \mathbb{P}^M$ are obtained as the image of an embedding $\varphi_t$ which is a general deformation of $\varphi$ along a one parameter family $T$ and are hence embedded inside $\mathbb{P}^M$ by the complete linear series of a line bundle $H_t$ which is a deformation of $H_0$. Since the multiplicity of a polarization remains constant on a smooth family, we have to find the multiplicity of $H_0$ on the double cover $X$. Now since $D$ is \textcolor{black}{very general,} smooth and irreducible part $(3)$ for $Y = \mathbb{F}_e$, \textcolor{black}{$0 \leq e \leq 1$} follows from the fact that $\textrm{Pic}(X)$ is generated by $\pi^*\mathcal{O}_Y(C_0)$ and $\pi^*\mathcal{O}_Y(f)$ (see \cite[Proposition $6.3$]{AHL10} \textcolor{black}{and \cite[Proposition $6.5$ (i), (iii)]{AHL10}}).
+
+\end{proof}
+
 \section{Extendability of K3 carpets on rational normal scrolls}\label{sec:carpets}
 
 \subsection{Set-up and notation}\label{subsec:setup}
