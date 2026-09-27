@@ -460,13 +460,15 @@ Each of the statements (1)--(3) are standard for the flag Hilbert scheme (see \c
 \begin{lemma}[Canonical ribbons on $C$]\label{lem:RC}
 Let $\RC:=\PP\big(H^0(N_C\otimes L_C)\big)\cong\PP^{g-3}$, and recall that $s_C=s|_C\colon N_C^{\vee}\cong N_Y^{\vee}|_C\to K_Y|_C=L_C$ is the restriction to $C$ of the surjection $s$ defining the carpet, an element of $H^0(N_C\otimes L_C)$.
 \begin{enumerate}
-\item Every nonzero $t\in H^0(N_C\otimes L_C)=\Hom(N_C^{\vee},L_C)$ is surjective and defines a double structure $\Ct_t\subset H$ on $C$ by $I_{\Ct_t}:=\ker\big(I_C\to N_C^{\vee}\xrightarrow{t}L_C\big)$; it satisfies $I_C^2\subset I_{\Ct_t}$ and $I_C/I_{\Ct_t}\cong L_C$, and depends only on $[t]\in\RC$. Conversely every double structure on $C$ in $H$ with conormal bundle $L_C$ is of this form. One has $\Ct=\Ct_{s_C}$.
+\item Every nonzero $t\in H^0(N_C\otimes L_C)=\Hom(N_C^{\vee},L_C)$ is surjective and defines a double structure $\Ct_t\subset H$ on $C$ by $I_{\Ct_t}:=\ker\big(I_C\to N_C^{\vee}\xrightarrow{t}L_C\big)$; it satisfies $I_C^2\subset I_{\Ct_t}$ and $I_C/I_{\Ct_t}\cong L_C$, and depends only on $[t]\in\RC$. Conversely every double structure on $C$ in $H$ with conormal bundle $L_C$ is of this form. 
+%One has $\Ct=\Ct_{s_C}$.
 \item $T_{[\Ct]}\RC=H^0(N_C\otimes L_C)/k\,s_C$. Concretely, a first-order deformation of $\Ct$ inside $H$ which is a double structure on $C_\Dd$ with invertible conormal is $\ker(s_C+\varepsilon t)$ for some $t\in H^0(N_C\otimes L_C)$, and $s_C+\varepsilon t$, $s_C+\varepsilon t'$ define the same subscheme if and only if $t-t'\in k\,s_C$.
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
-(1) $N_C\cong\OO(g+1)^{\oplus g-2}$ and $L_C\cong\OO(-g-1)$, so $\Hom(N_C^{\vee},L_C)=\Hom(\OO(-g-1)^{g-2},\OO(-g-1))=k^{g-2}$ consists of constant maps, every nonzero one of which is surjective. The correspondence between double structures with conormal $L_C$ and surjections $N_C^{\vee}\to L_C$ is \cite[\S1]{BE95}. That $\Ct=\Yt\cap H$ corresponds to $s_C$: $I_{\Ct/H}=(I_{\Yt}+(h))/(h)$ and $I_{C/H}=(I_Y+(h))/(h)$, where $h$ is the equation of $H$; since $h$ is a nonzerodivisor modulo $I_Y$, $I_Y\cap(h)=hI_Y$, whence $I_{C/H}/I_{\Ct/H}=I_Y/(I_{\Yt}+hI_Y)=K_Y\otimes\OO_C=L_C$ and the surjection $N_C^{\vee}\to L_C$ is $s\otimes\OO_C=s_C$.
+$(1)$ For part $(1)$ see \cite[\S1]{BE95}. \\
+%(1) $N_C\cong\OO(g+1)^{\oplus g-2}$ and $L_C\cong\OO(-g-1)$, so $\Hom(N_C^{\vee},L_C)=\Hom(\OO(-g-1)^{g-2},\OO(-g-1))=k^{g-2}$ consists of constant maps, every nonzero one of which is surjective. The correspondence between double structures with conormal $L_C$ and surjections $N_C^{\vee}\to L_C$ is \cite[\S1]{BE95}. That $\Ct=\Yt\cap H$ corresponds to $s_C$: $I_{\Ct/H}=(I_{\Yt}+(h))/(h)$ and $I_{C/H}=(I_Y+(h))/(h)$, where $h$ is the equation of $H$; since $h$ is a nonzerodivisor modulo $I_Y$, $I_Y\cap(h)=hI_Y$, whence $I_{C/H}/I_{\Ct/H}=I_Y/(I_{\Yt}+hI_Y)=K_Y\otimes\OO_C=L_C$ and the surjection $N_C^{\vee}\to L_C$ is $s\otimes\OO_C=s_C$.
 (2) An invertible sheaf on $C_\Dd$ restricting to $L_C$ is $L_C\otimes\OO_\Dd$ (as $H^1(\OO_C)=0$), with automorphisms $\OO_\Dd^{\times}$; so such a deformation is the kernel of a surjection $s_C+\varepsilon t\colon N_C^{\vee}\otimes\OO_\Dd\to L_C\otimes\OO_\Dd$, well defined up to multiplication by a unit $1+\varepsilon\lambda$, i.e.\ up to $t\mapsto t+\lambda s_C$.
 \end{proof}
 
