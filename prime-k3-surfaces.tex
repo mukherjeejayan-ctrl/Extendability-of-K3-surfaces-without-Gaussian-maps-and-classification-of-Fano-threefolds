@@ -739,7 +739,7 @@ The map $\bar\delta^{-1}\circ a=d\Psi\colon H^0(\NY(-H))\to H^0(N_C\otimes K_Y|_
 \end{proposition}
 
 \begin{proof}
-By Proposition~\ref{prop:dPsi}, $d\Psi$ is surjective with kernel $\Im c$. By Proposition~\ref{prop:a=dPsi}, $a=\bar\delta\circ d\Psi$ is surjective with kernel $\Im c$. Surjectivity of $F$ follows from diagram \eqref{diag:a} and the sequence \eqref{eq:3.61}, as explained in \S\ref{subsec:reduction}.
+By Proposition~\ref{prop:dPsi}, $d\Psi$ is surjective with kernel $\Im c$. By Proposition~\ref{prop:a=dPsi}, $a=\bar\delta\circ d\Psi$ is surjective with kernel $\Im c$. Surjectivity of $F$ follows from diagram \eqref{diag:a} and the sequence \eqref{eq:3.61}, as explained in the proof of Theorem~\ref{thm:alpha}.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:alpha}]
@@ -793,7 +793,7 @@ Let $Y=F_1\subset\PP^6$ be embedded by $|C_0+3f|$ and let $\Yt$ be the K3 carpet
 \end{proposition}
 
 \begin{proof}
-Here $b=e+2$, $M=6$, and $\OO_Y(-H-K_Y)=\OO_Y(C_0)$, with $h^0(\OO_Y(C_0))=1$ and $h^1(\OO_Y(C_0))=h^2(\OO_Y(C_0))=0$. We go through \S\ref{subsec:reduction}, where the assumption $b\ge e+3$ was used only to have $H^0(-H-K_Y)=0$ in \eqref{eq:3.41} and \eqref{eq:3.52}; everything else, in particular \eqref{eq:3.47}, \eqref{eq:3.48}, \eqref{eq:3.56}--\eqref{eq:3.59} and \eqref{eq:3.61}, holds for $b\ge e+1$. From \eqref{eq:3.41} and \eqref{eq:3.48} we get an exact sequence
+Here $b=e+2$, $M=6$, and $\OO_Y(-H-K_Y)=\OO_Y(C_0)$, with $h^0(\OO_Y(C_0))=1$ and $h^1(\OO_Y(C_0))=h^2(\OO_Y(C_0))=0$. We go through the proof of Theorem~\ref{thm:alpha}, where the assumption $b\ge e+3$ was used only to have $H^0(-H-K_Y)=0$ in \eqref{eq:3.41} and \eqref{eq:3.52}; everything else, in particular \eqref{eq:3.47}, \eqref{eq:3.48}, \eqref{eq:3.56}--\eqref{eq:3.59} and \eqref{eq:3.61}, holds for $b\ge e+1$. From \eqref{eq:3.41} and \eqref{eq:3.48} we get an exact sequence
 \begin{multline*}
 0\to H^0(\NYt(-H+K_Y))\to H^0(\OO_Y(C_0))=k\xrightarrow{\ \delta_1\ }H^1(\NY(-H+K_Y))=k^3\\
 \xrightarrow{\ j\ }H^1(\NYt(-H+K_Y))\to0
@@ -818,7 +818,7 @@ In particular $h^0(\NYt(-2\Ht))=0$ if $b\ge e+3$, and $h^0(\NYt(-2\Ht))\le1$ if 
 \end{proposition}
 
 \begin{proof}
-Tensoring \eqref{eq:3.1} by $\OO_{\Yt}(-2\Ht)$ gives $h^0(\NYt(-2\Ht))\le h^0(\NYt(-2H+K_Y))+h^0(\NYt(-2H))$. We use throughout that $H^0(\OO_Y(-H+K_Y))=0$, $H^0(\OO_Y(-2H-K_Y))=0$ (as $-2H-K_Y=(e+2-2b)f$ and $2b>e+2$), and, by Kodaira vanishing, $H^1(\OO_Y(-2H))=H^1(\OO_Y(-2H+K_Y))=0$ and $H^i(\OO_Y(-H))=0$ for all $i$ (\S\ref{subsec:reduction}).
+Tensoring \eqref{eq:3.1} by $\OO_{\Yt}(-2\Ht)$ gives $h^0(\NYt(-2\Ht))\le h^0(\NYt(-2H+K_Y))+h^0(\NYt(-2H))$. We use throughout that $H^0(\OO_Y(-H+K_Y))=0$, $H^0(\OO_Y(-2H-K_Y))=0$ (as $-2H-K_Y=(e+2-2b)f$ and $2b>e+2$), and, by Kodaira vanishing, $H^1(\OO_Y(-2H))=H^1(\OO_Y(-2H+K_Y))=0$ and and $H^i(\OO_Y(-H))=0$ for all $i$ (see the derivation of \eqref{eq:3.54}).
 
 \emph{Step 1: $H^0(\NYt(-2H+K_Y))=0$.} By \eqref{eq:3.2} tensored with $-2H+K_Y$, $H^0(\NYt(-2H+K_Y))=H^0(\Hc(-2H+K_Y))$, and by \eqref{eq:3.3} tensored with $-2H+K_Y$ the latter is a quotient of $H^0(\NY(-2H+K_Y))$. By \eqref{eq:3.11} tensored with $-2H+K_Y$, $H^0(\TP(-2H+K_Y))=0$, so by \eqref{eq:3.10} $H^0(\NY(-2H+K_Y))$ injects into $H^1(T_Y(-2H+K_Y))$. Finally $H^1(T_Y(-2H+K_Y))=0$: in
 \[
@@ -1321,7 +1321,7 @@ Conversely, Proposition~\ref{prop:section}(1) applied to $Y'=\Gamma_U(u)$, $u=[\
 
 \section{The compatibility \texorpdfstring{$h\circ f=2g$}{h o f = 2g}}\label{app:hfg}
 
-We keep the notation of \S\ref{subsec:reduction}: $\Hc(-H)\to\NYt(-H)$ is the first map of \eqref{eq:3.2}$(-H)$, denoted $\kappa_0$ on global sections, $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3}$(-H)$, and $h=H^1$ of the last map of \eqref{eq:3.2}$(-H+K_Y)$, i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
+We keep the notation of the proof of Theorem~\ref{thm:alpha}: $\Hc(-H)\to\NYt(-H)$ is the first map of \eqref{eq:3.2}$(-H)$, denoted $\kappa_0$ on global sections, $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3}$(-H)$, and $h=H^1$ of the last map of \eqref{eq:3.2}$(-H+K_Y)$, i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
 
 \begin{lemma}\label{lem:hfg}
 $h\circ f=2\,g$. Consequently $\Im(h\circ f)=\Im g$, and the right square of diagram \eqref{diag:a} commutes with $2\cdot\id$ as its right-hand vertical map.
