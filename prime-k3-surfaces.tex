@@ -131,6 +131,8 @@ Recall the smoothing fibers $X_t \xhookrightarrow{\varphi_t} \mathbb{P}^M$ are o
 
 \section{Extendability of K3 carpets on rational normal scrolls}\label{sec:carpets}
 
+
+
 \subsection{Set-up and notation}\label{subsec:setup}
 
 Throughout this section $Y=F_e$, $e\ge 0$, is a Hirzebruch surface with ruling $p\colon Y\to\PP^1$, fibre class $f$ and negative section $C_0$ ($C_0^2=-e$), so that $K_Y=-2C_0-(e+2)f$. We fix an integer $b\ge e+3$ and put
@@ -177,7 +179,9 @@ and the Euler exact sequence restricted to $Y$,
 \end{equation}
 \end{remark}
 
-\subsection{The theorem}
+\subsection{Main theorem}
+
+As mentioned before, to give an upper bound to $\alpha(X)$ for a $K3$ surface $X \subset \mathbb{P}^M$, we will degenerate $X \subset \mathbb{P}^M$ to a $K3$ carpet $\widetilde{Y} \subset \mathbb{P}^M$, using \Cref{degeneration into $K3$ carpets} and compute $\alpha(\widetilde{Y})$.  The main tool for all our computations that follow consist of the three exact sequences \Cref{eq:3.1}, \Cref{eq:3.2} and \Cref{eq:3.3}  that decomposes the cohomology of the twisted normal bundle $N_{\widetilde{Y}/\mathbb{P}^M}(-\widetilde{H})$ of a ribbon $\widetilde{Y} \subset \mathbb{P}^M$ in terms of cohomology of various twists of the normal bundle $N_{Y/\mathbb{P}^M}$ of the reduced part. \\
 
 \begin{theorem}\label{thm:alpha}
 Let $\Yt\subset\PM$ be the K3 carpet on the rational normal scroll $Y=F_e\subset\PM$ embedded by $|H|$, $H=C_0+bf$, and assume $b\ge e+3$. Then
@@ -187,12 +191,13 @@ Let $\Yt\subset\PM$ be the K3 carpet on the rational normal scroll $Y=F_e\subset
 In particular $\alpha(\Yt)=0$ if and only if $b\ge 2e+5$.
 \end{theorem}
 
-\begin{remark}
-For $b\ge 2e+5$ this is Proposition~3.8(3) of \cite{BM25}. For $e+3\le b\le 2e+4$ (the Mukai range) it shows that the upper bound $\alpha(\Yt)\le h^0(-H-2K_Y)$ used in \cite[Theorem~4.1]{BM25} is in fact an equality.
-\end{remark}
+%\begin{remark}
+%For $b\ge 2e+5$ this is Proposition~3.8(3) of \cite{BM25}. For $e+3\le b\le 2e+4$ (the Mukai range) it shows that the upper bound $\alpha(\Yt)\le h^0(-H-2K_Y)$ used in \cite[Theorem~4.1]{BM25} is in fact an equality.
+%\end{remark}
 
 \subsection{Proof of Theorem~\ref{thm:alpha}, first part: reduction to the surjectivity of a map \texorpdfstring{$a$}{a}}\label{subsec:reduction}
 
+\begin{proof}
 Tensoring sequence \eqref{eq:3.1} by $-\Ht$ and taking the cohomology, we have
 \begin{multline}\label{eq:3.40}
 0\to H^0(\NYt(-H+K_Y))\to H^0(\NYt(-\Ht))\to H^0(\NYt(-H))\to H^1(\NYt(-H+K_Y))\\
@@ -353,7 +358,12 @@ A \v{C}ech cocycle computation (Lemma~\ref{lem:hfg} in Appendix~\ref{app:hfg}) s
 0\arrow[r] & H^1(\NY(-H+K_Y))\arrow[r] & H^1(\NYt(-H+K_Y))\arrow[r,"h"] & H^1(-H-K_Y)\arrow[r] & 0
 \end{tikzcd}
 \end{equation}
-where $a$ is the map induced by $f$ on the kernels. Since the right-hand vertical map is an isomorphism, the snake lemma gives $\coker a\cong\coker f$. Therefore, to show that $f$ is surjective, it is enough to show that $a$ is surjective.
+where $a$ is the map induced by $f$ on the kernels. Since the right-hand vertical map is an isomorphism, the snake lemma gives $\coker a\cong\coker f$. Therefore, to show that $f$ is surjective, it is enough to show that $a$ is surjective. Now the proof is completed by Proposition \Cref{surjectivity of a}.
+\end{proof}
+
+\begin{proposition}\label{surjectivity of a}
+The map $a: H^0(\NY(-H)) \to H^1(\NY(-H+K_Y))$ in \Cref{diag:a} is surjective.
+\end{proposition}
 
 \subsubsection*{Reformulation of the target of $a$}
 We now rewrite the target $H^1(\NY(-H+K_Y))$ of $a$ in terms of a hyperplane section. Choose a hyperplane $H\subset\PM$ (we use the same letter) meeting $Y$ transversally along a smooth curve
@@ -1336,11 +1346,20 @@ the last step because $L$ is a line bundle ($\vartheta(u)\otimes v=\vartheta(v)\
 
 \begin{thebibliography}{GGP08}
 
+\bibitem[AHL10]{AHL10} M.~Artebani, J.~Hausen and A.~Laface, \emph{On Cox rings of K3 surfaces}, Compos.\ Math.\ \textbf{146} (2010), no.~4, 964--998.
+
 \bibitem[BE95]{BE95} D.~Bayer, D.~Eisenbud, \emph{Ribbons and their canonical embeddings}, Trans.\ Amer.\ Math.\ Soc.\ \textbf{347} (1995), 719--756.
 
 \bibitem[BM24]{BM24} P.~Bangere, J.~Mukherjee, \emph{Extendability of projective varieties via degeneration to ribbons with applications to Calabi--Yau threefolds}, arXiv:2409.03960.
 
-\bibitem[BM25]{BM25} P.~Bangere, J.~Mukherjee, \emph{Extendability of K3 surfaces without Gaussian maps and classification of prime Fano threefolds}, draft. %% adjust: this is the manuscript whose \S3 is reproduced in \S\ref{subsec:reduction}
+%\bibitem[BM25]{BM25} P.~Bangere, J.~Mukherjee, \emph{Extendability of K3 surfaces without Gaussian maps and classification of prime Fano threefolds}, draft. %% adjust: this is the manuscript whose \S3 is reproduced in \S\ref{subsec:reduction}
+
+\bibitem[BMR21]{BMR21}
+Bangere, Purnaprajna; Mukherjee, Jayan; Raychaudhury, Debaditya
+\emph{K3 carpets on minimal rational surfaces and their smoothings.}
+Internat. J. Math.32(2021), no.6, Paper No. 2150032, 20 pp.
+
+\bibitem[AHL10]{AHL10} M.~Artebani, J.~Hausen and A.~Laface, \emph{On Cox rings of K3 surfaces}, Compos.\ Math.\ \textbf{146} (2010), no.~4, 964--998.
 
 \bibitem[But94]{But94} D.~C.~Butler, \emph{Normal generation of vector bundles over a curve}, J.\ Differential Geom.\ \textbf{39} (1994), 1--34.
 
