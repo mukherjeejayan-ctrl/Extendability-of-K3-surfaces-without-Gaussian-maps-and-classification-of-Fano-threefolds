@@ -195,8 +195,6 @@ In particular $\alpha(\Yt)=0$ if and only if $b\ge 2e+5$.
 %For $b\ge 2e+5$ this is Proposition~3.8(3) of \cite{BM25}. For $e+3\le b\le 2e+4$ (the Mukai range) it shows that the upper bound $\alpha(\Yt)\le h^0(-H-2K_Y)$ used in \cite[Theorem~4.1]{BM25} is in fact an equality.
 %\end{remark}
 
-\subsection{Proof of Theorem~\ref{thm:alpha}, first part: reduction to the surjectivity of a map \texorpdfstring{$a$}{a}}\label{subsec:reduction}
-
 \begin{proof}
 Tensoring sequence \eqref{eq:3.1} by $-\Ht$ and taking the cohomology, we have
 \begin{multline}\label{eq:3.40}
@@ -366,7 +364,7 @@ The map $a: H^0(\NY(-H)) \to H^1(\NY(-H+K_Y))$ in \Cref{diag:a} is surjective.
 \end{proposition}
 
 \subsubsection*{Reformulation of the target of $a$}
-We now rewrite the target $H^1(\NY(-H+K_Y))$ of $a$ in terms of a hyperplane section. Choose a hyperplane $H\subset\PM$ (we use the same letter) meeting $Y$ transversally along a smooth curve
+We now rewrite the target $H^1(\NY(-H+K_Y))$ of $a$ by composing it with an isomorphism. The composed map will have a deformation theoretic interpretation, which will enable us to show that it is surjective. Choose a hyperplane $H\subset\PM$ (we use the same letter) meeting $Y$ transversally along a smooth curve
 \[
 C:=Y\cap H ,
 \]
@@ -411,16 +409,16 @@ Then $\delta$ is surjective with kernel $k\cdot s_C$. Hence it induces an isomor
 By Lemma~\ref{lem:pushforward}, $H^0(\NY\otimes K_Y)=k\,s$ and $H^1(\NY\otimes K_Y)=0$; the long exact sequence of the restriction sequence gives the claim. (As a check on dimensions: $N_C\cong\OO_{\PP^1}(g+1)^{\oplus g-2}$ for a rational normal curve of degree $g-1$, so $h^0(N_C\otimes L_C)=g-2$, while $h^1(\NY(-H+K_Y))=2b-e-2=g-3$ by \eqref{eq:3.47}.)
 \end{proof}
 
-Composing $a$ with $\bar\delta^{-1}$ we conclude:
 
-\begin{quote}
-\emph{To prove Theorem~\ref{thm:alpha} it is enough to show that the map
+
+\begin{proof}[Proof of \Cref{surjectivity of a}]
+Composing $a$ with $\bar\delta^{-1}$ we conclude that it is enough to show that the map
 \begin{equation}\label{eq:themap}
 \bar\delta^{-1}\circ a\colon\ H^0(\NY(-H))\longrightarrow H^0(N_C\otimes K_Y|_C)\big/\,k\,s_C
 \end{equation}
-is surjective.}
-\end{quote}
-This is Proposition~\ref{prop:a-surj} below, whose proof occupies the rest of this section.
+is surjective. Now the proof follows from \Cref{prop:a-surj}.   
+\end{proof}
+
 
 \subsection{Proof of Theorem~\ref{thm:alpha}, second part: the geometric meaning of \texorpdfstring{$a$}{a}}\label{subsec:geometric}
 
