@@ -455,7 +455,7 @@ Each of the statements (1)--(3) are standard for the flag Hilbert scheme (see \c
 
 %% ---- bibliography: add before \bibitem[Lvo92] ----
 
-
+We recall some well-known facts about the space of canonical ribbons on a rational curve $C$ and the tangent space to that space at a given ribbon $\widetilde{C}$.
 
 \begin{lemma}[Canonical ribbons on $C$]\label{lem:RC}
 Let $\RC:=\PP\big(H^0(N_C\otimes L_C)\big)\cong\PP^{g-3}$, and recall that $s_C=s|_C\colon N_C^{\vee}\cong N_Y^{\vee}|_C\to K_Y|_C=L_C$ is the restriction to $C$ of the surjection $s$ defining the carpet, an element of $H^0(N_C\otimes L_C)$.
@@ -471,6 +471,8 @@ $(1)$ For part $(1)$ see \cite[\S1]{BE95}. \\
 %(1) $N_C\cong\OO(g+1)^{\oplus g-2}$ and $L_C\cong\OO(-g-1)$, so $\Hom(N_C^{\vee},L_C)=\Hom(\OO(-g-1)^{g-2},\OO(-g-1))=k^{g-2}$ consists of constant maps, every nonzero one of which is surjective. The correspondence between double structures with conormal $L_C$ and surjections $N_C^{\vee}\to L_C$ is \cite[\S1]{BE95}. That $\Ct=\Yt\cap H$ corresponds to $s_C$: $I_{\Ct/H}=(I_{\Yt}+(h))/(h)$ and $I_{C/H}=(I_Y+(h))/(h)$, where $h$ is the equation of $H$; since $h$ is a nonzerodivisor modulo $I_Y$, $I_Y\cap(h)=hI_Y$, whence $I_{C/H}/I_{\Ct/H}=I_Y/(I_{\Yt}+hI_Y)=K_Y\otimes\OO_C=L_C$ and the surjection $N_C^{\vee}\to L_C$ is $s\otimes\OO_C=s_C$.
 (2) An invertible sheaf on $C_\Dd$ restricting to $L_C$ is $L_C\otimes\OO_\Dd$ (as $H^1(\OO_C)=0$), with automorphisms $\OO_\Dd^{\times}$; so such a deformation is the kernel of a surjection $s_C+\varepsilon t\colon N_C^{\vee}\otimes\OO_\Dd\to L_C\otimes\OO_\Dd$, well defined up to multiplication by a unit $1+\varepsilon\lambda$, i.e.\ up to $t\mapsto t+\lambda s_C$.
 \end{proof}
+
+In the following lemma we prove a slight generalization of \cite{GP97}, to show that there exists a unique $K3$ carpet structure on a first order deformation $Y_{\varepsilon} \subset \mathbb{P}_D^M$ of the scroll $Y \subset \mathbb{P}^M$.
 
 \begin{lemma}[The carpet on a deformed scroll]\label{lem:Phi}
 Let $Y_\varepsilon\subset\PM_\Dd$ be a first-order deformation of $Y$. There is a unique closed subscheme $\Yt_\varepsilon\subset\PM_\Dd$, flat over $\Dd$, with $\Yt_\varepsilon\times_\Dd\{0\}=\Yt$, $Y_\varepsilon\subset\Yt_\varepsilon$, $I_{Y_\varepsilon}^2\subset I_{\Yt_\varepsilon}$ and $I_{Y_\varepsilon}/I_{\Yt_\varepsilon}$ invertible on $Y_\varepsilon$. We write $\Phi(Y_\varepsilon):=\Yt_\varepsilon$ and $d\Phi\colon H^0(\NY)\to H^0(\NYt)$ for the resulting map. Moreover:
@@ -489,7 +491,13 @@ and $\varepsilon\mathcal{F}\cong\NY\otimes K_Y$. By \Cref{lem:pushforward}, $H^0
 (1) With $\eta:=d\Phi(x)$, $I_{\Yt_\varepsilon}\subset I_{Y_\varepsilon}$ means that for $f\in I_{\Yt}$ and any $g$ with $g\equiv\eta(f)$ mod $I_{\Yt}$ one has $g\equiv x(f)$ mod $I_Y$, i.e.\ $\eta(f)\equiv x(f)$ mod $I_Y$ for all $f\in I_{\Yt}$. (2) follows from uniqueness.
 \end{proof}
 
-\subsubsection*{The carpet-section map}
+\subsubsection*{The map $\Psi$ from $\mathcal{S}_C$ to the space of canonical ribbons}
+
+Below we define the crucial map $$\Psi: \mathcal{S}_C \to \mathcal{R}_C$$ whose differential will turn out to be the map
+\begin{equation*}
+\bar\delta^{-1}\circ a\colon\ H^0(\NY(-H))\longrightarrow H^0(N_C\otimes K_Y|_C)\big/\,k\,s_C
+\end{equation*}
+in \Cref{eq:themap}
 
 \emph{The universal ribbon.} Put $V:=H^0(N_C\otimes L_C)$, so $\RC=\PP(V)$, and let $\pr_2\colon C\times\RC\to\RC$. Since $\pr_{2*}\sHom(N_C^{\vee}\boxtimes\OO_{\RC},L_C\boxtimes\OO_{\RC}(1))=V\otimes\OO_{\RC}(1)$, the tautological line subbundle $\OO_{\RC}(-1)\hookrightarrow V\otimes\OO_{\RC}$, viewed as a nowhere vanishing section of $V\otimes\OO_{\RC}(1)$, is a homomorphism
 \[
@@ -511,7 +519,7 @@ Let $\cY\subset\PM\times\SC$ be the universal scroll and $\pr\colon\cY\to\SC$ th
 \end{theorem}
 
 \begin{proof}
-(1) $\SC$ is smooth: the proof of Lemma~\ref{lem:SC}(2) applies at every $[Y']\in\SC$, since \eqref{eq:3.57} only requires $b'\ge e'+1$, which holds for every smooth scroll $Y'$. Hence \cite[Prop.~3.7]{GP97} applies to the flat family $\pr\colon\cY\to\SC$ of smooth rational normal scrolls in $\PM\times\SC=\PP^g_{\SC}$ and gives the existence and uniqueness of $\cYt$. Its fibre over $[Y']$ is a K3 carpet on $Y'$, hence equals $\Yt'$ \cite[Prop.~1.7]{GP97}. The remaining assertions are the construction of $\cYt$ in the proof of \cite[Prop.~3.7]{GP97}: $\cN$ is a line bundle, $1\in H^0(\OO_{\SC})=H^0(N_{\cY}\otimes\omega_{\cY/\SC}\otimes\pr^*\cN^{-1})$ is a nowhere vanishing section, i.e.\ a surjection $N_{\cY}^{\vee}\to\omega_{\cY/\SC}\otimes\pr^*\cN^{-1}$, and $I_{\cYt}$ is the kernel of $I_{\cY}\to N_{\cY}^{\vee}\to\omega_{\cY/\SC}\otimes\pr^*\cN^{-1}$.
+(1) By Lemma~\ref{lem:SC}(2), $\SC$ is smooth at every $[Y']\in\SC$. Hence \cite[Prop.~3.7]{GP97} applies to the flat family $\pr\colon\cY\to\SC$ of smooth rational normal scrolls in $\PM\times\SC=\PP^g_{\SC}$ and gives the existence and uniqueness of $\cYt$. Its fibre over $[Y']$ is a K3 carpet on $Y'$, hence equals $\Yt'$ \cite[Prop.~1.7]{GP97}. The fact that $\cN$ is a line bundle again follows from \cite[Prop.~1.7]{GP97}. The last two claims follow from the fact that $1\in H^0(\OO_{\SC})=H^0(N_{\cY}\otimes\omega_{\cY/\SC}\otimes\pr^*\cN^{-1})$ is a nowhere vanishing section, and hence gives a surjection $N_{\cY}^{\vee}\to\omega_{\cY/\SC}\otimes\pr^*\cN^{-1}$, and $I_{\cYt}$ is the kernel of $I_{\cY}\to N_{\cY}^{\vee}\to\omega_{\cY/\SC}\otimes\pr^*\cN^{-1}$.
 
 (2) Let $h$ be the equation of $H$. For every $[Y']\in\SC$, $h$ is a nonzerodivisor on $\OO_{Y'}$ and on $\OO_{\Yt'}$: the latter is Cohen--Macaulay of pure dimension $2$ (by $0\to K_{Y'}\to\OO_{\Yt'}\to\OO_{Y'}\to0$) with support $Y'\not\subset H$. As $\cY$ and $\cYt$ are flat over $\SC$, the local criterion of flatness \cite[Cor.\ to Thm.~22.5]{Mat89} shows that $h$ is a nonzerodivisor on $\OO_{\cY}$ and on $\OO_{\cYt}$, and that $\OO_{\cCt}=\OO_{\cYt}/h\OO_{\cYt}$ is flat over $\SC$. Since $I_{\cY}\cap(h)=hI_{\cY}$,
 \[
