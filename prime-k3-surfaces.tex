@@ -500,9 +500,9 @@ Below we define the crucial map $$\Psi: \mathcal{S}_C \to \mathcal{R}_C$$ whose 
 in \Cref{eq:themap}
 
 \emph{The universal ribbon.} Put $V:=H^0(N_C\otimes L_C)$, so $\RC=\PP(V)$, and let $\pr_2\colon C\times\RC\to\RC$. Since $\pr_{2*}\sHom(N_C^{\vee}\boxtimes\OO_{\RC},L_C\boxtimes\OO_{\RC}(1))=V\otimes\OO_{\RC}(1)$, the tautological line subbundle $\OO_{\RC}(-1)\hookrightarrow V\otimes\OO_{\RC}$, viewed as a nowhere vanishing section of $V\otimes\OO_{\RC}(1)$, is a homomorphism
-\[
+\begin{equation}\label{universal ribbon}
 \tau\colon N_C^{\vee}\boxtimes\OO_{\RC}\longrightarrow L_C\boxtimes\OO_{\RC}(1)
-\]
+\end{equation}
 whose restriction to $C\times\{[t]\}$ is a nonzero multiple of $t$; hence $\tau$ is surjective by Lemma~\ref{lem:RC}(1). Let $\Ct_{\RC}\subset H\times\RC$ be the closed subscheme with
 \[
 I_{\Ct_{\RC}}:=\ker\big(I_{C\times\RC}\to I_{C\times\RC}/I_{C\times\RC}^2=N_C^{\vee}\boxtimes\OO_{\RC}\xrightarrow{\ \tau\ }L_C\boxtimes\OO_{\RC}(1)\big).
@@ -532,7 +532,7 @@ Finally, $C\times\SC\subset\cY$ is the divisor of $h\in H^0(\OO_{\cY}(1))$, so b
 q\colon N_C^{\vee}\boxtimes\OO_{\SC}=I_{C\times\SC}/I_{C\times\SC}^2\longrightarrow I_{C\times\SC}/I_{\cCt}\cong L_C\boxtimes\cN^{-1},
 \]
 that is, $I_{\cCt}=\ker\big(I_{C\times\SC}\to N_C^{\vee}\boxtimes\OO_{\SC}\xrightarrow{\ q\ }L_C\boxtimes\cN^{-1}\big)$.
-By the projection formula $q\in H^0(\SC,V\otimes\cN^{-1})$, and $q$ vanishes nowhere on $\SC$, its restriction to each $C\times\{[Y']\}$ being a surjection $N_C^{\vee}\to L_C$. Thus $q$ is a line subbundle $\cN\hookrightarrow V\otimes\OO_{\SC}$, i.e.\ a morphism $\Psi\colon\SC\to\PP(V)=\RC$ with $\Psi^*\OO_{\RC}(-1)=\cN$ and $(\id_C\times\Psi)^*\tau=q$. The terms of $0\to I_{\Ct_{\RC}}\to I_{C\times\RC}\to L_C\boxtimes\OO_{\RC}(1)\to0$ are flat over $\RC$, so its pullback along $\id_H\times\Psi$ is the exact sequence $0\to(\id_H\times\Psi)^*I_{\Ct_{\RC}}\to I_{C\times\SC}\xrightarrow{q}L_C\boxtimes\cN^{-1}\to0$; hence $(\id_H\times\Psi)^{-1}(\Ct_{\RC})=\cCt$. Conversely $(\id_H\times\Psi)^{-1}(\Ct_{\RC})$ determines the surjection $N_C^{\vee}\boxtimes\OO_{\SC}\to I_{C\times\SC}/I_{\cCt}$ up to an automorphism of the target, hence the line subbundle $\Psi^*\OO_{\RC}(-1)\subset V\otimes\OO_{\SC}$, hence $\Psi$. On closed points, $\Psi([Y'])$ is the class of the fibre of $\cCt$ over $[Y']$, i.e.\ $[\Yt'\cap H]$ by (2).
+By the projection formula $q\in H^0(\SC,V\otimes\cN^{-1})$, and $q$ vanishes nowhere on $\SC$, its restriction to each $C\times\{[Y']\}$ being a surjection $N_C^{\vee}\to L_C$. Thus $q$ is a line subbundle $\cN\hookrightarrow V\otimes\OO_{\SC}$, i.e.\ a morphism $\Psi\colon\SC\to\PP(V)=\RC$ with $\Psi^*\OO_{\RC}(-1)=\cN$ and $(\id_C\times\Psi)^*\tau=q$ where $\tau$ is as in \Cref{universal ribbon}. The terms of $0\to I_{\Ct_{\RC}}\to I_{C\times\RC}\to L_C\boxtimes\OO_{\RC}(1)\to0$ are flat over $\RC$, so its pullback along $\id_H\times\Psi$ is the exact sequence $0\to(\id_H\times\Psi)^*I_{\Ct_{\RC}}\to I_{C\times\SC}\xrightarrow{q}L_C\boxtimes\cN^{-1}\to0$; hence $(\id_H\times\Psi)^{-1}(\Ct_{\RC})=\cCt$. Conversely $(\id_H\times\Psi)^{-1}(\Ct_{\RC})$ determines the surjection $N_C^{\vee}\boxtimes\OO_{\SC}\to I_{C\times\SC}/I_{\cCt}$ up to an automorphism of the target, hence the line subbundle $\Psi^*\OO_{\RC}(-1)\subset V\otimes\OO_{\SC}$, hence $\Psi$. On closed points, $\Psi([Y'])$ is the class of the fibre of $\cCt$ over $[Y']$, i.e.\ $[\Yt'\cap H]$ by (2).
 \end{proof}
 
 \begin{definition}\label{def:Psi}
