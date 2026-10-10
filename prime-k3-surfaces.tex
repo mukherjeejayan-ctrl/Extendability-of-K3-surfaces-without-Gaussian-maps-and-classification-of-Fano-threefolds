@@ -479,31 +479,6 @@ Let $\RC:=\PP\big(H^0(N_C\otimes L_C)\big)\cong\PP^{g-3}$, and recall that $s_C=
 \end{enumerate}
 \end{lemma}
 
-\begin{proof}
-$(1)$ For part $(1)$ see \cite[\S1]{BE95}. \\
-%(1) $N_C\cong\OO(g+1)^{\oplus g-2}$ and $L_C\cong\OO(-g-1)$, so $\Hom(N_C^{\vee},L_C)=\Hom(\OO(-g-1)^{g-2},\OO(-g-1))=k^{g-2}$ consists of constant maps, every nonzero one of which is surjective. The correspondence between double structures with conormal $L_C$ and surjections $N_C^{\vee}\to L_C$ is \cite[\S1]{BE95}. That $\Ct=\Yt\cap H$ corresponds to $s_C$: $I_{\Ct/H}=(I_{\Yt}+(h))/(h)$ and $I_{C/H}=(I_Y+(h))/(h)$, where $h$ is the equation of $H$; since $h$ is a nonzerodivisor modulo $I_Y$, $I_Y\cap(h)=hI_Y$, whence $I_{C/H}/I_{\Ct/H}=I_Y/(I_{\Yt}+hI_Y)=K_Y\otimes\OO_C=L_C$ and the surjection $N_C^{\vee}\to L_C$ is $s\otimes\OO_C=s_C$.
-(2) An invertible sheaf on $C_\Dd$ restricting to $L_C$ is $L_C\otimes\OO_\Dd$ (as $H^1(\OO_C)=0$), with automorphisms $\OO_\Dd^{\times}$; so such a deformation is the kernel of a surjection $s_C+\varepsilon t\colon N_C^{\vee}\otimes\OO_\Dd\to L_C\otimes\OO_\Dd$, well defined up to multiplication by a unit $1+\varepsilon\lambda$, i.e.\ up to $t\mapsto t+\lambda s_C$.
-\end{proof}
-
-In the following lemma we prove a slight generalization of \cite{GP97}, to show that there exists a unique $K3$ carpet structure on a first order deformation $Y_{\varepsilon} \subset \mathbb{P}_D^M$ of the scroll $Y \subset \mathbb{P}^M$.
-
-\begin{lemma}\label{lem:Phi}
-Let $Y_\varepsilon\subset\PM_\Dd$ be a first-order deformation of $Y$. There is a unique closed subscheme $\Yt_\varepsilon\subset\PM_\Dd$, flat over $\Dd$, with $\Yt_\varepsilon\times_\Dd\{0\}=\Yt$, $Y_\varepsilon\subset\Yt_\varepsilon$, $I_{Y_\varepsilon}^2\subset I_{\Yt_\varepsilon}$ and $I_{Y_\varepsilon}/I_{\Yt_\varepsilon}$ invertible on $Y_\varepsilon$. We write $\Phi(Y_\varepsilon):=\Yt_\varepsilon$ and $d\Phi\colon H^0(\NY)\to H^0(\NYt)$ for the resulting map. Moreover:
-\begin{enumerate}
-\item the image of $d\Phi(x)$ under $H^0(\NYt) = \operatorname{Hom}(I_{\widetilde Y}, \mathcal O_{\widetilde Y})\to H^0(\NYt\otimes\OO_Y) = \operatorname{Hom}(I_{\widetilde Y}, \mathcal O_{Y})$ is $\iota(x):=x|_{I_{\Yt}}$, the image of $x$ under the composite $H^0(\NY) = \operatorname{Hom}(I_{Y}, \mathcal O_{Y})\to H^0(\Hc)\to H^0(\NYt\otimes\OO_Y) = \operatorname{Hom}(I_{\widetilde Y}, \mathcal O_{Y})$ of the maps in \eqref{eq:3.3} and \eqref{eq:3.2};
-\item for $\gamma_\varepsilon\in PGL_{M+1}(\Dd)$ one has $\Phi(\gamma_\varepsilon Y)=\gamma_\varepsilon\Yt$.
-\end{enumerate}
-\end{lemma}
-
-\begin{proof}
-Such a $\Yt_\varepsilon$ is the kernel of a surjection $s_\varepsilon\colon N_{Y_\varepsilon/\PM_\Dd}^{\vee}\to L_\varepsilon$ onto an invertible sheaf with $L_\varepsilon|_Y\cong K_Y$. Since $H^1(\mathcal{O}_Y) = 0$, we have that $\operatorname{Pic}(Y_\varepsilon)\to\operatorname{Pic}(Y)$ is injective. Hence  $L_\varepsilon\cong\omega_{Y_\varepsilon/\Dd}$, and $s_\varepsilon$ is determined by $\Yt_\varepsilon$ up to $H^0(\OO_{Y_\varepsilon}^{\times})=(k[\varepsilon]/\varepsilon^2)^{\times}$. Conversely every such surjection lifting $s$ defines such a $\Yt_\varepsilon$. Put $\mathcal{F}:=N_{Y_\varepsilon/\PM_\Dd}\otimes\omega_{Y_\varepsilon/\Dd}$, a locally free sheaf on $Y_\varepsilon$. Tensoring the exact sequence 
-$$0 \to \varepsilon \mathcal{O}_Y \to \mathcal{O}_{Y_{\varepsilon}} \to \mathcal{O}_Y \to 0$$
-by $\mathcal F$, we have $$0\to\varepsilon\mathcal{F}\to\mathcal{F}\to\NY\otimes K_Y\to 0$$ 
-and $\varepsilon\mathcal{F}\cong\NY\otimes K_Y$. By \Cref{lem:pushforward}, $H^0(\NY\otimes K_Y)=k\,s$,  $H^1(\NY\otimes K_Y)=0$. Therefore, $H^0(\mathcal{F})\to H^0(\NY\otimes K_Y)=k\,s$ is surjective with kernel $\varepsilon H^0(\mathcal{F})=\varepsilon k\,s$. So lifts of $s$ exist, are surjective by Nakayama, and form the set $\{(1+\varepsilon\lambda)s_\varepsilon\}$. But every such surjection has the same kernel and therefore we have a unique double structure $\widetilde{Y}_{\varepsilon}$.
-
-(1) With $\eta:=d\Phi(x)$, $I_{\Yt_\varepsilon}\subset I_{Y_\varepsilon}$ means that for $f\in I_{\Yt}$ and any $g$ with $g\equiv\eta(f)$ mod $I_{\Yt}$ one has $g\equiv x(f)$ mod $I_Y$, i.e.\ $\eta(f)\equiv x(f)$ mod $I_Y$ for all $f\in I_{\Yt}$. (2) follows from uniqueness.
-\end{proof}
-
 \subsubsection*{The map $\Psi$ from $\mathcal{S}_C$ to the space of canonical ribbons}
 
 Below we define the crucial map $$\Psi: \mathcal{S}_C \to \mathcal{R}_C$$ whose differential will turn out to be the map
@@ -548,22 +523,59 @@ that is, $I_{\cCt}=\ker\big(I_{C\times\SC}\to N_C^{\vee}\boxtimes\OO_{\SC}\xrigh
 By the projection formula $q\in H^0(\SC,V\otimes\cN^{-1})$, and $q$ vanishes nowhere on $\SC$, its restriction to each $C\times\{[Y']\}$ being a surjection $N_C^{\vee}\to L_C$. Thus $q$ is a line subbundle $\cN\hookrightarrow V\otimes\OO_{\SC}$, i.e.\ a morphism $\Psi\colon\SC\to\PP(V)=\RC$ with $\Psi^*\OO_{\RC}(-1)=\cN$ and $(\id_C\times\Psi)^*\tau=q$ where $\tau$ is as in \Cref{universal ribbon}. Since $L_C\boxtimes\OO_{\RC}(1)$ is a line bundle, we have that the pullback along $\id_H\times\Psi$  of $$0\to I_{\Ct_{\RC}}\to I_{C\times\RC}\xrightarrow{\tau} L_C\boxtimes\OO_{\RC}(1)\to0$$ is the exact sequence $$0\to(\id_H\times\Psi)^*I_{\Ct_{\RC}}\to I_{C\times\SC}\xrightarrow{q}L_C\boxtimes\cN^{-1}\to0$$ and hence $(\id_H\times\Psi)^{-1}(\Ct_{\RC})=\cCt$. To see the uniqueness, note that $(\id_H\times\Psi)^{-1}(\Ct_{\RC})$ determines the surjection $N_C^{\vee}\boxtimes\OO_{\SC}\to I_{C\times\SC}/I_{\cCt}$ up to an automorphism of the target, hence the line subbundle $\Psi^*\OO_{\RC}(-1)\subset V\otimes\OO_{\SC}$, hence $\Psi$. On closed points, $\Psi([Y'])$ is the class of the fibre of $\cCt$ over $[Y']$, i.e.\ $[\Yt'\cap H]$ by (2).
 \end{proof}
 
-\begin{definition}\label{def:Psi}
+
+
+\begin{proof}
+$(1)$ For part $(1)$ see \cite[\S1]{BE95}. \\
+%(1) $N_C\cong\OO(g+1)^{\oplus g-2}$ and $L_C\cong\OO(-g-1)$, so $\Hom(N_C^{\vee},L_C)=\Hom(\OO(-g-1)^{g-2},\OO(-g-1))=k^{g-2}$ consists of constant maps, every nonzero one of which is surjective. The correspondence between double structures with conormal $L_C$ and surjections $N_C^{\vee}\to L_C$ is \cite[\S1]{BE95}. That $\Ct=\Yt\cap H$ corresponds to $s_C$: $I_{\Ct/H}=(I_{\Yt}+(h))/(h)$ and $I_{C/H}=(I_Y+(h))/(h)$, where $h$ is the equation of $H$; since $h$ is a nonzerodivisor modulo $I_Y$, $I_Y\cap(h)=hI_Y$, whence $I_{C/H}/I_{\Ct/H}=I_Y/(I_{\Yt}+hI_Y)=K_Y\otimes\OO_C=L_C$ and the surjection $N_C^{\vee}\to L_C$ is $s\otimes\OO_C=s_C$.
+(2) An invertible sheaf on $C_\Dd$ restricting to $L_C$ is $L_C\otimes\OO_\Dd$ (as $H^1(\OO_C)=0$), with automorphisms $\OO_\Dd^{\times}$; so such a deformation is the kernel of a surjection $s_C+\varepsilon t\colon N_C^{\vee}\otimes\OO_\Dd\to L_C\otimes\OO_\Dd$, well defined up to multiplication by a unit $1+\varepsilon\lambda$, i.e.\ up to $t\mapsto t+\lambda s_C$.
+\end{proof}
+
+In the following two lemmas, we describe the map $d\Psi: H^0(N_Y(-H)) \to H^0(N_C \otimes L_C)/ks_C$, which is the differential of the map $\Psi$. An element of $H^0(N_Y(-H))$ consists of a flag $C_D = Y_{\epsilon} \cap H_D \subset Y_{\epsilon} \subset \mathbb{P}_D^M$ where $Y_{\epsilon} \subset \mathbb{P}_D^M$ is an embedded first order deformation $Y \subset \mathbb{P}^M$. In the following lemma we prove a slight generalization of \cite{GP97}, to show that there exists a unique $K3$ carpet structure on a first order deformation $Y_{\varepsilon} \subset \mathbb{P}_D^M$ of the scroll $Y \subset \mathbb{P}^M$.
+
+\begin{lemma}\label{lem:Phi}
+Let $Y_\varepsilon\subset\PM_\Dd$ be a first-order deformation of $Y$. There is a unique closed subscheme $\Yt_\varepsilon\subset\PM_\Dd$, flat over $\Dd$, with $\Yt_\varepsilon\times_\Dd\{0\}=\Yt$, $Y_\varepsilon\subset\Yt_\varepsilon$, $I_{Y_\varepsilon}^2\subset I_{\Yt_\varepsilon}$ and $I_{Y_\varepsilon}/I_{\Yt_\varepsilon}$ invertible on $Y_\varepsilon$. Further in this case, $I_{Y_\varepsilon}/I_{\Yt_\varepsilon} \cong \omega_{Y_{\epsilon}/D}$.  We write $\Phi(Y_\varepsilon):=\Yt_\varepsilon$ and $d\Phi\colon H^0(\NY)\to H^0(\NYt)$ for the resulting map. Moreover:
+\begin{enumerate}
+\item the image of $d\Phi(x)$ under $H^0(\NYt) = \operatorname{Hom}(I_{\widetilde Y}, \mathcal O_{\widetilde Y})\to H^0(\NYt\otimes\OO_Y) = \operatorname{Hom}(I_{\widetilde Y}, \mathcal O_{Y})$ is $\iota(x):=x|_{I_{\Yt}}$, the image of $x$ under the composite $H^0(\NY) = \operatorname{Hom}(I_{Y}, \mathcal O_{Y})\to H^0(\Hc)\to H^0(\NYt\otimes\OO_Y) = \operatorname{Hom}(I_{\widetilde Y}, \mathcal O_{Y})$ of the maps in \eqref{eq:3.3} and \eqref{eq:3.2};
+\item for $\gamma_\varepsilon\in PGL_{M+1}(\Dd)$ one has $\Phi(\gamma_\varepsilon Y)=\gamma_\varepsilon\Yt$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Such a $\Yt_\varepsilon$ is the kernel of a surjection $s_\varepsilon\colon N_{Y_\varepsilon/\PM_\Dd}^{\vee}\to L_\varepsilon$ onto an invertible sheaf with $L_\varepsilon|_Y\cong K_Y$. Since $H^1(\mathcal{O}_Y) = 0$, we have that $\operatorname{Pic}(Y_\varepsilon)\to\operatorname{Pic}(Y)$ is injective. Hence  $L_\varepsilon\cong\omega_{Y_\varepsilon/\Dd}$, and $s_\varepsilon$ is determined by $\Yt_\varepsilon$ up to $H^0(\OO_{Y_\varepsilon}^{\times})=(k[\varepsilon]/\varepsilon^2)^{\times}$. Conversely every such surjection lifting $s$ defines such a $\Yt_\varepsilon$. Put $\mathcal{F}:=N_{Y_\varepsilon/\PM_\Dd}\otimes\omega_{Y_\varepsilon/\Dd}$, a locally free sheaf on $Y_\varepsilon$. Tensoring the exact sequence 
+$$0 \to \varepsilon \mathcal{O}_Y \to \mathcal{O}_{Y_{\varepsilon}} \to \mathcal{O}_Y \to 0$$
+by $\mathcal F$, we have $$0\to\varepsilon\mathcal{F}\to\mathcal{F}\to\NY\otimes K_Y\to 0$$ 
+and $\varepsilon\mathcal{F}\cong\NY\otimes K_Y$. By \Cref{lem:pushforward}, $H^0(\NY\otimes K_Y)=k\,s$,  $H^1(\NY\otimes K_Y)=0$. Therefore, $H^0(\mathcal{F})\to H^0(\NY\otimes K_Y)=k\,s$ is surjective with kernel $\varepsilon H^0(\mathcal{F})=\varepsilon k\,s$. So lifts of $s$ exist, are surjective by Nakayama, and form the set $\{(1+\varepsilon\lambda)s_\varepsilon\}$. But every such surjection has the same kernel and therefore we have a unique double structure $\widetilde{Y}_{\varepsilon}$.
+
+(1) With $\eta:=d\Phi(x)$, $I_{\Yt_\varepsilon}\subset I_{Y_\varepsilon}$ means that for $f\in I_{\Yt}$ and any $g$ with $g\equiv\eta(f)$ mod $I_{\Yt}$ one has $g\equiv x(f)$ mod $I_Y$, i.e.\ $\eta(f)\equiv x(f)$ mod $I_Y$ for all $f\in I_{\Yt}$. (2) follows from uniqueness.
+\end{proof}
+
+
+\begin{lemma}\label{def:Psi}
 Let $x\in H^0(\NY(-H))=T_{[Y]}\SC$, let $Y_\varepsilon\supset C_\Dd$ be the corresponding deformation (Lemma~\ref{lem:SC}(1)), $\Yt_\varepsilon:=\Phi(Y_\varepsilon)$, and
 \[
 \Ct_\varepsilon:=\Yt_\varepsilon\cap H_\Dd\subset H_\Dd
 \]
 (scheme-theoretic intersection). Then:
 \begin{enumerate}
-\item[(i)] $\Ct_\varepsilon$ is flat over $\Dd$ with closed fibre $\Ct$. Indeed $h$ is a nonzerodivisor on $\OO_{\Yt}$, as $\Yt$ is Cohen--Macaulay of pure dimension $2$ with support $Y\not\subset H$; hence $\operatorname{Tor}_1^{\Dd}(\OO_{\Ct_\varepsilon},k)=\ker(h\colon\OO_{\Yt}\to\OO_{\Yt})=0$.
-\item[(ii)] $\Ct_\varepsilon$ is a double structure on $C_\Dd$ with conormal $L_C\otimes\OO_\Dd$. Indeed $Y_\varepsilon\cap H_\Dd=C_\Dd$ (it contains $C_\Dd$, and both are flat over $\Dd$ with closed fibre $C$), so $C_\Dd\subset\Ct_\varepsilon$; $I_{C_\Dd}^2\subset I_{\Ct_\varepsilon}$ because $I_{Y_\varepsilon}^2\subset I_{\Yt_\varepsilon}$; and, exactly as in the proof of Lemma~\ref{lem:RC}(1), $I_{C_\Dd/H_\Dd}/I_{\Ct_\varepsilon/H_\Dd}=I_{Y_\varepsilon}/(I_{\Yt_\varepsilon}+hI_{Y_\varepsilon})=L_\varepsilon\otimes\OO_{C_\Dd}\cong L_C\otimes\OO_\Dd$.
+\item[(i)] $\Ct_\varepsilon$ is flat over $\Dd$ with closed fibre $\Ct$. 
+\item[(ii)] $\Ct_\varepsilon$ is a double structure on $C_\Dd$ with conormal bundle $L_C\otimes\OO_\Dd$. 
 \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+To see (i) note that $h$ is a nonzerodivisor on $\OO_{\Yt}$, since $\Yt$ is Cohen--Macaulay of pure dimension $2$ and $h$ is a nonzerodivisor on $\OO_{Y}$. Now the conclusion follows from local criterion of flatness. \\
+To see (ii), note that since $\widetilde Y_{\epsilon}$ is double structure over $Y_{\epsilon}$ with conormal bundle $\omega_{Y_{\epsilon}/D}$ by \Cref{lem:Phi}, $\widetilde C_{\epsilon} = \widetilde Y_{\epsilon} \cap H_D$ is a double structure on $Y_{\epsilon} \cap H_D = C_D$ with conormal bundle $\omega_{Y_{\epsilon}/D}|_{C_D} = L_C \otimes \mathcal O_D$. 
+\end{proof}
+
 Hence, by Lemma~\ref{lem:RC}(2), $\Ct_\varepsilon=\ker(s_C+\varepsilon t)$ for a $t\in H^0(N_C\otimes L_C)$ well defined modulo $k\,s_C$. We define
 \[
 d\Psi\colon H^0(\NY(-H))\longrightarrow H^0(N_C\otimes L_C)/k\,s_C=T_{[\Ct]}\RC,\qquad x\longmapsto [t].
 \]
 It is the differential at $[Y]$ of the morphism $\Psi$ of Theorem~\ref{thm:Psi}. Indeed, regard $Y_\varepsilon$ as a morphism $\Dd\to\SC$. By Theorem~\ref{thm:Psi}(1) and flatness, $\cYt\times_{\SC}\Dd$ is flat over $\Dd$, contains $Y_\varepsilon=\cY\times_{\SC}\Dd$, has closed fibre $\Yt$, and satisfies $I_{Y_\varepsilon}^2\subset I_{\cYt\times_{\SC}\Dd}$ with $I_{Y_\varepsilon}/I_{\cYt\times_{\SC}\Dd}=(I_{\cY}/I_{\cYt})|_{Y_\varepsilon}$ invertible; so $\cYt\times_{\SC}\Dd=\Yt_\varepsilon$ by the uniqueness in Lemma~\ref{lem:Phi}. Hence $\Ct_\varepsilon=\cCt\times_{\SC}\Dd$ is the pullback of $\Ct_{\RC}$ along $\Psi\circ Y_\varepsilon\colon\Dd\to\RC$ (Theorem~\ref{thm:Psi}(3)), i.e.\ $\Psi\circ Y_\varepsilon$ is the $\Dd$-point $[s_C+\varepsilon t]$ of $\RC$, which is the tangent vector $[t]\in T_{[\Ct]}\RC$.
-\end{definition}
+
+
+
 
 \begin{proposition}\label{prop:a=dPsi}
 $\bar\delta^{-1} \circ a= d\Psi$. Equivalently, the map \eqref{eq:themap} is $d\Psi$.
