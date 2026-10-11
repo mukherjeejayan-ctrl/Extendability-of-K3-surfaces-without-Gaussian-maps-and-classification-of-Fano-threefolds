@@ -571,18 +571,21 @@ To see (i) note that $h$ is a nonzerodivisor on $\OO_{\Yt}$, since $\Yt$ is Cohe
 To see (ii), note that since $\widetilde Y_{\varepsilon}$ is double structure over $Y_{\varepsilon}$ with conormal bundle $\omega_{Y_{\varepsilon}/D}$ by \Cref{lem:Phi}, $\widetilde C_{\varepsilon} = \widetilde Y_{\varepsilon} \cap H_D$ is a double structure on $Y_{\varepsilon} \cap H_D = C_D$ with conormal bundle $\omega_{Y_{\varepsilon}/D}|_{C_D} = L_C \otimes \mathcal O_D$. 
 \end{proof}
 
-\begin{lemma}\label{lem:d\Psi}
-The differential 
+\begin{lemma}\label{lem:dPsi}
+The differential
 \[
-d\Psi\colon H^0(\NY(-H))\longrightarrow H^0(N_C\otimes L_C)/k\,s_C=T_{[\Ct]}\RC,\qquad 
+d\Psi\colon T_{[Y]}\SC=H^0(\NY(-H))\longrightarrow H^0(N_C\otimes L_C)/k\,s_C=T_{[\Ct]}\RC
 \]
-of the map $\Psi$ defined in \Cref{thm:Psi} is given by 
-$$d\Psi(Y_{\varepsilon} \supset C_D) = \widetilde{C}_{\varepsilon} = \widetilde Y_{\varepsilon} \cap H_D$$
-In other words, if $x \in H^0(N_Y(-H))$ and $\Ct_\varepsilon=\ker(s_C+\varepsilon t)$ for a $t\in H^0(N_C\otimes L_C)$, then 
-$$d\Psi(x) = [t]$$ where $[t]$ denotes the class of $t$ modulo $ks_C$
+of the map $\Psi$ of \Cref{thm:Psi} is given by
+\[
+d\Psi(Y_\varepsilon\supset C_\Dd)=\Ct_\varepsilon=\Yt_\varepsilon\cap H_\Dd .
+\]
+In other words, if $x\in H^0(\NY(-H))$ and $\Ct_\varepsilon=\ker(s_C+\varepsilon t)$ for a $t\in H^0(N_C\otimes L_C)$, then $d\Psi(x)=[t]$, where $[t]$ denotes the class of $t$ modulo $k\,s_C$.
 \end{lemma}
+
 \begin{proof}
-It is the differential at $[Y]$ of the morphism $\Psi$ of Theorem~\ref{thm:Psi}. Indeed, regard $Y_\varepsilon$ as a morphism $\Dd\to\SC$. By Theorem~\ref{thm:Psi}(1) and flatness, $\cYt\times_{\SC}\Dd$ is flat over $\Dd$, contains $Y_\varepsilon=\cY\times_{\SC}\Dd$, has closed fibre $\Yt$, and satisfies $I_{Y_\varepsilon}^2\subset I_{\cYt\times_{\SC}\Dd}$ with $I_{Y_\varepsilon}/I_{\cYt\times_{\SC}\Dd}=(I_{\cY}/I_{\cYt})|_{Y_\varepsilon}$ invertible; so $\cYt\times_{\SC}\Dd=\Yt_\varepsilon$ by the uniqueness in Lemma~\ref{lem:Phi}. Hence $\Ct_\varepsilon=\cCt\times_{\SC}\Dd$ is the pullback of $\Ct_{\RC}$ along $\Psi\circ Y_\varepsilon\colon\Dd\to\RC$ (Theorem~\ref{thm:Psi}(3)), i.e.\ $\Psi\circ Y_\varepsilon$ is the $\Dd$-point $[s_C+\varepsilon t]$ of $\RC$, which is the tangent vector $[t]\in T_{[\Ct]}\RC$.
+ Regard $Y_\varepsilon \supset C_D$ as a morphism $\Dd\to\SC$. Then $d\Psi(Y_\varepsilon \supset C_D)$ is given by the composition $D \to \mathcal{S}_C \xrightarrow{\Psi} \mathcal{R}_C$. By Theorem~\ref{thm:Psi}(1) and flatness, $\cYt\times_{\SC}\Dd$ is flat over $\Dd$ and is a double structure on $Y_\varepsilon=\cY\times_{\SC}\Dd$ such that its restriction to the central fiber is the $K3$ double structure $\widetilde Y $ on $Y$. So
+ $\cYt\times_{\SC}\Dd=\Yt_\varepsilon$ by the uniqueness in Lemma~\ref{lem:Phi}. Hence $\Ct_\varepsilon=\cCt\times_{\SC}\Dd$ is the pullback of $\Ct_{\RC}$ along $D \to \mathcal{S}_C \xrightarrow{\Psi} \mathcal{R}_C$ by Theorem~\ref{thm:Psi}(3). Therefore $d\Psi(Y_\varepsilon\supset C_\Dd)=\Ct_\varepsilon=\Yt_\varepsilon\cap H_\Dd$. 
 \end{proof}
 
 
