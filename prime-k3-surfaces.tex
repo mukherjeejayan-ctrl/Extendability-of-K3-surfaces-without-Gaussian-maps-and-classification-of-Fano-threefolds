@@ -365,10 +365,10 @@ The map $a: H^0(\NY(-H)) \to H^1(\NY(-H+K_Y))$ in \Cref{diag:a} is surjective.
 
 \subsection{Proof of \Cref{surjectivity of a}}
 
-This section is devoted to the proof of \Cref{surjectivity of a}. We outline the steps to do it for the ease of navigation:
+This subsection is devoted to the proof of \Cref{surjectivity of a}. We outline the steps to do it for the ease of navigation:
 
 \begin{enumerate}
-    \item Construct an isomorphism $\bar\delta\colon H^0(N_C\otimes L_C)/k\,s_C\ \xrightarrow{\ \sim\ }\ H^1(\NY(-H+K_Y))$ and conclude that it is enough to show that $\bar{\delta}^{-1} \circ a$ is surjective (see \Cref{lem:delta}.
+    \item Construct an isomorphism $\bar\delta\colon H^0(N_C\otimes L_C)/k\,s_C\ \xrightarrow{\ \sim\ }\ H^1(\NY(-H+K_Y))$ and conclude that it is enough to show that $\bar{\delta}^{-1} \circ a$ is surjective (see \Cref{lem:delta}).
 
     \item Give a deformation theoretic interpretation of the map $\bar{\delta}^{-1} \circ a$ by showing that $\bar{\delta}^{-1} \circ a = d\Psi$ (see \Cref{prop:a=dPsi}) where $\Psi$ is the map defined in \Cref{thm:Psi}, $(3)$.
 
@@ -376,7 +376,7 @@ This section is devoted to the proof of \Cref{surjectivity of a}. We outline the
 \end{enumerate}
 
 
-
+\subsubsection{The isomorphism $\bar{\delta}$}\label{isomorphism_delta}
 We now rewrite the target $H^1(\NY(-H+K_Y))$ of $a$ by composing it with an isomorphism. The composed map will have a deformation theoretic interpretation, which will enable us to show that it is surjective. Choose a hyperplane $H\subset\PM$ (we use the same letter) meeting $Y$ transversally along a smooth curve
 \[
 C:=Y\cap H ,
@@ -433,8 +433,9 @@ is surjective. Now the proof follows from \Cref{prop:a-surj}.
 \end{proof}
 
 
-\subsubsection{Deformation theoretic interpretation of $\bar\delta^{-1}\circ a$ and proof of \Cref{prop:a-surj}}\label{subsec:geometric}
+\subsubsection{Deformation theoretic interpretation of $\bar\delta^{-1}\circ a$ and the map $\Psi$}\label{subsec:geometric}
 
+In this subsection, we will interpret the map $\bar\delta^{-1}\circ a$ as the differential $d\Psi$ of a map $\Psi$ that we will define below in \Cref{thm:Psi}. \par
 In this and the following subsections $\Dd$ denotes the scheme $\operatorname{Spec}k[\varepsilon]/(\varepsilon^2)$, and for a closed subscheme $Z\subset\PM$ we write $Z_\Dd:=Z\times\Dd$ for the constant family, a closed subscheme of $\PM_\Dd$. We use freely the identification of first-order embedded deformations of a closed subscheme $Z\subset\PM$ with sections of $N_{Z/\PM}=\sHom(I_Z,\OO_Z)$ \cite[\S3.2]{Ser06}: to a section $\eta$ corresponds the closed subscheme $Z_\varepsilon\subset\PM_\Dd$ with ideal
 \[
 I_{Z_\varepsilon}=\{\,f+\varepsilon g\ :\ f\in I_Z,\ g\in\OO_{\PM},\ g\equiv\eta(f)\bmod I_Z\,\}\subset\OO_{\PM}[\varepsilon]/(\varepsilon^2),
@@ -533,7 +534,7 @@ By the projection formula $q\in H^0(\SC,V\otimes\cN^{-1})$, and $q$ vanishes now
 
 
 
-In the following two lemmas, we describe the map $d\Psi: H^0(N_Y(-H)) \to H^0(N_C \otimes L_C)/ks_C$, which is the differential of the map $\Psi$. An element of $H^0(N_Y(-H))$ consists of a flag $C_D = Y_{\varepsilon} \cap H_D \subset Y_{\varepsilon} \subset \mathbb{P}_D^M$ where $Y_{\varepsilon} \subset \mathbb{P}_D^M$ is an embedded first order deformation $Y \subset \mathbb{P}^M$. In the following lemma we prove a slight generalization of \cite[Prop.~3.7]{GP97}, to show that given a first order deformation $Y_{\varepsilon} \subset \mathbb{P}_D^M$ of the scroll $Y \subset \mathbb{P}^M$ there exists a unique embedded double structure $Y_{\varepsilon} \subset \widetilde Y_{\varepsilon} \subset \mathbb{P}_D^M$  that restricts on the central fiber to the unique embedded $K3$ carpet structure $Y \subset \widetilde Y \subset \mathbb{P}^M$ .
+In the following three lemmas, we describe the map $d\Psi: H^0(N_Y(-H)) \to H^0(N_C \otimes L_C)/ks_C$, which is the differential of the map $\Psi$. An element of $H^0(N_Y(-H))$ consists of a flag $C_D = Y_{\varepsilon} \cap H_D \subset Y_{\varepsilon} \subset \mathbb{P}_D^M$ where $Y_{\varepsilon} \subset \mathbb{P}_D^M$ is an embedded first order deformation $Y \subset \mathbb{P}^M$. In the following lemma we prove a slight generalization of \cite[Prop.~3.7]{GP97}, to show that given a first order deformation $Y_{\varepsilon} \subset \mathbb{P}_D^M$ of the scroll $Y \subset \mathbb{P}^M$ there exists a unique embedded double structure $Y_{\varepsilon} \subset \widetilde Y_{\varepsilon} \subset \mathbb{P}_D^M$  that restricts on the central fiber to the unique embedded $K3$ carpet structure $Y \subset \widetilde Y \subset \mathbb{P}^M$ .
 
 \begin{lemma}\label{lem:Phi}
 Let $Y_\varepsilon\subset\PM_\Dd$ be a first-order deformation of $Y$. There is a unique closed subscheme $\Yt_\varepsilon\subset\PM_\Dd$, flat over $\Dd$, with $\Yt_\varepsilon\times_\Dd\{0\}=\Yt$, $Y_\varepsilon\subset\Yt_\varepsilon$, $I_{Y_\varepsilon}^2\subset I_{\Yt_\varepsilon}$ and $I_{Y_\varepsilon}/I_{\Yt_\varepsilon}$ invertible on $Y_\varepsilon$. Further in this case, $I_{Y_\varepsilon}/I_{\Yt_\varepsilon} \cong \omega_{Y_{\varepsilon}/D}$.  We write $\Phi(Y_\varepsilon):=\Yt_\varepsilon$ and $d\Phi\colon H^0(\NY)\to H^0(\NYt)$ for the resulting map. Moreover:
@@ -667,10 +668,9 @@ Consequently $\tilde\delta(\eta|_{\Ct})=[\mu_i-\mu_j]=[\xi_j-\xi_i]=-F(\xi)$, wh
 By the Lemma, $\bar\delta(d\Psi(x))=-\tilde\delta(\eta|_{\Ct})=F(\xi)=a(x)$.
 \end{proof}
 
-\subsubsection{ local sections of \texorpdfstring{$\Psi$}{Psi} and the differential \texorpdfstring{$d\Psi$}{dPsi}}\label{subsec:sections}
+\subsubsection{Construction of local sections of \texorpdfstring{$\Psi$}{Psi} and surjectivity of the differential \texorpdfstring{$d\Psi$}{dPsi}}\label{subsec:sections}
 
-\subsubsection*{The bundle $E_{Y'}$}
-
+In this subsubsection, we construct the local sections of $\Psi$ and show that the differential $d\Psi$ is surjective.
 Put $Q:=K_C\otimes L_C^{-1}=\OO_C(C)=\OO_{\PP^1}(g-1)$. For $Y'\in\SC$ let $\pi'\colon Y'\to C$ be the ruling for which $C$ is a section and $E_{Y'}:=\pi'_*\OO_{Y'}(C)$. Pushing forward we have $0\to\OO_{Y'}\to\OO_{Y'}(C)\to\OO_C(C)\to0$ since $R^1\pi'_*\OO_{Y'}=0$. This gives the extension
 \begin{equation}\label{eq:EY}
 0\to\OO_C\to E_{Y'}\to Q\to0,
@@ -695,7 +695,7 @@ Tensoring the conormal sequence of $\Ct_t\subset H$ with $\OO_C$ gives $I_{\Ct_t
 we get $H^0(T_H|_C\otimes L_C)=\ker\big(H^1(L_C)\to H^1(L_C(1))\otimes H^0(\OO_H(1))^{\vee}\big)$. This map is adjoint to the multiplication pairing $H^1(\OO_{\PP^1}(-g-1))\otimes H^0(\OO_{\PP^1}(g-1))\to H^1(\OO_{\PP^1}(-2))=k$, which is perfect by Serre duality; hence it is injective and $H^0(T_H|_C\otimes L_C)=0$. So $\beta$ is injective, and both spaces have dimension $g-2$.
 \end{proof}
 
-\subsubsection*{Local sections of $\Psi$}
+In the following theorem, given a point in $\mathcal{R}_C$ we construct a map $\Gamma_U$ defined around a neighbourhood $U$ of the point. We will show in \Cref{prop:BEsection}, that $\Gamma_U$ is a section of $\Psi$ over $U$.
 
 \begin{theorem}[Local sections of $\Psi$]\label{thm:Gamma}
 Let $\pr\colon C\times\RC\to\RC$ be the projection.
@@ -797,13 +797,13 @@ By Proposition~\ref{prop:dPsi}, $d\Psi$ is surjective with kernel $\Im c$. By Pr
 By \eqref{eq:alpha-F}, $\alpha(\Yt)=h^0(-H-2K_Y)+\dim\coker F$, and $F$ is surjective by Proposition~\ref{prop:a-surj}. For the last assertion note that $-H-2K_Y=3C_0+(2e+4-b)f$ and $h^0(\OO_Y(3C_0+kf))=\sum_{i=0}^{3}h^0(\OO_{\PP^1}(k-ie))$, which vanishes if and only if $k<0$, i.e.\ $b\ge 2e+5$.
 \end{proof}
 
-\begin{remark}[Deformation-theoretic meaning]
-The equality $\ker a=\Im c$ obtained in Proposition~\ref{prop:a-surj} says: a first-order deformation $Y_\varepsilon$ of the scroll inside $\PM$ which contains $C_\Dd$ is contained in a first-order deformation $\Yt_\varepsilon$ of the carpet with $\Yt_\varepsilon\cap H_\Dd=\Ct_\Dd$ if and only if $Y_\varepsilon=\gamma_\varepsilon Y$ for a projectivity $\gamma_\varepsilon\in\GH(\Dd)$ fixing $H$ pointwise; and then $\Yt_\varepsilon=\gamma_\varepsilon\Yt$. Equivalently, by Proposition~\ref{prop:BEsection}(2): the hyperplane section of the K3 carpet on a scroll $Y'\supset C$ is the ribbon whose restricted cotangent bundle is $V_{Y'}=E_{Y'}\otimes L_C$ ($\cong E_{Y'}^{\vee}\otimes K_C$), and this ribbon determines $Y'$ up to $\GH$. The scalar $\yt_h$ is the ``horizontal component'' of the carpet class of \cite[Proposition~1.7]{GP97}.
-\end{remark}
+%\begin{remark}[Deformation-theoretic meaning]
+%The equality $\ker a=\Im c$ obtained in Proposition~\ref{prop:a-surj} says: a first-order deformation $Y_\varepsilon$ of the scroll inside $\PM$ which contains $C_\Dd$ is contained in a first-order deformation $\Yt_\varepsilon$ of the carpet with $\Yt_\varepsilon\cap H_\Dd=\Ct_\Dd$ if and only if $Y_\varepsilon=\gamma_\varepsilon Y$ for a projectivity $\gamma_\varepsilon\in\GH(\Dd)$ fixing $H$ pointwise; and then $\Yt_\varepsilon=\gamma_\varepsilon\Yt$. Equivalently, by Proposition~\ref{prop:BEsection}(2): the hyperplane section of the K3 carpet on a scroll $Y'\supset C$ is the ribbon whose restricted cotangent bundle is $V_{Y'}=E_{Y'}\otimes L_C$ ($\cong E_{Y'}^{\vee}\otimes K_C$), and this ribbon determines $Y'$ up to $\GH$. The scalar $\yt_h$ is the ``horizontal component'' of the carpet class of \cite[Proposition~1.7]{GP97}.
+%\end{remark}
 
 \section{Prime K3 surfaces of low genus and Fano threefolds of Picard rank one}\label{sec:fano}
 
-This section is the case $r=1$ of \cite[\S4]{BM25}; the bounds on $\alpha$ are now supplied by Theorem~\ref{thm:alpha} (and by Proposition~\ref{prop:g6} for genus $6$), and the vanishing of $h^0(N(-2))$ by Proposition~\ref{prop:N2}.
+In this section we give sharp bounds to $\alpha(X)$, where $X$ is a prime $K3$ surface of genus $g = 12$ or $6 \leq g \leq 10$.
 
 \subsection{Set-up}\label{subsec:fano-setup}
 
