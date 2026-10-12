@@ -263,7 +263,7 @@ Now we compute $H^i(\NYt(-H))$ for $i=0,1,2$. Tensoring sequence \eqref{eq:3.2} 
 0\to H^0(\Hc(-H))\to H^0(\NYt(-H))\to H^0(\OO_Y(-H-2K_Y))\to H^1(\Hc(-H))\to H^1(\NYt(-H))\\
 \to H^1(\OO_Y(-H-2K_Y))\to H^2(\Hc(-H))\to H^2(\NYt(-H))\to H^2(\OO_Y(-H-2K_Y))\to 0
 \end{multline}
-Note that $h^2(-H-2K_Y)=h^0(H+3K_Y)=h^0(-5C_0+(b-3e-6)f)=0$. (In \cite{BM25} the assumption $b\ge 2e+5$, which gives $H^0(-H-2K_Y)=0$, was made at this point; we do not assume it.)
+Note that $h^2(-H-2K_Y)=h^0(H+3K_Y)=h^0(-5C_0+(b-3e-6)f)=0$. %(In \cite{BM25} the assumption $b\ge 2e+5$, which gives $H^0(-H-2K_Y)=0$, was made at this point; we do not assume it.)
 
 Tensoring sequence \eqref{eq:3.3} by $-H$ and taking the cohomology, we have that
 \begin{multline}\label{eq:3.52}
@@ -793,9 +793,9 @@ The map $\bar\delta^{-1}\circ a=d\Psi\colon H^0(\NY(-H))\to H^0(N_C\otimes K_Y|_
 By Proposition~\ref{prop:dPsi}, $d\Psi$ is surjective with kernel $\Im c$. By Proposition~\ref{prop:a=dPsi}, $a=\bar\delta\circ d\Psi$ is surjective with kernel $\Im c$. Surjectivity of $F$ follows from diagram \eqref{diag:a} and the sequence \eqref{eq:3.61}, as explained in the proof of Theorem~\ref{thm:alpha}.
 \end{proof}
 
-\begin{proof}[Proof of Theorem~\ref{thm:alpha}]
-By \eqref{eq:alpha-F}, $\alpha(\Yt)=h^0(-H-2K_Y)+\dim\coker F$, and $F$ is surjective by Proposition~\ref{prop:a-surj}. For the last assertion note that $-H-2K_Y=3C_0+(2e+4-b)f$ and $h^0(\OO_Y(3C_0+kf))=\sum_{i=0}^{3}h^0(\OO_{\PP^1}(k-ie))$, which vanishes if and only if $k<0$, i.e.\ $b\ge 2e+5$.
-\end{proof}
+%\begin{proof}[Proof of Theorem~\ref{thm:alpha}]
+%By \eqref{eq:alpha-F}, $\alpha(\Yt)=h^0(-H-2K_Y)+\dim\coker F$, and $F$ is surjective by Proposition~\ref{prop:a-surj}. For the last assertion note that $-H-2K_Y=3C_0+(2e+4-b)f$ and $h^0(\OO_Y(3C_0+kf))=\sum_{i=0}^{3}h^0(\OO_{\PP^1}(k-ie))$, which vanishes if and only if $k<0$, i.e.\ $b\ge 2e+5$.
+%\end{proof}
 
 %\begin{remark}[Deformation-theoretic meaning]
 %The equality $\ker a=\Im c$ obtained in Proposition~\ref{prop:a-surj} says: a first-order deformation $Y_\varepsilon$ of the scroll inside $\PM$ which contains $C_\Dd$ is contained in a first-order deformation $\Yt_\varepsilon$ of the carpet with $\Yt_\varepsilon\cap H_\Dd=\Ct_\Dd$ if and only if $Y_\varepsilon=\gamma_\varepsilon Y$ for a projectivity $\gamma_\varepsilon\in\GH(\Dd)$ fixing $H$ pointwise; and then $\Yt_\varepsilon=\gamma_\varepsilon\Yt$. Equivalently, by Proposition~\ref{prop:BEsection}(2): the hyperplane section of the K3 carpet on a scroll $Y'\supset C$ is the ribbon whose restricted cotangent bundle is $V_{Y'}=E_{Y'}\otimes L_C$ ($\cong E_{Y'}^{\vee}\otimes K_C$), and this ribbon determines $Y'$ up to $\GH$. The scalar $\yt_h$ is the ``horizontal component'' of the carpet class of \cite[Proposition~1.7]{GP97}.
@@ -807,7 +807,7 @@ In this section we give sharp bounds to $\alpha(X)$, where $X$ is a prime $K3$ s
 
 \subsection{Set-up}\label{subsec:fano-setup}
 
-For a smooth K3 surface $X\subset\PP^n$ we write $N_X:=N_{X/\PP^n}$ and, as in \S\ref{subsec:setup}, $\alpha(X):=h^0(N_X(-1))-(n+1)$. Recall \cite{Zak91,Lvo92} that if $\alpha(X)\le0$ then $X$ is not extendable: every $V\subset\PP^{n+1}$ having $X$ as a hyperplane section is a cone over $X$.
+For a smooth K3 surface $X\subset\PP^M$ we write $N_X:=N_{X/\PP^M}$ and, as in \S\ref{subsec:setup}, $\alpha(X):=h^0(N_X(-1))-(n+1)$. Recall \cite{Zak91,Lvo92} that if $\alpha(X)\le0$ then $X$ is not extendable: every $V\subset\PP^{n+1}$ having $X$ as a hyperplane section is a cone over $X$.
 
 Fix $g\ge3$. Let $\mathcal H_g$ be the locus, in the Hilbert scheme of $\PP^g$, of smooth K3 surfaces $X\subset\PP^g$ embedded by the complete linear series of a very ample line bundle $H$ with $H^2=2g-2$ and $H$ primitive in $\operatorname{Pic}X$; we call them \emph{prime K3 surfaces of genus $g$}. Since the moduli space of primitively polarized K3 surfaces of genus $g$ is irreducible \cite[Ch.~6]{Huy16}, $\mathcal H_g$ is irreducible; it is smooth of dimension $18+(g+1)^2$, because for $X\in\mathcal H_g$ the Euler sequence gives $h^0(T_{\PP^g}|_X)=(g+1)^2-1$ and $H^1(T_{\PP^g}|_X)=H^2(\OO_X)=k$, the map $H^1(T_X)\to H^2(\OO_X)$, cup product with $c_1(H)$, is surjective, and $H^2(T_X)=0$, so that $h^1(N_X)=0$ and $h^0(N_X)=(g+1)^2-1+19$. A point of $\mathcal H_g$ is called \emph{general} if it lies in a suitable dense open subset.
 
