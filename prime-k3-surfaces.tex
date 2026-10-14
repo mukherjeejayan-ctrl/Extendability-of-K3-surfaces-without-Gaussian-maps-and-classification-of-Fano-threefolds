@@ -971,11 +971,118 @@ Hence taking the cohomology of the diagram \eqref{diag:relEuler2}, we have a com
 This shows that the map $s$ is injective and is in fact an isomorphism. Hence $H^0(\NY(-2H))=0$.
 \smallskip
 
-(b) Since $s$ is surjective, \eqref{eq:3.10} shows that the connecting map $\partial\colon H^1(\NY(-2H))\to H^2(T_Y(-2H))$ is injective.
-Therefore, it suffices to show that $\partial\circ s^{\vee}\colon H^1(\OO_Y(-2H-K_Y))\to H^2(T_Y(-2H))$ is injective. The pull-back of the normal sequence \eqref{eq:3.10} along $s^{\vee}\colon\OO_Y(-K_Y)\to\NY$ is an extension of $\OO_Y(-K_Y)$ by $T_Y$ whose class is $\partial(s)=\yt\in\Ext^1(\OO_Y(-K_Y),T_Y)=H^1(T_Y\otimes K_Y)$ (Lemma~\ref{lem:pushforward}); so $\partial\circ s^{\vee}$ is the cup product with $\yt$. Write $\OO_Y(-2H-K_Y)=p^*L$ with $L:=\OO_{\PP^1}(e+2-2b)$. By Lemma~\ref{lem:pushforward} (and its proof) and the projection formula, $p_*(T_Y\otimes K_Y\otimes p^*L)=L(-2)$ and $R^1p_*(T_Y\otimes K_Y\otimes p^*L)=L$, so the Leray spectral sequence identifies $H^2(T_Y(-2H))=H^2(T_Y\otimes K_Y\otimes p^*L)$ with $H^1(\PP^1,L)=H^1(\OO_Y(-2H-K_Y))$, and by its multiplicativity the cup product with $\yt$ becomes multiplication by the image of $\yt$ in $H^0(R^1p_*(T_Y\otimes K_Y))=H^0(\OO_{\PP^1})=k$, which is nonzero by Lemma~\ref{lem:pushforward}. Hence $\partial\circ s^{\vee}$ is an isomorphism, $s^{\vee}$ is injective, and $H^0(\Hc(-2H))=0$.
-
-Finally $h^0(\OO_Y(2C_0+(2e+4-2b)f))=\sum_{i=0}^{2}h^0(\OO_{\PP^1}(2e+4-2b-ie))$, which is $0$ for $b\ge e+3$ and $1$ for $(e,b)=(1,3)$.
+(b) Consider the exact sequence given by twisting \eqref{eq:3.3} by $-2H$,
+\begin{equation}\label{eq:b16}
+0\to\OO_Y(-2H-K_Y)\xrightarrow{\ s^{\vee}\ }\NY(-2H)\to\Hc(-2H)\to0 .
+\end{equation}
+Let $p\colon Y\to\PP^1$ denote the smooth fibration. Now note that $-2H-K_Y=(e+2-2b)f$ and hence $R^1p_*(-2H-K_Y)=0$. Hence we have the following exact sequence by pushing forward the exact sequence \eqref{eq:b16}
+\begin{equation}\label{eq:b17}
+0\to p_*(-2H-K_Y)\xrightarrow{\ \beta\ }p_*(\NY(-2H))\to p_*(\Hc(-2H))\to0 .
+\end{equation}
+It is enough to show that the exact sequence \eqref{eq:b17} is split: then $H^1(p_*(-2H-K_Y))\to H^1(p_*(\NY(-2H)))$ is injective, and since $H^1(\OO_Y(-2H-K_Y))=H^1(p_*(-2H-K_Y))$ and $H^1(p_*(\NY(-2H)))\to H^1(\NY(-2H))$ is injective by the Leray spectral sequence, the map $s^{\vee}\colon H^1(\OO_Y(-2H-K_Y))\to H^1(\NY(-2H))$ is injective. To see this we first show that there is a surjection from $p_*(\NY(-2H))$ to $p_*(-2H-K_Y)$. To see this consider the exact sequence \eqref{eq:3.10} twisted by $-2H$ to get
+\begin{equation}\label{eq:b18}
+0\to T_Y(-2H)\to\TP(-2H)\to\NY(-2H)\to0 .
+\end{equation}
+We show that
+\[
+R^1p_*(\TP(-2H))=0,\qquad p_*(T_Y(-2H))=\OO_{\PP^1}(e-2b)\quad\text{and}\quad R^1p_*(T_Y(-2H))=\OO_{\PP^1}(e+2-2b) .
+\]
+To see the first vanishing once again note that from the Euler exact sequence \eqref{eq:3.11} twisted by $-2H$, we have
+\[
+0\to\OO_Y(-2H)\to\OO_Y(-H)^{\oplus M+1}\to\TP(-2H)\to0 .
+\]
+Since $R^1p_*(\OO_Y(-H))=R^2p_*(\OO_Y(-2H))=0$, we have that $R^1p_*(\TP(-2H))=0$. Now we turn to $R^ip_*(T_Y(-2H))$. Consider the exact sequence of horizontal and vertical tangent bundles on $Y$ twisted by $-2H$
+\begin{equation}\label{eq:b19}
+0\to T_{Y/\PP^1}(-2H)\to T_Y(-2H)\to p^*T_{\PP^1}(-2H)\to0 .
+\end{equation}
+Using the relative Euler exact sequence we have that $T_{Y/\PP^1}=2C_0+ef$, so that $T_{Y/\PP^1}(-2H)=(e-2b)f$. Therefore $p_*(T_{Y/\PP^1}(-2H))=\OO_{\PP^1}(e-2b)$ and $R^ip_*(T_{Y/\PP^1}(-2H))=R^ip_*((e-2b)f)=0$ for $i=1,2$. Now $p^*T_{\PP^1}(-2H)=-2C_0+(2-2b)f$. Therefore, $p_*p^*T_{\PP^1}(-2H)=p_*(-2C_0+(2-2b)f)=\OO_{\PP^1}(2-2b)\otimes p_*(-2C_0)=0$ and
+\begin{align*}
+R^1p_*(p^*T_{\PP^1}(-2H))&=R^1p_*(-2C_0+(2-2b)f)\\
+&=\OO_{\PP^1}(2-2b)\otimes R^1p_*(-2C_0)\\
+&=\OO_{\PP^1}(2-2b)\otimes(p_*(\OO_Y))^*\otimes(\textstyle\bigwedge^2(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e)))^*\\
+&=\OO_{\PP^1}(e+2-2b) .
+\end{align*}
+Pushing forward the sequence \eqref{eq:b19}, we have that
+\[
+0\to p_*(T_{Y/\PP^1}(-2H))=\OO_{\PP^1}(e-2b)\to p_*T_Y(-2H)\to0
+\]
+and
+\[
+0\to R^1p_*T_Y(-2H)\to\OO_{\PP^1}(e+2-2b)\to0 .
+\]
+Now pushing forward the exact sequence \eqref{eq:b18}, we have that
+\begin{multline}\label{eq:b23}
+0\to\OO_{\PP^1}(e-2b)=p_*T_Y(-2H)=p_*(T_{Y/\PP^1}(-2H))\to p_*(\TP(-2H))\to p_*(\NY(-2H))\\
+\xrightarrow{\ \lambda\ }\OO_{\PP^1}(e+2-2b)=p_*(-2H-K_Y)\to0 .
+\end{multline}
+We now end the proof by showing that for the K3 carpet $\Yt$, which is defined by the injection $s^{\vee}\colon\OO_Y(-K_Y)\to\NY$ of \eqref{eq:s}, the map $\lambda$ is, up to a nonzero scalar, a section to the injective map $\beta$ induced by $s^{\vee}$ after twisting by $-2H$ and pushing forward, which sits in the following diagram
+\begin{equation}\label{diag:section}
+\begin{tikzcd}
+  &&& 0 \arrow[d] && \\
+  &&& p_*(-2H-K_Y) \arrow[d, "\beta"] && \\
+  0 \arrow[r] & \OO_{\PP^1}(e-2b) \arrow[r] &  p_*(\TP(-2H)) \arrow[r, "\delta"] & p_*(\NY(-2H)) \arrow[r, "\lambda"] & p_*(-2H-K_Y) \arrow[r] & 0
+\end{tikzcd}
+\end{equation}
+Since $p_*(-2H-K_Y)=\OO_{\PP^1}(e+2-2b)$ is a line bundle, it is enough to show that $\lambda\circ\beta$ is non-zero. This happens if and only if $\operatorname{Im}(\beta)$ is not contained in $\operatorname{Ker}(\lambda)$. So we need to show that $\beta$ does not factor as
+\[
+\begin{tikzcd}
+   & & p_*(-2H-K_Y) \arrow[d, "\beta"] \arrow[dl] \\
+   0 \arrow[r] & \operatorname{Ker}(\lambda) \arrow[r] & p_*(\NY(-2H))
+\end{tikzcd}
+\]
+i.e.\ that $\beta$ is not in the image of
+\begin{equation}\label{eq:b32}
+\Hom(p_*(-2H-K_Y),\operatorname{Ker}(\lambda))\to\Hom(p_*(-2H-K_Y),p_*(\NY(-2H))) .
+\end{equation}
+To see this note that (by sequence \eqref{eq:b23} and diagram \eqref{diag:section}), we have an exact sequence
+\[
+0\to\OO_{\PP^1}(e-2b)=p_*T_{Y/\PP^1}(-2H)\to p_*(\TP(-2H))\to\operatorname{Ker}(\lambda)\to0 .
+\]
+Applying the functor $\Hom(p_*(-2H-K_Y),-)$ we get
+\begin{multline}\label{eq:b30}
+0\to\Hom(p_*(-2H-K_Y),p_*T_{Y/\PP^1}(-2H))\to\Hom(p_*(-2H-K_Y),p_*(\TP(-2H)))\\
+\to\Hom(p_*(-2H-K_Y),\operatorname{Ker}(\lambda))\to\Ext^1(p_*(-2H-K_Y),p_*T_{Y/\PP^1}(-2H))\\
+\xrightarrow{\ \eta\ }\Ext^1(p_*(-2H-K_Y),p_*(\TP(-2H))) .
+\end{multline}
+We first show that the map $\eta$ is an injective map and is in fact an isomorphism. Pushing forward the bottom row of diagram \eqref{diag:relEuler2}, since $p_*(\OO_Y(-H))=R^1p_*(\OO_Y(-H))=0$, we get
+\begin{equation}\label{eq:b26}
+0\to p_*(\TP(-2H))\to R^1p_*(-2H)\to0 ,
+\end{equation}
+and pushing forward the top row of diagram \eqref{diag:relEuler2}, since $p^*(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e))^*\otimes\OO_Y(C_0-2H)$ has no direct images, we get
+\begin{equation}\label{eq:b29}
+0\to p_*T_{Y/\PP^1}(-2H)\to R^1p_*(-2H)\to0 .
+\end{equation}
+Because of the commutative diagram \eqref{diag:relEuler2}, \eqref{eq:b26} and \eqref{eq:b29} sit in a commutative diagram
+\[
+\begin{tikzcd}
+0 \arrow[r] & \Ext^1(p_*(-2H-K_Y), p_*T_{Y/\PP^1}(-2H)) \arrow[d, "\eta"] \arrow[r] & \Ext^1(p_*(-2H-K_Y), R^1p_*(-2H)) \arrow[r] \arrow[d, "\cong"] & 0 \\
+0 \arrow[r] & \Ext^1(p_*(-2H-K_Y), p_*(\TP(-2H))) \arrow[r] & \Ext^1(p_*(-2H-K_Y), R^1p_*(-2H)) \arrow[r] & 0
+\end{tikzcd}
+\]
+The right hand vertical map above is an isomorphism because it is induced by $w(-2H)$ in diagram \eqref{diag:relEuler2} which is an isomorphism. Hence the map $\eta$ is an isomorphism. Going back to sequence \eqref{eq:b30}, we have
+\begin{multline}\label{eq:b31}
+0\to\Hom(p_*(-2H-K_Y),p_*T_{Y/\PP^1}(-2H))\to\Hom(p_*(-2H-K_Y),p_*(\TP(-2H)))\\
+\to\Hom(p_*(-2H-K_Y),\operatorname{Ker}(\lambda))\to0 .
+\end{multline}
+Therefore, the image of the map \eqref{eq:b32} is the image of
+\begin{equation}\label{eq:b33}
+\Hom(p_*(-2H-K_Y),p_*(\TP(-2H)))\to\Hom(p_*(-2H-K_Y),p_*(\NY(-2H))) .
+\end{equation}
+Since $p^*p_*(-2H-K_Y)=-2H-K_Y$, by the projection formula, this is the map
+\begin{equation}\label{eq:b34}
+H^0(\TP\otimes K_Y)\to H^0(\NY\otimes K_Y),
+\end{equation}
+and $\beta$ corresponds to $s\in H^0(\NY\otimes K_Y)$. Now by taking the cohomology of the exact sequence
+\[
+0\to T_Y\otimes K_Y\to\TP\otimes K_Y\to\NY\otimes K_Y\to0
+\]
+we have
+\[
+0\to H^0(T_Y\otimes K_Y)\to H^0(\TP\otimes K_Y)\to H^0(\NY\otimes K_Y)\xrightarrow{\ \partial\ }H^1(T_Y\otimes K_Y) .
+\]
+Now $s$ is not in the image of \eqref{eq:b34}, because $\partial(s)\neq0$ by Lemma~\ref{lem:pushforward}. Hence $\lambda\circ\beta\neq0$, the sequence \eqref{eq:b17} is split, and $s^{\vee}\colon H^1(\OO_Y(-2H-K_Y))\to H^1(\NY(-2H))$ is injective. Therefore $H^0(\Hc(-2H))=0$.
 \end{proof}
+
 
 \subsection{Classification of Fano threefolds of Picard rank one}
 
@@ -1014,23 +1121,20 @@ Let $g\ge6$.
 \begin{proof}
 \emph{Proof of (1).} If $\mathcal V_g\neq\emptyset$, let $V$ be a general element of an irreducible component of $\overline{\mathcal V_g}$. By Lemma~\ref{lem:hypsection} a general hyperplane section of $V$ is a general prime K3 surface $X$ of genus $g$, and $V$ is not a cone; this contradicts Theorem~\ref{thm:alpha-lowgenus}(7).
 
-\emph{Proof of (2).} First one notes that $\mathcal H_g$ is irreducible. Now the list of examples of Fano--Iskovskikh--Mori--Mukai (see for example \cite[Table~3.1]{CLM98}) shows that in each of the cases mentioned in part (2), there exist K3 surfaces in $\mathcal H_g$ which are extendable to smooth Fano threefolds. For a smooth Fano threefold $V\in\mathcal V_g$ one has $h^1(N_{V/\PP^{g+1}})=0$ (from \eqref{eq:3.10} for $V$: $H^1(T_{\PP^{g+1}}|_V)=0$ by the Euler sequence, as $H^1(\OO_V(1))=H^2(\OO_V)=0$, and $H^2(T_V)=0$ by Kodaira--Nakano vanishing), so $V$ is a smooth point of the Hilbert scheme and lies on a unique irreducible component, of dimension $h^0(N_{V/\PP^{g+1}})$. Hence the examples of Fano--Iskovskikh--Mori--Mukai, which form an irreducible family, lie on a unique irreducible component $W_0$ of $\overline{\mathcal V_g}$, and by Lemma~\ref{lem:hypsection} $\mathcal H_g$ is dominated by $W_0$. We end the proof by showing that $W_0$ is the unique irreducible component of $\overline{\mathcal V_g}$ and that the known examples form an open dense subset of $\mathcal V_g$. To see this, we observe first, as in \cite{CLM93} and \cite{CLM98}, that a projectively Cohen--Macaulay scheme degenerates along a flat family to the cone over its hyperplane section. Hence, by Lemma~\ref{lem:hypsection} applied to each irreducible component $W$ of $\overline{\mathcal V_g}$, every $W$ contains the cone $C(X)$ over a general K3 surface $X\subset\PP^g$ in $\mathcal H_g$, and we may take the same $X$ for all components, $\mathcal H_g$ being irreducible; so it is enough to show that for a general $X\in\mathcal H_g$ the cone $C(X)\subset\PP^{g+1}$ is a smooth point of the Hilbert scheme. For the stated values of $g$, Corollary~\ref{cor:cone} along with Theorem~\ref{thm:alpha-lowgenus} gives an upper bound for $\dim T_{[C(X)]}$, which is listed as follows:
+\emph{Proof of (2).} First one notes that $\mathcal H_g$ is irreducible. Now the list of examples of Fano--Iskovskikh--Mori--Mukai (see for example \cite[Table~3.1]{CLM98}) shows that in each of the cases mentioned in part (2), there exist K3 surfaces in $\mathcal H_g$ which are extendable to smooth Fano threefolds. Hence by Lemma~\ref{lem:hypsection}, in each of the cases, $\mathcal H_g$ is dominated by $\mathcal V_g$. We end the proof by showing that $\overline{\mathcal V_g}$ has a unique irreducible component and that the examples of Fano--Iskovskikh--Mori--Mukai form a dense subset of $\mathcal V_g$. To see this, we observe first, as in \cite{CLM93} and \cite{CLM98}, that a projectively Cohen--Macaulay scheme degenerates along a flat family to the cone over its hyperplane section. Hence, once again using Lemma~\ref{lem:hypsection}, it is enough to show that for a general K3 surface $X\subset\PP^g$ in $\mathcal H_g$, the cone $C(X)\subset\PP^{g+1}$, which lies on every irreducible component of $\overline{\mathcal V_g}$, is a smooth point of the Hilbert scheme. For the stated values of $g$, Corollary~\ref{cor:cone} along with Theorem~\ref{thm:alpha-lowgenus} gives an upper bound to $\dim T_{[C(X)]}$, which is listed as follows:
 \begin{center}
 \begin{tabular}{c|cccccc}
 $g$ & $6$ & $7$ & $8$ & $9$ & $10$ & $12$\\ \hline
 $\dim T_{[C(X)]}\le$ & $85$ & $98$ & $114$ & $132$ & $153$ & $201$
 \end{tabular}
 \end{center}
-Now using the descriptions of the examples of Fano--Iskovskikh--Mori--Mukai, one can calculate the dimension $h^0(N_{V/\PP^{g+1}})$ (see for example \cite[Table~2, p.~666]{CLM93} and \cite[Table~3.1]{CLM98}) to check that in each case $\dim W_0=h^0(N_{V/\PP^{g+1}})$ is exactly the upper bound just obtained. Since $C(X)\in W_0$, we get $\dim W_0\le\dim T_{[C(X)]}\le\dim W_0$; hence $C(X)$ is a smooth point of the Hilbert scheme, and $W_0$ is the only component through it.
+Now for a smooth Fano threefold $V\in\mathcal V_g$, $V$ represents a smooth point of the Hilbert scheme, since embedded deformations of an anticanonically embedded Fano threefold are unobstructed by the vanishing of $h^1(N_{V/\PP^{g+1}})$, which follows from the Kodaira--Nakano vanishing theorem. Therefore the dimension of $\overline{\mathcal V_g}$ at $V$ is given by $\dim T_{[V]}=h^0(N_{V/\PP^{g+1}})$. Now using the descriptions of the examples of Fano--Iskovskikh--Mori--Mukai, one can calculate the dimension $h^0(N_{V/\PP^{g+1}})$ (see for example \cite[Table~2, p.~666]{CLM93} and \cite[Table~3.1]{CLM98}) to check that in each case $\dim T_{[V]}$ is exactly the upper bound just obtained. Since $C(X)$ lies on the irreducible component of $\overline{\mathcal V_g}$ containing $V$, whose dimension is $h^0(N_{V/\PP^{g+1}})$, $C(X)$ is also a smooth point of the Hilbert scheme. Hence $\overline{\mathcal V_g}$ has a unique irreducible component. Finally, the examples of Fano--Iskovskikh--Mori--Mukai form an irreducible family (in each case they are the linear sections of a fixed homogeneous variety, see \cite{Muk88}) of dimension $h^0(N_{V/\PP^{g+1}})=\dim\mathcal V_g$, hence a dense subset of $\mathcal V_g$.
 \end{proof}
 
 \section{Extensions of ribbons to \texorpdfstring{$K$}{K}-trivial carpets}\label{sec:extensions}
 
-This section is \S7 of \cite{DM25}, reproduced with the additions needed to complete the proof of Theorem~7.5(1) of that paper (Theorem~\ref{thm:extension}(1) below) and with the embedded versions of that statement (Theorem~\ref{thm:extension}(2),(3)). The notation is that of \S\ref{sec:carpets} with the curve $C$ allowed to have any genus $g_C$: $\Ct$ is a ribbon on $C$ of arithmetic genus $g$ with conormal bundle $L_C$, $Y$ is a ruled surface over $C$ and $\Yt$ a carpet on $Y$; for $g_C=0$ one recovers the objects of \S\ref{sec:carpets}. For a vector bundle $V$ on $C$ we write $\PP(V)=\operatorname{Proj}\operatorname{Sym}V$, so that $p_*\OO_{\PP(V)}(1)=V$ and a surjection $V\to A$ onto a line bundle defines a section $i$ of $p\colon\PP(V)\to C$ with $i^*\OO_{\PP(V)}(1)=A$. A \emph{ribbon} on $C$ with conormal bundle $L_C$ is a double structure $\Ct$ on $C$ with $I_{C/\Ct}^2=0$ and $I_{C/\Ct}\cong L_C$; a \emph{$K$-trivial carpet} on $Y$ is a double structure $\Yt$ on $Y$ with $I_{Y/\Yt}^2=0$ and $I_{Y/\Yt}\cong K_Y$ (for $g_C=0$ these are the K3 carpets of \S\ref{sec:carpets}). By \cite[Theorem~1.2]{BE95} (whose proof applies verbatim to carpets, see \cite[Lemma~3.1]{DM25}), ribbons on $C$ with conormal bundle $L_C$, together with an identification $I_{C/\Ct}=L_C$, correspond bijectively to $\Ext^1(\Omega_C,L_C)$ via the restricted cotangent sequence
-\[
-0\to L_C\to\Omega_{\Ct}|_C\to\Omega_C\to0 ,
-\]
-two ribbons being isomorphic as ribbons on $C$ (i.e.\ by an isomorphism inducing the identity on $C$) if and only if their classes are proportional; the class $0$ is the split ribbon. Likewise $K$-trivial carpets on $Y$ with an identification $I_{Y/\Yt}=K_Y$ correspond to $\Ext^1(\Omega_Y,K_Y)$ via $0\to K_Y\to\Omega_{\Yt}|_Y\to\Omega_Y\to0$; we write $\Yt_{\yt}$ for the carpet of class $\yt$, so that $\Yt_{\lambda\yt}\cong\Yt_{\yt}$ over $Y$ for $\lambda\in k^{\times}$ and $\Yt_0$ is the split carpet.
+In this section we prove \Cref{thm:extension}, that is used to show that $\Gamma_U$ is a section to $\Psi$ over $U$ in \Cref{prop:BEsection}. 
+
 
 \begin{setup}\label{setup:ribbon}
 Let $\Ct$ be a ribbon of arithmetic genus $g$ and conormal bundle $L_C$ over a smooth curve $C$ of genus $g_C$. Then $\Ct$ is defined by an extension
@@ -1304,6 +1408,33 @@ is semistable, and apply \cite[Theorem~5.1(2)]{DM25}. This follows from \cite[Co
 Theorem~\ref{thm:extension}(3) says that a canonically embedded non-split ribbon $\Ct\subset\PP^{g-1}$ of arithmetic genus $g$ on the rational normal curve $C$ is the hyperplane section $\Yt\cap H$ of the K3 carpet on the rational normal scroll $Y=\PP(\Omega_{\Ct}|_C\otimes L_C^{-1})\subset\PP^{g}$, embedded by $|\OO_{\PP(\Omega_{\Ct}|_C\otimes L_C^{-1})}(1)|=|\OO_Y(C)|$, $H=\PP^{g-1}$ being the hyperplane with $Y\cap H=C$. This is a theorem of Bayer--Eisenbud \cite[\S8]{BE95}; it is used in this form in the proof of Proposition~\ref{prop:BEsection}.
 \end{remark}
 
+\section{The compatibility \texorpdfstring{$h\circ f=2g$}{h o f = 2g}}\label{app:hfg}
+
+We keep the notation of the proof of Theorem~\ref{thm:alpha}: $\Hc(-H)\to\NYt(-H)$ is the first map of \eqref{eq:3.2}$(-H)$, denoted $\kappa_0$ on global sections, $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3}$(-H)$, and $h=H^1$ of the last map of \eqref{eq:3.2}$(-H+K_Y)$, i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
+
+\begin{lemma}\label{lem:hfg}
+$h\circ f=2\,g$. Consequently $\Im(h\circ f)=\Im g$, and the right square of diagram \eqref{diag:a} commutes with $2\cdot\id$ as its right-hand vertical map.
+\end{lemma}
+
+\begin{proof}
+We use \v{C}ech cocycles on an affine cover $\{U_i\}$ of $\Yt$ (equivalently of $Y$), $U_{ij}=U_i\cap U_j$, and write $L:=I_Y/I_{\Yt}\cong K_Y$. Fix $\varphi\in H^0(\Hc(-H))$, i.e.\ $\varphi\colon I_{\Yt}/I_Y^2\to\OO_Y(-H)$, and let $\bar\varphi=\kappa_0(\varphi)=\varphi\circ\pi$ with $\pi\colon I_{\Yt}/I_YI_{\Yt}\to I_{\Yt}/I_Y^2$; note $\bar\varphi(I_Y^2)=0$.
+
+\emph{Cocycle for $f(\varphi)=F(\bar\varphi)$.} Choose $\OO_{\Yt}$-linear lifts $\Phi_i\colon I_{\Yt}/I_{\Yt}^2|_{U_i}\to\OO_{\Yt}(-\Ht)|_{U_i}$ of $\bar\varphi$. Then $\Phi_{ij}=\Phi_i-\Phi_j$ takes values in $L(-H)$, and $f(\varphi)=[\{\Phi_{ij}\}]$. Since $h$ is restriction along $L^{\otimes2}\cong I_Y^2/I_YI_{\Yt}$,
+\[
+h(f(\varphi))=\big[\{\Phi_{ij}|_{L^{\otimes 2}}\}\big],\qquad \Phi_{ij}|_{L^{\otimes2}}(\bar x\otimes\bar y)=\Phi_i(xy)-\Phi_j(xy)\quad(x,y\in I_Y).
+\]
+
+\emph{Cocycle for $g(\varphi)$.} Choose $\OO_Y$-linear lifts $\psi_i\colon I_Y/I_Y^2|_{U_i}\to\OO_Y(-H)$ with $\psi_i|_{I_{\Yt}/I_Y^2}=\varphi$; then $\psi_{ij}=\psi_i-\psi_j$ factors through $L$ and $g(\varphi)=[\{\psi_{ij}\}]$.
+
+\emph{Comparison.} Put $B_i(x,y):=\Phi_i(xy)\in L(-H)$ for $x,y\in I_Y$ (well defined since $\bar\varphi(I_Y^2)=0$). Then: (i) $B_i$ is symmetric, $\OO$-bilinear, and vanishes if $x$ or $y$ lies in $I_Y^2$ (if $x=\sum x'_kx''_k$, then $\Phi_i(x'_kx''_ky)=\bar x''_k\cdot\Phi_i(x'_ky)\in L\cdot L(-H)=0$), so it descends to $I_Y/I_Y^2$; (ii) if $x\in I_{\Yt}$ then $B_i(x,y)=\bar y\cdot\Phi_i(x)=\varphi(\bar x)\otimes\bar y$, because multiplication by $\bar y\in L$ on $\OO_{\Yt}(-\Ht)$ factors through $\OO_Y(-H)$; symmetrically for $y\in I_{\Yt}$. Put $B'_i(x,y):=\psi_i(x)\otimes\bar y+\psi_i(y)\otimes\bar x$. By (ii), $B_i=B'_i$ whenever one argument lies in $I_{\Yt}/I_Y^2$, so $C_i:=B_i-B'_i$ descends to a section of $\sHom(L^{\otimes2},L(-H))=L^{-1}(-H)$ over $U_i$. Over $U_{ij}$, as forms on $L\times L$,
+\[
+B_i-B_j=(C_i-C_j)+(B'_i-B'_j),\qquad (B'_i-B'_j)(u,v)=\psi_{ij}(u)\otimes v+\psi_{ij}(v)\otimes u=2\,\psi_{ij}(u)\otimes v,
+\]
+the last step because $L$ is a line bundle ($\vartheta(u)\otimes v=\vartheta(v)\otimes u$). Hence $\{B_i-B_j\}=\delta\{C_i\}+2\{\psi_{ij}\otimes\id_L\}$, i.e.\ $h(f(\varphi))=2g(\varphi)$.
+\end{proof}
+
+
+
 \section{The map \texorpdfstring{$\rho$}{rho}}\label{sec:rho}
 
 This section is not used in the proof of Theorem~\ref{thm:alpha}. It records a second description of $\Psi$ through the extension classes $[V_{Y'}]$ of \eqref{eq:EY}: the morphism $\rho\colon\SC\to\PP(\Ext^1(\Omega_C,L_C))$, $Y'\mapsto[V_{Y'}]$, its local sections and its differential, and the identity $\beta\circ\Psi=\rho$, which gives a second proof of Proposition~\ref{prop:dPsi}.
@@ -1453,30 +1584,6 @@ Conversely, Proposition~\ref{prop:section}(1) applied to $Y'=\Gamma_U(u)$, $u=[\
 
 \appendix
 
-\section{The compatibility \texorpdfstring{$h\circ f=2g$}{h o f = 2g}}\label{app:hfg}
-
-We keep the notation of the proof of Theorem~\ref{thm:alpha}: $\Hc(-H)\to\NYt(-H)$ is the first map of \eqref{eq:3.2}$(-H)$, denoted $\kappa_0$ on global sections, $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3}$(-H)$, and $h=H^1$ of the last map of \eqref{eq:3.2}$(-H+K_Y)$, i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
-
-\begin{lemma}\label{lem:hfg}
-$h\circ f=2\,g$. Consequently $\Im(h\circ f)=\Im g$, and the right square of diagram \eqref{diag:a} commutes with $2\cdot\id$ as its right-hand vertical map.
-\end{lemma}
-
-\begin{proof}
-We use \v{C}ech cocycles on an affine cover $\{U_i\}$ of $\Yt$ (equivalently of $Y$), $U_{ij}=U_i\cap U_j$, and write $L:=I_Y/I_{\Yt}\cong K_Y$. Fix $\varphi\in H^0(\Hc(-H))$, i.e.\ $\varphi\colon I_{\Yt}/I_Y^2\to\OO_Y(-H)$, and let $\bar\varphi=\kappa_0(\varphi)=\varphi\circ\pi$ with $\pi\colon I_{\Yt}/I_YI_{\Yt}\to I_{\Yt}/I_Y^2$; note $\bar\varphi(I_Y^2)=0$.
-
-\emph{Cocycle for $f(\varphi)=F(\bar\varphi)$.} Choose $\OO_{\Yt}$-linear lifts $\Phi_i\colon I_{\Yt}/I_{\Yt}^2|_{U_i}\to\OO_{\Yt}(-\Ht)|_{U_i}$ of $\bar\varphi$. Then $\Phi_{ij}=\Phi_i-\Phi_j$ takes values in $L(-H)$, and $f(\varphi)=[\{\Phi_{ij}\}]$. Since $h$ is restriction along $L^{\otimes2}\cong I_Y^2/I_YI_{\Yt}$,
-\[
-h(f(\varphi))=\big[\{\Phi_{ij}|_{L^{\otimes 2}}\}\big],\qquad \Phi_{ij}|_{L^{\otimes2}}(\bar x\otimes\bar y)=\Phi_i(xy)-\Phi_j(xy)\quad(x,y\in I_Y).
-\]
-
-\emph{Cocycle for $g(\varphi)$.} Choose $\OO_Y$-linear lifts $\psi_i\colon I_Y/I_Y^2|_{U_i}\to\OO_Y(-H)$ with $\psi_i|_{I_{\Yt}/I_Y^2}=\varphi$; then $\psi_{ij}=\psi_i-\psi_j$ factors through $L$ and $g(\varphi)=[\{\psi_{ij}\}]$.
-
-\emph{Comparison.} Put $B_i(x,y):=\Phi_i(xy)\in L(-H)$ for $x,y\in I_Y$ (well defined since $\bar\varphi(I_Y^2)=0$). Then: (i) $B_i$ is symmetric, $\OO$-bilinear, and vanishes if $x$ or $y$ lies in $I_Y^2$ (if $x=\sum x'_kx''_k$, then $\Phi_i(x'_kx''_ky)=\bar x''_k\cdot\Phi_i(x'_ky)\in L\cdot L(-H)=0$), so it descends to $I_Y/I_Y^2$; (ii) if $x\in I_{\Yt}$ then $B_i(x,y)=\bar y\cdot\Phi_i(x)=\varphi(\bar x)\otimes\bar y$, because multiplication by $\bar y\in L$ on $\OO_{\Yt}(-\Ht)$ factors through $\OO_Y(-H)$; symmetrically for $y\in I_{\Yt}$. Put $B'_i(x,y):=\psi_i(x)\otimes\bar y+\psi_i(y)\otimes\bar x$. By (ii), $B_i=B'_i$ whenever one argument lies in $I_{\Yt}/I_Y^2$, so $C_i:=B_i-B'_i$ descends to a section of $\sHom(L^{\otimes2},L(-H))=L^{-1}(-H)$ over $U_i$. Over $U_{ij}$, as forms on $L\times L$,
-\[
-B_i-B_j=(C_i-C_j)+(B'_i-B'_j),\qquad (B'_i-B'_j)(u,v)=\psi_{ij}(u)\otimes v+\psi_{ij}(v)\otimes u=2\,\psi_{ij}(u)\otimes v,
-\]
-the last step because $L$ is a line bundle ($\vartheta(u)\otimes v=\vartheta(v)\otimes u$). Hence $\{B_i-B_j\}=\delta\{C_i\}+2\{\psi_{ij}\otimes\id_L\}$, i.e.\ $h(f(\varphi))=2g(\varphi)$.
-\end{proof}
 
 \begin{thebibliography}{GGP08}
 
