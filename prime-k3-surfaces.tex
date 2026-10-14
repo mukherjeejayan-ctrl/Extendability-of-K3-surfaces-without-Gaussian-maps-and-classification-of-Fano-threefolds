@@ -853,7 +853,7 @@ and $H^2(\NYt(-H+K_Y))=0$; thus $h^0(\NYt(-H+K_Y))=1-\operatorname{rank}\delta_1
 \[
 h^0(\NYt(-\Ht))=h^0(\NYt(-H+K_Y))+h^0(\NYt(-H))-\operatorname{rank}F=20-\operatorname{rank}\delta_1-\operatorname{rank}F,
 \]
-where $F\colon H^0(\NYt(-H))\to H^1(\NYt(-H+K_Y))$ is the connecting map, and it remains to show that $F$ is surjective: then $\operatorname{rank}F=3-\operatorname{rank}\delta_1$ and $\alpha(\Yt)=17-7=10$.
+where $F\colon H^0(\NYt(-H))\to H^1(\NYt(-H+K_Y))$ is the connecting map, and it remains to show that $F$ is surjective. Since then, $\operatorname{rank}F=3-\operatorname{rank}\delta_1$ and $\alpha(\Yt)=17-7=10$.
 
 The proof of Proposition~\ref{prop:a=dPsi} shows, without using $b\ge e+3$, that $F(\iota(x))=j(\delta(t))$ for every $x\in H^0(\NY(-H))$, where $\iota\colon H^0(\NY(-H))\to H^0(\NYt(-H))$ is induced by restriction of homomorphisms from $I_Y$ to $I_{\Yt}$, $d\Psi(x)=[t]$, and $\delta$ is the map of Lemma~\ref{lem:delta}. Now $\delta$ is surjective (Lemma~\ref{lem:delta}), $d\Psi$ is surjective (Proposition~\ref{prop:dPsi}; its proof, and those of the results of \S\S\ref{subsec:geometric}--\ref{subsec:sections} on which it relies, only use $b\ge e+1$), and $j$ is surjective; hence the image of $F$ is all of $H^1(\NYt(-H+K_Y))$.
 \end{proof}
@@ -869,13 +869,13 @@ In particular $h^0(\NYt(-2\Ht))=0$ if $b\ge e+3$, and $h^0(\NYt(-2\Ht))\le1$ if 
 \end{proposition}
 
 \begin{proof}
-Tensoring \eqref{eq:3.1} by $\OO_{\Yt}(-2\Ht)$ gives $h^0(\NYt(-2\Ht))\le h^0(\NYt(-2H+K_Y))+h^0(\NYt(-2H))$. We use throughout that $H^0(\OO_Y(-H+K_Y))=0$, $H^0(\OO_Y(-2H-K_Y))=0$ (as $-2H-K_Y=(e+2-2b)f$ and $2b>e+2$), and, by Kodaira vanishing, $H^1(\OO_Y(-2H))=H^1(\OO_Y(-2H+K_Y))=0$ and and $H^i(\OO_Y(-H))=0$ for all $i$ (see the derivation of \eqref{eq:3.54}).
+Tensoring \eqref{eq:3.1} by $\OO_{\Yt}(-2\Ht)$ gives $h^0(\NYt(-2\Ht))\le h^0(\NYt(-2H+K_Y))+h^0(\NYt(-2H))$. We use throughout that $H^0(\OO_Y(-H+K_Y))=0$, $H^0(\OO_Y(-2H-K_Y))=0$ (as $-2H-K_Y=(e+2-2b)f$ and $2b>e+2$), and, by Kodaira vanishing, $H^1(\OO_Y(-2H))=H^1(\OO_Y(-2H+K_Y))=0$ and $H^i(\OO_Y(-H))=0$ for all $i$ (see the derivation of \eqref{eq:3.54}).
 
 \emph{Step 1: $H^0(\NYt(-2H+K_Y))=0$.} By \eqref{eq:3.2} tensored with $-2H+K_Y$, $H^0(\NYt(-2H+K_Y))=H^0(\Hc(-2H+K_Y))$, and by \eqref{eq:3.3} tensored with $-2H+K_Y$ the latter is a quotient of $H^0(\NY(-2H+K_Y))$. By \eqref{eq:3.11} tensored with $-2H+K_Y$, $H^0(\TP(-2H+K_Y))=0$, so by \eqref{eq:3.10} $H^0(\NY(-2H+K_Y))$ injects into $H^1(T_Y(-2H+K_Y))$. Finally $H^1(T_Y(-2H+K_Y))=0$: in
 \[
 0\to T_{Y/\PP^1}(-2H+K_Y)\to T_Y(-2H+K_Y)\to p^*T_{\PP^1}(-2H+K_Y)\to0
 \]
-we have $T_{Y/\PP^1}(-2H+K_Y)=\OO_Y(-2C_0-(2b+2)f)$ and $p^*T_{\PP^1}(-2H+K_Y)=\OO_Y(-4C_0-(2b+e)f)$; both have $p_*=0$, while by relative duality $R^1p_*\OO_Y(-2C_0)=\OO_{\PP^1}(e)$ and $R^1p_*\OO_Y(-4C_0)=\OO_{\PP^1}(e)\oplus\OO_{\PP^1}(2e)\oplus\OO_{\PP^1}(3e)$. Hence
+we have $T_{Y/\PP^1}(-2H+K_Y)=\OO_Y(-2C_0-(2b+2)f)$ and $p^*T_{\PP^1}(-2H+K_Y)=\OO_Y(-4C_0-(2b+e)f)$; both have vanishing $p_*$, while by relative duality $R^1p_*\OO_Y(-2C_0)=\OO_{\PP^1}(e)$ and $R^1p_*\OO_Y(-4C_0)=\OO_{\PP^1}(e)\oplus\OO_{\PP^1}(2e)\oplus\OO_{\PP^1}(3e)$. Hence
 \begin{gather*}
 H^1(T_{Y/\PP^1}(-2H+K_Y))=H^0(\OO_{\PP^1}(e-2b-2))=0,\\
 H^1(p^*T_{\PP^1}(-2H+K_Y))=H^0\big(\OO_{\PP^1}(-2b)\oplus\OO_{\PP^1}(e-2b)\oplus\OO_{\PP^1}(2e-2b)\big)=0 .
@@ -885,11 +885,94 @@ H^1(p^*T_{\PP^1}(-2H+K_Y))=H^0\big(\OO_{\PP^1}(-2b)\oplus\OO_{\PP^1}(e-2b)\oplus
 \[
 0\to H^0(\NY(-2H))\to H^0(\Hc(-2H))\to H^1(\OO_Y(-2H-K_Y))\xrightarrow{\ s^{\vee}\ }H^1(\NY(-2H)),
 \]
-so it suffices to show that $H^0(\NY(-2H))=0$ and that $s^{\vee}$ is injective.
+so it suffices to show that (a) $H^0(\NY(-2H))=0$ and that (b) $s^{\vee}$ is injective.
 
-(a) By \eqref{eq:3.11} tensored with $-2H$, $H^0(\TP(-2H))=0$ and $H^1(\TP(-2H))\cong H^2(\OO_Y(-2H))$. Hence by \eqref{eq:3.10}, $H^0(\NY(-2H))=\ker\big(H^1(T_Y(-2H))\to H^1(\TP(-2H))\big)$. In $0\to T_{Y/\PP^1}(-2H)\to T_Y(-2H)\to p^*T_{\PP^1}(-2H)\to0$ the sheaf $p^*T_{\PP^1}(-2H)=\OO_Y(-2C_0+(2-2b)f)$ has $H^0=H^1=0$ ($p_*=0$ and $R^1p_*=\OO_{\PP^1}(e+2-2b)$), so $H^1(T_{Y/\PP^1}(-2H))\to H^1(T_Y(-2H))$ is an isomorphism. Put $E:=p_*\OO_Y(H)=\OO_{\PP^1}(b)\oplus\OO_{\PP^1}(b-e)$, so that $Y=\PP(E)$ with $\OO_{\PP(E)}(1)=\OO_Y(H)$ and $H^0(\OO_Y(H))=H^0(E)$. The relative Euler sequence $0\to\OO_Y\to p^*E^{\vee}\otimes\OO_Y(H)\to T_{Y/\PP^1}\to0$ maps to the Euler sequence \eqref{eq:3.11} via the dual of the evaluation map $H^0(E)\otimes\OO_{\PP^1}\to E$, the induced map $T_{Y/\PP^1}\to\TP$ being the natural inclusion. Twisting by $-2H$, the connecting map $H^1(T_{Y/\PP^1}(-2H))\to H^2(\OO_Y(-2H))$ of the relative Euler sequence therefore factors through $H^1(\TP(-2H))\cong H^2(\OO_Y(-2H))$; and it is injective, because $H^1(p^*E^{\vee}\otimes\OO_Y(-H))=0$ ($p^*E^{\vee}\otimes\OO_Y(-H)=p^*E^{\vee}(-b)\otimes\OO_Y(-C_0)$ and $p_*\OO_Y(-C_0)=R^1p_*\OO_Y(-C_0)=0$). Hence $H^1(T_Y(-2H))\to H^1(\TP(-2H))$ is injective and $H^0(\NY(-2H))=0$. Moreover $h^1(T_Y(-2H))=h^1(\OO_Y((e-2b)f))=2b-e-1=h^0(\OO_Y((2b-e-2)f))=h^2(\OO_Y(-2H))$, so this map is an isomorphism, and \eqref{eq:3.10} shows that the connecting map $\partial\colon H^1(\NY(-2H))\to H^2(T_Y(-2H))$ is injective.
+(a) Twisting the sequence \eqref{eq:3.10} by $-2H$ and taking cohomology, we have
+\[
+0\to H^0(T_Y(-2H))\to H^0(\TP(-2H))\to H^0(\NY(-2H))\to H^1(T_Y(-2H))\xrightarrow{\ s\ }H^1(\TP(-2H)) .
+\]
+Turning to the Euler sequence \eqref{eq:3.11}, twisting by $-2H$ and taking cohomology, we get
+\[
+0\to H^0(\OO_Y(-H)^{\oplus M+1})=(0)\to H^0(\TP(-2H))\to H^1(\OO_Y(-2H))=(0) .
+\]
+Hence $H^0(\TP(-2H))=0$. So it is enough to show that the map $H^1(T_Y(-2H))\xrightarrow{\ s\ }H^1(\TP(-2H))$ is injective.
 
-(b) It suffices to show that $\partial\circ s^{\vee}\colon H^1(\OO_Y(-2H-K_Y))\to H^2(T_Y(-2H))$ is injective. The pull-back of the normal sequence \eqref{eq:3.10} along $s^{\vee}\colon\OO_Y(-K_Y)\to\NY$ is an extension of $\OO_Y(-K_Y)$ by $T_Y$ whose class is $\partial(s)=\yt\in\Ext^1(\OO_Y(-K_Y),T_Y)=H^1(T_Y\otimes K_Y)$ (Lemma~\ref{lem:pushforward}); so $\partial\circ s^{\vee}$ is the cup product with $\yt$. Write $\OO_Y(-2H-K_Y)=p^*L$ with $L:=\OO_{\PP^1}(e+2-2b)$. By Lemma~\ref{lem:pushforward} (and its proof) and the projection formula, $p_*(T_Y\otimes K_Y\otimes p^*L)=L(-2)$ and $R^1p_*(T_Y\otimes K_Y\otimes p^*L)=L$, so the Leray spectral sequence identifies $H^2(T_Y(-2H))=H^2(T_Y\otimes K_Y\otimes p^*L)$ with $H^1(\PP^1,L)=H^1(\OO_Y(-2H-K_Y))$, and by its multiplicativity the cup product with $\yt$ becomes multiplication by the image of $\yt$ in $H^0(R^1p_*(T_Y\otimes K_Y))=H^0(\OO_{\PP^1})=k$, which is nonzero by Lemma~\ref{lem:pushforward}. Hence $\partial\circ s^{\vee}$ is an isomorphism, $s^{\vee}$ is injective, and $H^0(\Hc(-2H))=0$.
+First consider the two exact sequences, the first one is the relative Euler sequence on $Y=\PP(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e))$ and the second one is the Euler sequence of $\PM$ pulled back to $Y$.
+\[
+\begin{tikzcd}
+  0 \arrow[r] & \OO_Y \arrow[r] & p^*(\OO_{\PP^1} \oplus \OO_{\PP^1}(-e))^* \otimes \OO_{Y}(C_0) \arrow[r, "x"] \arrow[dr, "y \circ x"] & T_{Y/\PP^1} \arrow[r] \arrow[d, "y"] & 0 \\
+   0 \arrow[r] & \OO_Y \arrow[r] & \OO_Y(H)^{\oplus M+1} \arrow[r] & \TP \arrow[r] & 0
+\end{tikzcd}
+\]
+The map $y$ is the injective map induced by the composition of two injective maps given by $0\to T_{Y/\PP^1}\to T_Y$ and $0\to T_Y\to\TP$. We show that the map $y$ has a unique lift to a map
+\[
+z\colon p^*(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e))^*\otimes\OO_Y(C_0)\to\OO_Y(H)^{\oplus M+1} .
+\]
+Apply the functor $\Hom(p^*(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e))^*\otimes\OO_Y(C_0),-)$ to the bottom exact sequence we have
+\begin{multline*}
+0\to\Hom(p^*(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e))^*\otimes\OO_Y(C_0),\OO_Y)\to\Hom(p^*(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e))^*\otimes\OO_Y(C_0),\OO_Y(H)^{\oplus M+1})\\
+\to\Hom(p^*(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e))^*\otimes\OO_Y(C_0),\TP)\to\Ext^1(p^*(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e))^*\otimes\OO_Y(C_0),\OO_Y)
+\end{multline*}
+Now, $\Ext^1(p^*(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e))^*\otimes\OO_Y(C_0),\OO_Y)=\Ext^1(\OO_Y(C_0)\oplus\OO_Y(C_0+ef),\OO_Y)=H^1(\OO_Y(-C_0)\oplus\OO_Y(-C_0-ef))=0$. Further, $\Hom(p^*(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e))^*\otimes\OO_Y(C_0),\OO_Y)=\Hom(\OO_Y(C_0)\oplus\OO_Y(C_0+ef),\OO_Y)=H^0(\OO_Y(-C_0)\oplus\OO_Y(-C_0-ef))=0$. Hence the map $y$ has a unique lift to the map $z$, which induces the following commutative diagram involving the two previous exact sequences
+\begin{equation}\label{diag:relEuler}
+\begin{tikzcd}
+  0 \arrow[r] & \OO_Y \arrow[r] \arrow[d, "w", "\cong"'] & p^*(\OO_{\PP^1} \oplus \OO_{\PP^1}(-e))^* \otimes \OO_Y(C_0) \arrow[r, "x"] \arrow[d, "z"] & T_{Y/\PP^1} \arrow[r] \arrow[d, "y"] & 0 \\
+   0 \arrow[r] & \OO_Y \arrow[r] & \OO_Y(H)^{\oplus M+1} \arrow[r] & \TP \arrow[r] & 0
+\end{tikzcd}
+\end{equation}
+To see that the map $w$ is an isomorphism, we only need to show that $w$ is non-zero. To show this restrict the above diagram to a fiber of the projection map $p\colon Y\to\PP^1$. Since $\OO_Y(H)=\OO_Y(C_0+bf)$, we have that under the embedding, the fiber $\PP^1$ is embedded by the complete linear series of $\OO_{\PP^1}(1)$, i.e.\ by a linear embedding $i\colon\PP^1\hookrightarrow\PM$. Hence after restricting the above diagram to the fiber, we get
+\[
+\begin{tikzcd}
+  0 \arrow[r] & \OO_{\PP^1} \arrow[r, "\sigma_{\PP^1}"] \arrow[d, "\Bar{w}", "\cong"'] & \OO_{\PP^1}(1)^{\oplus 2} \arrow[r, "\rho_{\PP^1}"] \arrow[d, "\widetilde{\alpha}"] & T_{\PP^1} \arrow[r] \arrow[d, "\beta = di"] & 0 \\
+   0 \arrow[r] & \OO_{\PP^1} \arrow[r, "i^*\sigma_{\PM}"] & \OO_{\PP^1}(1)^{\oplus M+1} \arrow[r, "i^*\rho_{\PM}"] & T_{\PP^1} \oplus \OO_{\PP^1}(1)^{\oplus M-1} = T_{\PM}|_{\PP^1} \arrow[r] & 0
+\end{tikzcd}
+\]
+where $\sigma_{\PP^1}$ and $\rho_{\PP^1}$ are the maps of the Euler exact sequence on $\PP^1$, while $i^*\sigma_{\PM}$ and $i^*\rho_{\PM}$ are the maps of the Euler exact sequence on $\PM$, pulled back to the line $\PP^1$, and $\beta=di$ is the differential map of the embedding $i$. As before, since $\Hom(\OO_{\PP^1}(1)^{\oplus 2},\OO_{\PP^1})=\Ext^1(\OO_{\PP^1}(1)^{\oplus 2},\OO_{\PP^1})=0$, the map $\widetilde{\alpha}$ is the unique map lifting $di\circ\rho_{\PP^1}$. Choose coordinates $[u:v]$ on $\PP^1$ and $[X_0:\dots:X_M]$ on $\PM$ such that $i([u:v])=[u:v:0:\dots:0]$. Then $di$ is the inclusion of the first summand $T_{\PP^1}\to T_{\PP^1}\oplus\OO_{\PP^1}(1)^{\oplus M-1}$, and the map
+\[
+\widetilde\alpha\colon\OO_{\PP^1}(1)^{\oplus 2}\longrightarrow\OO_{\PP^1}(1)^{\oplus M+1},\qquad \widetilde\alpha(a,b)=(a,b,0,\dots,0),
+\]
+makes the diagram commutative, since both $\rho_{\PP^1}(a,b)$ and $i^*\rho_{\PM}(a,b,0,\dots,0)$ are the vector field $a\,\partial/\partial X_0+b\,\partial/\partial X_1$ along the line. Hence this is $\widetilde\alpha$, and $\widetilde{\alpha}\circ\sigma_{\PP^1}(1)=\widetilde{\alpha}(u,v)=(u,v,0,\dots,0)=i^*\sigma_{\PM}(1)$. Therefore $\Bar{w}(1)=1$. Hence $w$ is an isomorphism.
+
+Now twisting the commutative diagram \eqref{diag:relEuler} by $\OO_Y(-2H)$, we have the following
+\begin{equation}\label{diag:relEuler2}
+\begin{tikzcd}
+  0 \arrow[r] & \OO_Y(-2H) \arrow[r] \arrow[d, "w(-2H)", "\cong"'] & p^*(\OO_{\PP^1} \oplus \OO_{\PP^1}(-e))^* \otimes \OO_Y(C_0-2H) \arrow[r, "x"] \arrow[d, "z"] & T_{Y/\PP^1}(-2H) \arrow[r] \arrow[d, "y"] & 0 \\
+   0 \arrow[r] & \OO_Y(-2H) \arrow[r] & \OO_Y(-H)^{\oplus M+1} \arrow[r] & \TP(-2H) \arrow[r] & 0
+\end{tikzcd}
+\end{equation}
+Taking cohomology of the bottom row of diagram \eqref{diag:relEuler2}, since $H^1(\OO_Y(-H))=H^2(\OO_Y(-H))=0$, we get
+\[
+0\to H^1(\TP(-2H))\to H^2(\OO_Y(-2H))\to0 .
+\]
+Similarly tensoring the exact sequence of horizontal and vertical tangent bundles of $Y$ by $-2H$, we have
+\[
+0\to T_{Y/\PP^1}(-2H)\to T_Y(-2H)\to p^*(T_{\PP^1})(-2H)\to0
+\]
+and taking the cohomology, we have that
+\[
+H^0(p^*(T_{\PP^1})(-2H))\to H^1(T_{Y/\PP^1}(-2H))\to H^1(T_Y(-2H))\to H^1(p^*(T_{\PP^1})(-2H))\to0 .
+\]
+Now note that $p^*(T_{\PP^1})(-2H)=-2C_0+(2-2b)f$. We have that $H^0(-2C_0+(2-2b)f)=0$ and $H^1(-2C_0+(2-2b)f)=H^1((2b-e-4)f)^*=0$ if $b\ge e+2$. Hence we have
+\[
+0\to H^1(T_{Y/\PP^1}(-2H))\to H^1(T_Y(-2H))\to0 .
+\]
+On the other hand, $p^*(\OO_{\PP^1}\oplus\OO_{\PP^1}(-e))^*\otimes\OO_Y(C_0-2H)=\OO_Y(-C_0-2bf)\oplus\OO_Y(-C_0+(e-2b)f)$ has no cohomology, since $p_*\OO_Y(-C_0)=R^1p_*\OO_Y(-C_0)=0$; so taking the cohomology of the top row of the diagram \eqref{diag:relEuler2}, we get
+\[
+0\to H^1(T_{Y/\PP^1}(-2H))\to H^2(\OO_Y(-2H))\to0 .
+\]
+Hence taking the cohomology of the diagram \eqref{diag:relEuler2}, we have a commutative diagram
+\[
+\begin{tikzcd}
+    H^1(T_{Y/\PP^1}(-2H)) \arrow[d, "\cong"] \arrow[r, "\cong"] & H^2(\OO_Y(-2H)) \arrow[dd, "\cong"] \\
+     H^1(T_{Y}(-2H)) \arrow[d, "s"] & \\
+     H^1(\TP(-2H)) \arrow[r, "\cong"] & H^2(\OO_Y(-2H))
+\end{tikzcd}
+\]
+This shows that the map $s$ is injective and is in fact an isomorphism. Hence $H^0(\NY(-2H))=0$.
+\smallskip
+
+(b) Since $s$ is surjective, \eqref{eq:3.10} shows that the connecting map $\partial\colon H^1(\NY(-2H))\to H^2(T_Y(-2H))$ is injective.
+Therefore, it suffices to show that $\partial\circ s^{\vee}\colon H^1(\OO_Y(-2H-K_Y))\to H^2(T_Y(-2H))$ is injective. The pull-back of the normal sequence \eqref{eq:3.10} along $s^{\vee}\colon\OO_Y(-K_Y)\to\NY$ is an extension of $\OO_Y(-K_Y)$ by $T_Y$ whose class is $\partial(s)=\yt\in\Ext^1(\OO_Y(-K_Y),T_Y)=H^1(T_Y\otimes K_Y)$ (Lemma~\ref{lem:pushforward}); so $\partial\circ s^{\vee}$ is the cup product with $\yt$. Write $\OO_Y(-2H-K_Y)=p^*L$ with $L:=\OO_{\PP^1}(e+2-2b)$. By Lemma~\ref{lem:pushforward} (and its proof) and the projection formula, $p_*(T_Y\otimes K_Y\otimes p^*L)=L(-2)$ and $R^1p_*(T_Y\otimes K_Y\otimes p^*L)=L$, so the Leray spectral sequence identifies $H^2(T_Y(-2H))=H^2(T_Y\otimes K_Y\otimes p^*L)$ with $H^1(\PP^1,L)=H^1(\OO_Y(-2H-K_Y))$, and by its multiplicativity the cup product with $\yt$ becomes multiplication by the image of $\yt$ in $H^0(R^1p_*(T_Y\otimes K_Y))=H^0(\OO_{\PP^1})=k$, which is nonzero by Lemma~\ref{lem:pushforward}. Hence $\partial\circ s^{\vee}$ is an isomorphism, $s^{\vee}$ is injective, and $H^0(\Hc(-2H))=0$.
 
 Finally $h^0(\OO_Y(2C_0+(2e+4-2b)f))=\sum_{i=0}^{2}h^0(\OO_{\PP^1}(2e+4-2b-ie))$, which is $0$ for $b\ge e+3$ and $1$ for $(e,b)=(1,3)$.
 \end{proof}
