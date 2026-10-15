@@ -1131,7 +1131,7 @@ $\dim T_{[C(X)]}\le$ & $85$ & $98$ & $114$ & $132$ & $153$ & $201$
 Now for a smooth Fano threefold $V\in\mathcal V_g$, $V$ represents a smooth point of the Hilbert scheme, since embedded deformations of an anticanonically embedded Fano threefold are unobstructed by the vanishing of $h^1(N_{V/\PP^{g+1}})$, which follows from the Kodaira--Nakano vanishing theorem. Therefore the dimension of $\overline{\mathcal V_g}$ at $V$ is given by $\dim T_{[V]}=h^0(N_{V/\PP^{g+1}})$. Now using the descriptions of the examples of Fano--Iskovskikh--Mori--Mukai, one can calculate the dimension $h^0(N_{V/\PP^{g+1}})$ (see for example \cite[Table~2, p.~666]{CLM93} and \cite[Table~3.1]{CLM98}) to check that in each case $\dim T_{[V]}$ is exactly the upper bound just obtained. Since $C(X)$ lies on the irreducible component of $\overline{\mathcal V_g}$ containing $V$, whose dimension is $h^0(N_{V/\PP^{g+1}})$, $C(X)$ is also a smooth point of the Hilbert scheme. Hence $\overline{\mathcal V_g}$ has a unique irreducible component. Finally, the examples of Fano--Iskovskikh--Mori--Mukai form an irreducible family (in each case they are the linear sections of a fixed homogeneous variety, see \cite{Muk88}) of dimension $h^0(N_{V/\PP^{g+1}})=\dim\mathcal V_g$, hence a dense subset of $\mathcal V_g$.
 \end{proof}
 
-\section{Extensions of ribbons to \texorpdfstring{$K$}{K}-trivial carpets}\label{sec:extensions}
+\section{Appendix: Extensions of ribbons to \texorpdfstring{$K$}{K}-trivial carpets}\label{sec:extensions}
 
 In this section we prove \Cref{thm:extension}, that is used to show that $\Gamma_U$ is a section to $\Psi$ over $U$ in \Cref{prop:BEsection}. 
 
@@ -1212,8 +1212,8 @@ Considering that $\operatorname{Sym}^2V\otimes L_C^{-2}$ is a direct summand of 
 \begin{theorem}\label{thm:extension}
 In Set-up~\ref{setup:ribbon}, assume that $\Ct$ is non-split. For $\yt\in\Ext^1(\Omega_Y,K_Y)$ let $\Yt_{\yt}$ be the $K$-trivial carpet on $Y$ of class $\yt$.
 \begin{enumerate}
-\item There is a unique $\yt_0\in\Ext^1(\Omega_Y,K_Y)$ such that the embedding $i\colon C\hookrightarrow Y$ extends to a closed embedding $\Ct\hookrightarrow\Yt_{\yt_0}$ inducing the identity $K_Y|_C=L_C$ on conormal bundles.
-\item Suppose $\OO_Y(C)$ is very ample, let $Y\hookrightarrow\PP^M$ be the embedding by the complete linear series of $\OO_Y(C)$, $M+1=h^0(\OO_Y(C))$, let $H\subset\PP^M$ be the hyperplane with $Y\cap H=C$, and let $\Yt\hookrightarrow\PP^M$ be the unique $K$-trivial carpet extending the embedding $Y\hookrightarrow\PP^M$ \cite[Proposition~3.2]{DM25}. Then $\Yt\cap H$ is a ribbon on $C$ with conormal bundle $L_C$, and $\Yt\cap H\cong\Ct$ as ribbons on $C$.
+\item There is a unique $\yt_0\in\Ext^1(\Omega_Y,K_Y)$, $\widetilde y_0 \neq 0$, such that the embedding $i\colon C\hookrightarrow Y$ extends to a closed embedding $\Ct\hookrightarrow\Yt_{\yt_0}$ inducing the identity $K_Y|_C=L_C$ on conormal bundles.
+%\item Suppose $\OO_Y(C)$ is very ample, let $Y\hookrightarrow\PP^M$ be the embedding by the complete linear series of $\OO_Y(C)$, $M+1=h^0(\OO_Y(C))$, let $H\subset\PP^M$ be the hyperplane with $Y\cap H=C$, and let $\Yt\hookrightarrow\PP^M$ be the unique $K$-trivial carpet extending the embedding $Y\hookrightarrow\PP^M$ \cite[Proposition~3.2]{DM25}. Then $\Yt\cap H$ is a ribbon on $C$ with conormal bundle $L_C$, and $\Yt\cap H\cong\Ct$ as ribbons on $C$.
 \item Let $g_C=0$ and let $\Ct\subset\PP^{M-1}$ be a canonically embedded ribbon, $M=g$, so that $C\subset\PP^{M-1}$ is a rational normal curve. Embed $Y$ in $\PM$ by the complete linear series of $\OO_Y(C)$ and identify $\PP^{M-1}$ with a hyperplane $H\subset\PM$ so that $Y\cap H=C$. If $\Yt\subset\PM$ is the K3 carpet on $Y$, then
 \[
 \Yt\cap H=\Ct
@@ -1273,7 +1273,20 @@ induced by $N_{C/Y}^{\vee}\hookrightarrow\Omega_Y|_C$. So it suffices to prove t
 \[
 \Ext^1(\Omega_Y,K_Y)\xrightarrow{\ r\ }\Ext^1(\Omega_Y|_C,L_C)\xrightarrow{\ \bar p\ }\Ext^1(\Omega_C,L_C)
 \]
-which also factors as
+
+We have a diagram as follows:
+\begin{equation}\label{diag:B}
+\begin{tikzcd}
+\Ext^1(\Omega_{Y/C},K_Y)\arrow[r]\arrow[d] & \Ext^1(\Omega_Y,K_Y)\arrow[r]\arrow[d,"r"] & \Ext^1(p^*\Omega_C,K_Y)=k\arrow[d]\\
+\Ext^1(\Omega_{Y/C}|_C,L_C)\arrow[r,hook] & \Ext^1(\Omega_Y|_C,L_C)\arrow[r,"\bar p"] & \Ext^1(\Omega_C,L_C)
+\end{tikzcd}
+\end{equation}
+whose vertical maps are restriction to $C$.
+Hence the map the map
+\[
+\Ext^1(\Omega_Y,K_Y)\xrightarrow{\ r\ }\Ext^1(\Omega_Y|_C,L_C)\xrightarrow{\ \bar p\ }\Ext^1(\Omega_C,L_C)
+\]
+also factors as
 \[
 \Ext^1(\Omega_Y,K_Y)\to\Ext^1(p^*\Omega_C,K_Y)\to\Ext^1(\Omega_C,L_C).
 \]
@@ -1323,7 +1336,7 @@ B:=\{\yt\in\Ext^1(\Omega_Y,K_Y):\ \yt_h=1\},
 \]
 the inverse image of $1\in\Ext^1(p^*\Omega_C,K_Y)$.
 
-\emph{Condition (b).} We have a diagram as follows:
+\emph{Condition (b).} Consider again the diagram:
 \begin{equation}\label{diag:B}
 \begin{tikzcd}
 \Ext^1(\Omega_{Y/C},K_Y)\arrow[r]\arrow[d] & \Ext^1(\Omega_Y,K_Y)\arrow[r]\arrow[d,"r"] & \Ext^1(p^*\Omega_C,K_Y)=k\arrow[d]\\
@@ -1364,7 +1377,7 @@ whose $H^1$ vanishes because $R^jp_*\OO_{\PP V}(-1)=0$ for all $j$. Taking cohom
 
 Therefore $r_N\circ r$ is injective on $B$. Being an injective affine map from the line $B$ to the line $\Ext^1(N_{C/Y}^{\vee},L_C)=k$, it is bijective, so exactly one point $\yt_0$ of $B$ satisfies condition (b). This proves (1).
 
-\emph{Proof of (2).} Note that since by Lemma~\ref{lem:OSC}, part (1), $\OO_Y(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}$, we have the existence of a unique $K$-trivial carpet $\Yt\hookrightarrow\PP^M$ extending the embedding $Y\hookrightarrow\PP^M$, and it is non-split \cite[Proposition~3.2]{DM25}; let $\yt\ne0$ be its class. Let $h$ be a linear form defining $H$, so that $h|_Y$ is the section of $\OO_Y(C)$ with zero scheme $C$. Since $h$ is a nonzerodivisor on $\OO_Y$ and on $K_Y$, it is a nonzerodivisor on $\OO_{\Yt}$, and $K_Y\cap h\OO_{\Yt}=hK_Y$. Hence the kernel of $\OO_{\Yt\cap H}=\OO_{\Yt}/h\OO_{\Yt}\to\OO_Y/h\OO_Y=\OO_C$ is $K_Y/hK_Y=K_Y\otimes\OO_C=L_C$, and it has square zero. Thus $\Ct':=\Yt\cap H$ is a ribbon on $C$ with conormal bundle $L_C$, $\Ct'\cap Y=C$, and the map $K_Y|_C\to I_{C/\Ct'}=L_C$ induced by $\Ct'\subset\Yt$ is the identity. As in the proof of (1), $r(\yt)=\bar i[\Ct']$; hence, by \eqref{eq:extsplit} and \eqref{eq:pbar-r}, $r_N\,r(\yt)=0$ and $[\Ct']=\yt_h[\Ct]$. By the proof of condition (b), $r_N\circ r$ is injective on $\Ext^1(\Omega_{Y/C},K_Y)=\ker(\yt\mapsto\yt_h)$; as $\yt\ne0$ and $r_N\,r(\yt)=0$, we get $\yt_h\ne0$. Therefore $[\Ct']$ and $[\Ct]$ are proportional and nonzero, and $\Ct'\cong\Ct$ as ribbons on $C$.
+%\emph{Proof of (2).} Note that since by Lemma~\ref{lem:OSC}, part (1), $\OO_Y(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}$, we have the existence of a unique $K$-trivial carpet $\Yt\hookrightarrow\PP^M$ extending the embedding $Y\hookrightarrow\PP^M$, and it is non-split \cite[Proposition~3.2]{DM25}; let $\yt\ne0$ be its class. Let $h$ be a linear form defining $H$, so that $h|_Y$ is the section of $\OO_Y(C)$ with zero scheme $C$. Since $h$ is a nonzerodivisor on $\OO_Y$ and on $K_Y$, it is a nonzerodivisor on $\OO_{\Yt}$, and $K_Y\cap h\OO_{\Yt}=hK_Y$. Hence the kernel of $\OO_{\Yt\cap H}=\OO_{\Yt}/h\OO_{\Yt}\to\OO_Y/h\OO_Y=\OO_C$ is $K_Y/hK_Y=K_Y\otimes\OO_C=L_C$, and it has square zero. Thus $\Ct':=\Yt\cap H$ is a ribbon on $C$ with conormal bundle $L_C$, $\Ct'\cap Y=C$, and the map $K_Y|_C\to I_{C/\Ct'}=L_C$ induced by $\Ct'\subset\Yt$ is the identity. As in the proof of (1), $r(\yt)=\bar i[\Ct']$; hence, by \eqref{eq:extsplit} and \eqref{eq:pbar-r}, $r_N\,r(\yt)=0$ and $[\Ct']=\yt_h[\Ct]$. By the proof of condition (b), $r_N\circ r$ is injective on $\Ext^1(\Omega_{Y/C},K_Y)=\ker(\yt\mapsto\yt_h)$; as $\yt\ne0$ and $r_N\,r(\yt)=0$, we get $\yt_h\ne0$. Therefore $[\Ct']$ and $[\Ct]$ are proportional and nonzero, and $\Ct'\cong\Ct$ as ribbons on $C$.
 
 \emph{Proof of (3).} Since $\Ct$ is non-split, $V\otimes L_C^{-1}\cong\OO_{\PP^1}(a)\oplus\OO_{\PP^1}(a')$ with $a,a'\ge1$ (an extension $0\to\OO_C\to V\otimes L_C^{-1}\to K_C\otimes L_C^{-1}\to0$ with $a=0$ is split), so $\OO_Y(C)=\OO_{\PP(V\otimes L_C^{-1})}(1)$ is very ample; and $h^0(\OO_Y(C))=M+1$, since $H^1(\OO_Y)=0$ and $N_{C/Y}=K_C\otimes L_C^{-1}=\OO_{\PP^1}(g-1)$.
 
@@ -1378,7 +1391,7 @@ and $H^i(K_Y(C))=H^{2-i}(\OO_Y(-C))^{\vee}=0$ for all $i$ (Lemma~\ref{lem:OSC}(1
 \]
 be the morphism defined by the complete linear series of $\OO_{\Yt_{\yt_0}}(\Ct)$. Its restriction to $Y$ is the embedding by $|\OO_Y(C)|$, and $\varphi^{-1}(H_1)=\Ct$ for the hyperplane $H_1$ defined by the section of $\OO_{\Yt_{\yt_0}}(\Ct)$ vanishing on $\Ct$.
 
-We claim that $\varphi$ is a closed embedding. It is finite (proper and injective on points), so it is enough to show that $\OO_{\PP^M_1}\to\varphi_*\OO_{\Yt_{\yt_0}}$ is surjective. Its image is a subsheaf of algebras mapping onto $\OO_Y=\varphi_*\OO_{\Yt_{\yt_0}}/K_Y$, so it is everything if and only if it contains $K_Y$, i.e.\ if and only if the map $I_Y\to K_Y$ induced by $\OO_{\PP^M_1}\to\varphi_*\OO_{\Yt_{\yt_0}}$ is surjective. Since $K_Y^2=0$ this map factors through $N_Y^{\vee}=I_Y/I_Y^2$, so it is a section of $N_Y\otimes K_Y$; and $H^0(N_Y\otimes K_Y)=k\,s$ with $s$ nowhere vanishing \cite[Proposition~3.2]{DM25}. Thus the map is $\lambda s$ for some $\lambda\in k$, and it is surjective if $\lambda\ne0$. If $\lambda=0$, then $I_Y$ maps to $0$, so $\OO_{\PP^M_1}\to\varphi_*\OO_{\Yt_{\yt_0}}$ factors through $\OO_Y$, i.e.\ $\varphi$ factors through a retraction of $Y\subset\Yt_{\yt_0}$; a retraction splits $0\to K_Y\to\OO_{\Yt_{\yt_0}}\to\OO_Y\to0$ as $\OO_Y$-algebras, so $\Yt_{\yt_0}$ would be the split carpet, contradicting $(\yt_0)_h=1$. Hence $\varphi$ is a closed embedding; $\varphi(Y)\subset\PP^M_1$ is embedded by $|\OO_Y(C)|$, $\varphi(\Yt_{\yt_0})$ is a K3 carpet on it, and $\varphi(\Yt_{\yt_0})\cap H_1=\varphi(\Ct)$.
+We claim that $\varphi$ is a closed embedding. It is finite (proper and injective on points), so it is enough to show that $\OO_{\PP^M_1}\to\varphi_*\OO_{\Yt_{\yt_0}}$ is surjective. Its image is a subsheaf of algebras mapping onto $\OO_Y=\varphi_*\OO_{\Yt_{\yt_0}}/K_Y$, so it is everything if and only if it contains $K_Y$, i.e.\ if and only if the map $I_Y\to K_Y$ induced by $\OO_{\PP^M_1}\to\varphi_*\OO_{\Yt_{\yt_0}}$ is surjective. Since $K_Y^2=0$ this map factors through $N_Y^{\vee}=I_Y/I_Y^2$, so it is a section of $N_Y\otimes K_Y$. But $H^0(N_Y\otimes K_Y)=k\,s$ with $s$ nowhere vanishing by \cite[Proposition~1.7]{GP97}. Thus the map is $\lambda s$ for some $\lambda\in k$, and it is surjective if $\lambda\ne0$. If $\lambda=0$, then $I_Y$ maps to $0$, so $\OO_{\PP^M_1}\to\varphi_*\OO_{\Yt_{\yt_0}}$ factors through $\OO_Y$, i.e.\ $\varphi$ factors through a retraction of $Y\subset\Yt_{\yt_0}$. But a retraction splits $0\to K_Y\to\OO_{\Yt_{\yt_0}}\to\OO_Y\to0$ as $\OO_Y$-algebras, so $\Yt_{\yt_0}$ would be the split carpet, contradicting $\widetilde y_0 \neq 0$. Hence $\varphi$ is a closed embedding; $\varphi(Y)\subset\PP^M_1$ is embedded by $|\OO_Y(C)|$, $\varphi(\Yt_{\yt_0})$ is a K3 carpet on it, and $\varphi(\Yt_{\yt_0})\cap H_1=\varphi(\Ct)$.
 
 It is clear that $\varphi(\Ct)\subset H_1=\PP^{g-1}$ is canonically embedded.
 
@@ -1388,25 +1401,6 @@ Now the given $\Ct\subset\PP^{M-1}$ and $\varphi(\Ct)\subset H_1$ are two embedd
 \]
 \end{proof}
 
-\begin{corollary}\label{cor:nonsmoothable}
-In Set-up~\ref{setup:ribbon}, let $g_C\ge2$, let $\Ct$ be non-split and let $\Yt=\Yt_{\yt_0}$ be the carpet of Theorem~\ref{thm:extension}(1). Then
-\begin{enumerate}
-\item $\Yt$ is not smoothable.
-\item If $b(\Ct)\ge\frac12(g+3)-2$ or equivalently $e\le0$, every infinitesimal deformation of $\Yt$ is locally trivial.
-\end{enumerate}
-\end{corollary}
-
-\begin{proof}
-Part (1) follows immediately from \cite[Theorem~5.1(1)]{DM25}. To show part (2), we only need to show that under the conditions on the blow-up index, or equivalently the invariant $e$, the vector bundle $V$ of the defining extension
-\[
-0\to L_C\to V\to K_C\to0
-\]
-is semistable, and apply \cite[Theorem~5.1(2)]{DM25}. This follows from \cite[Corollary~4.5]{DM24}.
-\end{proof}
-
-\begin{remark}\label{rem:BE}
-Theorem~\ref{thm:extension}(3) says that a canonically embedded non-split ribbon $\Ct\subset\PP^{g-1}$ of arithmetic genus $g$ on the rational normal curve $C$ is the hyperplane section $\Yt\cap H$ of the K3 carpet on the rational normal scroll $Y=\PP(\Omega_{\Ct}|_C\otimes L_C^{-1})\subset\PP^{g}$, embedded by $|\OO_{\PP(\Omega_{\Ct}|_C\otimes L_C^{-1})}(1)|=|\OO_Y(C)|$, $H=\PP^{g-1}$ being the hyperplane with $Y\cap H=C$. This is a theorem of Bayer--Eisenbud \cite[\S8]{BE95}; it is used in this form in the proof of Proposition~\ref{prop:BEsection}.
-\end{remark}
 
 \section{The compatibility \texorpdfstring{$h\circ f=2g$}{h o f = 2g}}\label{app:hfg}
 
@@ -1435,154 +1429,7 @@ the last step because $L$ is a line bundle ($\vartheta(u)\otimes v=\vartheta(v)\
 
 
 
-\section{The map \texorpdfstring{$\rho$}{rho}}\label{sec:rho}
 
-This section is not used in the proof of Theorem~\ref{thm:alpha}. It records a second description of $\Psi$ through the extension classes $[V_{Y'}]$ of \eqref{eq:EY}: the morphism $\rho\colon\SC\to\PP(\Ext^1(\Omega_C,L_C))$, $Y'\mapsto[V_{Y'}]$, its local sections and its differential, and the identity $\beta\circ\Psi=\rho$, which gives a second proof of Proposition~\ref{prop:dPsi}.
-
-\subsection{The map \texorpdfstring{$\rho$}{rho} and its differential}\label{subsec:rho}
-
-\begin{theorem}\label{thm:rho}
-Let $Q$ be as in \S\ref{subsec:sections}, $A:=\Ext^1(K_C,L_C)=\Ext^1(\Omega_C,L_C)\cong k^{g-2}$ and $\PP:=\PP(A)\cong\PP^{g-3}$.
-\begin{enumerate}
-\item There is a morphism $\rho\colon\SC\to\PP$ sending $Y'$ to the class of the extension
-\[
-0\to L_C\to V_{Y'}\to K_C\to0,\qquad V_{Y'}:=E_{Y'}\otimes L_C,
-\]
-where $E_{Y'}:=\pi'_*\OO_{Y'}(C)$, $\pi'\colon Y'\to C$ the ruling for which $C$ is a section, sits in $0\to\OO_C\to E_{Y'}\to Q\to0$. Moreover $Y'=\PP(E_{Y'})$ with $C$ the section defined by $E_{Y'}\to Q$, and $V_{Y'}\cong E_{Y'}^{\vee}\otimes K_C$.
-\item Every point of $\PP$ has an open neighbourhood $U$ with a morphism $\Gamma_U\colon U\to\SC$ such that $\rho\circ\Gamma_U=\id_U$ and $\Gamma_U(\rho(Y'))\in\GH\cdot Y'$ for every $Y'\in\rho^{-1}(U)$.
-\end{enumerate}
-\end{theorem}
-
-\begin{proof}
-(1) Let $C\times\SC\hookrightarrow\mathcal{Y}\hookrightarrow\PM\times\SC$ be the universal scroll, as in Theorem~\ref{thm:Psi}. Let $p\colon\mathcal{Y}\to C\times\SC$ be the relative ruling for which $C\times\SC$ is a section and $\mathcal{V}:=p_*\OO_{\mathcal{Y}}(1)$; then $\mathcal{Y}=\PP(\mathcal{V})$ and
-\[
-\OO_{\mathcal{Y}}(1)=\OO_{\PP(\mathcal{V})}(1)=\OO_{\PP(\mathcal{V})}(C\times\SC),
-\]
-since $C\times\SC=\mathcal{Y}\cap(H\times\SC)$. Further $\OO_{C\times\SC}(1)=\OO_{C\times\SC}(C\times\SC)=Q\boxtimes\OO_{\SC}$. Now $C\times\SC$ is a section of $\PP(\mathcal{V})\to C\times\SC$ and hence comes with a surjection $\mathcal{V}\to Q\boxtimes\OO_{\SC}$; let $\mathcal{K}$ be its kernel. We claim $\mathcal{K}=\OO_{C\times\SC}$. From $0\to\OO_{\PP(\mathcal{V})}(-(C\times\SC))\to\OO_{\PP(\mathcal{V})}\to\OO_{C\times\SC}\to0$ we get $0\to\OO_{\PP(\mathcal{V})}\to\OO_{\PP(\mathcal{V})}(1)\to\OO_{C\times\SC}(1)\to0$, and pushing forward by $p$ ($R^1p_*\OO_{\PP(\mathcal{V})}=0$),
-\begin{equation}\label{eq:ext}
-0\to\OO_{C\times\SC}\to\mathcal{V}\to Q\boxtimes\OO_{\SC}\to0 .
-\end{equation}
-Tensoring with $L_C\boxtimes\OO_{\SC}$ we have
-\begin{equation}\label{eq:V}
-0\to L_C\boxtimes\OO_{\SC}\to\mathcal{V}\otimes(L_C\boxtimes\OO_{\SC})\to K_C\boxtimes\OO_{\SC}\to0 .
-\end{equation}
-On $C\times A$ there is a universal extension $0\to L_C\boxtimes\OO_A\to\mathcal{V}_A\to K_C\boxtimes\OO_A\to0$, of class $\id_A\in A\otimes A^{\vee}\subset A\otimes H^0(\OO_A)=\Ext^1_{C\times A}(K_C\boxtimes\OO_A,L_C\boxtimes\OO_A)$, and every extension of $K_C\boxtimes\OO_T$ by $L_C\boxtimes\OO_T$ over a scheme $T$ is its pull-back along a unique morphism $T\to A$ (base change, using $\Hom(K_C,L_C)=0$). Hence \eqref{eq:V} is the pull-back of $\mathcal{V}_A$ along a morphism $\nu\colon\SC\to A$. The fibre of \eqref{eq:ext} at $Y'$ is $0\to\OO_C\to E_{Y'}\to Q\to0$ with $E_{Y'}=\mathcal{V}|_{C\times\{Y'\}}=\pi'_*\OO_{Y'}(C)$, and it is nowhere split since $\SC$ consists of smooth scrolls: $E_{Y'}\cong\OO(a_1')\oplus\OO(a_2')$ with $a_i'\ge1$, so $E_{Y'}\not\cong\OO_C\oplus Q$. Hence $\nu$ takes values in $A\smallsetminus\{0\}$, and $\rho:=[\nu]\colon\SC\to A\smallsetminus\{0\}\to\PP$ is the required morphism. Finally $Y'=\PP(E_{Y'})$ with $C$ the section defined by $E_{Y'}\to Q$, and $E_{Y'}\otimes L_C=E_{Y'}\otimes Q^{\vee}\otimes K_C\cong E_{Y'}^{\vee}\otimes K_C$ because $\det E_{Y'}=Q$.
-
-(2) Consider the universal extension $0\to L_C\boxtimes\OO_{\PP}(1)\to\mathcal{V}_{\PP}\to K_C\boxtimes\OO_{\PP}\to0$ on $C\times\PP$. Tensoring with $L_C^{-1}\boxtimes\OO_{\PP}(-1)$ we get
-\[
-0\to\OO_{C\times\PP}\to\mathcal{V}'\to Q\boxtimes\OO_{\PP}(-1)\to0,\qquad \mathcal{V}':=\mathcal{V}_{\PP}\otimes(L_C^{-1}\boxtimes\OO_{\PP}(-1)).
-\]
-The surjection $\mathcal{V}'\to Q\boxtimes\OO_{\PP}(-1)$ gives a section $i\colon C\times\PP\to\PP(\mathcal{V}')$ of $p\colon\PP(\mathcal{V}')\to C\times\PP$ such that $i^*\OO_{\PP(\mathcal{V}')}(1)=Q\boxtimes\OO_{\PP}(-1)$. Let $\mathrm{pr}\colon C\times\PP\to\PP$ and $\mathcal{W}:=\mathrm{pr}_*p_*\OO_{\PP(\mathcal{V}')}(1)=\mathrm{pr}_*\mathcal{V}'$. For $v\in\PP$, $\mathcal{W}_v=H^0(\mathcal{V}'|_{C\times\{v\}})=H^0(E_v)$ with $E_v\cong\OO(a_1')\oplus\OO(a_2')$, $a_i'\ge1$, $a_1'+a_2'=g-1$; so $h^0(E_v)=g+1=M+1$ and $h^1(E_v)=0$, and $\mathcal{W}$ is a vector bundle of rank $M+1$. Embed $\PP(\mathcal{V}')$ in $\PP(\mathcal{W})$ over $\PP$ by $|\OO_{\PP(\mathcal{V}')}(1)|$. Pushing forward the sequence above,
-\[
-0\to\OO_{\PP}\to\mathcal{W}\to H^0(Q)\otimes\OO_{\PP}(-1)\to0,
-\]
-and the image of $i(C\times\PP)$ lies in $\PP\big(H^0(Q)\otimes\OO_{\PP}(-1)\big)=\PP(H^0(Q))\times\PP=H\times\PP$, where it is $C\times\PP$, because $i(C\times\{v\})$ is embedded by $|i^*\OO(1)|=|\OO_C(1)|$. Given $v\in\PP$, let $U\ni v$ be an open set on which $\OO_{\PP}(-1)$ is trivial, e.g.\ the complement of a hyperplane, and choose a splitting of the sequence over $U$ (it exists, as $\Ext^1(H^0(Q)\otimes\OO_{\PP}(-1),\OO_{\PP})=H^0(Q)^{\vee}\otimes H^1(\OO_{\PP}(1))=0$). This gives $\mathcal{W}|_U\cong(k\oplus H^0(Q))\otimes\OO_U=H^0(\OO_{\PM}(1))\otimes\OO_U$ compatible with the quotients onto $H^0(Q)=H^0(\OO_H(1))$, hence $\PP(\mathcal{W})|_U\cong\PM\times U$ carrying $H\times U$ to $H\times U$ and $C\times U$ to $C\times U$. The composite $\PP(\mathcal{V}')|_U\hookrightarrow\PP(\mathcal{W})|_U\cong\PM\times U$ is a family of scrolls containing $C\times U$, i.e.\ a morphism $\Gamma_U\colon U\to\SC$. For $v\in U$, $\pi_*\OO_{\Gamma_U(v)}(C)=\mathcal{V}'_v=E_v$ with its extension, so $\rho\circ\Gamma_U=\id_U$. Finally, for $Y'\in\rho^{-1}(U)$, $\Gamma_U(\rho(Y'))$ and $Y'$ are both embeddings of $(\PP(E_{Y'}),C)$ by the complete linear series of $\OO(C)$ restricting to the given $C\subset H$; two such embeddings differ by an element of $\GH$, so $\Gamma_U(\rho(Y'))\in\GH\cdot Y'$.
-\end{proof}
-
-\begin{proposition}\label{prop:drho}
-Let
-\[
-d\rho\colon H^0(\NY(-H))=T_{[Y]}\SC\longrightarrow T_{\rho(Y)}\PP=\Ext^1(\Omega_C,L_C)/k\,[V_Y]
-\]
-be the differential of $\rho$ at $[Y]$.
-\begin{enumerate}
-\item $d\rho$ is surjective.
-\item $\ker d\rho=\Im c=T_{[Y]}(\GH\cdot Y)$.
-\end{enumerate}
-\end{proposition}
-
-\begin{proof}
-(1) Choose an open $U\subset\PP$ with $\rho(Y)\in U$ and a section $\Gamma_U\colon U\to\SC$ of $\rho$ as in Theorem~\ref{thm:rho}(2). Then $\rho\circ\Gamma_U=\id_U$, and differentiating at $\rho(Y)$,
-\[
-d\rho_{\Gamma_U(\rho(Y))}\circ d\Gamma_U=\id\colon T_{\rho(Y)}\PP\to T_{\rho(Y)}\PP .
-\]
-By Theorem~\ref{thm:rho}(2), $\Gamma_U(\rho(Y))=\gamma Y$ for some $\gamma\in\GH$, so $d\rho_{\gamma Y}$ is surjective.
-
-\emph{Claim.} $\GH$ acts on $\SC$ and $\rho$ is $\GH$-invariant: $\rho\circ\gamma=\rho$ for $\gamma\in\GH$.
-
-Granting the claim, $d\rho_{\gamma Y}\circ d\gamma_Y=d\rho_Y$, and $d\gamma_Y\colon T_Y\SC\to T_{\gamma Y}\SC$ is an isomorphism since $\gamma$ is an automorphism of $\SC$; hence $\operatorname{rank}d\rho_Y=\operatorname{rank}d\rho_{\gamma Y}$, and $d\rho_Y$ is surjective.
-
-\emph{Proof of the claim.} Let $Y'\in\SC$ and $\gamma\in\GH$. Since $\gamma$ is a projectivity with $\gamma|_H=\id$, it maps $Y'$ onto a scroll $\gamma Y'$ containing $C$, so $\GH$ acts on $\SC$. Moreover $\gamma$ maps lines to lines and fixes $C$ pointwise, hence carries the fibres of $\pi'\colon Y'\to C$ (the lines of $Y'$ meeting $C$ in one point) to those of the ruling of $\gamma Y'$, and $\pi'(\gamma y)=\pi'(y)$; that is, the square
-\[
-\begin{tikzcd}[row sep=small]
-Y'\arrow[r,"\gamma","\sim"']\arrow[d,"\pi'"'] & \gamma Y'\arrow[d,"\pi'"]\\
-C\arrow[r,"\id"] & C
-\end{tikzcd}
-\]
-commutes, with $\gamma|_C=\id_C$. Hence $\gamma^*$ induces an isomorphism $\pi'_*\OO_{\gamma Y'}(C)\xrightarrow{\sim}\pi'_*\OO_{Y'}(C)$ compatible with the restriction maps to $\OO_C(C)=Q$, i.e.\ an isomorphism $E_{\gamma Y'}\cong E_{Y'}$ inducing the identity on $Q$. It then carries the kernel $\OO_C$ of $E_{\gamma Y'}\to Q$ onto the kernel $\OO_C$ of $E_{Y'}\to Q$, necessarily by a nonzero scalar, so the extension classes of $E_{\gamma Y'}$ and $E_{Y'}$ in $\Ext^1(Q,\OO_C)$ are proportional. Therefore $\rho(\gamma Y')=\rho(Y')$ in $\PP$, and the claim is proved.
-
-(2) By the claim, the two morphisms $\GH\times\SC\to\PP$, $(\gamma,Y')\mapsto\rho(\gamma Y')$ and $(\gamma,Y')\mapsto\rho(Y')$, agree on closed points; since $\GH\times\SC$ is reduced near $\GH\times\{Y\}$ (Lemma~\ref{lem:SC}(2)), they agree as morphisms there. Differentiating at $(1,Y)$ along $\GH$ gives $d\rho\circ c=0$, i.e.\ $\Im c\subset\ker d\rho$. By (1) and Lemma~\ref{lem:SC}(3),
-\[
-\dim\ker d\rho=h^0(\NY(-H))-\dim\PP=(M+1)+(2b-e-2)-(2b-e-2)=M+1=\dim\Im c ,
-\]
-so $\ker d\rho=\Im c$.
-\end{proof}
-
-\subsection{\texorpdfstring{$\Psi=\rho$}{Psi = rho}}\label{subsec:Psirho}
-
-\begin{proposition}\label{prop:Psi=rho}
-For every $Y'\in\SC$ one has $\beta(\Psi(Y'))=\rho(Y')$ in $\PP(\Ext^1(\Omega_C,L_C))$.
-\end{proposition}
-
-\begin{proof}
-$\rho(Y')=[V_{Y'}]$ by Theorem~\ref{thm:rho}(1), and $\beta(\Psi(Y'))\in k^{\times}[V_{Y'}]$ by Proposition~\ref{prop:BEsection}(2) (or, more precisely, $\beta(\Psi(Y'))=[\Ct']=\yt'_h[V_{Y'}]$ with $\yt'_h\ne0$ by Proposition~\ref{prop:section}).
-\end{proof}
-
-\begin{remark}[Second proof of Proposition~\ref{prop:dPsi}]
-By Proposition~\ref{prop:Psi=rho}, the two morphisms $\beta\circ\Psi$ and $\rho$ from $\SC$ to $\PP(\Ext^1(\Omega_C,L_C))$ agree on closed points ($\beta$ being the linear isomorphism of Lemma~\ref{lem:beta}). Since $\SC$ is reduced near $[Y]$ (Lemma~\ref{lem:SC}(2)), they agree as morphisms near $[Y]$, hence
-\[
-\bar\beta\circ d\Psi=d\rho\quad\text{at }[Y],
-\]
-where $\bar\beta\colon H^0(N_C\otimes L_C)/k\,s_C\xrightarrow{\sim}\Ext^1(\Omega_C,L_C)/k[V_Y]$ is induced by $\beta$ (note $\beta(s_C)=[\Ct]=\yt_h[V_Y]$). By Proposition~\ref{prop:drho}, $d\rho$ is surjective with kernel $\Im c$; therefore $d\Psi$ is surjective with kernel $\Im c$. This is Proposition~\ref{prop:dPsi}.
-\end{remark}
-
-\section{The class of the hyperplane section of the carpet}\label{sec:direct}
-
-This section gives a proof of Proposition~\ref{prop:BEsection} which does not use Theorem~\ref{thm:extension}: it computes directly, for every $Y'\in\SC$, the class in $\Ext^1(\Omega_C,L_C)$ of the ribbon $\Yt'\cap H$. Parts (1), (2), (3) of the following proposition are parts (2), (1), (3) of Proposition~\ref{prop:BEsection}.
-
-\begin{proposition}\label{prop:section}
-Let $Y'\in\SC$, let $\yt'\in\Ext^1(\Omega_{Y'},K_{Y'})=H^1(T_{Y'}\otimes K_{Y'})$ be the class of the carpet $\Yt'$ (the restricted cotangent sequence $0\to K_{Y'}\to\Omega_{\Yt'}|_{Y'}\to\Omega_{Y'}\to0$; one has $\yt'=\partial(s')$), and let $\yt'_h\in k$ be its horizontal component, i.e.\ its image in $\Ext^1(p^*\Omega_{\PP^1},K_{Y'})=H^1(\Omega_{Y'/\PP^1})=k$ with respect to the basis given by the relative Euler class. Then the class of the restricted cotangent sequence of the ribbon $\Ct'=\Yt'\cap H$ is
-\[
-[\Ct']=\yt'_h\cdot[V_{Y'}]\in\Ext^1(\Omega_C,L_C),\qquad\text{and}\qquad \yt'_h\neq 0 .
-\]
-Consequently:
-\begin{enumerate}
-\item $\Yt'\cap H=\Ct_t$ for the $t\in H^0(N_C\otimes L_C)$ with $\beta(t)\in k^{\times}[V_{Y'}]$; i.e.\ $\Psi(Y')=[\beta^{-1}[V_{Y'}]]$.
-\item $\Psi\circ\Gamma_U=\id_U$ for every $\Gamma_U$ as in Theorem~\ref{thm:Gamma}(2).
-\item $\Gamma_U(\Psi(Y'))\in\GH\cdot Y'$ for every $Y'\in\Psi^{-1}(U)$.
-\end{enumerate}
-\end{proposition}
-
-\begin{proof}
-Write $Y$ for $Y'$, $p$ for the ruling, $\yt$, $\Ct_H:=\Yt\cap H$. Let $q\colon\Omega_Y|_C\to\Omega_C$ be the quotient map (kernel $N_{C/Y}^{\vee}=Q^{\vee}$) and $\sigma\colon\Omega_C\to\Omega_Y|_C$ the splitting induced by $p$ via $C\cong\PP^1$, so $q\circ\sigma=\id$.
-
-\emph{Step (i): $\yt|_C=q^*[\Ct_H]$.} Pulling back differentials along $\Ct_H\hookrightarrow\Yt$ and restricting to $C$ gives a map $\Omega_{\Yt}|_C\to\Omega_{\Ct_H}|_C$ which on the subsheaves is the identification $(I_Y/I_{\Yt})|_C=I_C/I_{\Ct_H}$ ($=L_C$, Lemma~\ref{lem:RC}) and on the quotients is $q$. A morphism of extensions which is the identity on the left term and $q$ on the right term exhibits the source as the pull-back of the target along $q$.
-
-\emph{Step (ii): $[\Ct_H]=\sigma^*(\yt|_C)$.} From $0\to Q^{\vee}\to\Omega_Y|_C\to\Omega_C\to0$ and $\Hom(-,L_C)$, the kernel of $q^*\colon\Ext^1(\Omega_C,L_C)\to\Ext^1(\Omega_Y|_C,L_C)$ is the image of $\Hom(Q^{\vee},L_C)=H^0(Q\otimes L_C)=H^0(\OO_{\PP^1}(-2))=0$, so $q^*$ is injective and $[\Ct_H]$ is the unique class with $q^*[\Ct_H]=\yt|_C$. Hence $[\Ct_H]=\sigma^*q^*[\Ct_H]=\sigma^*(\yt|_C)$.
-
-\emph{Step (iii): factorisation.} The map $\yt\mapsto\sigma^*(\yt|_C)$ is ``pull back along $p^*\Omega_{\PP^1}\to\Omega_Y$, then restrict to $C$'' (both are pull-back along the composite $\Omega_C=(p^*\Omega_{\PP^1})|_C\to\Omega_Y|_C$). It therefore factors through
-\[
-\Ext^1(\Omega_Y,K_Y)\xrightarrow{\ r_h\ }\Ext^1(p^*\Omega_{\PP^1},K_Y)=H^1(K_Y\otimes p^*T_{\PP^1})=H^1(\Omega_{Y/\PP^1})\xrightarrow{\ \operatorname{res}_C\ }\Ext^1(\Omega_C,L_C),
-\]
-using $K_Y\otimes p^*T_{\PP^1}=K_{Y/\PP^1}=\Omega_{Y/\PP^1}$. Now $H^1(\Omega_{Y/\PP^1})=H^0(R^1p_*\Omega_{Y/\PP^1})=k$ is spanned by the class $u$ of the relative Euler sequence $0\to\Omega_{Y/\PP^1}\to p^*E_Y\otimes\OO_{\PP(E_Y)}(-1)\to\OO_Y\to0$ (tensored with $p^*\Omega_{\PP^1}$ to view it in $\Ext^1(p^*\Omega_{\PP^1},K_Y)$). Restricting this sequence to $C$, where $\OO_{\PP(E_Y)}(-1)|_C=Q^{\vee}$ and $\Omega_{Y/\PP^1}|_C=Q^{\vee}$, and tensoring with $\Omega_C=K_C$ gives
-\[
-0\to Q^{\vee}\otimes K_C=L_C\to E_Y\otimes Q^{\vee}\otimes K_C=V_Y\to K_C\to0,
-\]
-i.e.\ $\operatorname{res}_C(u)=[V_Y]$ (this is \cite[Claim~7.6]{DM25}). Writing $r_h(\yt)=\yt_h\cdot u$ we get $[\Ct_H]=\yt_h\,[V_Y]$.
-
-\emph{Step (iv): $\yt_h\ne0$.} Since $p_*(K_Y\otimes p^*T_{\PP^1})=T_{\PP^1}\otimes p_*K_Y=0$, the Leray map identifies $H^1(K_Y\otimes p^*T_{\PP^1})$ with $H^0(R^1p_*(K_Y\otimes p^*T_{\PP^1}))=H^0(R^1p_*(T_Y\otimes K_Y))$ (using $R^1p_*(T_{Y/\PP^1}\otimes K_Y)=R^1p_*(p^*K_{\PP^1})=0$), and under this identification $r_h$ is the Leray map $H^1(T_Y\otimes K_Y)\to H^0(R^1p_*(T_Y\otimes K_Y))$. By Lemma~\ref{lem:pushforward} the image of $\yt=\partial(s)$ under this map is nonzero.
-
-(1) $\beta(\Psi(Y'))=[\Ct']=\yt'_h[V_{Y'}]$ with $\yt'_h\ne0$, and $\beta$ is injective.
-
-(2) Let $u=[t]\in U$ and $Y':=\Gamma_U(u)$. Then $[V_{Y'}]\in k^{\times}\beta(t)$ by Theorem~\ref{thm:Gamma}(2), so $\beta(\Psi(Y'))\in k^{\times}\beta(t)$ by (1), and $\Psi(Y')=[t]=u$.
-
-(3) Let $Y'\in\Psi^{-1}(U)$, $\Psi(Y')=[t]$ and $Y'':=\Gamma_U([t])$. By (1) and Theorem~\ref{thm:Gamma}(2), $[V_{Y'}]$ and $[V_{Y''}]$ both lie in $k^{\times}\beta(t)$; so the extensions \eqref{eq:EY} of $Y'$ and $Y''$ have proportional classes, and there is an isomorphism $E_{Y'}\cong E_{Y''}$ inducing the identity on $Q$ (and a nonzero scalar on $\OO_C$). Hence $(\PP(E_{Y'}),C)\cong(\PP(E_{Y''}),C)$ over $C$, and $Y'$, $Y''$ are two embeddings of this pair by the complete linear series $|\OO(C)|$ which agree on $C$. They differ by a $\gamma\in PGL_{M+1}(k)$ with $\gamma|_C=\id$, hence $\gamma|_H=\id$ since $C$ spans $H$; so $Y''=\gamma Y'$ with $\gamma\in\GH$.
-\end{proof}
-
-
-Conversely, Proposition~\ref{prop:section}(1) applied to $Y'=\Gamma_U(u)$, $u=[\Ct]$, recovers Theorem~\ref{thm:extension}(3) in the form $\Yt_{\Ct}\cap H=\Ct$.
-
-\appendix
 
 
 \begin{thebibliography}{GGP08}
