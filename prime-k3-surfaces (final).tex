@@ -1151,67 +1151,37 @@ where $V$ is a rank two vector bundle on $C$. Further $V=\Omega_{\Ct}|_C$. Now t
 \item a ruled surface $Y=\PP(V)\to C$ and
 \item an embedding $C\hookrightarrow Y=\PP(V)$ as a section of the ruled surface $Y$ defined by the surjection $V\to K_C$.
 \end{enumerate}
-Note that $\deg L_C=2g_C-1-g$, since $\chi(\OO_{\Ct})=\chi(\OO_C)+\chi(L_C)$.
+Note that $\deg L_C=2g_C-1-g$, since $\chi(\OO_{\Ct})=\chi(\OO_C)+\chi(L_C)$. 
 \end{setup}
 
-\begin{definition}\label{def:invariant}
-Every ruled surface on a fixed curve $C$ can be uniquely expressed as $Y=\PP(V_n)$ where $V_n$ is a normalized vector bundle, i.e.\ $h^0(V_n)\neq0$ and $h^0(V_n\otimes A^{-1})=0$ for every line bundle $A$ of positive degree. The invariant of a ruled surface is defined as $e=-\deg(V_n)$. Let $C_0$ denote the numerical class of $\OO_{\PP(V_n)}(1)$ and $f$ denote the numerical class of any fiber.
-\end{definition}
+%\begin{definition}\label{def:invariant}
+%Every ruled surface on a fixed curve $C$ can be uniquely expressed as $Y=\PP(V_n)$ where $V_n$ is a normalized vector bundle, i.e.\ $h^0(V_n)\neq0$ and $h^0(V_n\otimes A^{-1})=0$ for every line bundle $A$ of positive degree. The invariant of a ruled surface is defined as $e=-\deg(V_n)$. Let $C_0$ denote the numerical class of $\OO_{\PP(V_n)}(1)$ and $f$ denote the numerical class of any fiber.
+%\end{definition}
 
-\begin{lemma}\label{lem:invariant}
-In Set-up~\ref{setup:ribbon}, assume that $g>g_C+1$. Then
-\begin{enumerate}
-\item the invariant of the ruled surface $Y$ is
-\[
-e=-\deg(L_C)+(2g_C-2)-2b(\Ct)=g-2b(\Ct)-1
-\]
-where $b(\Ct)$ is the blow-up index of $\Ct$ (see \cite{DM24}).
-\item If $\Ct$ is a ribbon on $C$ with arithmetic genus $g$, such that $g>\max\{2g_C-1,g_C+1\}$ and maximum blow-up index, then
-\begin{enumerate}
-\item if both $g_C$ and $g$ are even, $e=-(g_C-1)$
-\item if $g_C$ is even and $g$ is odd, $e=-g_C$
-\item if $g_C$ is odd and $g$ is even, $e=-g_C$
-\item if both $g_C$ and $g$ are odd, $e=-(g_C-1)$.
-\end{enumerate}
-Hence $Y$ is general with respect to the invariant $e$.
-\item If $\Ct$ on $C$ is a general ribbon with arithmetic genus $g$, such that $g>\max\{4g_C-3,g_C+1\}$, the ruled surface $Y$ is general in its space of deformations.
-\end{enumerate}
-\end{lemma}
 
-\begin{proof}
-\emph{Proof of (1).} The normalized vector bundle $V_n$ is given by $V_n=V\otimes A^{-1}$ where $A$ is the line sub-bundle of maximum degree. By \cite[Proposition~4.4]{DM24}, we have that $\deg(A)=2g_C-2-b(\Ct)$. Hence
-\begin{align*}
--\deg(V_n)&=-\deg(V\otimes A^{-1})\\
-&=-\deg(L_C\otimes A^{-1})-\deg(K_C\otimes A^{-1})\\
-&=g-(2g_C-1)-(2g_C-2)+2(2g_C-2-b(\Ct))\\
-&=g-2b(\Ct)-1 .
-\end{align*}
-
-\emph{Proof of (2).} This follows by plugging in the maximum value of the blow-up index from \cite[Corollary~4.3]{DM24}.
-
-\emph{Proof of (3).} Let $0\to L_C\to V\to K_C\to0$ be an extension defining a general ribbon. We show that for a one parameter family of deformations $\mathcal V$ on $C\times T\to T$ of $V_0=V$, the general fiber $V_t$ admits a surjection $V_t\to K_C$. Note that the surjection $V\to K_C\to0$ gives a global section of $H^0(V^*\otimes K_C)$. Now $h^1(V^*\otimes K_C)=h^0(V)$ by Serre duality. For a general ribbon, we can assume $V$ to be semistable (see \cite[Corollary~4.5]{DM24}). From the defining extension, we have $\mu(V)=\frac12\deg(K_C\otimes L_C)=\frac12(2g_C-2-g+(2g_C-1))=\frac12(4g_C-3-g)<0$ by the condition on the arithmetic genus. Hence $h^1(V^*\otimes K_C)=h^0(V)=0$. This means the section of $V^*\otimes K_C$ deforms along the one-parameter family to give a section of $V_t^*\otimes K_C$ for a fiber over a general $t$. This section $V_t\to K_C$ is surjective by Nakayama's lemma.
-\end{proof}
 
 \begin{lemma}\label{lem:OSC}
-In Set-up~\ref{setup:ribbon},
-\begin{enumerate}
-\item The line bundle $\OO_Y(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}$. The numerical class of this line bundle is given by $C_0+(g-b(\Ct)-1)f=C_0+\frac12(g+e-1)f$.
-\item Assume that $V$ is semistable (which holds if $b(\Ct)\ge\frac12(g+3)-2$, or equivalently $e\le0$, by \cite[Corollary~4.5]{DM24}) and that $g>4g_C+1$. Then the multiplication map
-\[
-H^0(\OO_Y(C))\otimes H^0(\OO_Y(C))\to H^0(\OO_Y(2C))
-\]
-is surjective.
-\end{enumerate}
+In Set-up~\ref{setup:ribbon}, the line bundle $\OO_Y(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}$. 
+
+
 \end{lemma}
 
 \begin{proof}
-\emph{Proof of (1).} The section $C$ is the zero locus of the composite $p^*L_C\to p^*V\to\OO_{\PP(V)}(1)$, which vanishes exactly at the points where the quotient of $V$ is $V\to K_C$; hence $\OO_Y(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}$. We have that $V_n=V\otimes A^{-1}$ where $A$ is the maximum degree line subbundle of $V$. Hence $\OO_{\PP(V)}(1)=\OO_{\PP(V_n)}(1)\otimes p^*A$, and $\OO_Y(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}=\OO_{\PP(V_n)}(1)\otimes p^*(A\otimes L_C^{-1})$. Now $\deg(A\otimes L_C^{-1})=\deg(A)-\deg(L_C)=2g_C-2-b(\Ct)+g-(2g_C-1)=g-b(\Ct)-1=\frac12(g+e-1)$.
+\emph{Proof of (1).} 
+Note that $\mathcal{O}_{\mathbb{P}(V)}(1)|_C = K_C$. Further since $C$ is a section, we have that $\mathcal{O}_Y(C) = \mathcal{O}_{\mathbb{P}(V)}(1) \otimes p^*M$ for some line bundle $M$ on $C$. From the exact sequence
+$$0 \to \mathcal{O}_{\mathbb{P}(V)}(1) \otimes \mathcal{O}_{\mathbb{P}(V)}(-C) \to \mathcal{O}_{\mathbb{P}(V)}(1) \to \mathcal{O}_{\mathbb{P}(V)}(1)|_C = K_C \to 0$$
+we get 
+$$0 \to p^*M^{-1} \to \mathcal{O}_{\mathbb{P}(V)}(1) \to \mathcal{O}_{\mathbb{P}(V)}(1)|_C = K_C \to 0$$
 
-\emph{Proof of (2).} We need to show that the map $H^0(\OO_{\PP(V)}(1)\otimes p^*L_C^{-1})\otimes H^0(\OO_{\PP(V)}(1)\otimes p^*L_C^{-1})\to H^0(\OO_{\PP(V)}(2)\otimes p^*L_C^{-2})$ is surjective. Pushing forward we see that the map is actually a composition of the two following maps on the curve $C$:
-\[
-H^0(V\otimes L_C^{-1})\otimes H^0(V\otimes L_C^{-1})\to H^0(V^{\otimes2}\otimes L_C^{-2})\to H^0(\operatorname{Sym}^2V\otimes L_C^{-2}) .
-\]
-Considering that $\operatorname{Sym}^2V\otimes L_C^{-2}$ is a direct summand of $V^{\otimes2}\otimes L_C^{-2}$, it is enough to show the surjectivity of the multiplication map of global sections of vector bundles on the curve $C$. The vector bundle $V=\Omega_{\Ct}|_C$ is semistable by assumption. Then by \cite[Theorem~1]{But94}, the surjection holds if $\mu(V\otimes L_C^{-1})>2g_C$. This happens if $\deg(K_C\otimes L_C^{-1})>4g_C$ or in other words $-\deg(L_C)>2g_C+2$. This is equivalent to $g>4g_C+1$.
+Pushing forward, we have 
+
+$$0 \to M^{-1} \to V \to K_C \to 0$$
+
+This gives, $M^{-1} = L_C$. Hence $\mathcal{O}_Y(C) = \mathcal{O}_{\mathbb{P}(V)}(1) \otimes p^*L_C^{-1}$.
+
+%The section $C$ is the zero locus of the composite $p^*L_C\to p^*V\to\OO_{\PP(V)}(1)$, which vanishes exactly at the points where the quotient of $V$ is $V\to K_C$; hence $\OO_Y(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}$. We have that $V_n=V\otimes A^{-1}$ where $A$ is the maximum degree line subbundle of $V$. Hence $\OO_{\PP(V)}(1)=\OO_{\PP(V_n)}(1)\otimes p^*A$, and $\OO_Y(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}=\OO_{\PP(V_n)}(1)\otimes p^*(A\otimes L_C^{-1})$. Now $\deg(A\otimes L_C^{-1})=\deg(A)-\deg(L_C)=2g_C-2-b(\Ct)+g-(2g_C-1)=g-b(\Ct)-1=\frac12(g+e-1)$.
+
+
 \end{proof}
 
 \begin{theorem}\label{thm:extension}
