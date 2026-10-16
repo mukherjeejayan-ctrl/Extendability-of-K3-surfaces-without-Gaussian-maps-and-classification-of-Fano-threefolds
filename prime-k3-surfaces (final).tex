@@ -364,6 +364,32 @@ A \v{C}ech cocycle computation (Lemma~\ref{lem:hfg} in Appendix~\ref{app:hfg}) s
 where $a$ is the map induced by $f$ on the kernels. Since the right-hand vertical map is an isomorphism, the snake lemma gives $\coker a\cong\coker f$. Therefore, to show that $f$ is surjective, it is enough to show that $a$ is surjective. Now the proof is completed by  \Cref{surjectivity of a}.
 \end{proof}
 
+We keep the notation of the proof of Theorem~\ref{thm:alpha}: $\Hc(-H)\to\NYt(-H)$ is the first map of \eqref{eq:3.2}$(-H)$, denoted $\kappa_0$ on global sections, $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3}$(-H)$, and $h=H^1$ of the last map of \eqref{eq:3.2}$(-H+K_Y)$, i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
+
+\begin{lemma}\label{lem:hfg}
+$h\circ f=2\,g$. Consequently $\Im(h\circ f)=\Im g$, and the right square of diagram \eqref{diag:a} commutes with $2\cdot\id$ as its right-hand vertical map.
+\end{lemma}
+
+\begin{proof}
+We use \v{C}ech cocycles on an affine cover $\{U_i\}$ of $\Yt$ (equivalently of $Y$), $U_{ij}=U_i\cap U_j$, and write $L:=I_Y/I_{\Yt}\cong K_Y$. Fix $\varphi\in H^0(\Hc(-H))$, i.e.\ $\varphi\colon I_{\Yt}/I_Y^2\to\OO_Y(-H)$, and let $\bar\varphi=\kappa_0(\varphi)=\varphi\circ\pi$ with $\pi\colon I_{\Yt}/I_YI_{\Yt}\to I_{\Yt}/I_Y^2$; note $\bar\varphi(I_Y^2)=0$.
+
+\emph{Cocycle for $f(\varphi)=F(\bar\varphi)$.} Choose $\OO_{\Yt}$-linear lifts $\Phi_i\colon I_{\Yt}/I_{\Yt}^2|_{U_i}\to\OO_{\Yt}(-\Ht)|_{U_i}$ of $\bar\varphi$. Then $\Phi_{ij}=\Phi_i-\Phi_j$ takes values in $L(-H)$, and $f(\varphi)=[\{\Phi_{ij}\}]$. Since $h$ is restriction along $L^{\otimes2}\cong I_Y^2/I_YI_{\Yt}$,
+\[
+h(f(\varphi))=\big[\{\Phi_{ij}|_{L^{\otimes 2}}\}\big],\qquad \Phi_{ij}|_{L^{\otimes2}}(\bar x\otimes\bar y)=\Phi_i(xy)-\Phi_j(xy)\quad(x,y\in I_Y).
+\]
+
+\emph{Cocycle for $g(\varphi)$.} Choose $\OO_Y$-linear lifts $\psi_i\colon I_Y/I_Y^2|_{U_i}\to\OO_Y(-H)$ with $\psi_i|_{I_{\Yt}/I_Y^2}=\varphi$; then $\psi_{ij}=\psi_i-\psi_j$ factors through $L$ and $g(\varphi)=[\{\psi_{ij}\}]$.
+
+\emph{Comparison.} Put $B_i(x,y):=\Phi_i(xy)\in L(-H)$ for $x,y\in I_Y$ (well defined since $\bar\varphi(I_Y^2)=0$). Then: (i) $B_i$ is symmetric, $\OO$-bilinear, and vanishes if $x$ or $y$ lies in $I_Y^2$ (if $x=\sum x'_kx''_k$, then $\Phi_i(x'_kx''_ky)=\bar x''_k\cdot\Phi_i(x'_ky)\in L\cdot L(-H)=0$), so it descends to $I_Y/I_Y^2$; (ii) if $x\in I_{\Yt}$ then $B_i(x,y)=\bar y\cdot\Phi_i(x)=\varphi(\bar x)\otimes\bar y$, because multiplication by $\bar y\in L$ on $\OO_{\Yt}(-\Ht)$ factors through $\OO_Y(-H)$; symmetrically for $y\in I_{\Yt}$. Put $B'_i(x,y):=\psi_i(x)\otimes\bar y+\psi_i(y)\otimes\bar x$. By (ii), $B_i=B'_i$ whenever one argument lies in $I_{\Yt}/I_Y^2$, so $C_i:=B_i-B'_i$ descends to a section of $\sHom(L^{\otimes2},L(-H))=L^{-1}(-H)$ over $U_i$. Over $U_{ij}$, as forms on $L\times L$,
+\[
+B_i-B_j=(C_i-C_j)+(B'_i-B'_j),\qquad (B'_i-B'_j)(u,v)=\psi_{ij}(u)\otimes v+\psi_{ij}(v)\otimes u=2\,\psi_{ij}(u)\otimes v,
+\]
+the last step because $L$ is a line bundle ($\vartheta(u)\otimes v=\vartheta(v)\otimes u$). Hence $\{B_i-B_j\}=\delta\{C_i\}+2\{\psi_{ij}\otimes\id_L\}$, i.e.\ $h(f(\varphi))=2g(\varphi)$.
+\end{proof}
+
+
+
+
 \begin{proposition}\label{surjectivity of a}
 The map $a: H^0(\NY(-H)) \to H^1(\NY(-H+K_Y))$ in \Cref{diag:a} is surjective.
 \end{proposition}
@@ -755,7 +781,7 @@ Let $\Gamma_U\colon U\to\SC$ be as in Theorem~\ref{thm:Gamma}(2).
 \end{proposition}
 
 \begin{proof}
-(1) Let $u=[t]\in U$ and $\Ct:=\Ct_t\subset H$. It is a non-split ribbon on $C$ with conormal bundle $L_C$ (Lemma~\ref{lem:RC}, Lemma~\ref{lem:beta}), and it is canonically embedded in $H=\PP^{g-1}$: it is nondegenerate of degree $2g-2$ and arithmetic genus $g$ in $\PP^{g-1}$, so by Riemann--Roch $\omega_{\Ct}\otimes\OO_{\Ct}(-1)$ is a line bundle of degree $0$ with a nonzero section, hence trivial (its restriction to $C$ is trivial, and $H^0(L_C)=0$). We apply Theorem~\ref{thm:extension}(3) to $\Ct\subset H$ (so $g_C=0$ in Set-up~\ref{setup:ribbon}). By Theorem~\ref{thm:Gamma}(1) the restricted cotangent sequence of $\Ct$ is the fibre of \eqref{eq:relcot} at $u$, so $V=\Omega_{\Ct}|_C=\mathcal V_u\otimes L_C$; hence the ruled surface of Set-up~\ref{setup:ribbon} is $\PP(V)=\PP(\mathcal V_u)$, with $\OO_{\PP(V)}(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}=\OO_{\PP(\mathcal V_u)}(1)$ (Lemma~\ref{lem:OSC}(1)) and $C$ the section defined by $\mathcal V_u\to Q$. By Theorem~\ref{thm:Gamma}(2), $\Gamma_U(u)\subset\PM$ is $\PP(\mathcal V_u)$ embedded by the complete linear series of $\OO_{\PP(\mathcal V_u)}(1)$, with $H$ the hyperplane such that $\Gamma_U(u)\cap H=C$ is the given curve (Lemma~\ref{lem:SC}); and $\Yt'$ is the K3 carpet on $\Gamma_U(u)$. Theorem~\ref{thm:extension}(3) gives $\Yt'\cap H=\Ct$, hence $\Psi(\Gamma_U(u))=[\Yt'\cap H]=[\Ct]=u$.
+(1) Let $u=[t]\in U$ and $\Ct:=\Ct_t\subset H$. It is a non-split ribbon on $C$ with conormal bundle $L_C$ (Lemma~\ref{lem:RC}, Lemma~\ref{lem:beta}), and it is canonically embedded in $H=\PP^{g-1}$: it is nondegenerate of degree $2g-2$ and arithmetic genus $g$ in $\PP^{g-1}$, so by Riemann--Roch $\omega_{\Ct}\otimes\OO_{\Ct}(-1)$ is a line bundle of degree $0$ with a nonzero section, hence trivial (its restriction to $C$ is trivial, and $H^0(L_C)=0$). We apply Theorem~\ref{thm:extension}(3) to $\Ct\subset H$ (so $g_C=0$ in Set-up~\ref{setup:ribbon}). By Theorem~\ref{thm:Gamma}(1) the restricted cotangent sequence of $\Ct$ is the fibre of \eqref{eq:relcot} at $u$, so $V=\Omega_{\Ct}|_C=\mathcal V_u\otimes L_C$; hence the ruled surface of Set-up~\ref{setup:ribbon} is $\PP(V)=\PP(\mathcal V_u)$, with $\OO_{\PP(V)}(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}=\OO_{\PP(\mathcal V_u)}(1)$ (Lemma~\ref{lem:OSC}(1)) and $C$ the section defined by $\mathcal V_u\to Q$. By Theorem~\ref{thm:Gamma}(2), $\Gamma_U(u)\subset\PM$ is $\PP(\mathcal V_u)$ embedded by the complete linear series of $\OO_{\PP(\mathcal V_u)}(1)$, with $H$ the hyperplane such that $\Gamma_U(u)\cap H=C$ is the given curve (Lemma~\ref{lem:SC}); and $\Yt'$ is the K3 carpet on $\Gamma_U(u)$. Theorem~\ref{thm:extension}(2) gives $\Yt'\cap H=\Ct$, hence $\Psi(\Gamma_U(u))=[\Yt'\cap H]=[\Ct]=u$.
 
 (2), (3) Let $Y'\in\SC$. Since $[E_{Y'}]$ is non-split, $[V_{Y'}]\ne0$, and since $\beta$ is an isomorphism (Lemma~\ref{lem:beta}) there is a $t\ne0$ with $\beta(t)=[V_{Y'}]$. Put $u:=[t]$ and choose $\Gamma_{U'}$ with $u\in U'$ (Theorem~\ref{thm:Gamma}(2)). Then $[V_{\Gamma_{U'}(u)}]\in k^{\times}\beta(t)=k^{\times}[V_{Y'}]$, so $Y'\in\GH\cdot\Gamma_{U'}(u)$ by Lemma~\ref{lem:GH}(2), and by Lemma~\ref{lem:GH}(1) and part (1),
 \[
@@ -1136,7 +1162,9 @@ $\dim T_{[C(X)]}\le$ & $85$ & $98$ & $114$ & $132$ & $153$ & $201$
 Now for a smooth Fano threefold $V\in\mathcal V_g$, $V$ represents a smooth point of the Hilbert scheme, since embedded deformations of an anticanonically embedded Fano threefold are unobstructed by the vanishing of $h^1(N_{V/\PP^{g+1}})$, which follows from the Kodaira--Nakano vanishing theorem. Therefore the dimension of $\overline{\mathcal V_g}$ at $V$ is given by $\dim T_{[V]}=h^0(N_{V/\PP^{g+1}})$. Now using the descriptions of the examples of Fano--Iskovskikh--Mori--Mukai, one can calculate the dimension $h^0(N_{V/\PP^{g+1}})$ (see for example \cite[Table~2, p.~666]{CLM93} and \cite[Table~3.1]{CLM98}) to check that in each case $\dim T_{[V]}$ is exactly the upper bound just obtained. Since $C(X)$ lies on the irreducible component of $\overline{\mathcal V_g}$ containing $V$, whose dimension is $h^0(N_{V/\PP^{g+1}})$, $C(X)$ is also a smooth point of the Hilbert scheme. Hence $\overline{\mathcal V_g}$ has a unique irreducible component. Finally, the examples of Fano--Iskovskikh--Mori--Mukai form an irreducible family (in each case they are the linear sections of a fixed homogeneous variety, see \cite{Muk88}) of dimension $h^0(N_{V/\PP^{g+1}})=\dim\mathcal V_g$, hence a dense subset of $\mathcal V_g$.
 \end{proof}
 
-\section{Appendix: Extensions of ribbons to \texorpdfstring{$K$}{K}-trivial carpets}\label{sec:extensions}
+\appendix
+\section{Extensions of ribbons to \texorpdfstring{$K$}{K}-trivial carpets}\label{sec:extensions}
+\begin{center}\textsc{by Anand Deopurkar and Jayan Mukherjee}\end{center}
 
 In this section we prove \Cref{thm:extension}, that is used to show that $\Gamma_U$ is a section to $\Psi$ over $U$ in \Cref{prop:BEsection}. 
 
@@ -1312,7 +1340,7 @@ B:=\{\yt\in\Ext^1(\Omega_Y,K_Y):\ \yt_h=1\},
 the inverse image of $1\in\Ext^1(p^*\Omega_C,K_Y)$.
 
 \emph{Condition (b).} Consider again the diagram:
-\begin{equation}\label{diag:B}
+\begin{equation}
 \begin{tikzcd}
 \Ext^1(\Omega_{Y/C},K_Y)\arrow[r]\arrow[d] & \Ext^1(\Omega_Y,K_Y)\arrow[r]\arrow[d,"r"] & \Ext^1(p^*\Omega_C,K_Y)=k\arrow[d]\\
 \Ext^1(\Omega_{Y/C}|_C,L_C)\arrow[r,hook] & \Ext^1(\Omega_Y|_C,L_C)\arrow[r,"\bar p"] & \Ext^1(\Omega_C,L_C)
@@ -1377,30 +1405,7 @@ Now the given $\Ct\subset\PP^{M-1}$ and $\varphi(\Ct)\subset H_1$ are two embedd
 \end{proof}
 
 
-\section{The compatibility \texorpdfstring{$h\circ f=2g$}{h o f = 2g}}\label{app:hfg}
-
-We keep the notation of the proof of Theorem~\ref{thm:alpha}: $\Hc(-H)\to\NYt(-H)$ is the first map of \eqref{eq:3.2}$(-H)$, denoted $\kappa_0$ on global sections, $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3}$(-H)$, and $h=H^1$ of the last map of \eqref{eq:3.2}$(-H+K_Y)$, i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
-
-\begin{lemma}\label{lem:hfg}
-$h\circ f=2\,g$. Consequently $\Im(h\circ f)=\Im g$, and the right square of diagram \eqref{diag:a} commutes with $2\cdot\id$ as its right-hand vertical map.
-\end{lemma}
-
-\begin{proof}
-We use \v{C}ech cocycles on an affine cover $\{U_i\}$ of $\Yt$ (equivalently of $Y$), $U_{ij}=U_i\cap U_j$, and write $L:=I_Y/I_{\Yt}\cong K_Y$. Fix $\varphi\in H^0(\Hc(-H))$, i.e.\ $\varphi\colon I_{\Yt}/I_Y^2\to\OO_Y(-H)$, and let $\bar\varphi=\kappa_0(\varphi)=\varphi\circ\pi$ with $\pi\colon I_{\Yt}/I_YI_{\Yt}\to I_{\Yt}/I_Y^2$; note $\bar\varphi(I_Y^2)=0$.
-
-\emph{Cocycle for $f(\varphi)=F(\bar\varphi)$.} Choose $\OO_{\Yt}$-linear lifts $\Phi_i\colon I_{\Yt}/I_{\Yt}^2|_{U_i}\to\OO_{\Yt}(-\Ht)|_{U_i}$ of $\bar\varphi$. Then $\Phi_{ij}=\Phi_i-\Phi_j$ takes values in $L(-H)$, and $f(\varphi)=[\{\Phi_{ij}\}]$. Since $h$ is restriction along $L^{\otimes2}\cong I_Y^2/I_YI_{\Yt}$,
-\[
-h(f(\varphi))=\big[\{\Phi_{ij}|_{L^{\otimes 2}}\}\big],\qquad \Phi_{ij}|_{L^{\otimes2}}(\bar x\otimes\bar y)=\Phi_i(xy)-\Phi_j(xy)\quad(x,y\in I_Y).
-\]
-
-\emph{Cocycle for $g(\varphi)$.} Choose $\OO_Y$-linear lifts $\psi_i\colon I_Y/I_Y^2|_{U_i}\to\OO_Y(-H)$ with $\psi_i|_{I_{\Yt}/I_Y^2}=\varphi$; then $\psi_{ij}=\psi_i-\psi_j$ factors through $L$ and $g(\varphi)=[\{\psi_{ij}\}]$.
-
-\emph{Comparison.} Put $B_i(x,y):=\Phi_i(xy)\in L(-H)$ for $x,y\in I_Y$ (well defined since $\bar\varphi(I_Y^2)=0$). Then: (i) $B_i$ is symmetric, $\OO$-bilinear, and vanishes if $x$ or $y$ lies in $I_Y^2$ (if $x=\sum x'_kx''_k$, then $\Phi_i(x'_kx''_ky)=\bar x''_k\cdot\Phi_i(x'_ky)\in L\cdot L(-H)=0$), so it descends to $I_Y/I_Y^2$; (ii) if $x\in I_{\Yt}$ then $B_i(x,y)=\bar y\cdot\Phi_i(x)=\varphi(\bar x)\otimes\bar y$, because multiplication by $\bar y\in L$ on $\OO_{\Yt}(-\Ht)$ factors through $\OO_Y(-H)$; symmetrically for $y\in I_{\Yt}$. Put $B'_i(x,y):=\psi_i(x)\otimes\bar y+\psi_i(y)\otimes\bar x$. By (ii), $B_i=B'_i$ whenever one argument lies in $I_{\Yt}/I_Y^2$, so $C_i:=B_i-B'_i$ descends to a section of $\sHom(L^{\otimes2},L(-H))=L^{-1}(-H)$ over $U_i$. Over $U_{ij}$, as forms on $L\times L$,
-\[
-B_i-B_j=(C_i-C_j)+(B'_i-B'_j),\qquad (B'_i-B'_j)(u,v)=\psi_{ij}(u)\otimes v+\psi_{ij}(v)\otimes u=2\,\psi_{ij}(u)\otimes v,
-\]
-the last step because $L$ is a line bundle ($\vartheta(u)\otimes v=\vartheta(v)\otimes u$). Hence $\{B_i-B_j\}=\delta\{C_i\}+2\{\psi_{ij}\otimes\id_L\}$, i.e.\ $h(f(\varphi))=2g(\varphi)$.
-\end{proof}
+%\section{The compatibility \texorpdfstring{$h\circ f=2g$}{h o f = 2g}}\label{app:hfg}
 
 
 
