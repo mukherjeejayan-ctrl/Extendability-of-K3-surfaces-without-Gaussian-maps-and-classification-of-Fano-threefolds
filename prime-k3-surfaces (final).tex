@@ -52,6 +52,24 @@
 \newcommand{\pr}{\mathrm{pr}}
 \makeatletter
 \providecommand{\@wraptoccontribs}[2]{}
+\def\@setauthors{%
+  \begingroup
+  \def\thanks{\protect\thanks@warning}%
+  \trivlist
+  \centering\footnotesize \@topsep30\p@\relax
+  \advance\@topsep by -\baselineskip
+  \item\relax
+  \author@andify\authors
+  \def\\{\protect\linebreak}%
+  \MakeUppercase{\authors}%
+  \ifx\@empty\contribs
+  \else
+    \penalty-3 \space \@setcontribs
+    \@closetoccontribs
+  \fi
+  \endtrivlist
+  \endgroup
+}
 \makeatother
 %---- title ------------------------------------------------------------
 \title[Extendability of general prime $K3$ surfaces without Gaussian maps ]{Extendability of general prime $K3$ surfaces without Gaussian maps and classification of prime Fano threefolds}
@@ -354,7 +372,7 @@ while from \eqref{eq:3.47}, \eqref{eq:3.48} and \eqref{eq:3.50}, we have the exa
 \[
 0\to H^1(\NY(-H+K_Y))=H^2(T_Y(-H+K_Y))\to H^1(\NYt(-H+K_Y))\xrightarrow{\ h\ } H^1(-H-K_Y)\to 0 .
 \]
-A \v{C}ech cocycle computation (Lemma~\ref{lem:hfg} in Appendix~\ref{app:hfg}) shows that $h\circ f=2g$. Therefore we have a commutative diagram of exact sequences
+A \v{C}ech cocycle computation in Lemma~\ref{lem:hfg} shows that $h\circ f=2g$. Therefore we have a commutative diagram of exact sequences
 \begin{equation}\label{diag:a}
 \begin{tikzcd}[column sep=normal]
 0\arrow[r] & H^0(\NY(-H))\arrow[r]\arrow[d,"a"'] & H^0(\Hc(-H))\arrow[r,"g"]\arrow[d,"f"] & H^1(-H-K_Y)\arrow[r]\arrow[d,"2\cdot\id"] & 0\\
@@ -364,7 +382,7 @@ A \v{C}ech cocycle computation (Lemma~\ref{lem:hfg} in Appendix~\ref{app:hfg}) s
 where $a$ is the map induced by $f$ on the kernels. Since the right-hand vertical map is an isomorphism, the snake lemma gives $\coker a\cong\coker f$. Therefore, to show that $f$ is surjective, it is enough to show that $a$ is surjective. Now the proof is completed by  \Cref{surjectivity of a}.
 \end{proof}
 
-We keep the notation of the proof of Theorem~\ref{thm:alpha}: $\Hc(-H)\to\NYt(-H)$ is the first map of \eqref{eq:3.2}$(-H)$, denoted $\kappa_0$ on global sections, $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3}$(-H)$, and $h=H^1$ of the last map of \eqref{eq:3.2}$(-H+K_Y)$, i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
+We noe prove \Cref{lem:hfg}. We keep the notation of the proof of Theorem~\ref{thm:alpha}: $\Hc(-H)\to\NYt(-H)$ is the first map of \eqref{eq:3.2}$(-H)$, denoted $\kappa_0$ on global sections, $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3}$(-H)$, and $h=H^1$ of the last map of \eqref{eq:3.2}$(-H+K_Y)$, i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
 
 \begin{lemma}\label{lem:hfg}
 $h\circ f=2\,g$. Consequently $\Im(h\circ f)=\Im g$, and the right square of diagram \eqref{diag:a} commutes with $2\cdot\id$ as its right-hand vertical map.
