@@ -140,7 +140,7 @@ Let $Y = \mathbb{F}_e \subset \mathbb{P}^M$, $e \geq 0$, be embedded by the comp
 
 For general prime $K3$ surfaces we obtain:
 
-\begin{theorem}(see \Cref{thm:alpha-lowgenus}, \Cref{cor:cone})\label{thm:K3 intro}
+\begin{theorem}(see \Cref{thm:alpha-lowgenus}, \Cref{cor:cone}, \Cref{cor:equality})\label{thm:K3 intro}
 Let $X \subset \mathbb{P}^g$ be a general prime $K3$ surface of genus $g \geq 6$.
 \begin{enumerate}
     \item If $g = 12$, then $\alpha(X) \leq 1$.
@@ -154,7 +154,8 @@ Let $X \subset \mathbb{P}^g$ be a general prime $K3$ surface of genus $g \geq 6$
 \end{enumerate}
 \end{theorem}
 
-The bounds in $(1)$--$(6)$ and $(8)$ are sharp. The proof of \Cref{thm:fano intro} shows that equality holds in each of them, since the cone over $X$ lies on an irreducible component of the closure of $\mathcal{V}_g$ whose dimension is the upper bound for the dimension of its tangent space given by \Cref{thm:K3 intro} and \Cref{cor:cone intro} below. \Cref{thm:K3 intro} recovers the results of \cite{CLM93} on general prime $K3$ surfaces of every genus $g \geq 6$ (for $g \leq 5$ a general prime $K3$ surface is a complete intersection and the results are classical), while the non-prime case was treated in \cite{BM25}.
+%The bounds in $(1)$--$(6)$ and $(8)$ are sharp. The proof of \Cref{thm:fano intro} shows that equality holds in each of them, since the cone over $X$ lies on an irreducible component of the closure of $\mathcal{V}_g$ whose dimension is the upper bound for the dimension of its tangent space given by \Cref{thm:K3 intro} and \Cref{cor:cone intro} below. 
+\Cref{thm:K3 intro} recovers the results of \cite{CLM93} on general prime $K3$ surfaces of every genus $g \geq 6$ (for $g \leq 5$ a general prime $K3$ surface is a complete intersection and the results are classical), while the non-prime case was treated in \cite{BM25}.
 
 \smallskip
 
@@ -1374,6 +1375,22 @@ $\dim T_{[C(X)]}\le$ & $85$ & $98$ & $114$ & $132$ & $153$ & $201$
 \end{tabular}
 \end{center}
 Now for a smooth Fano threefold $V\in\mathcal V_g$, $V$ represents a smooth point of the Hilbert scheme, since embedded deformations of an anticanonically embedded Fano threefold are unobstructed by the vanishing of $h^1(N_{V/\PP^{g+1}})$, which follows from the Kodaira--Nakano vanishing theorem. Therefore the dimension of $\overline{\mathcal V_g}$ at $V$ is given by $\dim T_{[V]}=h^0(N_{V/\PP^{g+1}})$. Now using the descriptions of the examples of Fano--Iskovskikh--Mori--Mukai, one can calculate the dimension $h^0(N_{V/\PP^{g+1}})$ (see for example \cite[Table~2, p.~666]{CLM93} and \cite[Table~3.1]{CLM98}) to check that in each case $\dim T_{[V]}$ is exactly the upper bound just obtained. Since $C(X)$ lies on the irreducible component of $\overline{\mathcal V_g}$ containing $V$, whose dimension is $h^0(N_{V/\PP^{g+1}})$, $C(X)$ is also a smooth point of the Hilbert scheme. Hence $\overline{\mathcal V_g}$ has a unique irreducible component. Finally, the examples of Fano--Iskovskikh--Mori--Mukai form an irreducible family (in each case they are the linear sections of a fixed homogeneous variety, see \cite{Muk88}) of dimension $h^0(N_{V/\PP^{g+1}})=\dim\mathcal V_g$, hence a dense subset of $\mathcal V_g$.
+\end{proof}
+
+\begin{corollary}\label{cor:equality}
+Let $X\subset\PP^g$ be a general prime K3 surface of genus $g$. Then the upper bounds of Theorem~\ref{thm:alpha-lowgenus} and Corollary~\ref{cor:cone} are equalities, namely
+\begin{enumerate}
+    \item If $g=12$, then $\alpha(X)=1$.
+    \item If $g=10$, then $\alpha(X)=3$.
+    \item If $g=9$, then $\alpha(X)=4$.
+    \item If $g=8$, then $\alpha(X)=6$.
+    \item If $g=7$, then $\alpha(X)=8$.
+    \item If $g=6$, then $\alpha(X)=10$ and $h^0(N_X(-2))=1$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+By Corollary~\ref{cor:cone}, $\dim T_{[C(X)]}=18+(g+1)^2+(g+1)+\alpha(X)+h^0(N_X(-2))$, and  $\alpha(X)\le\alpha(\Yt)$ and $h^0(N_X(-2))\le h^0(\NYt(-2\Ht))$ by \eqref{eq:semicont}. Hence $\dim T_{[C(X)]} \leq 18+(g+1)^2+(g+1)+\alpha(\widetilde Y)+h^0(N_{\widetilde Y}(-2)) = h^0(N_{V/\PP^{g+1}})$ by the proof of part $(2)$ of \Cref{thm:fano}. But a smooth $V$ is a smooth point of the Hilbert scheme and hence $\alpha(X) = \alpha(\Yt)$ and $h^0(N_{X}(-2)) = h^0(N_{\widetilde Y}(-2))$. Now the conclusion follows from Theorem~\ref{thm:alpha}, Proposition~\ref{prop:g6} and Proposition~\ref{prop:N2}.
 \end{proof}
 
 \appendix
