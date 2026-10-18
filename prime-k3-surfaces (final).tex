@@ -214,7 +214,7 @@ Now \Cref{thm:carpet intro}, $(1)$ is equivalent to the surjectivity of $F$. The
     \[
     a\colon H^0(\NY(-H)) \longrightarrow H^1(\NY\otimes K_Y(-H))
     \]
-    is surjective. Note that $H^0(\NY(-H)) = H^0(\NY(-C))$ is the tangent space $T_{[Y]}\SC$ at $[Y]$ to the space  $\SC$ of smooth rational normal scrolls $Y' \subset \PM$ with $Y' \cap H = C$, which is smooth of dimension $2(g-1)$ at $[Y]$ (see \Cref{lem:SC}). $\mathcal{S}_C$ is the fiber over $C \subset H$ of the flag Hilbert scheme parametrizing pairs $(Y',C')$, where $Y'$ is a rational normal scroll and $C'$ is a hyperlane section of it, which is a rational normal curve. 
+    is surjective. Note that $H^0(\NY(-H)) = H^0(\NY(-C))$ is the tangent space $T_{[Y]}\SC$ at $[Y]$ to the space  $\SC$ of smooth rational normal scrolls $Y' \subset \PM$ with $Y' \cap H = C$, which is smooth of dimension $2(g-1)$ at $[Y]$ (see \Cref{lem:SC}). $\mathcal{S}_C$ is the fiber over $C \subset H$ of the flag Hilbert scheme parametrizing pairs $(Y',C')$, where $Y'$ is a rational normal scroll and $C'$ is a hyperplane section of it, which is a rational normal curve. 
     %A tangent vector is a first order embedded deformation $Y_\varepsilon \subset \PM_{\Dd}$ of $Y$ containing $C_{\Dd} = C \times \Dd$, where $\Dd = \operatorname{Spec}k[\varepsilon]/(\varepsilon^2)$.
 
     \item[(2)] \emph{The isomorphism $\bar{\delta}$} (see \Cref{lem:pushforward}, \Cref{lem:delta} and \Cref{lem:RC}). 
@@ -589,7 +589,7 @@ A \v{C}ech cocycle computation in Lemma~\ref{lem:hfg} shows that $h\circ f=2g$. 
 where $a$ is the map induced by $f$ on the kernels. Since the right-hand vertical map is an isomorphism, the snake lemma gives $\coker a\cong\coker f$. Therefore, to show that $f$ is surjective, it is enough to show that $a$ is surjective. Now the proof is completed by  \Cref{surjectivity of a}.
 \end{proof}
 
-We noe prove \Cref{lem:hfg}. We keep the notation of the proof of Theorem~\ref{thm:alpha}: $\Hc(-H)\to\NYt(-H)$ is the first map of \eqref{eq:3.2}$(-H)$, denoted $\kappa_0$ on global sections, $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3}$(-H)$, and $h=H^1$ of the last map of \eqref{eq:3.2}$(-H+K_Y)$, i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
+We now prove \Cref{lem:hfg}. We keep the notation of the proof of Theorem~\ref{thm:alpha}: $\Hc(-H)\to\NYt(-H)$ is the first map of \eqref{eq:3.2}$(-H)$, denoted $\kappa_0$ on global sections, $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3}$(-H)$, and $h=H^1$ of the last map of \eqref{eq:3.2}$(-H+K_Y)$, i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
 
 \begin{lemma}\label{lem:hfg}
 $h\circ f=2\,g$. Consequently $\Im(h\circ f)=\Im g$, and the right square of diagram \eqref{diag:a} commutes with $2\cdot\id$ as its right-hand vertical map.
@@ -865,7 +865,7 @@ Here $F$ is the connecting map of \eqref{eq:3.65}, i.e.\ of \eqref{eq:3.1} twist
 
 Pick $x\in H^0(\NY(-H))$ and set $\xi:=\iota(x)$. \emph{We need to show $\bar\delta(d\Psi(x))=F(\xi)$.}
 
-\emph{Computation of $d\Psi(x)$.} The vector $x$ is a first-order deformation $Y_\varepsilon\subset\PM_\Dd$ of $Y$ containing $C_\Dd$, and $Y_\varepsilon\cap H_\Dd=C_\Dd$ (Lemma~\ref{lem:SC}(1), Definition~\ref{def:Psi}(ii)). By Lemma~\ref{lem:Phi} (the version of \cite[Prop.~3.7]{GP97} over $\Dd$) there is a K3 carpet $\Yt_\varepsilon=\Phi(Y_\varepsilon)\subset\PM_\Dd$ on $Y_\varepsilon$; since $\Yt_\varepsilon\times_\Dd\operatorname{Spec}k=\Yt$, it is an embedded first-order deformation of $\Yt\subset\PM$. Call its class $\eta\in H^0(\NYt)$. Then $\Ct_\varepsilon:=\Yt_\varepsilon\cap H_\Dd$ is a ribbon on $C_\Dd$ with conormal bundle $L_C\otimes\OO_\Dd$, hence a $\Dd$-point of $\RC$ at $[\Ct]$, and by definition (Definition~\ref{def:Psi})
+\emph{Computation of $d\Psi(x)$.} The vector $x$ is a first-order deformation $Y_\varepsilon\subset\PM_\Dd$ of $Y$ containing $C_\Dd$, and $Y_\varepsilon\cap H_\Dd=C_\Dd$ (Lemma~\ref{lem:SC}(1), \Cref{def:Psi}(ii)). By Lemma~\ref{lem:Phi} (the version of \cite[Prop.~3.7]{GP97} over $\Dd$) there is a K3 carpet $\Yt_\varepsilon=\Phi(Y_\varepsilon)\subset\PM_\Dd$ on $Y_\varepsilon$; since $\Yt_\varepsilon\times_\Dd\operatorname{Spec}k=\Yt$, it is an embedded first-order deformation of $\Yt\subset\PM$. Call its class $\eta\in H^0(\NYt)$. Then $\Ct_\varepsilon:=\Yt_\varepsilon\cap H_\Dd$ is a ribbon on $C_\Dd$ with conormal bundle $L_C\otimes\OO_\Dd$, hence a $\Dd$-point of $\RC$ at $[\Ct]$, and by definition (\Cref{def:Psi})
 \[
 d\Psi(x)=[\Ct_\varepsilon]\in T_{[\Ct]}\RC=H^0(N_C\otimes L_C)/k\,s_C .
 \]
@@ -888,9 +888,9 @@ d\Psi(x)=[\Ct_\varepsilon]\in T_{[\Ct]}\RC=H^0(N_C\otimes L_C)/k\,s_C .
 
 \emph{Proof of the Claim.} (i) The image of $\eta|_{\Ct}$ in $H^0(N_{\Ct}\otimes\OO_C)=\Hom(I_{\Ct},\OO_C)$ is $\eta|_C\colon f\mapsto\eta(f)|_C$. By Lemma~\ref{lem:Phi}(1), $\eta(f)\equiv x(f)$ mod $I_Y$; so $\eta|_C$ is the restriction to $I_{\Ct}$ of the class $f\mapsto x(f)|_C$ of $Y_\varepsilon\cap H_\Dd$ as a deformation of $C$ in $H$, which is $0$ because $Y_\varepsilon\cap H_\Dd=C_\Dd$. Hence $\eta|_C=0$, and by the first sequence of \eqref{eq:ribbonseq}, $\eta|_{\Ct}\in H^0(N_{\Ct}\otimes L_C)=\Hom(I_{\Ct},L_C)$.
 
-(ii) Tensoring the third sequence of \eqref{eq:ribbonseq} with $L_C$ gives $0\to\OO_C\xrightarrow{s_C}N_C\otimes L_C\to\Hc_C\otimes L_C\to0$, whence $H^0(N_C\otimes L_C)/k\,s_C\cong H^0(\Hc_C\otimes L_C)$ as $H^1(\OO_C)=0$; tensoring the second with $L_C$ gives $0\to\Hc_C\otimes L_C\to N_{\Ct}\otimes L_C\to L_C^{-1}\to0$, whence $H^0(\Hc_C\otimes L_C)\hookrightarrow H^0(N_{\Ct}\otimes L_C)$. The composite is $t\mapsto t|_{I_{\Ct}}$. Now $\Ct_\varepsilon$ is a double structure on $C_\Dd$, i.e.\ $I_{C_\Dd}^2\subset I_{\Ct_\varepsilon}$ (Definition~\ref{def:Psi}(ii)); in terms of the class $\eta|_{\Ct}$ this says exactly that $\eta|_{\Ct}\in\Hom(I_{\Ct},L_C)$ vanishes on $I_C^2$, i.e.\ $\eta|_{\Ct}\in\Hom(I_{\Ct}/I_C^2,L_C)=H^0(\Hc_C\otimes L_C)$.
+(ii) Tensoring the third sequence of \eqref{eq:ribbonseq} with $L_C$ gives $0\to\OO_C\xrightarrow{s_C}N_C\otimes L_C\to\Hc_C\otimes L_C\to0$, whence $H^0(N_C\otimes L_C)/k\,s_C\cong H^0(\Hc_C\otimes L_C)$ as $H^1(\OO_C)=0$; tensoring the second with $L_C$ gives $0\to\Hc_C\otimes L_C\to N_{\Ct}\otimes L_C\to L_C^{-1}\to0$, whence $H^0(\Hc_C\otimes L_C)\hookrightarrow H^0(N_{\Ct}\otimes L_C)$. The composite is $t\mapsto t|_{I_{\Ct}}$. Now $\Ct_\varepsilon$ is a double structure on $C_\Dd$, i.e.\ $I_{C_\Dd}^2\subset I_{\Ct_\varepsilon}$ (\Cref{def:Psi}(ii)); in terms of the class $\eta|_{\Ct}$ this says exactly that $\eta|_{\Ct}\in\Hom(I_{\Ct},L_C)$ vanishes on $I_C^2$, i.e.\ $\eta|_{\Ct}\in\Hom(I_{\Ct}/I_C^2,L_C)=H^0(\Hc_C\otimes L_C)$.
 
-(iii) Write $d\Psi(x)=[t]$, i.e.\ $\Ct_\varepsilon=\ker(s_C+\varepsilon t)$ (Definition~\ref{def:Psi}). For $f\in I_{\Ct}$ the element $f+\varepsilon g$ lies in $I_{\Ct_\varepsilon}$ if and only if $s_C(g)=-t(f)$; so the class of $\Ct_\varepsilon$ is $f\mapsto-t(f)\in L_C=I_C/I_{\Ct}$, that is, $\eta|_{\Ct}=-t|_{I_{\Ct}}$. This proves the Claim.
+(iii) Write $d\Psi(x)=[t]$, i.e.\ $\Ct_\varepsilon=\ker(s_C+\varepsilon t)$ (\Cref{def:Psi}). For $f\in I_{\Ct}$ the element $f+\varepsilon g$ lies in $I_{\Ct_\varepsilon}$ if and only if $s_C(g)=-t(f)$; so the class of $\Ct_\varepsilon$ is $f\mapsto-t(f)\in L_C=I_C/I_{\Ct}$, that is, $\eta|_{\Ct}=-t|_{I_{\Ct}}$. This proves the Claim.
 
 \emph{The two connecting maps.} Let $\tilde\delta\colon H^0(N_{\Ct}\otimes L_C)\to H^1(\NYt(-H+K_Y))$ be the connecting map of the restriction sequence
 \[
@@ -1006,7 +1006,7 @@ Let $\Gamma_U\colon U\to\SC$ be as in Theorem~\ref{thm:Gamma}(2).
 \end{proposition}
 
 \begin{proof}
-(1) Let $u=[t]\in U$ and $\Ct:=\Ct_t\subset H$. It is a non-split ribbon on $C$ with conormal bundle $L_C$ (Lemma~\ref{lem:RC}, Lemma~\ref{lem:beta}), and it is canonically embedded in $H=\PP^{g-1}$: it is nondegenerate of degree $2g-2$ and arithmetic genus $g$ in $\PP^{g-1}$, so by Riemann--Roch $\omega_{\Ct}\otimes\OO_{\Ct}(-1)$ is a line bundle of degree $0$ with a nonzero section, hence trivial (its restriction to $C$ is trivial, and $H^0(L_C)=0$). We apply Theorem~\ref{thm:extension}(2) to $\Ct\subset H$ (so $g_C=0$ in Set-up~\ref{setup:ribbon}). By Theorem~\ref{thm:Gamma}(1) the restricted cotangent sequence of $\Ct$ is the fibre of \eqref{eq:relcot} at $u$, so $V=\Omega_{\Ct}|_C=\mathcal V_u\otimes L_C$; hence the ruled surface of Set-up~\ref{setup:ribbon} is $\PP(V)=\PP(\mathcal V_u)$, with $\OO_{\PP(V)}(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}=\OO_{\PP(\mathcal V_u)}(1)$ (Lemma~\ref{lem:OSC}(1)) and $C$ the section defined by $\mathcal V_u\to Q$. By Theorem~\ref{thm:Gamma}(2), $\Gamma_U(u)\subset\PM$ is $\PP(\mathcal V_u)$ embedded by the complete linear series of $\OO_{\PP(\mathcal V_u)}(1)$, with $H$ the hyperplane such that $\Gamma_U(u)\cap H=C$ is the given curve (Lemma~\ref{lem:SC}); and $\Yt'$ is the K3 carpet on $\Gamma_U(u)$. Theorem~\ref{thm:extension}(2) gives $\Yt'\cap H=\Ct$, hence $\Psi(\Gamma_U(u))=[\Yt'\cap H]=[\Ct]=u$.
+(1) Let $u=[t]\in U$ and $\Ct:=\Ct_t\subset H$. It is a non-split ribbon on $C$ with conormal bundle $L_C$ (Lemma~\ref{lem:RC}, Lemma~\ref{lem:beta}), and it is canonically embedded in $H=\PP^{g-1}$: it is nondegenerate of degree $2g-2$ and arithmetic genus $g$ in $\PP^{g-1}$, so by Riemann--Roch $\omega_{\Ct}\otimes\OO_{\Ct}(-1)$ is a line bundle of degree $0$ with a nonzero section, hence trivial (its restriction to $C$ is trivial, and $H^0(L_C)=0$). We apply Theorem~\ref{thm:extension}(2) to $\Ct\subset H$ (so $g_C=0$ in Set-up~\ref{setup:ribbon}). By Theorem~\ref{thm:Gamma}(1) the restricted cotangent sequence of $\Ct$ is the fibre of \eqref{eq:relcot} at $u$, so $V=\Omega_{\Ct}|_C=\mathcal V_u\otimes L_C$; hence the ruled surface of Set-up~\ref{setup:ribbon} is $\PP(V)=\PP(\mathcal V_u)$, with $\OO_{\PP(V)}(C)=\OO_{\PP(V)}(1)\otimes p^*L_C^{-1}=\OO_{\PP(\mathcal V_u)}(1)$ (Lemma~\ref{lem:OSC}) and $C$ the section defined by $\mathcal V_u\to Q$. By Theorem~\ref{thm:Gamma}(2), $\Gamma_U(u)\subset\PM$ is $\PP(\mathcal V_u)$ embedded by the complete linear series of $\OO_{\PP(\mathcal V_u)}(1)$, with $H$ the hyperplane such that $\Gamma_U(u)\cap H=C$ is the given curve (Lemma~\ref{lem:SC}); and $\Yt'$ is the K3 carpet on $\Gamma_U(u)$. Theorem~\ref{thm:extension}(2) gives $\Yt'\cap H=\Ct$, hence $\Psi(\Gamma_U(u))=[\Yt'\cap H]=[\Ct]=u$.
 
 (2), (3) Let $Y'\in\SC$. Since $[E_{Y'}]$ is non-split, $[V_{Y'}]\ne0$, and since $\beta$ is an isomorphism (Lemma~\ref{lem:beta}) there is a $t\ne0$ with $\beta(t)=[V_{Y'}]$. Put $u:=[t]$ and choose $\Gamma_{U'}$ with $u\in U'$ (Theorem~\ref{thm:Gamma}(2)). Then $[V_{\Gamma_{U'}(u)}]\in k^{\times}\beta(t)=k^{\times}[V_{Y'}]$, so $Y'\in\GH\cdot\Gamma_{U'}(u)$ by Lemma~\ref{lem:GH}(2), and by Lemma~\ref{lem:GH}(1) and part (1),
 \[
@@ -1018,7 +1018,7 @@ This is (2). If moreover $\Psi(Y')\in U$, then $u=\Psi(Y')\in U$, and $[V_{\Gamm
 Finally in the following Proposition, we show that $d\Psi$ is surjective.
 
 \begin{proposition}\label{prop:dPsi}
-Let $d\Psi\colon H^0(\NY(-H))=T_{[Y]}\SC\to T_{[\Ct]}\RC=H^0(N_C\otimes L_C)/k\,s_C$ be the differential of $\Psi$ at $[Y]$ (Definition~\ref{def:Psi}).
+Let $d\Psi\colon H^0(\NY(-H))=T_{[Y]}\SC\to T_{[\Ct]}\RC=H^0(N_C\otimes L_C)/k\,s_C$ be the differential of $\Psi$ at $[Y]$ (\Cref{def:Psi}).
 \begin{enumerate}
 \item $d\Psi$ is surjective.
 \item $\ker d\Psi=\Im c=T_{[Y]}(\GH\cdot Y)$.
@@ -1436,7 +1436,6 @@ In Set-up~\ref{setup:ribbon}, the line bundle $\OO_Y(C)=\OO_{\PP(V)}(1)\otimes p
 \end{lemma}
 
 \begin{proof}
-\emph{Proof of (1).} 
 Note that $\mathcal{O}_{\mathbb{P}(V)}(1)|_C = K_C$. Further since $C$ is a section, we have that $\mathcal{O}_Y(C) = \mathcal{O}_{\mathbb{P}(V)}(1) \otimes p^*M$ for some line bundle $M$ on $C$. From the exact sequence
 $$0 \to \mathcal{O}_{\mathbb{P}(V)}(1) \otimes \mathcal{O}_{\mathbb{P}(V)}(-C) \to \mathcal{O}_{\mathbb{P}(V)}(1) \to \mathcal{O}_{\mathbb{P}(V)}(1)|_C = K_C \to 0$$
 we get 
@@ -1613,7 +1612,7 @@ with $\Omega_{Y/C}^{*}\otimes K_Y$ we get
 \[
 0\to\Omega_{Y/C}^{*}\otimes K_Y\otimes\OO_Y(-C)\to\Omega_{Y/C}^{*}\otimes K_Y\to\Omega_{Y/C}^{*}|_C\otimes L_C\to0 .
 \]
-Since $\Omega_{Y/C}=K_Y\otimes p^*K_C^{*}$, we have $\Omega_{Y/C}^{*}=K_Y^{*}\otimes p^*K_C$, and hence, by Lemma~\ref{lem:OSC}(1),
+Since $\Omega_{Y/C}=K_Y\otimes p^*K_C^{*}$, we have $\Omega_{Y/C}^{*}=K_Y^{*}\otimes p^*K_C$, and hence, by Lemma~\ref{lem:OSC},
 \[
 \Omega_{Y/C}^{*}\otimes K_Y\otimes\OO_Y(-C)=p^*K_C\otimes\OO_Y(-C)=\OO_{\PP V}(-1)\otimes p^*(K_C\otimes L_C),
 \]
@@ -1629,7 +1628,7 @@ Let $\Yt_{\yt_0}$ and $\Ct\subset\Yt_{\yt_0}$ be as in (1). Then $\Ct$ is a Cart
 \[
 0\to K_Y(C)\to\OO_{\Yt_{\yt_0}}(\Ct)\to\OO_Y(C)\to0
 \]
-and $H^i(K_Y(C))=H^{2-i}(\OO_Y(-C))^{\vee}=0$ for all $i$ (Lemma~\ref{lem:OSC}(1): $\OO_Y(-C)=\OO_{\PP V}(-1)\otimes p^*L_C$) we get $H^0(\OO_{\Yt_{\yt_0}}(\Ct))\cong H^0(\OO_Y(C))$. Let
+and $H^i(K_Y(C))=H^{2-i}(\OO_Y(-C))^{\vee}=0$ for all $i$ (Lemma~\ref{lem:OSC}: $\OO_Y(-C)=\OO_{\PP V}(-1)\otimes p^*L_C$) we get $H^0(\OO_{\Yt_{\yt_0}}(\Ct))\cong H^0(\OO_Y(C))$. Let
 \[
 \varphi\colon\Yt_{\yt_0}\to\PP^M_1:=\PP\big(H^0(\OO_{\Yt_{\yt_0}}(\Ct))^{\vee}\big)
 \]
