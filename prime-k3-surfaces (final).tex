@@ -79,12 +79,12 @@
 \contrib[(with an appendix by]{Anand Deopurkar and Jayan Mukherjee)}
 \address{Mathematical Sciences Institute, Australian National University}
 \email{anand.deopurkar@anu.edu.au}
-\date{\today}
+%\date{\today}
 
 \begin{document}
 
 \begin{abstract}
-In \cite{BM24} an approach to the question of extendability of projective varieties via degeneration to ribbons was introduced, and in \cite{BM25} it was used to give a new proof of optimal results on the extendability of general non-prime $K3$ surfaces and the classification of non-prime Fano threefolds. In this article we treat the prime case and complete this program: we give a new proof, without Gaussian maps, of the optimal results on the extendability of general prime $K3$ surfaces of every genus, of the classification of prime Fano threefolds of Picard rank one due to Fano, Iskovskikh and Mukai, and of the irreducibility of their Hilbert schemes. This involves degenerations of $K3$ surfaces to ribbons on embedded rational normal scrolls, called $K3$ carpets. We compute exactly the cohomology of the twisted normal bundle of these $K3$ carpets, instead of computing coranks of Gaussian maps of the canonical curve sections as in \cite{CLM93}. The key challenge is to analyze the coboundary map of the sequence relating the normal bundle of the $K3$ carpet to the normal bundle of the scroll. We give a deformation theoretic interpretation of this map. Given such a $K3$ carpet and its hyperplane section, which is a canonical ribbon, we show that the coboundary map corresponds to the obstruction to lifting a first order deformation of the underlying scroll fixing the underlying rational normal curve to a first order deformation of the $K3$ carpet fixing the canonical ribbon. To compute the obstruction, we use a result on extensions of non-split ribbons on any curve to a unique $K$-trivial carpet in a canonical way. The genus zero case of this result was stated in \cite{BE95}. %This result in fact independently proves the birationality  of the flag moduli space $(X,C)$, where $X$ is a $K3$ surface and $C$ is a canonical curve to its image under the second projection, as predicted by Mukai's program of constructing the $K3$ surface from the canonical curve. 
+In \cite{BM24} an approach to the question of extendability of projective varieties via degeneration to ribbons was introduced, and in \cite{BM25} it was used to give a new proof of optimal results on the extendability of general non-prime $K3$ surfaces and the classification of non-prime Fano threefolds. In this article we treat the prime case and complete this program. We give a new proof, without Gaussian maps, of the optimal results on the extendability of general prime $K3$ surfaces of every genus, of the classification of prime Fano threefolds of Picard rank one due to Fano, Iskovskikh and Mukai, and of the irreducibility of their Hilbert schemes. This involves degenerations of $K3$ surfaces to ribbons on embedded rational normal scrolls, called $K3$ carpets. We compute exactly the cohomology of the twisted normal bundle of these $K3$ carpets, instead of computing coranks of Gaussian maps of the canonical curve sections as in \cite{CLM93}. The key challenge is to analyze the coboundary map of the sequence relating the normal bundle of the $K3$ carpet to the normal bundle of the scroll. We give a deformation theoretic interpretation of this map. Given such a $K3$ carpet and its hyperplane section, which is a canonical ribbon, we show that the coboundary map corresponds to the obstruction to lifting a first order deformation of the underlying scroll fixing the underlying rational normal curve to a first order deformation of the $K3$ carpet fixing the canonical ribbon. To compute the obstruction, we use a result on extensions of non-split ribbons on any curve to a unique $K$-trivial carpet in a canonical way. The genus zero case of this result was stated in \cite{BE95}. %This result in fact independently proves the birationality  of the flag moduli space $(X,C)$, where $X$ is a $K3$ surface and $C$ is a canonical curve to its image under the second projection, as predicted by Mukai's program of constructing the $K3$ surface from the canonical curve. 
 %Together with \cite{BM24} and \cite{BM25}, this completes the proof of the extendability results for general $K3$ surfaces and of the classification of Fano threefolds of Picard rank one by means of ribbon degenerations of Hirzebruch surfaces, with no recourse to Gaussian maps.
 \end{abstract}
 
@@ -101,15 +101,17 @@ Extendability of a projective variety is a natural and fundamental question in p
 
 \smallskip
 
-This article revisits the question of extendability of an embedded prime $K3$ surface and its applications to the boundedness, classification and Hilbert schemes of prime Fano threefolds of Picard rank one. In \cite{CLM93}, \cite{CLM94} and \cite{CLM98}, Ciliberto, Lopez and Miranda analyze the extendability of general $K3$ surfaces by computing the coranks of Wahl maps of the canonical curve sections (see also \cite{CD22}, \cite{CD24}, \cite{K20}, \cite{Tot20}). In the case of prime $K3$ surfaces, which is the case treated in this article, the authors of \cite{CLM93} degenerate the $K3$ surface to a union of two rational normal scrolls, and further to a union of planes whose hyperplane sections are graph curves, and compute in this way the corank of the Wahl map of a general canonical curve section of a general prime $K3$ surface of genus $g$: it is one if and only if $g = 11$ or $g \geq 13$. The classification of prime Fano threefolds of Picard rank one, due to Fano, Iskovskikh and Mukai (see \cite{Isk77}, \cite{Isk78}, \cite{Muk88}), is then recovered by a careful analysis of the Hilbert scheme at the points representing cones over canonical curves (see \cite{CLM93}, \cite{CLM98}).
+This article revisits the question of extendability of an embedded prime $K3$ surface and its applications to the boundedness, classification and Hilbert schemes of prime Fano threefolds of Picard rank one. In \cite{CLM93}, \cite{CLM94} and \cite{CLM98}, Ciliberto, Lopez and Miranda analyzed the extendability of general $K3$ surfaces by computing the coranks of Wahl maps of the canonical curve sections (see also \cite{CD22}, \cite{CD24}, \cite{CDGK20}, \cite{K20}, \cite{KLM11}, \cite{Tot20}). 
+%In the case of prime $K3$ surfaces, which is the case treated in this article, the authors of \cite{CLM93} degenerate the $K3$ surface to a union of two rational normal scrolls, and further to a union of planes whose hyperplane sections are graph curves, and compute in this way the corank of the Wahl map of a general canonical curve section of a general prime $K3$ surface of genus $g$. It turns out to be one if and only if $g = 11$ or $g \geq 13$. The classification of prime Fano threefolds of Picard rank one, due to Fano, Iskovskikh and Mukai (see \cite{Isk77}, \cite{Isk78}, \cite{Muk88}), is then recovered by a careful analysis of the Hilbert scheme at the points representing cones over canonical curves (see \cite{CLM93}, \cite{CLM98}).
 
 \smallskip
 
-The questions on extendability has almost always involved Gaussian map, either on the surface or going to the hyperplane curve section. As noted in \cite{Lop23} ``the emerging philosophy is that if one can control the corank of the Gaussian maps of the curve section of X, then one can give information on the extendability of X.'' It is further noted in \cite{Lop23} that there are only two other general results (\cite{KLM11}, \cite{CDGK20}) that allows studying the extendability of surfaces, without passing to the hyperplane section.
+The questions on extendability has almost always involved the Gaussian map, either on the surface or going to the hyperplane curve section. As noted in \cite{Lop23} ``the emerging philosophy is that if one can control the corank of the Gaussian maps of the curve section of X, then one can give information on the extendability of X.'' 
+%It is further noted in \cite{Lop23} that there are only two other general results (\cite{KLM11}, \cite{CDGK20}) that allows studying the extendability of surfaces, without passing to the hyperplane section.
 
 \smallskip
 
-In \cite{BM24} an approach to the question of extendability via degeneration to ribbons was introduced. It avoids Gaussian maps altogether, either on the surface or on the hyperplane curve section, and provides another general method to study extendability, by directly computing $\alpha(X) = h^0(N_{X/\mathbb{P}^M}(-1))-M-1$ and $h^0(N_{X/\mathbb{P}^M}(-2))$ on a ribbon degeneration of $X$. In \cite{BM25} this method was used to give a new proof of the optimal results of \cite{CLM98} on the extendability of general non-prime $K3$ surfaces and of the classification of non-prime Fano threefolds of Picard rank one; the prime case could be handled there only for infinitely many, but sporadic, values of $g$. In this article we treat the prime case for all genera and thereby complete this program, i.e., we prove the optimal results on the extendability of general $K3$ surfaces, prime or non-prime, and the classification of Fano threefolds of Picard rank one. Once $\alpha(X)$ and $h^0(N_{X/\mathbb{P}^M}(-2))$ are computed for a general prime $K3$ surface $X$, we conclude using the following theorem due to Zak-L\'vovsky.
+In \cite{BM24} an approach to the question of extendability via degeneration to ribbons was introduced. It avoids Gaussian maps altogether, either on the surface or on the hyperplane curve section, and provides a general method to study extendability, by directly computing $\alpha(X) = h^0(N_{X/\mathbb{P}^M}(-1))-M-1$ and $h^0(N_{X/\mathbb{P}^M}(-2))$ on a ribbon degeneration of $X$. Once $\alpha(X)$ and $h^0(N_{X/\mathbb{P}^M}(-2))$ are computed, we conclude using the following theorem due to Zak-L\'vovsky.
 
 \begin{theorem}(\cite{Lvo92}, \cite{Zak91})\label{ZL}
 Let $X \subset \mathbb{P}^{M}$ be a smooth irreducible nondegenerate variety of codimension at least $1$ and suppose $X$ is not a quadric. If $\alpha(X) \leq 0$, then X is not extendable. Further, given an integer $k \geq 2$, suppose that either:
@@ -120,7 +122,15 @@ Let $X \subset \mathbb{P}^{M}$ be a smooth irreducible nondegenerate variety of 
 If $\alpha(X) \leq k-1$, then X is not $k-$ extendable.
 \end{theorem}
 
-By semicontinuity it is enough to give sharp upper bounds to $\alpha(X)$ by computing it over an embedded degeneration of $X$. Let $Y = \mathbb{F}_e$, $e \in \{0,1\}$, be a Hirzebruch surface embedded in $\mathbb{P}^g$ by the complete linear series of $H = C_0+bf$, $b \geq e+2$, as a rational normal scroll of degree $g-1$, where $g = 2b-e+1$. Every genus $g \geq 6$ arises in this way. Let $\widetilde{Y} \subset \mathbb{P}^g$ be the $K3$ carpet on $Y$ (see \Cref{ribbon}), that is, the unique double structure on $Y$ with trivial dualizing sheaf and $h^1(\mathcal{O}_{\widetilde{Y}}) = 0$ \cite{GP97}, and let $\widetilde{H} = \mathcal{O}_{\widetilde{Y}}(1)$. By \cite{GP97} and \cite{BMR21}, $\widetilde{Y}$ is smoothable in $\mathbb{P}^g$ to prime $K3$ surfaces of genus $g$ (see \Cref{degeneration into $K3$ carpets}), so that $\alpha(X) \leq \alpha(\widetilde{Y}) := h^0(N_{\widetilde{Y}/\mathbb{P}^g}(-\widetilde{H}))-g-1$ for a general prime $K3$ surface $X$ of genus $g$, and similarly for $h^0(N_{X/\mathbb{P}^g}(-2))$ (see \eqref{eq:semicont}). As in \cite{BM24} and \cite{BM25}, the computability of $\alpha(\widetilde{Y})$ is facilitated by the fact that $\widetilde{Y} \subset \mathbb{P}^g$ is an embedded ribbon which is a local complete intersection scheme whose reduced part is the scroll $Y \subset \mathbb{P}^g$. Three exact sequences (see \Cref{rem:sequences}) reduce the computation of the cohomology of twists of the normal bundle $N_{\widetilde{Y}/\mathbb{P}^g}$ to the computation of the cohomology of twists of $N_{Y/\mathbb{P}^g}$ and to the analysis of the related coboundary maps. The new difficulty in the prime case is that one of these coboundary maps cannot be controlled by cohomological means alone. We give a deformation theoretic interpretation of this map, which we explain in \S\ref{subsec:intro-ingredient}; this is the key new ingredient of this article.
+
+
+In \cite{BM25} this method was used to give a new proof of the optimal results of \cite{CLM98} on the extendability of general non-prime $K3$ surfaces and of the classification of non-prime Fano threefolds of Picard rank one. 
+%the prime case could be handled there only for infinitely many, but sporadic, values of $g$. 
+In this article we treat the prime case and thereby complete this program, i.e., we prove the optimal results on the extendability of general prime $K3$ surfaces, and the classification of prime Fano threefolds of Picard rank one. 
+
+
+
+By semicontinuity it is enough to give sharp upper bounds to $\alpha(X)$ by computing it over an embedded degeneration of $X$. Let $Y = \mathbb{F}_e$, $e \in \{0,1\}$, be a Hirzebruch surface embedded in $\mathbb{P}^g$ by the complete linear series of $H = C_0+bf$, $b \geq e+2$, as a rational normal scroll of degree $g-1$, where $g = 2b-e+1$. Every genus $g \geq 6$ arises in this way. Let $\widetilde{Y} \subset \mathbb{P}^g$ be the $K3$ carpet on $Y$ (see \Cref{ribbon}), that is, the unique double structure on $Y$ with trivial dualizing sheaf and $h^1(\mathcal{O}_{\widetilde{Y}}) = 0$ \cite{GP97}, and let $\widetilde{H} = \mathcal{O}_{\widetilde{Y}}(1)$. By \cite{GP97} and \cite{BMR21} (see also \cite{Gon06}, \cite{GGP10}, \cite{GGP13}), $\widetilde{Y}$ is smoothable in $\mathbb{P}^g$ to prime $K3$ surfaces of genus $g$ (see \Cref{degeneration into $K3$ carpets}), so that $\alpha(X) \leq \alpha(\widetilde{Y}) := h^0(N_{\widetilde{Y}/\mathbb{P}^g}(-\widetilde{H}))-g-1$ for a general prime $K3$ surface $X$ of genus $g$, and similarly for $h^0(N_{X/\mathbb{P}^g}(-2))$ (see \eqref{eq:semicont}). As in \cite{BM24} and \cite{BM25}, the computability of $\alpha(\widetilde{Y})$ is facilitated by the fact that $\widetilde{Y} \subset \mathbb{P}^g$ is an embedded ribbon which is a local complete intersection scheme whose reduced part is the scroll $Y \subset \mathbb{P}^g$. Three exact sequences (see \Cref{rem:sequences}) reduce the computation of the cohomology of twists of the normal bundle $N_{\widetilde{Y}/\mathbb{P}^g}$ to the computation of the cohomology of twists of $N_{Y/\mathbb{P}^g}$ and to the analysis of the related coboundary maps. The new difficulty in the prime case is that one of these coboundary maps cannot be controlled by cohomological means alone. We give a deformation theoretic interpretation of this map, which we explain in \S\ref{subsec:intro-ingredient}; this is the key new ingredient of this article.
 
 \smallskip
 
@@ -138,19 +148,19 @@ Let $Y = \mathbb{F}_e \subset \mathbb{P}^M$, $e \geq 0$, be embedded by the comp
 \end{enumerate}
 \end{theorem}
 
-For general prime $K3$ surfaces we obtain:
+For general prime $K3$ surfaces of low genus, we obtain:
 
 \begin{theorem}(see \Cref{thm:alpha-lowgenus}, \Cref{cor:cone}, \Cref{cor:equality})\label{thm:K3 intro}
 Let $X \subset \mathbb{P}^g$ be a general prime $K3$ surface of genus $g \geq 6$.
 \begin{enumerate}
-    \item If $g = 12$, then $\alpha(X) \leq 1$.
-    \item If $g = 10$, then $\alpha(X) \leq 3$.
-    \item If $g = 9$, then $\alpha(X) \leq 4$.
-    \item If $g = 8$, then $\alpha(X) \leq 6$.
-    \item If $g = 7$, then $\alpha(X) \leq 8$.
-    \item If $g = 6$, then $\alpha(X) \leq 10$.
+    \item If $g = 12$, then $\alpha(X) = 1$.
+    \item If $g = 10$, then $\alpha(X) = 3$.
+    \item If $g = 9$, then $\alpha(X) = 4$.
+    \item If $g = 8$, then $\alpha(X) = 6$.
+    \item If $g = 7$, then $\alpha(X) = 8$.
+    \item If $g = 6$, then $\alpha(X) = 10$.
     \item If $g = 11$ or $g \geq 13$, then $\alpha(X) = 0$ and consequently $X \subset \mathbb{P}^g$ is not extendable.
-    \item $H^0(N_{X/\mathbb{P}^g}(-2)) = 0$ if $g \geq 7$, and $h^0(N_{X/\mathbb{P}^g}(-2)) \leq 1$ if $g = 6$.
+    \item $H^0(N_{X/\mathbb{P}^g}(-2)) = 0$ if $g \geq 7$, and $h^0(N_{X/\mathbb{P}^g}(-2)) = 1$ if $g = 6$.
 \end{enumerate}
 \end{theorem}
 
@@ -183,9 +193,9 @@ Let $g \geq 6$ and let $\mathcal{V}_g$ denote the locus, in the Hilbert scheme o
 %% ---- optional: uncomment if a corollary on the corank of the Wahl map (as in [BM25]) is added to Section 4 ----
 %Finally, exactly as in \cite{BM25}, \Cref{thm:K3 intro} $(7)$ together with \cite[$2.2$]{CDS20} (see also \cite{ABS17}) and \cite[Lemma $8.3$]{K01} gives back the corank one theorem of \cite{CLM93}: for any smooth hyperplane section $C$ of a general prime $K3$ surface of genus $g = 11$ or $g \geq 13$, one has $\alpha(C) = \operatorname{cork}(\Phi_{\omega_C}) = 1$.
 
-\subsection{The key new ingredient}\label{subsec:intro-ingredient}
+\subsection{The key new ingredient in the proof}\label{subsec:intro-ingredient}
 
-We keep the notation of \Cref{thm:carpet intro} and assume $b \geq e+3$; the case $(e,b) = (1,3)$ requires a small additional argument (see \Cref{prop:g6}). We write $\NY := N_{Y/\PM}$ and $\NYt := N_{\Yt/\PM}$. Let $H \subset \PM$ be a hyperplane meeting $Y$ transversally along a smooth curve $C := Y \cap H$, a rational normal curve of degree $g-1$ in $H \cong \PP^{g-1}$ (note that $\OO_Y(H) = \OO_Y(C)$), and let $\Ct := \Yt \cap H$, which is a canonical ribbon on $C$ of arithmetic genus $g$ (see \cite{BE95}, \cite{GP97}). Put $N_C := N_{C/H}$ and $L_C := K_Y|_C \cong \OO_{\PP^1}(-g-1)$, the conormal bundle of $\Ct$.
+We keep the notation of \Cref{thm:carpet intro} and assume $b \geq e+3$; the case $(e,b) = (1,3)$ requires a small additional argument (see \Cref{prop:g6}). We write $\NY := N_{Y/\PM}$ and $\NYt := N_{\Yt/\PM}$. Let $H \subset \PM$ be a hyperplane meeting $Y$ transversally along a smooth curve $C := Y \cap H$ which is a rational normal curve of degree $g-1$ in $H \cong \PP^{g-1}$ (note that $\OO_Y(H) = \OO_Y(C)$). Let $\Ct := \Yt \cap H$, which is a canonical ribbon on $C$ of arithmetic genus $g$ (see \cite{BE95}, \cite{GP97}). Put $N_C := N_{C/H}$ and $L_C := K_Y|_C \cong \OO_{\PP^1}(-g-1)$, the conormal bundle of $\Ct$.
 
 \smallskip
 
@@ -198,7 +208,7 @@ where $F\colon H^0(\NYt\otimes\OO_Y(-H)) \to H^1(\NYt\otimes K_Y(-H))$ is the co
 Now \Cref{thm:carpet intro}, $(1)$ is equivalent to the surjectivity of $F$. The surjectivity of $F$ is proved in the following steps.
 
 \begin{enumerate}
-    \item[(1)] \emph{Reduction to a map $a$ between cohomology groups of twists of $\NY$} (see the proof of \Cref{thm:alpha}, \Cref{lem:hfg} and \Cref{surjectivity of a}). Using the sequences \eqref{eq:3.2} and \eqref{eq:3.3}, the group $H^0(\NY(-H))$ injects into the source of $F$ and $H^1(\NY\otimes K_Y(-H))$ injects into its target and it can be shown that
+    \item[(1)] \emph{Reduction to a map $a$ between cohomology groups of twists of $\NY$} (see the proof of \Cref{thm:alpha}, \Cref{lem:hfg} and \Cref{surjectivity of a}). Using the sequences \eqref{eq:3.2} and \eqref{eq:3.3}, the group $H^0(\NY(-H))$ injects into the source of $F$ and $H^1(\NY\otimes K_Y(-H))$ injects into its target and it is shown that
     %A \v{C}ech cocycle computation (\Cref{lem:hfg}) shows that $F$ induces a commutative diagram with exact rows \eqref{diag:a} whose right-hand vertical map is $2\cdot\id$; by the snake lemma, 
     $F$ is surjective if and only if the induced map
     \[
@@ -246,7 +256,7 @@ Let $\Ct$ be a ribbon on a smooth curve $C$ of genus $g_C$ with conormal bundle 
 In the above notation, assume that $\Ct$ is non-split.
 \begin{enumerate}
     \item There is a unique $K$-trivial carpet $\Yt$ on $Y$ such that the embedding $i\colon C \hookrightarrow Y$ extends to a closed embedding $\Ct \hookrightarrow \Yt$ inducing the identity $K_Y|_C = L_C$ on conormal bundles. Moreover $\Yt$ is non-split.
-    \item Let $g_C = 0$ and let $\Ct \subset \PP^{g-1}$ be a canonically embedded ribbon of arithmetic genus $g$, so that $C \subset \PP^{g-1}$ is a rational normal curve. Then $\OO_Y(C)$ is very ample; embed $Y$ in $\PP^g$ by its complete linear series, as a rational normal scroll, and identify $\PP^{g-1}$ with a hyperplane $H \subset \PP^g$ so that $Y \cap H = C$. Then the $K3$ carpet $\Yt \subset \PP^g$ on $Y$ satisfies
+    \item Let $g_C = 0$ and let $\Ct \subset \PP^{g-1}$ be a canonically embedded ribbon of arithmetic genus $g$, so that $C \subset \PP^{g-1}$ is a rational normal curve. Then $\OO_Y(C)$ is very ample. Embed $Y$ in $\PP^g$ by its complete linear series, as a rational normal scroll, and identify $\PP^{g-1}$ with a hyperplane $H \subset \PP^g$ so that $Y \cap H = C$. Then the $K3$ carpet $\Yt \subset \PP^g$ on $Y$ satisfies
     \[
     \Yt \cap H = \Ct .
     \]
@@ -286,7 +296,7 @@ The genus zero case of this result was stated in \cite{BE95}. What is needed in 
 
 \vspace{0.2cm}
 
-\noindent\textbf{Acknowledgements.} %% to be added
+\noindent\textbf{Acknowledgements.} We thank Professor Purnaprajna Bangere for many stimulating discussions on this topic. %% to be added
 
 %% content to be added
 
@@ -1651,6 +1661,8 @@ Now the given $\Ct\subset\PP^{M-1}$ and $\varphi(\Ct)\subset H_1$ are two embedd
 
 \bibitem[BE95]{BE95} D.~Bayer, D.~Eisenbud, \emph{Ribbons and their canonical embeddings}, Trans.\ Amer.\ Math.\ Soc.\ \textbf{347} (1995), 719--756.
 
+\bibitem[BGM24]{BGM24} P.~Bangere, F.~J.~Gallego, J.~Mukherjee, \emph{Projective smoothing of varieties with simple normal crossings}, (To appear in Algebraic Geometry) arXiv:2403.04167.
+
 \bibitem[BM24]{BM24} P.~Bangere, J.~Mukherjee, \emph{Extendability of projective varieties via degeneration to ribbons with applications to Calabi--Yau threefolds}, Annali della Scuola Normale Superiore di Pisa, Classe di Scienze,  https://doi.org/$10.2422/2036-2145.202409_035$
 
 \bibitem[BM25]{BM25} P.~Bangere, J.~Mukherjee, \emph{Extendability of K3 surfaces without Gaussian maps and classification of non-prime Fano threefolds}
@@ -1688,6 +1700,12 @@ Internat. J. Math.32(2021), no.6, Paper No. 2150032, 20 pp.
 \bibitem[ES18]{ES18} D.~Eisenbud, F.-O.~Schreyer, \emph{Equations and syzygies of K3 carpets and unions of scrolls}, arXiv:1804.08011.
 
 \bibitem[GGP08]{GGP08} F.~J.~Gallego, M.~Gonz\'alez, B.~P.~Purnaprajna, \emph{K3 double structures on Enriques surfaces and their smoothings}, J.\ Pure Appl.\ Algebra \textbf{212} (2008), 981--993.
+
+\bibitem[GGP10]{GGP10} F.~J.~Gallego, M.~Gonz\'alez, B.~P.~Purnaprajna, \emph{Deformation of canonical morphisms and the moduli of surfaces of general type}, Invent.\ Math.\ \textbf{182} (2010), no.~1, 1--46.
+
+\bibitem[GGP13]{GGP13} F.~J.~Gallego, M.~Gonz\'alez, B.~P.~Purnaprajna, \emph{An infinitesimal condition to smooth ropes}, Rev.\ Mat.\ Complut.\ \textbf{26} (2013), 253--269.
+
+\bibitem[Gon06]{Gon06} M.~Gonz\'alez, \emph{Smoothing of ribbons over curves}, J.\ Reine Angew.\ Math.\ \textbf{591} (2006), 201--235.
 
 \bibitem[GP97]{GP97} F.~J.~Gallego, B.~P.~Purnaprajna, \emph{Degenerations of K3 surfaces in projective space}, Trans.\ Amer.\ Math.\ Soc.\ \textbf{349} (1997), 2477--2492.
 
