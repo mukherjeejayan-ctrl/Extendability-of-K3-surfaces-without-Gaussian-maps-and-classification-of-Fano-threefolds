@@ -84,7 +84,7 @@
 \begin{document}
 
 \begin{abstract}
-In \cite{BM24} an approach to the question of extendability of projective varieties via degeneration to ribbons was introduced, and in \cite{BM25} it was used to give a new proof of optimal results on the extendability of general non-prime $K3$ surfaces and the classification of non-prime Fano threefolds. In this article we treat the prime case and complete this program. We give a new proof of the optimal results on the extendability of general prime $K3$ surfaces of every genus, of the classification of prime Fano threefolds of Picard rank one due to Fano, Iskovskikh and Mukai, and of the irreducibility of their Hilbert schemes. This involves degenerations of $K3$ surfaces to ribbons on embedded rational normal scrolls, called $K3$ carpets. We compute exactly the cohomology of the twisted normal bundle of these $K3$ carpets, instead of computing coranks of Gaussian maps of the canonical curve sections as in \cite{CLM93}. The key challenge is to analyze the coboundary map of the sequence relating the normal bundle of the $K3$ carpet to the normal bundle of the scroll. We give a deformation theoretic interpretation of this map. Given such a $K3$ carpet and its hyperplane section, which is a canonical ribbon, we show that the coboundary map corresponds to the obstruction to lifting a first order deformation of the underlying scroll fixing the underlying rational normal curve to a first order deformation of the $K3$ carpet fixing the canonical ribbon. To compute the obstruction, we use a result on extensions of non-split ribbons on any curve to a unique $K$-trivial carpet in a canonical way. The genus zero case of this result was stated in \cite{BE95}. %This result in fact independently proves the birationality  of the flag moduli space $(X,C)$, where $X$ is a $K3$ surface and $C$ is a canonical curve to its image under the second projection, as predicted by Mukai's program of constructing the $K3$ surface from the canonical curve. 
+In \cite{BM24} an approach to the question of extendability of projective varieties via degeneration to ribbons was introduced, and in \cite{BM25} it was used to give a new proof of optimal results on the extendability of general non-prime $K3$ surfaces and the classification of non-prime Fano threefolds. In this article we treat the prime case. We give a new proof of the optimal results on the extendability of general prime $K3$ surfaces of every genus, of the classification of prime Fano threefolds of Picard rank one due to Fano, Iskovskikh and Mukai, and of the irreducibility of their Hilbert schemes. This involves degenerations of $K3$ surfaces to ribbons on embedded rational normal scrolls, called $K3$ carpets. We compute exactly the cohomology of the twisted normal bundle of these $K3$ carpets, instead of computing coranks of Gaussian maps of the canonical curve sections as in \cite{CLM93}. The key challenge is to analyze the coboundary map of the sequence relating the normal bundle of the $K3$ carpet to the normal bundle of the scroll. We give a deformation theoretic interpretation of this map. Given such a $K3$ carpet and its hyperplane section, which is a canonical ribbon, we show that the coboundary map corresponds to the obstruction to lifting a first order deformation of the underlying scroll fixing the underlying rational normal curve to a first order deformation of the $K3$ carpet fixing the canonical ribbon. To compute the obstruction, we use a result on extensions of non-split ribbons on any curve to a unique $K$-trivial carpet in a canonical way. The genus zero case of this result was stated in \cite{BE95}. %This result in fact independently proves the birationality  of the flag moduli space $(X,C)$, where $X$ is a $K3$ surface and $C$ is a canonical curve to its image under the second projection, as predicted by Mukai's program of constructing the $K3$ surface from the canonical curve. 
 %Together with \cite{BM24} and \cite{BM25}, this completes the proof of the extendability results for general $K3$ surfaces and of the classification of Fano threefolds of Picard rank one by means of ribbon degenerations of Hirzebruch surfaces, with no recourse to Gaussian maps.
 \end{abstract}
 
@@ -298,6 +298,7 @@ The genus zero case of this result was stated in \cite{BE95}. What is needed in 
 
 \noindent\textbf{Acknowledgements.} We thank Professor Purnaprajna Bangere for many stimulating discussions on this topic. %% to be added
 
+\noindent\textbf{AI Disclosure.} Claude Fable 5.1 has claimed to have a more computational proof of \Cref{surjectivity of a}(which the surjectivity of the coboundary map) using \cite{ES18}, whose correctness has not been verified by the author. We have also used Claude Fable 5.1 for latex purposes. 
 %% content to be added
 
 \section{Preliminaries on degeneration of $K3$ surfaces into $K3$ double structures on Hirzebruch surfaces}
@@ -692,7 +693,7 @@ is surjective. Now the proof follows from \Cref{prop:a-surj}.
 \subsubsection{Deformation theoretic interpretation of $\bar\delta^{-1}\circ a$ and the map $\Psi$}\label{subsec:geometric}
 
 In this subsection, we will interpret the map $\bar\delta^{-1}\circ a$ as the differential $d\Psi$ of a map $\Psi$ that we will define below in \Cref{thm:Psi}. \par
-In this and the following subsections $\Dd$ denotes the scheme $\operatorname{Spec}k[\varepsilon]/(\varepsilon^2)$, and for a closed subscheme $Z\subset\PM$ we write $Z_\Dd:=Z\times\Dd$ for the constant family, a closed subscheme of $\PM_\Dd$. We use freely the identification of first-order embedded deformations of a closed subscheme $Z\subset\PM$ with sections of $N_{Z/\PM}=\sHom(I_Z,\OO_Z)$ \cite[\S3.2]{Ser06}: to a section $\eta$ corresponds the closed subscheme $Z_\varepsilon\subset\PM_\Dd$ with ideal
+In this and the following subsections $\Dd$ denotes the scheme $\operatorname{Spec}k[\varepsilon]/(\varepsilon^2)$, and for a closed subscheme $Z\subset\PM$ we write $Z_\Dd:=Z\times\Dd$ for the constant family, a closed subscheme of $\PM_\Dd$. We use freely the identification of first-order embedded deformations of a closed subscheme $Z\subset\PM$ with sections of $N_{Z/\PM}=\sHom(I_Z,\OO_Z)$ \cite[\S3.2]{Ser06}. A section $\eta$ corresponds the closed subscheme $Z_\varepsilon\subset\PM_\Dd$ with ideal
 \[
 I_{Z_\varepsilon}=\{\,f+\varepsilon g\ :\ f\in I_Z,\ g\in\OO_{\PM},\ g\equiv\eta(f)\bmod I_Z\,\}\subset\OO_{\PM}[\varepsilon]/(\varepsilon^2),
 \]
@@ -702,7 +703,7 @@ the preimage of the graph of $\eta$. Locally $I_{Z_\varepsilon}$ is generated by
 
 %% ---- Lemma 2.6 (replaces the lemma and its proof) ----
 
-\begin{lemma}[Scrolls through $C$]\label{lem:SC}
+\begin{lemma}\label{lem:SC}
 Let $\mathcal F$ be the flag Hilbert scheme of pairs $(C'\subset Y')$ of closed subschemes of $\PM$ with Hilbert polynomials
 \[
 P_{C'}(n)=(2b-e)\,n+1,\qquad P_{Y'}(n)=(2b-e)\binom{n+1}{2}+n+1,
@@ -727,7 +728,7 @@ Each of the statements (1)--(3) are standard for the flag Hilbert scheme (see \c
 
 We recall some well-known facts about the space of canonical ribbons on a rational curve $C$ and the tangent space to that space at a given ribbon $\widetilde{C}$.
 
-\begin{lemma}[Canonical ribbons on $C$]\label{lem:RC}
+\begin{lemma}\label{lem:RC}
 Let $\RC:=\PP\big(H^0(N_C\otimes L_C)\big)\cong\PP^{g-3}$, and recall that $s_C=s|_C\colon N_C^{\vee}\cong N_Y^{\vee}|_C\to K_Y|_C=L_C$ is the restriction to $C$ of the surjection $s$ defining the carpet, an element of $H^0(N_C\otimes L_C)$.
 \begin{enumerate}
 \item Every nonzero $t\in H^0(N_C\otimes L_C)=\Hom(N_C^{\vee},L_C)$ is surjective and defines a double structure $\Ct_t\subset H$ on $C$ by $I_{\Ct_t}:=\ker\big(I_C\to N_C^{\vee}\xrightarrow{t}L_C\big)$; it satisfies $I_C^2\subset I_{\Ct_t}$ and $I_C/I_{\Ct_t}\cong L_C$, and depends only on $[t]\in\RC$. Conversely every double structure on $C$ in $H$ with conormal bundle $L_C$ is of this form. 
@@ -742,7 +743,7 @@ $(1)$ For part $(1)$ see \cite[\S1]{BE95}. \\
 (2) An invertible sheaf on $C_\Dd$ restricting to $L_C$ is $L_C\otimes\OO_\Dd$ (as $H^1(\OO_C)=0$), with automorphisms $\OO_\Dd^{\times}$; so such a deformation is the kernel of a surjection $s_C+\varepsilon t\colon N_C^{\vee}\otimes\OO_\Dd\to L_C\otimes\OO_\Dd$, well defined up to multiplication by a unit $1+\varepsilon\lambda$, i.e.\ up to $t\mapsto t+\lambda s_C$.
 \end{proof}
 
-\subsubsection*{The map $\Psi$ from $\mathcal{S}_C$ to the space of canonical ribbons}
+%\subsubsection*{The map $\Psi$ from $\mathcal{S}_C$ to the space of canonical ribbons}
 
 Below we define the crucial map $$\Psi: \mathcal{S}_C \to \mathcal{R}_C$$ whose differential will turn out to be the map
 \begin{equation*}
@@ -852,7 +853,7 @@ $\bar\delta^{-1} \circ a= d\Psi$. Equivalently, the map \eqref{eq:themap} is $d\
 \end{proposition}
 
 \begin{proof}
-Throughout we regard $H^1(\NY(-H+K_Y))$ as a subspace of $H^1(\NYt(-H+K_Y))$ via the injective map $j$ of the bottom row of \eqref{diag:a}; $j$ is induced by the sheaf map $\NY\to\NYt\otimes\OO_Y$, ``restrict a homomorphism from $I_Y$ to $I_{\Yt}$'' (the composite of \eqref{eq:3.3} and \eqref{eq:3.2}), and so is the injection $\iota\colon H^0(\NY(-H))\hookrightarrow H^0(\NYt(-H))$ of \eqref{eq:3.60}, \eqref{eq:3.61}. The maps in play are
+Throughout we regard $H^1(\NY(-H+K_Y))$ as a subspace of $H^1(\NYt(-H+K_Y))$ via the injective map $j$ of the bottom row of \eqref{diag:a}. The map $j$ is induced by the sheaf map $\NY\to\NYt\otimes\OO_Y$, which restricts a homomorphism from $I_Y$ to $I_{\Yt}$ (the composite of \eqref{eq:3.3} and \eqref{eq:3.2}), and so is the injection $\iota\colon H^0(\NY(-H))\hookrightarrow H^0(\NYt(-H))$ of \eqref{eq:3.60}, \eqref{eq:3.61}. The maps in play are
 \begin{equation}\label{diag:overview}
 \begin{tikzcd}[column sep=large, row sep=large]
 && H^0(\NYt(-\Ht))\arrow[d]\\
@@ -861,16 +862,18 @@ Throughout we regard $H^1(\NY(-H+K_Y))$ as a subspace of $H^1(\NYt(-H+K_Y))$ via
 & H^0(N_C\otimes L_C)/k\,s_C=T_{[\Ct]}\RC\arrow[ur,"\bar\delta"',"\sim"] &
 \end{tikzcd}
 \end{equation}
-Here $F$ is the connecting map of \eqref{eq:3.65}, i.e.\ of \eqref{eq:3.1} twisted by $-\Ht$, and by definition of $a$ (diagram \eqref{diag:a}) $a=F\circ\iota$. The row through $\delta$ is the cohomology of the restriction sequence $0\to\NY\otimes K_Y(-C)\to\NY\otimes K_Y\to N_C\otimes L_C\to0$ of Lemma~\ref{lem:delta}: $\delta$ is its connecting map, its kernel $k\,s_C$ is the image of $H^0(\NY\otimes K_Y)=k\,s$, and $\bar\delta$ is the induced isomorphism. The dashed arrow is explained below; it is well defined modulo $k\,s_C=\ker\delta$.
+Here $F$ is the connecting map of \eqref{eq:3.65}, i.e.\ of \eqref{eq:3.1} twisted by $-\Ht$, and by definition of $a$ (diagram \eqref{diag:a}) $a=F\circ\iota$. The row through $\delta$ is the cohomology of the restriction sequence $$0\to\NY\otimes K_Y(-C)\to\NY\otimes K_Y\to N_C\otimes L_C\to0$$ of Lemma~\ref{lem:delta}. $\delta$ is its connecting map, its kernel $k\,s_C$ is the image of $H^0(\NY\otimes K_Y)=k\,s$, and $\bar\delta$ is the induced isomorphism. The dashed arrow is explained below; it is well defined modulo $k\,s_C=\ker\delta$.
 
-Pick $x\in H^0(\NY(-H))$ and set $\xi:=\iota(x)$. \emph{We need to show $\bar\delta(d\Psi(x))=F(\xi)$.}
+Pick $x\in H^0(\NY(-H))$ and set $\xi:=\iota(x)$. We need to show $\bar\delta(d\Psi(x))=F(\xi)$.
 
-\emph{Computation of $d\Psi(x)$.} The vector $x$ is a first-order deformation $Y_\varepsilon\subset\PM_\Dd$ of $Y$ containing $C_\Dd$, and $Y_\varepsilon\cap H_\Dd=C_\Dd$ (Lemma~\ref{lem:SC}(1), \Cref{def:Psi}(ii)). By Lemma~\ref{lem:Phi} (the version of \cite[Prop.~3.7]{GP97} over $\Dd$) there is a K3 carpet $\Yt_\varepsilon=\Phi(Y_\varepsilon)\subset\PM_\Dd$ on $Y_\varepsilon$; since $\Yt_\varepsilon\times_\Dd\operatorname{Spec}k=\Yt$, it is an embedded first-order deformation of $\Yt\subset\PM$. Call its class $\eta\in H^0(\NYt)$. Then $\Ct_\varepsilon:=\Yt_\varepsilon\cap H_\Dd$ is a ribbon on $C_\Dd$ with conormal bundle $L_C\otimes\OO_\Dd$, hence a $\Dd$-point of $\RC$ at $[\Ct]$, and by definition (\Cref{def:Psi})
+%\emph{Computation of $d\Psi(x)$.} 
+The vector $x$ is a first-order deformation $Y_\varepsilon\subset\PM_\Dd$ of $Y$ containing $C_\Dd$, and $Y_\varepsilon\cap H_\Dd=C_\Dd$ (Lemma~\ref{lem:SC}(1), \Cref{def:Psi}(ii)). By Lemma~\ref{lem:Phi} (the version of \cite[Prop.~3.7]{GP97} over $\Dd$) there is a K3 carpet $\Yt_\varepsilon=\Phi(Y_\varepsilon)\subset\PM_\Dd$ on $Y_\varepsilon$; since $\Yt_\varepsilon\times_\Dd\operatorname{Spec}k=\Yt$, it is an embedded first-order deformation of $\Yt\subset\PM$. Call its class $\eta\in H^0(\NYt)$. Then $\Ct_\varepsilon:=\Yt_\varepsilon\cap H_\Dd$ is a ribbon on $C_\Dd$ with conormal bundle $L_C\otimes\OO_\Dd$, hence a $\Dd$-point of $\RC$ at $[\Ct]$, and by definition (\Cref{def:Psi})
 \[
 d\Psi(x)=[\Ct_\varepsilon]\in T_{[\Ct]}\RC=H^0(N_C\otimes L_C)/k\,s_C .
 \]
 
-\emph{Where $\eta|_{\Ct}$ lives.} Put $N_{\Ct}:=N_{\Ct/H}=\sHom(I_{\Ct},\OO_{\Ct})$. Composing $\eta\colon I_{\Yt}\to\OO_{\Yt}$ with $\OO_{\Yt}\to\OO_{\Ct}$ and using $I_{\Yt}\otimes\OO_H=I_{\Ct/H}$ gives $\eta|_{\Ct}\in H^0(N_{\Ct})$: the class of $\Ct_\varepsilon$ as a first-order deformation of $\Ct$ inside $H$ (reduce the generators $f+\varepsilon\tilde\eta(f)$ of $I_{\Yt_\varepsilon}$ modulo $h$). For the ribbon $\Ct\subset H$, whose conormal bundle is $L_C=I_C/I_{\Ct}$, we have the analogues of \eqref{eq:3.1}--\eqref{eq:3.3} \cite[Lemma~4.1]{GGP08}:
+%\emph{Where $\eta|_{\Ct}$ lives.} 
+Put $N_{\Ct}:=N_{\Ct/H}=\sHom(I_{\Ct},\OO_{\Ct})$. Composing $\eta\colon I_{\Yt}\to\OO_{\Yt}$ with $\OO_{\Yt}\to\OO_{\Ct}$ and using $I_{\Yt}\otimes\OO_H=I_{\Ct/H}$ gives $\eta|_{\Ct}\in H^0(N_{\Ct})$. The class of $\Ct_\varepsilon$ as a first-order deformation of $\Ct$ inside $H$ (reduce the generators $f+\varepsilon\tilde\eta(f)$ of $I_{\Yt_\varepsilon}$ modulo $h$). For the ribbon $\Ct\subset H$, whose conormal bundle is $L_C=I_C/I_{\Ct}$, we have the analogues of \eqref{eq:3.1}--\eqref{eq:3.3} \cite[Lemma~4.1]{GGP08}:
 \begin{equation}\label{eq:ribbonseq}
 \begin{gathered}
 0\to N_{\Ct}\otimes L_C\to N_{\Ct}\to N_{\Ct}\otimes\OO_C\to0,\qquad
@@ -892,7 +895,8 @@ d\Psi(x)=[\Ct_\varepsilon]\in T_{[\Ct]}\RC=H^0(N_C\otimes L_C)/k\,s_C .
 
 (iii) Write $d\Psi(x)=[t]$, i.e.\ $\Ct_\varepsilon=\ker(s_C+\varepsilon t)$ (\Cref{def:Psi}). For $f\in I_{\Ct}$ the element $f+\varepsilon g$ lies in $I_{\Ct_\varepsilon}$ if and only if $s_C(g)=-t(f)$; so the class of $\Ct_\varepsilon$ is $f\mapsto-t(f)\in L_C=I_C/I_{\Ct}$, that is, $\eta|_{\Ct}=-t|_{I_{\Ct}}$. This proves the Claim.
 
-\emph{The two connecting maps.} Let $\tilde\delta\colon H^0(N_{\Ct}\otimes L_C)\to H^1(\NYt(-H+K_Y))$ be the connecting map of the restriction sequence
+%\emph{The two connecting maps.} 
+Now let $\tilde\delta\colon H^0(N_{\Ct}\otimes L_C)\to H^1(\NYt(-H+K_Y))$ be the connecting map of the restriction sequence
 \[
 0\to\NYt(-H+K_Y)\to\NYt(K_Y)\to\NYt(K_Y)|_C=N_{\Ct}\otimes L_C\to0
 \]
@@ -914,7 +918,7 @@ Therefore what we need to show is the following.
 & 0 & 0 & 0 &
 \end{tikzcd}
 \end{equation}
-whose rows are \eqref{eq:3.1} twisted by $-\Ht$, \eqref{eq:3.1} itself, and the first sequence of \eqref{eq:ribbonseq}; the columns are exact because $h$ is a nonzerodivisor on $\OO_{\Yt}$ and on $\OO_Y$. $F$ is the connecting map of the top row and $\tilde\delta$ that of the left column. Lift $\xi$ locally to sections $\xi_i$ of $\NYt(-\Ht)$ over an affine cover $\{U_i\}$; then $F(\xi)=[\xi_i-\xi_j]$. Two observations:
+whose rows are \eqref{eq:3.1} twisted by $-\Ht$, \eqref{eq:3.1} itself, and the first sequence of \eqref{eq:ribbonseq}; the columns are exact because $h$ is a nonzerodivisor on $\OO_{\Yt}$ and on $\OO_Y$. $F$ is the connecting map of the top row and $\tilde\delta$ that of the left column. Lift $\xi$ locally to sections $\xi_i$ of $\NYt(-\Ht)$ over an affine cover $\{U_i\}$; then $F(\xi)=[\xi_i-\xi_j]$. We make two observations:
 \begin{enumerate}
 \item[(a)] View the $\xi_i$ as local sections of $\NYt$ (middle column). Then $\eta|_{U_i}-\xi_i$ restricts to zero on $Y$, since $\eta$ and $\xi_i$ both reduce to $\xi=x|_{I_{\Yt}}$ (Lemma~\ref{lem:Phi}(1)). Hence $\mu_i:=\eta|_{U_i}-\xi_i$ are local sections of $\NYt(K_Y)$.
 \item[(b)] The $\xi_i$ vanish on $\Ct$, being multiples of $h$; so $\mu_i|_{\Ct}=\eta|_{\Ct\cap U_i}$, i.e.\ the $\mu_i$ are local lifts of $\eta|_{\Ct}$ to $\NYt(K_Y)$.
@@ -979,7 +983,8 @@ whose fibre $\mathcal{V}_u$ over $u=[t]\in\RC$ is isomorphic to $\Omega_{\Ct_t}|
 and $i(C\times\RC)$ lies in $\PP\big(H^0(Q)\otimes\OO_{\RC}(-1)\big)=\PP(H^0(Q))\times\RC=H\times\RC$, where it is $C\times\RC$, because $i(C\times\{u\})$ is embedded by $|i^*\OO(1)|=|\OO_C(1)|$. Given $u\in\RC$, let $U\ni u$ be an open set on which $\OO_{\RC}(-1)$ is trivial, e.g.\ the complement of a hyperplane, and choose a splitting of the sequence (it exists, as $\Ext^1(H^0(Q)\otimes\OO_{\RC}(-1),\OO_{\RC})=H^0(Q)^{\vee}\otimes H^1(\OO_{\RC}(1))=0$). This gives $\mathcal{W}|_U\cong(k\oplus H^0(Q))\otimes\OO_U=H^0(\OO_{\PM}(1))\otimes\OO_U$ compatible with the quotients onto $H^0(Q)=H^0(\OO_H(1))$, hence $\PP(\mathcal{W})|_U\cong\PM\times U$ carrying $H\times U$ to $H\times U$ and $C\times U$ to $C\times U$. The composite $\PP(\mathcal{V})|_U\hookrightarrow\PP(\mathcal{W})|_U\cong\PM\times U$ is a flat family of smooth scrolls containing $C\times U$, i.e.\ a morphism $\Gamma_U\colon U\to\SC$. By construction $\Gamma_U(u)=\PP(\mathcal{V}_u)$ embedded by $|\OO_{\PP(\mathcal{V}_u)}(1)|$ with $C=i(C\times\{u\})$; as $\OO_{\PP(\mathcal{V}_u)}(1)=\OO(C)$, $E_{\Gamma_U(u)}=\pi_*\OO_{\Gamma_U(u)}(C)=\mathcal{V}_u$, and \eqref{eq:EY} for $\Gamma_U(u)$ is the fibre of \eqref{eq:VR}. The last assertion follows from (1).
 \end{proof}
 
-\subsubsection*{$\GH$-invariance}
+%\subsubsection*{$\GH$-invariance}
+In the following lemma we show the $G_H$ invariance of $\Psi$, where $G_H$ is the set of automorphisms which induces identity on $H$.
 
 \begin{lemma}\label{lem:GH}
 \begin{enumerate}
@@ -1696,7 +1701,7 @@ Internat. J. Math.32(2021), no.6, Paper No. 2150032, 20 pp.
 
 %\bibitem[DM25]{DM25} A.~Deopurkar, J.~Mukherjee, \emph{Stable reduction of ribbons and K-trivial carpets on surface scrolls}, preprint.
 
-\bibitem[ES18]{ES18} D.~Eisenbud, F.-O.~Schreyer, \emph{Equations and syzygies of K3 carpets and unions of scrolls}, arXiv:1804.08011.
+\bibitem[ES19]{ES18} D.~Eisenbud, F.-O.~Schreyer, \emph{Equations and syzygies of K3 carpets and unions of scrolls}, Acta Math.\ Vietnam.\ \textbf{44} (2019), no.~1, 3--29.
 
 \bibitem[GGP08]{GGP08} F.~J.~Gallego, M.~Gonz\'alez, B.~P.~Purnaprajna, \emph{K3 double structures on Enriques surfaces and their smoothings}, J.\ Pure Appl.\ Algebra \textbf{212} (2008), 981--993.
 
