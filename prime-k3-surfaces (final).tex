@@ -130,11 +130,11 @@ In this article we treat the prime case and thereby complete this program, i.e.,
 
 
 
-By semicontinuity it is enough to give sharp upper bounds to $\alpha(X)$ by computing it over an embedded degeneration of $X$. Let $Y = \mathbb{F}_e$, $e \in \{0,1\}$, be a Hirzebruch surface embedded in $\mathbb{P}^g$ by the complete linear series of $H = C_0+bf$, $b \geq e+2$, as a rational normal scroll of degree $g-1$, where $g = 2b-e+1$. Every genus $g \geq 6$ arises in this way. Let $\widetilde{Y} \subset \mathbb{P}^g$ be the $K3$ carpet on $Y$ (see \Cref{ribbon}), that is, the unique double structure on $Y$ with trivial dualizing sheaf and $h^1(\mathcal{O}_{\widetilde{Y}}) = 0$ \cite{GP97}, and let $\widetilde{H} = \mathcal{O}_{\widetilde{Y}}(1)$. By \cite{GP97} and \cite{BMR21} (see also \cite{Gon06}, \cite{GGP10}, \cite{GGP13}), $\widetilde{Y}$ is smoothable in $\mathbb{P}^g$ to prime $K3$ surfaces of genus $g$ (see \Cref{degeneration into $K3$ carpets}), so that $\alpha(X) \leq \alpha(\widetilde{Y}) := h^0(N_{\widetilde{Y}/\mathbb{P}^g}(-\widetilde{H}))-g-1$ for a general prime $K3$ surface $X$ of genus $g$, and similarly for $h^0(N_{X/\mathbb{P}^g}(-2))$ (see \eqref{eq:semicont}). It is worth noting that by \cite{BGM24}, such a $\widetilde Y$ lies in the closure of a union of two scrolls meeting transversally along an anti-canonical elliptic curve, a degeneration that was used in \cite{CLM93}.  As in \cite{BM24} and \cite{BM25}, the computability of $\alpha(\widetilde{Y})$ is facilitated by the fact that $\widetilde{Y} \subset \mathbb{P}^g$ is an embedded ribbon which is a local complete intersection scheme whose reduced part is the scroll $Y \subset \mathbb{P}^g$. Three exact sequences (see \Cref{rem:sequences}) reduce the computation of the cohomology of twists of the normal bundle $N_{\widetilde{Y}/\mathbb{P}^g}$ to the computation of the cohomology of twists of $N_{Y/\mathbb{P}^g}$ and to the analysis of the related coboundary maps. The new difficulty in the prime case is that one of these coboundary maps cannot be controlled by cohomological means alone. We give a deformation theoretic interpretation of this map, which we explain in \S\ref{subsec:intro-ingredient}; this is the key new ingredient of this article.
+By semicontinuity it is enough to give sharp upper bounds to $\alpha(X)$ by computing it over an embedded degeneration of $X$. Let $Y = \mathbb{F}_e$, $e \in \{0,1\}$, be a Hirzebruch surface embedded in $\mathbb{P}^g$ by the complete linear series of $H = C_0+bf$, $b \geq e+2$, as a rational normal scroll of degree $g-1$, where $g = 2b-e+1$. Every genus $g \geq 6$ arises in this way. Let $\widetilde{Y} \subset \mathbb{P}^g$ be the $K3$ carpet on $Y$ (see \Cref{ribbon}), that is, the unique double structure on $Y$ with trivial dualizing sheaf and $h^1(\mathcal{O}_{\widetilde{Y}}) = 0$ \cite{GP97}, and let $\widetilde{H} = \mathcal{O}_{\widetilde{Y}}(1)$. By \cite{GP97} (see also \cite{BMR21}, \cite{Gon06}, \cite{GGP10}, \cite{GGP13}), $\widetilde{Y}$ is smoothable in $\mathbb{P}^g$ to prime $K3$ surfaces of genus $g$ (see \Cref{degeneration into $K3$ carpets}), so that $\alpha(X) \leq \alpha(\widetilde{Y}) := h^0(N_{\widetilde{Y}/\mathbb{P}^g}(-\widetilde{H}))-g-1$ for a general prime $K3$ surface $X$ of genus $g$, and similarly for $h^0(N_{X/\mathbb{P}^g}(-2))$ (see \eqref{eq:semicont}). It is worth noting that by \cite{BGM24}, such a $\widetilde Y$ lies in the closure of a union of two scrolls meeting transversally along an anti-canonical elliptic curve, a degeneration that was used in \cite{CLM93}.  As in \cite{BM24} and \cite{BM25}, the computability of $\alpha(\widetilde{Y})$ is facilitated by the fact that $\widetilde{Y} \subset \mathbb{P}^g$ is an embedded ribbon which is a local complete intersection scheme whose reduced part is the scroll $Y \subset \mathbb{P}^g$. Three exact sequences (see \Cref{rem:sequences}) reduce the computation of the cohomology of twists of the normal bundle $N_{\widetilde{Y}/\mathbb{P}^g}$ to the computation of the cohomology of twists of $N_{Y/\mathbb{P}^g}$ and to the analysis of the related coboundary maps. The new difficulty in the prime case is that one of these coboundary maps cannot be controlled by cohomological means alone. We give a deformation theoretic interpretation of this map, which we explain in \S\ref{subsec:intro-ingredient}; this is the key new ingredient of this article.
 
 \smallskip
 
-We now state our results. Let $\mathcal{H}_g$ denote the Hilbert scheme of prime $K3$ surfaces of genus $g$ (see \Cref{Hilbert schemes of K3 surfaces} and \S\ref{subsec:fano-setup}), i.e., of smooth $K3$ surfaces $X \subset \mathbb{P}^g$ embedded by the complete linear series of a primitive very ample line bundle $B$ with $B^2 = 2g-2$. It is irreducible, and a point of $\mathcal{H}_g$ is called general if it lies in a suitable dense open subset. Our main theorem computes $\alpha(\widetilde{Y})$ exactly, for $K3$ carpets on rational normal scrolls of any type.
+We now state our results. Let $\mathcal{H}_g$ denote the Hilbert scheme of prime $K3$ surfaces of genus $g$ (see \Cref{Hilbert schemes of K3 surfaces} and \S\ref{subsec:fano-setup}), i.e., of smooth $K3$ surfaces $X \subset \mathbb{P}^g$ embedded by the complete linear series of a primitive very ample line bundle $B$ with $B^2 = 2g-2$. It is irreducible, and a point of $\mathcal{H}_g$ is called general if it lies in a suitable dense open subset. Our main theorem computes $\alpha(\widetilde{Y})$ exactly, for $K3$ carpets on rational normal scrolls.
 
 \begin{theorem}(see \Cref{thm:alpha}, \Cref{prop:g6}, \Cref{prop:N2})\label{thm:carpet intro}
 Let $Y = \mathbb{F}_e \subset \mathbb{P}^M$, $e \geq 0$, be embedded by the complete linear series of $H = C_0+bf$ with $b \geq e+2$, so that $M = 2b-e+1$, and let $\widetilde{Y} \subset \mathbb{P}^M$ be the $K3$ carpet on $Y$.
@@ -148,7 +148,7 @@ Let $Y = \mathbb{F}_e \subset \mathbb{P}^M$, $e \geq 0$, be embedded by the comp
 \end{enumerate}
 \end{theorem}
 
-For general prime $K3$ surfaces of low genus, we obtain:
+For general prime $K3$ surfaces we obtain:
 
 \begin{theorem}(see \Cref{thm:alpha-lowgenus}, \Cref{cor:cone}, \Cref{cor:equality})\label{thm:K3 intro}
 Let $X \subset \mathbb{P}^g$ be a general prime $K3$ surface of genus $g \geq 6$.
@@ -250,7 +250,7 @@ Now \Cref{thm:carpet intro}, $(1)$ is equivalent to the surjectivity of $F$. The
    % \item[(5)] \emph{Extensions of ribbons to $K$-trivial carpets} (see \Cref{thm:extension}). In the appendix, written jointly with Anand Deopurkar, we prove the result on extensions of ribbons to carpets that is needed in step $(4)$; it holds for ribbons on curves of any genus, and we expect it to be of independent interest. Its statement is \Cref{thm:extension intro} below. The proof of part $(1)$ is a computation in the space $\Ext^1(\Omega_Y,K_Y)$ parametrizing $K$-trivial carpets on the ruled surface $Y$: the condition that the given embedding $C \hookrightarrow Y$ extends to an embedding of the ribbon inducing the identity on conormal bundles splits into two conditions, the first of which cuts out an affine line in $\Ext^1(\Omega_Y,K_Y)$, while the second is the vanishing of a linear form which is nonconstant on that line.
 \end{enumerate}
 
-Let $\Ct$ be a ribbon on a smooth curve $C$ of genus $g_C$ with conormal bundle $L_C$. Then $V := \Omega_{\Ct}|_C$ is a rank two vector bundle on $C$ sitting in the restricted cotangent sequence $0 \to L_C \to V \to K_C \to 0$, and this sequence determines $\Ct$ (see \cite{BE95}). Let $Y := \PP(V)$ with projection $p\colon Y \to C$ and let $i\colon C \hookrightarrow Y$ be the section defined by the surjection $V \to K_C$. Then $K_Y|_C = L_C$. A $K$-trivial carpet on $Y$ is a ribbon on $Y$ with conormal bundle $K_Y$; such carpets are parametrized by $\Ext^1(\Omega_Y,K_Y)$ (see \cite{BE95}).
+Let $\Ct$ be a ribbon on a smooth curve $C$ of genus $g_C$ with conormal bundle $L_C$. Then $V := \Omega_{\Ct}|_C$ is a rank two vector bundle on $C$ sitting in the restricted cotangent sequence $0 \to L_C \to V \to K_C \to 0$, and this sequence determines $\Ct$ (see \cite{BE95}). Let $Y := \PP(V)$ with projection $p\colon Y \to C$ and let $i\colon C \hookrightarrow Y$ be the section defined by the surjection $V \to K_C$. Then $K_Y|_C = L_C$. A $K$-trivial carpet on $Y$ is a ribbon on $Y$ with conormal bundle $K_Y$. Such carpets are parametrized by $\Ext^1(\Omega_Y,K_Y)$ (see \cite{BE95}).
 
 \begin{theorem}(see \Cref{thm:extension})\label{thm:extension intro}
 In the above notation, assume that $\Ct$ is non-split.
@@ -298,7 +298,7 @@ The genus zero case of this result was stated in \cite{BE95}. What is needed in 
 
 \noindent\textbf{Acknowledgements.} We thank Professor Purnaprajna Bangere for many stimulating discussions on this topic. %% to be added
 
-\noindent\textbf{AI Disclosure.} Claude Fable 5.1 has claimed to have a more computational proof of \Cref{surjectivity of a}(which is the surjectivity of the coboundary map) using \cite{ES18}, whose correctness has not been verified by the author. We have also used Claude Fable 5.1 for latex purposes. 
+\noindent\textbf{AI Disclosure.} Throughout, we have used Claude (Anthropic) Fable 5.1 for LaTeX typesetting, proofreading the arguments and for improving the presentation of the article. \Cref{lem:hfg} has been worked out by Fable $5.1$ replacing an earlier erroneous version where the author had claimed that $h \circ f = g$. It also suggested a correct and much shorter alternative argument for the injectivity of $s^{\vee}$ in Step~2(b) of the proof of Proposition~\ref{prop:N2}, via the Yoneda product with the class $\partial(s)$ of Lemma~\ref{lem:pushforward} and the Leray spectral sequence. The proof given here although longer, is more transparent to the author and follows \cite{BM25} instead. It also has substantial contributions in helping the author write \Cref{prop:a=dPsi} in its present form. Finally Claude Fable 5.1 has claimed to have a different and  more computational syzygy theoretic proof of \Cref{surjectivity of a}(which is the surjectivity of the coboundary map mentioned in the abstract) using equations and syzygies of $K3$ carpets described by Eisenbud and Frank-Olaf Schreyer in \cite{ES18}, whose correctness has not yet been verified by the author and is a potential topic for further research. 
 %% content to be added
 
 \section{Preliminaries on degeneration of $K3$ surfaces into $K3$ double structures on Hirzebruch surfaces}
@@ -393,7 +393,7 @@ and by \cite[Proposition~1.7]{GP97} such a surjection exists and is unique up to
 \]
 the Zak--L'vovsky invariant of $\Yt\subset\PM$.
 
-\begin{remark}[The ribbon exact sequences]\label{rem:sequences}
+\begin{remark}\label{rem:sequences}
 For the carpet $\Yt$ we have the following exact sequences (see \cite[Lemma~4.1]{GGP08})
 \begin{align}
 &0\to \NYt(K_Y)\to \NYt\to \NYt\otimes\OO_Y\to 0 \label{eq:3.1}\\
@@ -590,23 +590,25 @@ A \v{C}ech cocycle computation in Lemma~\ref{lem:hfg} shows that $h\circ f=2g$. 
 where $a$ is the map induced by $f$ on the kernels. Since the right-hand vertical map is an isomorphism, the snake lemma gives $\coker a\cong\coker f$. Therefore, to show that $f$ is surjective, it is enough to show that $a$ is surjective. Now the proof is completed by  \Cref{surjectivity of a}.
 \end{proof}
 
-We now prove \Cref{lem:hfg}. We keep the notation of the proof of Theorem~\ref{thm:alpha}: $\Hc(-H)\to\NYt(-H)$ is the first map of \eqref{eq:3.2}$(-H)$, denoted $\kappa_0$ on global sections, $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3}$(-H)$, and $h=H^1$ of the last map of \eqref{eq:3.2}$(-H+K_Y)$, i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
+We now prove \Cref{lem:hfg}. We keep the notation of the proof of Theorem~\ref{thm:alpha}. Let $\Hc(-H)\to\NYt(-H)$ be the first map of \eqref{eq:3.2} tensored with $(-H)$, and let $\kappa_0$ denote the induced map on global sections, while $F$ is the connecting map of \eqref{eq:3.65}, $f=F\circ\kappa_0$, $g$ is the connecting map of \eqref{eq:3.3} tensored with $(-H)$, and $h: H^1(\NYt(-H+K_Y))\to  H^1(-H-K_Y)$.
+%i.e.\ restriction of homomorphisms to $I_Y^2/I_YI_{\Yt}\cong K_Y^{\otimes 2}$. 
+We identify $\sHom(K_Y,\OO_Y(-H))\cong\sHom(K_Y^{\otimes2},K_Y(-H))$ via $\vartheta\mapsto\vartheta\otimes\id_{K_Y}$.
 
 \begin{lemma}\label{lem:hfg}
 $h\circ f=2\,g$. Consequently $\Im(h\circ f)=\Im g$, and the right square of diagram \eqref{diag:a} commutes with $2\cdot\id$ as its right-hand vertical map.
 \end{lemma}
 
 \begin{proof}
-We use \v{C}ech cocycles on an affine cover $\{U_i\}$ of $\Yt$ (equivalently of $Y$), $U_{ij}=U_i\cap U_j$, and write $L:=I_Y/I_{\Yt}\cong K_Y$. Fix $\varphi\in H^0(\Hc(-H))$, i.e.\ $\varphi\colon I_{\Yt}/I_Y^2\to\OO_Y(-H)$, and let $\bar\varphi=\kappa_0(\varphi)=\varphi\circ\pi$ with $\pi\colon I_{\Yt}/I_YI_{\Yt}\to I_{\Yt}/I_Y^2$; note $\bar\varphi(I_Y^2)=0$.
+We use \v{C}ech cocycles on an affine cover $\{U_i\}$ of $\Yt$ (equivalently of $Y$), $U_{ij}=U_i\cap U_j$, and write $L:=I_Y/I_{\Yt}\cong K_Y$. Fix $\varphi\in H^0(\Hc(-H))$, i.e.\ $\varphi\colon I_{\Yt}/I_Y^2\to\OO_Y(-H)$, and let $\bar\varphi=\kappa_0(\varphi)=\varphi\circ\pi$ with $\pi\colon I_{\Yt}/I_YI_{\Yt}\to I_{\Yt}/I_Y^2$. Note that $\bar\varphi(I_Y^2)=0$. \par
 
-\emph{Cocycle for $f(\varphi)=F(\bar\varphi)$.} Choose $\OO_{\Yt}$-linear lifts $\Phi_i\colon I_{\Yt}/I_{\Yt}^2|_{U_i}\to\OO_{\Yt}(-\Ht)|_{U_i}$ of $\bar\varphi$. Then $\Phi_{ij}=\Phi_i-\Phi_j$ takes values in $L(-H)$, and $f(\varphi)=[\{\Phi_{ij}\}]$. Since $h$ is restriction along $L^{\otimes2}\cong I_Y^2/I_YI_{\Yt}$,
+Let us find the cocycle for  $f(\varphi)=F(\bar\varphi)$. Choose $\OO_{\Yt}$-linear lifts $\Phi_i\colon I_{\Yt}/I_{\Yt}^2|_{U_i}\to\OO_{\Yt}(-\Ht)|_{U_i}$ of $\bar\varphi$. Then $\Phi_{ij}=\Phi_i-\Phi_j$ takes values in $L(-H)$, and $f(\varphi)=[\{\Phi_{ij}\}]$. Since $h$ is restriction along $L^{\otimes2}\cong I_Y^2/I_YI_{\Yt}$,
 \[
 h(f(\varphi))=\big[\{\Phi_{ij}|_{L^{\otimes 2}}\}\big],\qquad \Phi_{ij}|_{L^{\otimes2}}(\bar x\otimes\bar y)=\Phi_i(xy)-\Phi_j(xy)\quad(x,y\in I_Y).
 \]
 
-\emph{Cocycle for $g(\varphi)$.} Choose $\OO_Y$-linear lifts $\psi_i\colon I_Y/I_Y^2|_{U_i}\to\OO_Y(-H)$ with $\psi_i|_{I_{\Yt}/I_Y^2}=\varphi$; then $\psi_{ij}=\psi_i-\psi_j$ factors through $L$ and $g(\varphi)=[\{\psi_{ij}\}]$.
+Now we find the cocycle for $g(\varphi)$. Choose $\OO_Y$-linear lifts $\psi_i\colon I_Y/I_Y^2|_{U_i}\to\OO_Y(-H)$ with $\psi_i|_{I_{\Yt}/I_Y^2}=\varphi$; then $\psi_{ij}=\psi_i-\psi_j$ factors through $L$ and $g(\varphi)=[\{\psi_{ij}\}]$.
 
-\emph{Comparison.} Put $B_i(x,y):=\Phi_i(xy)\in L(-H)$ for $x,y\in I_Y$ (well defined since $\bar\varphi(I_Y^2)=0$). Then: (i) $B_i$ is symmetric, $\OO$-bilinear, and vanishes if $x$ or $y$ lies in $I_Y^2$ (if $x=\sum x'_kx''_k$, then $\Phi_i(x'_kx''_ky)=\bar x''_k\cdot\Phi_i(x'_ky)\in L\cdot L(-H)=0$), so it descends to $I_Y/I_Y^2$; (ii) if $x\in I_{\Yt}$ then $B_i(x,y)=\bar y\cdot\Phi_i(x)=\varphi(\bar x)\otimes\bar y$, because multiplication by $\bar y\in L$ on $\OO_{\Yt}(-\Ht)$ factors through $\OO_Y(-H)$; symmetrically for $y\in I_{\Yt}$. Put $B'_i(x,y):=\psi_i(x)\otimes\bar y+\psi_i(y)\otimes\bar x$. By (ii), $B_i=B'_i$ whenever one argument lies in $I_{\Yt}/I_Y^2$, so $C_i:=B_i-B'_i$ descends to a section of $\sHom(L^{\otimes2},L(-H))=L^{-1}(-H)$ over $U_i$. Over $U_{ij}$, as forms on $L\times L$,
+Now we compare the two cocycles. Put $B_i(x,y):=\Phi_i(xy)\in L(-H)$ for $x,y\in I_Y$ (well defined since $\bar\varphi(I_Y^2)=0$). Then: (i) $B_i$ is symmetric, $\OO$-bilinear, and vanishes if $x$ or $y$ lies in $I_Y^2$ (if $x=\sum x'_kx''_k$, then $\Phi_i(x'_kx''_ky)=\bar x''_k\cdot\Phi_i(x'_ky)\in L\cdot L(-H)=0$), so it descends to $I_Y/I_Y^2$; (ii) if $x\in I_{\Yt}$ then $B_i(x,y)=\bar y\cdot\Phi_i(x)=\varphi(\bar x)\otimes\bar y$, because multiplication by $\bar y\in L$ on $\OO_{\Yt}(-\Ht)$ factors through $\OO_Y(-H)$. Similarly, if $y\in I_{\Yt}$ then $B_i(x,y)=\bar x\cdot\Phi_i(y)=\varphi(\bar y)\otimes\bar x$. Put $B'_i(x,y):=\psi_i(x)\otimes\bar y+\psi_i(y)\otimes\bar x$. By (ii), $B_i=B'_i$ whenever one argument lies in $I_{\Yt}/I_Y^2$, so $C_i:=B_i-B'_i$ descends to a section of $\sHom(L^{\otimes2},L(-H))=L^{-1}(-H)$ over $U_i$. Over $U_{ij}$, as forms on $L\times L$,
 \[
 B_i-B_j=(C_i-C_j)+(B'_i-B'_j),\qquad (B'_i-B'_j)(u,v)=\psi_{ij}(u)\otimes v+\psi_{ij}(v)\otimes u=2\,\psi_{ij}(u)\otimes v,
 \]
@@ -957,7 +959,7 @@ we get $H^0(T_H|_C\otimes L_C)=\ker\big(H^1(L_C)\to H^1(L_C(1))\otimes H^0(\OO_H
 
 In the following theorem, given a point in $\mathcal{R}_C$ we construct a map $\Gamma_U$ defined around a neighbourhood $U$ of the point. We will show in \Cref{prop:BEsection}, that $\Gamma_U$ is a section of $\Psi$ over $U$.
 
-\begin{theorem}[Local sections of $\Psi$]\label{thm:Gamma}
+\begin{theorem}\label{thm:Gamma}
 Let $\pr\colon C\times\RC\to\RC$ be the projection.
 \begin{enumerate}
 \item The restricted cotangent sequence of the universal ribbon $\Ct_{\RC}\subset H\times\RC$,
@@ -1023,7 +1025,7 @@ This is (2). If moreover $\Psi(Y')\in U$, then $u=\Psi(Y')\in U$, and $[V_{\Gamm
 Finally in the following Proposition, we show that $d\Psi$ is surjective.
 
 \begin{proposition}\label{prop:dPsi}
-Let $d\Psi\colon H^0(\NY(-H))=T_{[Y]}\SC\to T_{[\Ct]}\RC=H^0(N_C\otimes L_C)/k\,s_C$ be the differential of $\Psi$ at $[Y]$ (\Cref{def:Psi}).
+Let $d\Psi\colon H^0(\NY(-H))=T_{[Y]}\SC\to T_{[\Ct]}\RC=H^0(N_C\otimes L_C)/k\,s_C$ be the differential of $\Psi$ at $[Y]$ (see \Cref{def:Psi}).
 \begin{enumerate}
 \item $d\Psi$ is surjective.
 \item $\ker d\Psi=\Im c=T_{[Y]}(\GH\cdot Y)$.
@@ -1062,22 +1064,22 @@ By Proposition~\ref{prop:dPsi}, $d\Psi$ is surjective with kernel $\Im c$. By Pr
 %The equality $\ker a=\Im c$ obtained in Proposition~\ref{prop:a-surj} says: a first-order deformation $Y_\varepsilon$ of the scroll inside $\PM$ which contains $C_\Dd$ is contained in a first-order deformation $\Yt_\varepsilon$ of the carpet with $\Yt_\varepsilon\cap H_\Dd=\Ct_\Dd$ if and only if $Y_\varepsilon=\gamma_\varepsilon Y$ for a projectivity $\gamma_\varepsilon\in\GH(\Dd)$ fixing $H$ pointwise; and then $\Yt_\varepsilon=\gamma_\varepsilon\Yt$. Equivalently, by Proposition~\ref{prop:BEsection}(2): the hyperplane section of the K3 carpet on a scroll $Y'\supset C$ is the ribbon whose restricted cotangent bundle is $V_{Y'}=E_{Y'}\otimes L_C$ ($\cong E_{Y'}^{\vee}\otimes K_C$), and this ribbon determines $Y'$ up to $\GH$. The scalar $\yt_h$ is the ``horizontal component'' of the carpet class of \cite[Proposition~1.7]{GP97}.
 %\end{remark}
 
-\section{Prime K3 surfaces of low genus and Fano threefolds of Picard rank one}\label{sec:fano}
+\section{Prime K3 surfaces of genus $g \geq 6$ and Fano threefolds of Picard rank one}\label{sec:fano}
 
-In this section we give sharp bounds to $\alpha(X)$, where $X$ is a prime $K3$ surface of genus $g = 12$ or $6 \leq g \leq 10$.
+In this section we give sharp bounds to $\alpha(X)$, where $X$ is a prime $K3$ surface of genus $g \geq 6$.
 
 \subsection{Set-up}\label{subsec:fano-setup}
 
 For a smooth K3 surface $X\subset\PP^M$ we write $N_X:=N_{X/\PP^M}$ and, as in \S\ref{subsec:setup}, $\alpha(X):=h^0(N_X(-1))-(M+1)$. Recall \cite{Zak91,Lvo92} that if $\alpha(X)\le0$ then $X$ is not extendable: every $V\subset\PP^{M+1}$ having $X$ as a hyperplane section is a cone over $X$.
 
-Fix $g\ge3$. Let $\mathcal H_g$ be the locus, in the Hilbert scheme of $\PP^g$, of smooth K3 surfaces $X\subset\PP^g$ embedded by the complete linear series of a very ample line bundle $H$ with $H^2=2g-2$ and $H$ primitive in $\operatorname{Pic}X$; we call them \emph{prime K3 surfaces of genus $g$}. Since the moduli space of primitively polarized K3 surfaces of genus $g$ is irreducible \cite[Ch.~6]{Huy16}, $\mathcal H_g$ is irreducible; it is smooth of dimension $18+(g+1)^2$, because for $X\in\mathcal H_g$ the Euler sequence gives $h^0(T_{\PP^g}|_X)=(g+1)^2-1$ and $H^1(T_{\PP^g}|_X)=H^2(\OO_X)=k$, the map $H^1(T_X)\to H^2(\OO_X)$, cup product with $c_1(H)$, is surjective, and $H^2(T_X)=0$, so that $h^1(N_X)=0$ and $h^0(N_X)=(g+1)^2-1+19$. A point of $\mathcal H_g$ is called \emph{general} if it lies in a suitable dense open subset.
+Fix $g\ge3$. Let $\mathcal H_g$ be the locus, in the Hilbert scheme of $\PP^g$, of smooth K3 surfaces $X\subset\PP^g$ embedded by the complete linear series of a very ample line bundle $H$ with $H^2=2g-2$ and $H$ primitive in $\operatorname{Pic}X$. We call them \emph{prime K3 surfaces of genus $g$}. Since the moduli space of primitively polarized K3 surfaces of genus $g$ is irreducible \cite[Ch.~6]{Huy16}, $\mathcal H_g$ is irreducible. It is smooth of dimension $18+(g+1)^2$, because for $X\in\mathcal H_g$ the Euler sequence gives $h^0(T_{\PP^g}|_X)=(g+1)^2-1$ and $H^1(T_{\PP^g}|_X)=H^2(\OO_X)=k$, the map $H^1(T_X)\to H^2(\OO_X)$, cup product with $c_1(H)$, is surjective, and $H^2(T_X)=0$, so that $h^1(N_X)=0$ and $h^0(N_X)=(g+1)^2-1+19$. A point of $\mathcal H_g$ is called \emph{general} if it lies in a suitable dense open subset.
 
-Let $e\in\{0,1\}$ and $b\ge e+2$, and let $\Yt\subset\PP^g$ be the K3 carpet on $Y=F_e$ embedded by $|H|$, $H=C_0+bf$, so that $g=2b-e+1$ (this is the set-up of \S\ref{subsec:setup}, except that we allow $b=e+2$). By \cite[Theorems~3.5 and 4.4]{GP97}, $[\Yt]$ lies in the closure of $\mathcal H_g$. Since $\Yt$ and the smooth K3 surfaces are local complete intersections, the normal sheaf of a flat family in $\PP^g$ degenerating a general $X\in\mathcal H_g$ to $\Yt$ is locally free and commutes with base change; by upper semicontinuity, for $X$ general in $\mathcal H_g$ and every $k\ge0$,
+Let $e\in\{0,1\}$ and $b\ge e+2$, and let $\Yt\subset\PP^g$ be the K3 carpet on $Y=F_e$ embedded by $|H|$, $H=C_0+bf$, so that $g=2b-e+1$ (this is the set-up of \S\ref{subsec:setup}, except that we allow $b=e+2$). By \Cref{degeneration into $K3$ carpets}, (see also \cite[Theorems~3.5 and 4.4]{GP97}), $[\Yt]$ lies in the closure of $\mathcal H_g$. Since $\Yt$ and the smooth K3 surfaces are local complete intersections, the normal sheaf of a flat family in $\PP^g$ degenerating a general $X\in\mathcal H_g$ to $\Yt$ is locally free and commutes with base change; by upper semicontinuity, for $X$ general in $\mathcal H_g$ and every $k\ge0$,
 \begin{equation}\label{eq:semicont}
 h^0(N_X(-k))\le h^0(\NYt(-k\Ht)),\qquad\text{in particular}\qquad \alpha(X)\le\alpha(\Yt).
 \end{equation}
 
-\subsection{The invariant \texorpdfstring{$\alpha$}{alpha} for \texorpdfstring{$6\le g\le 12$}{6 <= g <= 12}}
+\subsection{The invariant \texorpdfstring{$\alpha$}{alpha} for \texorpdfstring{$g \geq 6$}{6 <= g <= 12}}
 
 \begin{theorem}\label{thm:alpha-lowgenus}
 Let $X\subset\PP^g$ be a general prime K3 surface of genus $g$.
@@ -1120,6 +1122,8 @@ The proof of Proposition~\ref{prop:a=dPsi} shows, without using $b\ge e+3$, that
 \end{proof}
 
 \subsection{Sections of \texorpdfstring{$N(-2)$}{N(-2)}}
+
+In this subsection we give upper bounds to the dimension of the space $H^0(N_{\widetilde Y}(-2))$ where $\widetilde Y \subset \mathbb{P}^g$ is a $K3$ carpet on a rational normal scroll $Y \subset \mathbb{P}^g$. This consequently gives upper bounds to the dimension of the space $H^0(N_{X}(-2))$, where $X \subset \mathbb{P}^g$ is a prime $K3$ surface of genus $g$. 
 
 \begin{proposition}\label{prop:N2}
 Let $Y=F_e\subset\PM$ be embedded by $|H|$, $H=C_0+bf$ with $b\ge e+2$, and let $\Yt$ be the K3 carpet on $Y$. Then
